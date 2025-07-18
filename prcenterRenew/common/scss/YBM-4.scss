@@ -1012,6 +1012,142 @@
     }
 }
 
+// Tab Nav: Module-a
+.tab-nav.module-a {
+    width: 100%;
+    .tab-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .tab-item {
+            overflow: hidden;
+            background: #EFF4FF;
+            &:first-child {
+                border-radius: rem-calc(52px) 0 0 rem-calc(52px);
+            }
+            &:last-child {
+                border-radius: 0 rem-calc(52px) rem-calc(52px) 0;
+            }
+        }
+    }
+    .tab-btn {
+        min-width: rem-calc(220px);
+        height: rem-calc(52px);
+        font-weight: 700;
+        font-size: rem-calc(16px);
+        line-height: rem-calc(28px);
+        border-radius: rem-calc(52px);
+        color: #000;
+        .total {
+            font-weight: 400;
+        }
+
+        &.is-selected {
+            background-color: #0055A7;
+            color: #fff;
+
+        }
+    }
+}
+
+// 게시판 목록
+.board-list-wrap {
+    .board-util {
+        display: flex;
+        align-items: center;
+        margin-bottom: rem-calc(12px);
+    }
+    .board-list {
+        table {
+            table-layout: auto;
+            border-spacing: 0;
+            border-collapse: collapse;
+            border-top: 1px solid #000000;
+            td {
+                height: rem-calc(64px);
+                padding: rem-calc(10px) rem-calc(20px);
+                border-bottom: 1px solid #eaeaea;
+                font-size: rem-calc(16px);
+                line-height: rem-calc(24px);
+
+                &.cel-count {
+                    color: #666666;
+                }
+                &.cel-title {
+                    color: #000000;
+                }
+                &.cel-date {
+                    color: #999999;
+                }
+            }
+        }
+    }
+
+    .board-pagination {
+        margin-top: rem-calc(24px);
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .btn-num,
+            .btn-page {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: rem-calc(48px);
+                height: rem-calc(48px);
+            }
+
+            .prev-single + .btn-num {
+                margin-left: rem-calc(16px);
+            }
+            .btn-num + .btn-num {
+                margin-left: rem-calc(2px);
+            }
+            .btn-num + .next-single {
+                margin-left: rem-calc(16px);
+            }
+
+            .btn-page {
+                background: no-repeat center center;
+                &.next-double {
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 29L23 24L18 19M25 29L30 24L25 19' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &.next-single {
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 30L27 24L21 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &.prev-single {
+                    transform: scaleX(-1);
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 30L27 24L21 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &.prev-double {
+                    transform: scaleX(-1);
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 29L23 24L18 19M25 29L30 24L25 19' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &:disabled {
+                    opacity: 0.25;
+                }
+            }
+
+            .btn-num {
+                font-weight: 400;
+                font-size: rem-calc(16px);
+                color: #000;
+
+                &[aria-current="page"] {
+                    border-radius: 50%;
+                    background-color: #E83844;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// 게시판 상세
+
 
 //////////////////////////////media query/////////////////////////////////////
 @include tablet{
