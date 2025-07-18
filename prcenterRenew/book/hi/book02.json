@@ -1,0 +1,73 @@
+{
+    "subject": "eng",
+    "title": "공통영어1/2 (김은형)",
+    "subscript": "영어 이해력과 표현력 UP!",
+    "cover_img_count": 2,
+    "writing_staff": [
+        {
+            "name":"김은형", 
+            "affiliation":"서울대학교 영어교육과 교수", 
+            "history":["서울대학교 영어영문학 학사", "서울대학교 영어영문학 석사" ,"State University of New York at Buffalo 미국문학 박사"],
+            "word":"우리가 함께 성장하고 소통하는 광장",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-02.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EA%B3%B5%ED%86%B5%EC%98%81%EC%96%B41_2%28%EA%B9%80%29%20%EC%A0%80%EC%9E%90%20%EA%B9%80%EC%9D%80%ED%98%95%2C%20%EC%97%84%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"엄동희", 
+            "affiliation":"중앙대학교 영어영문학과 교수", 
+            "history":["University of Illinois at Urbana-Champaign 영문학 박사"],
+            "word":"1타",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-02.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EA%B3%B5%ED%86%B5%EC%98%81%EC%96%B41_2%28%EA%B9%80%29%20%EC%A0%80%EC%9E%90%20%EA%B9%80%EC%9D%80%ED%98%95%2C%20%EC%97%84%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"이성호", 
+            "affiliation":"중앙대학교 영어영문학과 교수", 
+            "history":["State University of New York at Buffalo 영문학 박사"],
+            "word":"지식의 화수분"
+        },
+        {
+            "name":"권예지", 
+            "affiliation":"대구여자고등학교 교사", 
+            "history":["경북대학교 영어교육학 석사"],
+            "word":"보드 게임"
+        },
+        {
+            "name":"이주양 ", 
+            "affiliation":"백암고등학교 교사", 
+            "history":["서울대학교 영어교육학 석사"],
+            "word":"나침반"
+        },
+        {
+            "name":"전채린", 
+            "affiliation":"선부고등학교 교사", 
+            "history":["서울대학교 외국어교육학 석사"],
+            "word":"도약"
+        },
+        {
+            "name":"추진아", 
+            "affiliation":"정왕고등학교 교사", 
+            "history":["서울대학교 외국어교육학 석사"],
+            "word":"영어 실력 쑥쑥~ 꿈을 향한 디딤돌 "
+        }
+    ],
+    "character":[
+        {"name":"공통영어1"},
+        {"name":"공통영어2"}
+    ],
+    "booktab":[
+        [
+            "학습자의 삶, 진로와 연계되는 다양한 주제 탐구",
+            "이해와 표현을 중심으로 한 새로운 체제",
+            "미디어와 디지털 학습을 통한 온·오프라인 연계 학습"
+        ],
+        [
+            "디지털 리터러시 함양을 위한 자기 주도적 학습 방법 제시",
+            "체계적이고 구체적인 교과서 활동 활용 안내 제공",
+            "풍부한 활동 예시 제공"
+        ],
+        [
+            "사용자의 편의성을 높이는 직관적인 디자인",
+            "체계적인 학습 콘텐츠 설명 자료 제공",
+            "다양한 멀티 미디어 자료 탑재"
+        ]
+    ]
+}

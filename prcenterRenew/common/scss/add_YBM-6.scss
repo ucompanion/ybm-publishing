@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'common';
+
+.submain{
+    &.ybm{
+        scroll-behavior: smooth;
+        .key-visual{
+            &.ybm2{
+                .inner{
+                    .movie-banner{
+                        position: absolute;
+                        top: 35%;
+                        right: 12%;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+        .section{
+            &.youtube{
+                .flex-wrap{
+                    .frame{
+                        &.v2{
+                            .img-wrap{
+                                width: 200px;
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet{
+    .submain{
+        &.ybm{
+            .section{
+                &.youtube{
+                    .flex-wrap{
+                        .frame{
+                            &.v2{
+                                .img-wrap{
+                                    width: 150px;
+                                }   
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

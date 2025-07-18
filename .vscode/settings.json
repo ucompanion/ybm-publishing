@@ -1,0 +1,48 @@
+{
+    "liveServer.settings.port": 5505,
+    "liveSassCompile.settings.autoprefix": [
+
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.formats":[
+        {
+        "format": "compressed",
+        "extensionName": ".css",
+        "savePath": "~/../css"
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [
+
+
+    ],
+    "liveSassCompile.settings.excludeList": [
+        // 필요한것만 컴파일 하기위한 제외목록 (컴파일 대상 주석처리)
+        "/aiStoryChat/**",
+        "/asset/**",
+        "/classGame/**",
+        "/ConnectingBook/**",
+        "/event/**",
+        "/expcenter/**",
+        "/gate/**",
+        "/prcenter/**",
+        // "/prcenterRenew/**",
+        "/pub_etc/**",
+        "/viewer/**",
+    ],
+    "sass.andStared": [
+
+        "active",
+        "focus",
+        "hover",
+        "nth-child"
+    ],
+    "files.autoSave": "off",
+    "json.schemas": [
+
+
+
+
+    ],
+    "git.autofetch": true,
+    "files.refactoring.autoSave": false,
+}

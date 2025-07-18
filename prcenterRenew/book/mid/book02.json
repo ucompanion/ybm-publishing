@@ -1,0 +1,78 @@
+{
+    "subject": "eng",
+    "title": "영어 1 (김은형)",
+    "subscript": "스스로 탐구하고 함께 성장하는 미래형 영어 교과서",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"김은형", 
+            "affiliation":"서울대학교 영어교육과 교수", 
+            "history":["The State University of New York at Buffalo 미국문학 박사","서울대학교 영어영문학과 석사"],
+            "word":"세계와 소통하는 마법의 문",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-02.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B41%28%EA%B9%80%29%20%EC%A0%80%EC%9E%90%20%EA%B9%80%EC%9D%80%ED%98%95%2C%20%EC%9D%B4%EC%A3%BC%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"이성호", 
+            "affiliation":"중앙대학교 교수", 
+            "history":["The State University of New York at Buffalo 영문학 박사"],
+            "word":"미슐랭 가이드"
+        },
+        {
+            "name":"엄동희", 
+            "affiliation":"중앙대학교 교수", 
+            "history":["University of Illinois at Urbana–Champaign 영문학 박사"],
+            "word":"비밀번호"
+        },
+        {
+            "name":"이주희", 
+            "affiliation":"홍익대학교 교수", 
+            "history":["The University of Texas at Austin 영어교육 박사"],
+            "word":"선물 꾸러미",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-02.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B41%28%EA%B9%80%29%20%EC%A0%80%EC%9E%90%20%EA%B9%80%EC%9D%80%ED%98%95%2C%20%EC%9D%B4%EC%A3%BC%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김나래", 
+            "affiliation":"현화중학교 교사", 
+            "history":["한국교원대학교 영어교육과 석사"],
+            "word":"내일이 더 기대되는 여행"
+        },
+        {
+            "name":"강수연", 
+            "affiliation":"신연중학교 교사", 
+            "history":["서울대학교 영어교육 박사"],
+            "word":"셰프의 요리"
+        },
+        {
+            "name":"이예나", 
+            "affiliation":"개포고등학교 교사", 
+            "history":["한국교원대학교 영어교육과 석사"],
+            "word":"와이파이"
+        },
+        {
+            "name":"김지은", 
+            "affiliation":"신서중학교 교사", 
+            "history":["서울대학교 영어교육과 석사"],
+            "word":"꿈을 이루는 사다리"
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "핵심 질문을 바탕으로 하는 주제 기반 교과서",
+            "이해한 내용을 자유롭게 표현하는 단계별 학습",
+            "디지털 활동으로 연계되는 자기주도 학습 관리"
+        ],
+        [
+            "필요한 내용이 한눈에 보이는 편리한 지도서",
+            "추가 제공되는 다양한 교수·학습 및 활동 자료",
+            "유용한 추가 활동 및 디지털 도구 활용 가이드"
+        ],
+        [
+            "풍부한 콘텐츠가 가득한 전자저작물",
+            "게임, 롤플레이, 녹음 등 다양한 기능",
+            "편리한 디지털 포트폴리오와의 연계"
+        ]
+    ]
+}

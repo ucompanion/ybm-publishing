@@ -1,0 +1,72 @@
+{
+    "subject": "math2",
+    "title": "수학 1 (류희찬)",
+    "subscript": "자기 주도 학습이 가능한 비주얼 교과서",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"류희찬", 
+            "affiliation":"한국교원대학교 수학교육과 명예 교수", 
+            "history":["서울대 수학교육과","서울대 대학원 수학교육학 석사","미국 템플대 대학원 수학교육학 박사"],
+            "word":"친숙한 소재와 시각적 구성을 통해 재미있게 학습하는 수학 교과서"
+        },
+        {
+            "name":"선우하식", 
+            "affiliation":"건국대학교 교수", 
+            "history":["한국과학 기술원 전산통계학 박사"],
+            "word":"수학의 내비게이션"
+        },
+        {
+            "name":"이종영", 
+            "affiliation":"전주교육대학교 교수", 
+            "history":["서울대학교 수학교육 박사"],
+            "word":"일곱 빛깔 무지개"
+        },
+        {
+            "name":"제수연", 
+            "affiliation":"여의도고등학교 교사", 
+            "history":["한국교원대학교 수학교육 석사"],
+            "word":"수학이 쉬워지는 교과서"
+        },
+        {
+            "name":"홍근숙", 
+            "affiliation":"구암중학교 교사", 
+            "history":["성균관대학교 수학교육과 학사"],
+            "word":"안경",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-03.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EC%88%98%ED%95%991%20%EC%A0%80%EC%9E%90%20%EC%B1%84%EC%9D%80%ED%9D%AC%2C%20%ED%99%8D%EA%B7%BC%EC%88%99%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"채은희", 
+            "affiliation":"공항중학교 교사", 
+            "history":["서울대학교 수학교육과 학사"],
+            "word":"세잎클로버",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-03.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EC%88%98%ED%95%991%20%EC%A0%80%EC%9E%90%20%EC%B1%84%EC%9D%80%ED%9D%AC%2C%20%ED%99%8D%EA%B7%BC%EC%88%99%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"박슬히", 
+            "affiliation":"주곡중학교 교사", 
+            "history":["한국교원대학교 수학교육 석사"],
+            "word":"꿀잼"
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "학습 내용을 쉽게 풀어낸 교과서",
+            "수업의 편의성을 높인 교과서",
+            "학습에 흥미를 느끼는 교과서"
+        ],
+        [
+            "수업에 필요한 자료를 찾기 쉽게 구성한 지도서",
+            "다양한 활동 자료와 평가 문항을 제시한 지도서",
+            "쉽고 자세한 해설을 제시한 지도서"
+        ],
+        [
+            "수업에 흥미를 유발시키는 멀티미디어 자료",
+            "교과서없이 할 수 있는 편리한 스마트 수업",
+            "새롭고 풍부한 수업 지원 자료"
+        ]
+    ]
+}

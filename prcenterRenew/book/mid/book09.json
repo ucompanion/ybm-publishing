@@ -1,0 +1,78 @@
+{
+    "subject": "health",
+    "title": "보건 (우옥영)",
+    "subscript": "건강한 생활과 행복한 어울림",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"우옥영", 
+            "affiliation":"경기대학교 겸임교수", 
+            "history":["(사)보건교육포럼 이사장","한국보건교육학회장"],
+            "word":"건강 생활의 비법을 담고 있는 보물 창고"
+        },
+        {
+            "name":"김대유", 
+            "affiliation":"서영대학교 외래교수", 
+            "history":["경기대학교 교육정책 박사"],
+            "word":"아름다운 삶과 보건 교육"
+        },
+        {
+            "name":"신미수", 
+            "affiliation":"서울가원초등학교 교사", 
+            "history":["동국대학교 교육정책 석사"],
+            "word":"건강과 행복의 필수품"
+        },
+        {
+            "name":"김지학", 
+            "affiliation":"시흥은행중학교 교사", 
+            "history":["서울대학교 보건정책관리 석사"],
+            "word":"건강 역량의 마스터키"
+        },
+        {
+            "name":"김민주", 
+            "affiliation":"부평중학교 교사", 
+            "history":["연세대학교 간호학과 졸업"],
+            "word":"건강한 삶의 지혜"
+        },
+        {
+            "name":"김순향", 
+            "affiliation":"인천동수중학교 교사", 
+            "history":["경기대학교 보건교육 석사"],
+            "word":"건강하고 행복한 삶의 문",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-10.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EB%B3%B4%EA%B1%B4%20%EC%A0%80%EC%9E%90%20%EA%B9%80%EC%88%9C%ED%96%A5%2C%20%EA%B9%80%EC%9A%B0%EB%A6%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"송은혜", 
+            "affiliation":"창원상남중학교 교사", 
+            "history":["마산대학교 간호학과 졸업"],
+            "word":"건강 증진의 필수 길잡이"
+        },
+        {
+            "name":"김우림", 
+            "affiliation":"상암중학교 교사", 
+            "history":["중앙대학교 적십자간호대학 간호학과 졸업"],
+            "word":"건강의 나침반",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-10.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EB%B3%B4%EA%B1%B4%20%EC%A0%80%EC%9E%90%20%EA%B9%80%EC%88%9C%ED%96%A5%2C%20%EA%B9%80%EC%9A%B0%EB%A6%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "다양한 교과 전문가가 만든 교과서",
+            "정보를 시각적으로 구조화한 교과서",
+            "스스로 참여하게 만드는 교과서"
+        ],
+        [
+            "수업에 바로 활용 가능한 주석 지도서",
+            "핵심 내용만 쏙쏙 알려주는 지도서",
+            "다양한 교수방법과 전략을 담은 지도서"
+        ],
+        [
+            "학생 참여를 이끄는 풍부한 시각 자료",
+            "편리하고 다양한 수업 도구 제공",
+            "재미를 배가하는 동영상과 애니메이션"
+        ]
+    ]
+}

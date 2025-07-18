@@ -1,0 +1,95 @@
+@import 'variables';
+
+@mixin zero-set {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    //vertical-align: middle;
+}
+
+@mixin font2{
+    font-family: $font-stack2;
+}
+@mixin font3{
+    font-family: $font-stack3;
+}
+@mixin font3-extrabold{
+    font-family: $font-stack3-extrabold;
+}
+
+@function rem-calc($size) {
+    @return calc($size / $base-font-size * 1rem);
+}
+
+@mixin flex-row{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+@mixin flex-clm{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+
+@mixin ellipsis{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+@mixin ellipsis2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: inherit;
+    word-break: break-all;
+}
+
+@mixin scroll{
+    overflow: auto;
+    &::-webkit-scrollbar{
+        width: 5px;
+        height: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: nth($bg-grays,12);
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: nth($bg-grays,11);
+        border-radius: 10px;
+    }
+}
+
+// 태블릿~PC 레이아웃 (태블릿환경에서는 PC레이아웃 유지)
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+  }
+// 모바일 레이아웃
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile-xl}) {
+        @content;
+    }
+}
+// 모바일 레이아웃
+@mixin mobileSm {
+  @media (max-width: #{$breakpoint-mobile-xm}) {
+      @content;
+  }
+}
+
+.mg{
+    $margin-top:0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135;
+    @each $item in $margin-top {
+        &.top-#{$item} { margin-top: #{$item}px !important; }
+        &.bottom-#{$item} { margin-bottom: #{$item}px !important; }
+    }
+}
+

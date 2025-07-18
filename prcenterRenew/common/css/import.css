@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+@import url("reset.css");
+@import url("layout.css");
+@import url("common.css");
+@import url("modal.css");
+@import url("YBM-5.css"); /* 인트로 */
+@import url("YBM-4.css"); /* 메인 */
+@import url("YBM-6.css"); /* YBM교과서 */
+@import url("YBM-7.css"); /* 수업이 필요한 모든 순간,Y클라우드 */
+/* @import url("YBM-15.css");  YBM소식 */
+@import url("add_YBM-6.css"); /* YBM교과서 추가 css */
+@import url("sub_book_main.css"); /* 교과서 서브 메인 */
+@import url("SUB_BOOK.css"); /* 교과서 서브 css */

@@ -1,0 +1,79 @@
+{
+    "subject": "music2",
+    "title": "음악 감상과 비평 (강민선)",
+    "subscript": "음악을 읽다, 세상을 잇다",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"강민선", 
+            "affiliation":"국제예술대학교 교수", 
+            "history":["서울대학교 음악교육 박사"],
+            "word":"공감과 감동이 있는 교과서",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-18.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%9D%8C%EC%95%85%20%EA%B0%90%EC%83%81%EA%B3%BC%20%EB%B9%84%ED%8F%89%20%EC%A0%80%EC%9E%90%20%EA%B0%95%EB%AF%BC%EC%84%A0%C2%B7%EC%9D%B4%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%86%A1%ED%98%84%EC%9A%B0%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김일영", 
+            "affiliation":"청담고등학교 교사", 
+            "history":["한국교원대학교 음악교육 박사"],
+            "word":"행복한 음악의 시작"
+        },
+        {
+            "name":"이동희", 
+            "affiliation":"경인교육대학교 교수", 
+            "history":["한국학중앙연구원 한국학대학원 음악학 박사"],
+            "word":"즐거운 교과서",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-18.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%9D%8C%EC%95%85%20%EA%B0%90%EC%83%81%EA%B3%BC%20%EB%B9%84%ED%8F%89%20%EC%A0%80%EC%9E%90%20%EA%B0%95%EB%AF%BC%EC%84%A0%C2%B7%EC%9D%B4%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%86%A1%ED%98%84%EC%9A%B0%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"송현우", 
+            "affiliation":"혜화여자고등학교 교사", 
+            "history":["경희대학교 작곡 학사"],
+            "word":"풍부한 교과서",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-18.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%9D%8C%EC%95%85%20%EA%B0%90%EC%83%81%EA%B3%BC%20%EB%B9%84%ED%8F%89%20%EC%A0%80%EC%9E%90%20%EA%B0%95%EB%AF%BC%EC%84%A0%C2%B7%EC%9D%B4%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%86%A1%ED%98%84%EC%9A%B0%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김형석", 
+            "affiliation":"국제예술대학교 교수", 
+            "history":["애리조나주립대 음악교육 박사"],
+            "word":"생동감 있는 교과서"
+        },
+        {
+            "name":"최진형", 
+            "affiliation":"세현고등학교 교사", 
+            "history":["연세대학교 음악교육 석사"],
+            "word":"꼭 필요한 교과서"
+        },
+        {
+            "name":"한태동", 
+            "affiliation":"명일고등학교 교사", 
+            "history":["서울대학교 음악교육 박사"],
+            "word":"쉽고 재밌는 교과서"
+        },
+        {
+            "name":"유하양", 
+            "affiliation":"수원여자고등학교 교사", 
+            "history":["서울대학교 음악교육 박사"],
+            "word":"흥미로운 교과서"
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "명곡과 최신 음악 QR 코드 수록",
+            "직관적인 3단계 활동으로 쉬운 재구성",
+            "현직 교사 설문 조사를 반영한 체재"
+        ],
+        [
+            "교사용 교과서와 지도서를 한 번에",
+            "다양한 활동 예시 내용 제공",
+            "간편한 수업 지도를 위한 보충 설명"
+        ],
+        [
+            "가독성을 높인 깔끔한 구성",
+            "음원, 영상 자료를 손쉽게 감상",
+            "악보, 활동지 다운로드 가능"
+        ]
+    ]
+}

@@ -1,0 +1,47 @@
+
+$font-stack: 'Pretendard Variable', 'Roboto','Malgun Gothic', sans-serif;
+$font-stack2: 'ONE-Mobile-POP', 'Malgun Gothic', sans-serif;
+$font-stack3: 'NPSfontBold', 'Malgun Gothic', sans-serif;
+$font-stack3-extrabold: 'NPSfontExtraBold', 'Malgun Gothic', sans-serif;
+$base-text-color : #000543;
+$base-text-color2 : #000;
+$base-bgcolor : #fff;
+$base-font-size: 16px;
+$guide-color: #E0E0E0;
+$base-footer: #333333;
+$footer-text: #aaa;
+$transparent: transparent;
+
+$bg-grays:(
+);
+$active-colors:(
+    #FF6652, //1
+    #9BB0C5, //2
+);
+$bg-colors:(
+    #E2E7FF, //1
+    #4A5AB2, //2
+    #81E5FB, //3
+    #FBDC81, //4
+    #6177F1, //5
+    #0055A7, //6
+    #C7D0FF, //7
+    #FFD34E, //8
+    #EFF6FF, //9
+    #C7DAF1, //10
+    #00D2C6, //11
+    #FFD6D3, //12
+
+);
+
+
+// layout
+$inner-container: 1280px;
+
+// url
+$img-url: '../../img/';
+
+// Breakpoints
+$breakpoint-tablet: 1280px;
+$breakpoint-mobile-xl: 960px;
+$breakpoint-mobile-xm: 680px;

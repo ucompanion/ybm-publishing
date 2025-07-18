@@ -1,0 +1,85 @@
+{
+    "subject": "eng",
+    "title": "영어Ⅰ/Ⅱ (박준언)",
+    "subscript": "융합적인 주제! 체계적인 활동!",
+    "cover_img_count": 2,
+    "writing_staff": [
+        {
+            "name":"박준언", 
+            "affiliation":"(전) 숭실대학교 영문학과 교수", 
+            "history":["서울대학교 영어교육과 학사","The University of Illinois at Urbana-Champaign 영어교육학과 석사","The University of Illinois at Urbana-Champaign 이중언어교육 박사"],
+            "word":"<span><em>Y</em>outhful,&nbsp;<em>B</em> rilliant,&nbsp;<em>M</em> ellow한 교재</span>"
+        },
+        {
+            "name":"윤병우", 
+            "affiliation":"(전) 서울시립대학교 교수", 
+            "history":["서울대학교 영어영문학과 영문학 박사"],
+            "word":"닮고 싶은 선배",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-03.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B4%E2%85%A0_%E2%85%A1%20%EC%A0%80%EC%9E%90%20%EC%9C%A4%EB%B3%91%EC%9A%B0%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%98%A4%ED%98%84%EC%A3%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"손나리", 
+            "affiliation":"서울대학교 인문사회학술연구교수", 
+            "history":["서울대학교 영어영문학과 현대영미시 박사"],
+            "word":"다채로운 씨앗을 품은 흙"
+        },
+        {
+            "name":"황은경", 
+            "affiliation":"명지대학교 교수", 
+            "history":["숙명여자대학교 영어영문학과 영어교육 박사"],
+            "word":"탐험의 지도"
+        },
+        {
+            "name":"최지영", 
+            "affiliation":"성남외국어고등학교 교사", 
+            "history":["서울대학교 영어교육과 영어교육 박사"],
+            "word":"지식의 놀이터"
+        },
+        {
+            "name":"오현주", 
+            "affiliation":"미림여자고등학교 교사", 
+            "history":["서울대학교 영어교육과 영어교육 석사"],
+            "word":"실력 향상을 위한 필수템",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-03.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B4%E2%85%A0_%E2%85%A1%20%EC%A0%80%EC%9E%90%20%EC%9C%A4%EB%B3%91%EC%9A%B0%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%98%A4%ED%98%84%EC%A3%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"여기상", 
+            "affiliation":"부개여자고등학교 교사", 
+            "history":["숙명여자대학교 TESOL 석사"],
+            "word":"꿈을 위한 도약대"
+        },
+        {
+            "name":"장환명", 
+            "affiliation":"인화여자고등학교 교사", 
+            "history":["브리스틀대학교 TESOL 석사"],
+            "word":"신세계로 이어주는 출입문"
+        },
+        {
+            "name":"황현경", 
+            "affiliation":"영선고등학교 교사", 
+            "history":["서울대학교 사범대학 글로벌교육협력 석사"],
+            "word":"글로벌 이슈와 학생의 미래를 잇는 다리"
+        }
+    ],
+    "character":[
+        {"name":"영어 Ⅰ"},
+        {"name":"영어 Ⅱ"}
+    ],
+    "booktab":[
+        [
+            "참신한 주제의 실용적이고 융합 소재를 다룬 글감!",
+            "체계적으로 구성된 세특 맞춤형 쓰기와 프로젝트!",
+            "디지털 리터러시 역량 UP!"
+        ],
+        [
+            "상세한 구문 해설과 배경지식 자료 수록",
+            "활동별 안내 및 수행 평가 성취 기준표 수록",
+            "풍부한 교수 학습 자료 수록"
+        ],
+        [
+            "가독성 높은 서체와 깔끔한 구성",
+            "흥미를 유발하는 영상 수록",
+            "본문에 제시된 어휘의 영영풀이와 예문, 음원 제공"
+        ]
+    ]
+}

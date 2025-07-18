@@ -1,0 +1,162 @@
+$font-stack: 'Pretendard Variable', 'Roboto','Malgun Gothic', sans-serif;
+$font-stack2: 'ONE-Mobile-POP', 'Malgun Gothic', sans-serif;
+$font-stack3: 'NPSfontBold', 'Malgun Gothic', sans-serif;
+$font-stack3-extrabold: 'NPSfontExtraBold', 'Malgun Gothic', sans-serif;
+$base-text-color : #333;
+$base-text-color2 : #000;
+$base-bgcolor : #fff;
+$base-font-size: 16px;
+$guide-color: #E0E0E0;
+$base-footer: #333333;
+$footer-text: #aaa;
+$transparent: transparent;
+
+$bg-grays:(
+    #F8F8F8, //1
+    #525252, //2
+    #E5E5E5, //3
+    #666666, //4
+    #888888, //5
+    #999999, //6
+    #CDD3D8, //7
+    #F7F7F7, //8
+    #EBEBEB, //9
+    #AAAAAA, //10
+    #F1F3F6, //11
+    #C6C6C6, //12
+    #969696, //13
+    #DDDDDD, //14
+    #BBBBBB, //15
+    #CCCCCC, //16
+    #CFCFCF, //17
+    #4E5865, //18
+    #2A2A2A, //19
+    #363636, //20
+);
+$active-colors:(
+    #1FB9DF, //1
+    #05B9DF, //2
+    #328C2B, //3
+    #3580E3, //4
+    #ED7971, //5
+    #094093, //6
+    #7378A0, //7
+    #E8C01B, //8
+    #488ED6, //9
+    #7978E4, //10
+    #498ED6, //11
+    #478FD6, //12
+    #6A86E7, //13
+    #47BEC6, //14
+    #F1847D, //15
+    #F26B82, //16
+    #0051BA, //17
+    #D375FF, //18
+    #0055A7, //19
+    #000543, //20
+    #7774F6, //21
+    #5452B1, //22
+    #9754B6, //23
+    #ED718F, //24
+    #B45964, //25
+    #4052A6, //26
+    #2B7277, //27
+    #914F4B, //28
+    #8ECBF3, //29
+    #3EB135, //30
+    #FF6652, //31
+    #62C3CE, //32
+    #4DCC80, //33
+);
+$bg-colors:(
+    #F8F8E1, //1
+    #F91F49, //2
+    #FFC321, //3
+    #DDEBFF, //4
+    #ffffff, //5
+    #FFEEA0, //6
+    #FBE5BC, //7
+    #B1EEE3, //8
+    #FED9FA, //9
+    #E3D9FE, //10
+    #3C3C49, //11
+    #C7DAF1, //12
+    #F3F9FF, //13
+    #353F8C, //14
+    #C0CDE4, //15
+    #E4F0F6, //16
+    #D1DCFF, //17
+    #B1FAFF, //18
+    #FFD6D3, //19
+    #332F7B, //20
+    #E7E6F1, //21
+    #53508E, //22
+    #FFF2EC, //23
+    #4D8CD7, //24
+    #DAF5EE, //25
+    #DDE5FE, //26
+    #FFE3E1, //27
+    #FFF2D4, //28
+    #3EC29F, //29
+    #FEB801, //30
+    #F2F9FF, //31
+    #DAE8F3, //32
+    #FFFFE7, //33
+    #DCEBFE, //34
+    #D8F6F8, //35
+    #F3E6F5, //36
+    #E7EFF9, //37
+    #F8ECE1, //38
+    #DFF4FA, //39
+    #E5FBE2, //40
+    #EBAEA9, //41
+    #F8FCFF, //42
+    #FFF8F2, //43
+    #C9C6E5, //44
+    #EDE5BF, //45
+    #FFCAC9, //46
+    #CEE9D0, //47
+    #DAECCE, //48
+    #B6DFE8, //49
+    #EECDE9, //50
+    #FFE3C9, //51
+    #C1DBF3, //52
+    #C5EAE8, //53
+    #F1CBD9, //54
+    #CACFE2, //55
+    #F3FCFF, //56
+    #F7FFF5, //57
+    #8FC0CC, //58
+    #B0D0AE, //59
+    #6C78D1, //60
+    #E3EDF3, //61
+    #D0E2ED, //62
+    #81E5FB, //63
+    #4A5AB2, //64
+    #FBDC81, //65
+    #F1DB76, //66
+    #FEF3C2, //67
+    #FF7D7D, //68
+);
+
+$color-ele: #FF6652;
+$color-mid: #05B9DF;
+$color-hi: #45B035;
+
+// layout
+$inner-container: 1280px;
+
+// url
+// $img-url: '/prcenterRenew/img/';
+// $img-sub-url: '/prcenterRenew/img/sub/';
+$img-url: '../../img/';
+$img-sub-url: '../../img/sub/';
+$img-main-url: '../../img/main/';
+
+// Breakpoints
+$breakpoint-pc: 1480px;
+$breakpoint-tablet: 1280px;
+$breakpoint-mobile-xl: 1023px;
+$breakpoint-mobile-xm: 680px;
+$breakpoint-mobile-xs: 480px;
+

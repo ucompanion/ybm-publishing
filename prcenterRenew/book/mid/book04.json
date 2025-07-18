@@ -1,0 +1,111 @@
+{
+    "subject": "science",
+    "title": "과학 1 (권우진)",
+    "subscript": "메타인지 질문으로 과학을 즐기다",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"권우진", 
+            "affiliation":"서울대학교 지구과학교육과 교수", 
+            "history":["미국 일리노이주립대학교 천문학 박사"],
+            "word":"선생님과 학생이 과학으로 '소통'하는 교과서",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-04.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EA%B3%BC%ED%95%991%20%EC%A0%80%EC%9E%90%20%EA%B6%8C%EC%9A%B0%EC%A7%84%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B6%8C%EC%A7%80%ED%98%9C%C2%B7%EC%9E%A5%EC%9D%80%EC%98%81%C2%B7%EC%B1%84%EC%97%B0%EC%88%98%C2%B7%EC%B5%9C%EC%9B%90%EA%B7%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"조정효", 
+            "affiliation":"서울대학교 물리교육과 교수", 
+            "history":["서울대학교 이론물리학 박사"],
+            "word":"미래과학의 꿈을 담은 책"
+        },
+        {
+            "name":"최윤희", 
+            "affiliation":"숭문중학교 교사", 
+            "history":["이화여자대학교 과학교육학 박사"],
+            "word":"미래를 꿈꾸게 하는 희망"
+        },
+        {
+            "name":"장은영", 
+            "affiliation":"경인중학교 교사", 
+            "history":["서울대학교 물리교육과 졸업"],
+            "word":"항상 함께 하는 친구",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-04.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EA%B3%BC%ED%95%991%20%EC%A0%80%EC%9E%90%20%EA%B6%8C%EC%9A%B0%EC%A7%84%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B6%8C%EC%A7%80%ED%98%9C%C2%B7%EC%9E%A5%EC%9D%80%EC%98%81%C2%B7%EC%B1%84%EC%97%B0%EC%88%98%C2%B7%EC%B5%9C%EC%9B%90%EA%B7%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"홍혜인", 
+            "affiliation":"방배중학교 교사", 
+            "history":["이화여자대학교 과학교육학 박사"],
+            "word":"초콜릿 케이크"
+        },
+        {
+            "name":"유수형", 
+            "affiliation":"서울대사범대학부설 여자중학교 교사", 
+            "history":["이화여자대학교 화학과 졸업"],
+            "word":"비밀의 방의 열쇠"
+        },
+        {
+            "name":"최원근", 
+            "affiliation":"서울과학고등학교 교사", 
+            "history":["서울대학교 화학교육과 졸업"],
+            "word":"꿈을 향해 날 수 있는 날개",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-04.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EA%B3%BC%ED%95%991%20%EC%A0%80%EC%9E%90%20%EA%B6%8C%EC%9A%B0%EC%A7%84%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B6%8C%EC%A7%80%ED%98%9C%C2%B7%EC%9E%A5%EC%9D%80%EC%98%81%C2%B7%EC%B1%84%EC%97%B0%EC%88%98%C2%B7%EC%B5%9C%EC%9B%90%EA%B7%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김완연", 
+            "affiliation":"한국교원대학교 생물교육과 교수", 
+            "history":["부산대학교 생명시스템학 박사"],
+            "word":"배움을 펼칠 새로운 세상"
+        },
+        {
+            "name":"채매화", 
+            "affiliation":"서울대학교사범대학 부설중학교 교사", 
+            "history":["서울대하교 생물교육과 졸업"],
+            "word":"또렷하게 보여 주는 안경"
+        },
+        {
+            "name":"채연수", 
+            "affiliation":"충북과학고등학교 교사", 
+            "history":["한국교원대학교 과학교육학 석사"],
+            "word":"함께 어우러지는 하모니",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-04.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EA%B3%BC%ED%95%991%20%EC%A0%80%EC%9E%90%20%EA%B6%8C%EC%9A%B0%EC%A7%84%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B6%8C%EC%A7%80%ED%98%9C%C2%B7%EC%9E%A5%EC%9D%80%EC%98%81%C2%B7%EC%B1%84%EC%97%B0%EC%88%98%C2%B7%EC%B5%9C%EC%9B%90%EA%B7%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"오현석", 
+            "affiliation":"춘천교육대학교 과학교육과 교수", 
+            "history":["서울대학교 과학교육학 박사"],
+            "word":"밤하늘의 기준인 북극성"
+        },
+        {
+            "name":"김수명", 
+            "affiliation":"문헌고등학교 교사", 
+            "history":["서울대학교 과학교육학 석사"],
+            "word":"과학을 탐험하는 탐험선"
+        },
+        {
+            "name":"권지혜", 
+            "affiliation":"중화고등학교 교사", 
+            "history":["서울대학교 과학교육학 석사"],
+            "word":"숨겨진 맛집",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-04.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EA%B3%BC%ED%95%991%20%EC%A0%80%EC%9E%90%20%EA%B6%8C%EC%9A%B0%EC%A7%84%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B6%8C%EC%A7%80%ED%98%9C%C2%B7%EC%9E%A5%EC%9D%80%EC%98%81%C2%B7%EC%B1%84%EC%97%B0%EC%88%98%C2%B7%EC%B5%9C%EC%9B%90%EA%B7%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "참신하고 다양한 활동을 담은 교과서",
+            "스스로 생각하는 힘을 길러주는 교과서",
+            "나, 너, 우리가 함께하는 교과서"
+        ],
+        [
+            "과학과 교수 학습 모형에 따른 교수 학습 지도안 제시",
+            "각 단원을 차시별로 구분하여 수업에 꼭 필요한 가이드 제시",
+            "대단원별로 다양한 유형(총괄평가, 서논술형 평가, 수행평가, 학교시험 대비평가 등)의 평가 문제 제시"
+        ],
+        [
+            "차시 수업, 스마트 교과서의 두 가지 형식으로 제시하여 선택 수업 가능",
+            "편리하게 활용할 수 있는 조작 기능을 깔끔한 화면으로 구성한 차시 수업",
+            "공통 자료, 수업 자료, 평가 자료, 멀티미디어 자료 등 다양한 수업 자료 제공"
+        ]
+    ]
+}

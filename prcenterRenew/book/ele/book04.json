@@ -1,0 +1,138 @@
+{
+    "subject": "society",
+    "title": "사회 3~4학년 (남상준)",
+    "subscript": "수업 흐름이 한눈에 들어오는 교과서",
+    "cover_img_count": 4,
+    "writing_staff": [
+        {
+            "name":"남상준",
+            "affiliation":"한국교원대학교 명예 교수",
+            "history":["서울대학교 사회교육 박사"],
+            "word":"세상을 보는 눈이다.",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-04.%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%82%AC%ED%9A%8C%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EB%82%A8%EC%83%81%EC%A4%80%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B9%80%EC%A3%BC%ED%83%9D%C2%B7%EC%9E%A5%EC%A7%84%EC%95%84%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김이재",
+            "affiliation":"경인교육대학교 사회과교육과 교수",
+            "history":["서울대학교 지리교육 박사"],
+            "word":"마법 지도책"
+        },
+        {
+            "name":"최진영",
+            "affiliation":"이화여자대학교 초등교육과 교수",
+            "history":["미시간주립대학교 교육과정 및 교수 전공 박사"],
+            "word":"세상 여행 안내서"
+        },
+        {
+            "name":"김주택",
+            "affiliation":"서울쌍문초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 박사"],
+            "word":"YBM 사회교과서로 공부하면, 사회 지식이 쏙! 들어와요.",
+            "type2": true,
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-04.%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%82%AC%ED%9A%8C%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EB%82%A8%EC%83%81%EC%A4%80%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B9%80%EC%A3%BC%ED%83%9D%C2%B7%EC%9E%A5%EC%A7%84%EC%95%84%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김상우",
+            "affiliation":"서울화곡초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 석사"],
+            "word":"길잡이 별"
+        },
+        {
+            "name":"김지원",
+            "affiliation":"서울상천초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 석사"],
+            "word":"사회로 나가는 마중물"
+        },
+        {
+            "name":"김현주",
+            "affiliation":"대전 한밭초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 박사"],
+            "word":"세상을 바르게 보는 렌즈"
+        },
+        {
+            "name":"김효선",
+            "affiliation":"광주 마재초등학교 교사",
+            "history":["한국교원대학교 역사교육 석사"],
+            "word":"징검다리"
+        },
+        {
+            "name":"문현진",
+            "affiliation":"울산 신복초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 박사"],
+            "word":"세상에 대한 호기심을 YBM 사회교과서와 함께 해요.",
+            "type2": true
+        },
+        {
+            "name":"박현진",
+            "affiliation":"충북 학성초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 석사"],
+            "word":"수다쟁이 친구"
+        },
+        {
+            "name":"백현민",
+            "affiliation":"세종 조치원교동초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 석사"],
+            "word":"사회를 바라보는 창문"
+        },
+        {
+            "name":"이병민",
+            "affiliation":"경북 구미봉곡초등학교 교사",
+            "history":["한국교원대학교 초등교육과 졸업"],
+            "word":"YBM과 함께라면 사회 공부도 즐겁습니다!",
+            "type2": true
+        },
+        {
+            "name":"이수룡",
+            "affiliation":"경기 한빛초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 박사"],
+            "word":"신기한 놀이터"
+        },
+        {
+            "name":"이현진",
+            "affiliation":"경북 장성초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 박사"],
+            "word":"안전핀(뽑으면 사고력 폭발!)"
+        },
+        {
+            "name":"장진아",
+            "affiliation":"서울남명초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 박사"],
+            "word":"연결고리",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-04.%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%82%AC%ED%9A%8C%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EB%82%A8%EC%83%81%EC%A4%80%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B9%80%EC%A3%BC%ED%83%9D%C2%B7%EC%9E%A5%EC%A7%84%EC%95%84%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"장혜정",
+            "affiliation":"서울탑산초등학교 교사",
+            "history":["한국교원대학교 초등사회과교육 박사"],
+            "word":"공부하면 세상을 보는 눈을 키울 수 있어요.",
+            "type2": true
+        }
+    ],
+    "character":[
+        {"name":"사회 3-1"},
+        {"name":"사회 3-2"},
+        {"name":"사회 4-1"},
+        {"name":"사회 4-2"},
+        {"name":"사회 5-1"},
+        {"name":"사회 5-2"},
+        {"name":"사회 6-1"},
+        {"name":"사회 6-2"}
+    ],
+    "booktab":[
+        [
+            "생활 소재를 활용한 흥미로운 교과서",
+            "질문을 통해 스스로 생각하는 힘을 키우는 교과서",
+            "놀이 활동으로 학습에 즐거움을 주는 교과서"
+        ],
+        [
+            "수업에 활용할 자료를 체계적으로 수록",
+            "각종 평가 문제와 알찬 참고 자료 제공",
+            "전체적인 수업 계획과 효율적인 수업 방법 안내"
+        ],
+        [
+            "수업을 재구성할 수 있는 '나만의 맞춤 수업'",
+            "차시 흐름에 맞춘 다양한 멀티미디어 자료",
+            "학습 수준을 점검할 수 있는 풍부한 평가 자료"
+        ]
+    ]
+}

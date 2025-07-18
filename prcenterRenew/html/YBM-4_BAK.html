@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="YBM교과서 홍보관">
+    <meta property="og:description" content="YBM 초중고 교과서 전 과목 39종 77책 합격!">
+    <meta property="og:image" content="https://www.ybmcloud.com/prcenterRenew/img/op_image.jpg">
+    <meta property="og:url" content="">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
+    <title>YBM홍보관 - 메인</title>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js" as="script">
+    <link rel="preconnect" href="https://img.youtube.com">
+
+    <link rel="stylesheet" href="/prcenterRenew/common/css/import.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- #오픈 이벤트: 교과서 찾기 이벤트 / 2024.08.27 유재란 / ran@indusweb.co.kr
+     #필요한 페이지에 내용 떼다가 활용하시면 됩니다.(css, html, js)
+     #이미지 사이즈는 ev-img-book 클래스의 width속성을 조절하여 적절한 크기로 조정할 수 있습니다.
+     #이미지명-과목 설명
+     ########################################################################
+     ev_icon01.png  기술·가정
+     ev_icon02.png  미술
+     ev_icon03.png  보건
+     ev_icon04.png  사회
+     ev_icon05.png  수학
+     ev_icon06.png  영어
+     ev_icon07.png  음악
+     ev_icon08.png  정보
+     ev_icon09.png  진로와직업
+     ev_icon10.png  체육
+     ev_icon11.png  한문
+     ########################################################################
+-->
+<style>
+.ev-sb240830{display: none; opacity: 0; position: fixed; z-index: 9999; right: 40px; bottom: 40px; transition: opacity 0.5s ease-in-out;}
+.ev-sb240830 .ev-img-book{width: 180px; height: auto; cursor: pointer}
+@media (max-width: 640px){
+    .ev-sb240830{right: 20px; bottom: 20px;}
+    .ev-sb240830 .ev-img-book{width: 100px;}
+}
+</style>
+<div class="ev-sb240830">
+    <div class="ev-img-book"><img src="../img/ev240830/ev_icon01.png" alt=""></div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        var element = document.querySelector('.ev-sb240830');
+        element.style.display = 'block';
+        setTimeout(function() {
+            element.style.opacity = 1;
+        }, 50); // transition 효과를 위해 약간의 지연 추가
+    }, 5000); // 페이지 진입 5초 후 요소 표시
+    document.querySelector('.ev-sb240830').addEventListener('click', function() {
+        var element = this;
+        element.style.opacity = 0;
+        element.addEventListener('transitionend', function() {
+            element.style.display = 'none';
+        }, { once: true });
+    }); // 클릭 시 요소 사라짐
+});
+</script>
+<!-- //오픈 이벤트: 교과서 찾기 이벤트 끄으읏 -->
+
+    <!-- ntight버전 : body-main에 night 클래스 추가 -->
+    <div class="body-container body-main night">
+
+        <!--그랜드 오픈 반영 -->
+        <header>
+            <div class="wrapper lg">
+                <h1><a href="YBM-4.html"><img src="/prcenterRenew/img/ico_logo.svg" alt=""></a></h1>
+                <div class="gnb-wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#;">2022개정 교과서</a>
+                            <ul class="depth">
+                                <li><a href="YBM-6.html">2022개정 교육과정 <br>이렇게 달라졌어요</a></li>
+                                <li><a href="YBM-6_YBM.html">YBM 교과서</a></li>
+                                <li><a href="YBM-6_AI.html">YBM AI 디지털교과서</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sub/BOOK_MAIN_ELE.html">초등학교</a></li>
+                        <li><a href="sub/BOOK_MAIN_MID.html">중학교</a></li>
+                        <li><a href="sub/BOOK_MAIN_HI.html">고등학교</a></li>
+                        <li>
+                            <a href="#;">Y클라우드</a>
+                            <ul class="depth">
+                                <li><a href="YBM-7.html">교수 학습 자료</a></li>
+                                <li><a href="YBM-7-news.html">YBM 소식</a></li>
+                                <li><a href="YBM-6_history.html">YBM 히스토리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hamburger">
+                    <input type="checkbox" name="toggleCheck">
+                    <div class="bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="floating-wrap">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <a href="https://www.ybmcloud.com/home.html" target="_blank">
+                            <img src="/prcenterRenew/img/ico_float_Y.svg" alt="" loading="lazy">
+                            <span>Y클라우드</span>
+                        </a>
+                    </li>
+                    <li class="sns">
+                        <a href="#;">
+                            <img src="/prcenterRenew/img/ico_float_sns.svg" alt="" loading="lazy">
+                            <span>SNS 채널</span>
+                        </a>
+                        <div class="float-sns">
+                            <div class="box">
+                                <a href="https://www.instagram.com/ybm_textbook/" target="_blank"><img src="/prcenterRenew/img/ico_sns_instargram.svg" alt="" loading="lazy"></a>
+                                <a href="https://blog.naver.com/ybm_text" target="_blank"><img src="/prcenterRenew/img/ico_sns_blog.svg" alt="" loading="lazy"></a>
+                                <a href="https://pf.kakao.com/_hPxbJC" target="_blank"><img src="/prcenterRenew/img/ico_sns_kakao.svg" alt="" loading="lazy"></a>
+                                <a href="https://www.youtube.com/@Ycloud_YBM" target="_blank"><img src="/prcenterRenew/img/ico_sns_youtube.svg" alt="" loading="lazy"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"onclick="clip(); return false;">
+                            <img src="/prcenterRenew/img/ico_float_share.svg" alt="" loading="lazy">
+                            <span>링크 공유</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="typeof">
+                    <li>
+                        <a href="https://www.ybmcloud.com/EYjKI" target="_blank">
+                            <img src="/prcenterRenew/img/ico_event.svg" alt="" loading="lazy">
+                            <span>이벤트</span>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="btn-bottom"><span></span></button>
+            </div>
+        </div>
+
+        <section class="main">
+            <!-- AI 디지털교과서 -->
+            <div class="floating-ai-banner">
+                <span>AI와 함께하는 미래교육,<br>YBM이 이끌어 갑니다</span>
+                <p>AI 디지털교과서</p>
+                <a href="YBM-6_AI.html">바로가기</a>
+                <img src="/prcenterRenew/img/bot_floating.png" alt="">
+            </div>
+
+            <canvas class="fireworks"></canvas>
+            <div class="contain">
+
+                <div class="cloud-wrap">
+                    <div class="box box1">
+                        <img class="img2" src="/prcenterRenew/img/img_cloud2.svg" alt="" loading="lazy">
+                        <img class="img2" src="/prcenterRenew/img/img_cloud2.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="box box2">
+                        <img class="img2" src="/prcenterRenew/img/ico_main_cloud.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="box box3">
+                        <img class="img2" src="/prcenterRenew/img/ico_main_cloud.svg" alt="" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="sun-wrap m1_cGroup">
+                    <img src="/prcenterRenew/img/ico_sun.svg" alt="" loading="lazy">
+                </div>
+
+                <div class="obj-wrap">
+                    <div class="rail">
+                        <div class="obj airplane">
+                            <img class="" src="/prcenterRenew/img/ico_airplane.svg" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-text-wrap m1_cGroup">
+                    <img src="/prcenterRenew/img/img_main_text.svg" alt="" loading="lazy">
+                </div>
+
+                <div class="main-swiper m1_cGroup">
+                    <div class="obj-wrap">
+                        <div class="obj fly">
+                            <img class="" src="/prcenterRenew/img/ico_fly_obj.svg" alt="" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- <div class="swiper-slide">
+                                <div class="item item1">
+                                    <p class="title sm"><span>2022 개정 교육과정</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-6.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj2" src="/prcenterRenew/img/ico_obj1.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">
+                                        <em>2022 개정 교육과정</em><br>
+                                        이렇게 달라졌어요
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item item2">
+                                    <p class="title sm"><span>2022 개정 YBM 교과서</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-6_YBM.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj1" src="/prcenterRenew/img/ico_obj2.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">
+                                        <em>2022 개정 교육과정</em><br>
+                                        YBM 교과서가 함께 합니다
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item item3">
+                                    <p class="title sm"><span>AI 디지털교과서</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-6_AI.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj1" src="/prcenterRenew/img/ico_obj3.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">
+                                        <em>세상에 없던 새로운 교과서</em>가
+                                        찾아옵니다
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item item4">
+                                    <p class="title"><span>Y클라우드</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-7.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj1" src="/prcenterRenew/img/ico_obj4.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">수업이 필요한 모든 순간<br> <em>Y클라우드</em>가 함께합니다</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item item5">
+                                    <p class="title"><span>YBM HISTORY</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-6_history.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj2" src="/prcenterRenew/img/ico_obj5.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">
+                                        <em>60여년 간 이어 온
+                                        교육 전문회사의 역사</em>를 만나보세요
+                                    </span>
+                                </div>
+                            </div> -->
+                            <div class="swiper-slide">
+                                <div class="item item-ele">
+                                    <p class="title"><span>초등학교</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-6_history.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj2" src="/prcenterRenew/img/ico_obj_ele.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">
+                                        내일을 담은
+                                        <em>교과서</em>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item item-mid">
+                                    <p class="title"><span>중학교</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-6_history.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj2" src="/prcenterRenew/img/ico_obj_mid.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">
+                                        내일을 여는
+                                        <em>교과서</em>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item item-hi">
+                                    <p class="title"><span>고등학교</span></p>
+                                    <div class="contain">
+                                        <a href="YBM-6_history.html" class="inner"></a>
+                                        <p class="img-box"><img class="obj obj2" src="/prcenterRenew/img/ico_obj_hi.svg" alt="" loading="lazy"></p>
+                                    </div>
+                                    <span class="desc">
+                                        내일로 가는
+                                        <em>교과서</em>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+
+                <div class="obj-wrap bottom ">
+                    <div class="container m1_cGroup">
+                    </div>
+                </div>
+
+                <div class="book-wrap">
+                    <div class="container">
+                        <div class="inner m1_cGroup">
+                            <!-- <div class="hole"><img src="/prcenterRenew/img/hole.svg" alt=""></div> -->
+                            <div class="wrapper">
+                                <img class="book" src="/prcenterRenew/img/ico_book.png" alt="" loading="lazy">
+                                <img class="ico y" src="/prcenterRenew/img/ico_obj_Y.svg" alt="" loading="lazy">
+                                <img class="ico b" src="/prcenterRenew/img/ico_obj_B.svg" alt="" loading="lazy">
+                                <img class="ico m" src="/prcenterRenew/img/ico_obj_M.svg" alt="" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section section01" >
+            <div class="container-wrapper">
+                <div class="wrapper">
+                    <img  src="/prcenterRenew/img/ico_tooltip_sec1.png" alt="" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="300" loading="lazy">
+                    <img  src="/prcenterRenew/img/img_sec1_txt.svg" alt="" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="300" loading="lazy">
+                    <div class="board-list mg top-40" data-aos="fade-down" data-aos-duration="1500" loading="lazy">
+                        <div class="list-item">
+                            <a href="https://wcontents.ybmcloud.com/pr/edutech_kor/" target="_blank" class="list-box">
+                                <div class="inner">
+                                    <div class="img-box"><img src="/prcenterRenew/img/update_board_20241018_1.png" alt="" loading="lazy"></div>
+                                    <div class="desc-box">
+                                        <span class="new">NEW</span>
+                                        <h2 class="board-title">신선한 YBM 교과서, 전면 대공개!</h2>
+                                        <p class="desc">선생님과 함께 키워낸 YBM교과서를 드디어 공개합니다! 2024 에듀테크 코리아 페어 현장 스케치에서 YBM이 준비한 신선한 교과서와 다양한 콘텐츠를 만나 보세요!</p>
+                                        <div class="more-box">
+                                        <button type="button" class="btn-bore">더보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-item">
+                            <a href="https://youtu.be/n_VppXYRNdQ" target="_blank" class="list-box">
+                                <div class="inner">
+                                    <div class="img-box"><img src="/prcenterRenew/img/update_board_20240830_1.png" alt="" loading="lazy"></div>
+                                    <div class="desc-box">
+                                        <span class="new">NEW</span>
+                                        <h2 class="board-title">YBM교과서, 자신 있습니다!</h2>
+                                        <p class="desc">미래 교육을 선도하는 YBM교과서의 비전과 대표님의 깊은 고민, 그리고 자신감 넘치는 각오까지! 교육에 진심인 허문호 대표님과의 단독 인터뷰, 지금 만나보세요!</p>
+                                        <div class="more-box">
+                                        <button type="button" class="btn-bore">더보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-item">
+                            <a href="https://www.youtube.com/playlist?list=PLUQw9OQxxLG4T01YB_FjWmjT-eTiLqquq" target="_blank" class="list-box">
+                                <div class="inner">
+                                    <div class="img-box"><img src="/prcenterRenew/img/update_board_20241002_1.png" alt="" loading="lazy"></div>
+                                    <div class="desc-box">
+                                        <h2 class="board-title">
+                                            2022 개정 YBM 교과서를 만든 사람들
+                                        </h2>
+                                        <p class="desc">
+                                            2022 개정 교육과정을 바탕으로 새롭고 신선한 YBM 교과서를 만든 사람들을 만나보세요!
+                                        </p>
+                                        <div class="more-box">
+                                            <button type="button" class="btn-bore">더보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-item">
+                            <a href="https://www.ybmcloud.com/cscenter/notice/378?siteType=E&noticeType=&schlLevel=&searchType=&searchKeyword=&pageNo=1&menuType=1001" target="_blank" class="list-box">
+                                <div class="inner">
+                                    <div class="img-box"><img src="/prcenterRenew/img/img_board_top2.png" alt="" loading="lazy"></div>
+                                    <div class="desc-box">
+                                        <h2 class="board-title">초등 수학 AI 진단 프로그램<br> AI 스쿨 BETA 오픈!</h2>
+                                        <p class="desc">AI 분석을 통해 우리 반에 꼭 맞는 설계는 물론<br>진단 리포트, 개별 과제 맞춤까지!</p>
+                                        <div class="more-box">
+                                            <button type="button" class="btn-bore">더보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-item">
+                            <a href="https://www.ybmcloud.com/cscenter/event" target="_blank" class="list-box">
+                                <div class="inner">
+                                    <div class="img-box"><img src="/prcenterRenew/img/img_board_top5.png" alt="" loading="lazy"></div>
+                                    <div class="desc-box">
+                                        <h2 class="board-title">Y클라우드 선생님만을 위한 EVENT에 참여해 보세요!</h2>
+                                        <p class="desc">수업 자료 신청과 수업 후기 남기기 등 풍성한 이벤트가 선생님을 기다리고 있어요!</p>
+                                        <div class="more-box">
+                                            <button type="button" class="btn-bore">더보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="event-container2"  data-aos="fade-down" data-aos-duration="1500" data-aos-offset="300">
+                        <a href="#"><img src="/prcenterRenew/img/img_banner_event2_pc.png" alt="" class="img-pc" loading="lazy"></a>
+                        <a href="#"><img src="/prcenterRenew/img/img_banner_event2_mo.png" alt="" class="img-mo" loading="lazy"></a>
+                    </div> -->
+                </div>
+                <div class="obj-wrap">
+                    <img class="obj obj1" src="/prcenterRenew/img/ico_sec1_obj_sun.svg" alt="" loading="lazy">
+                    <img class="obj obj2" src="/prcenterRenew/img/ico_sec1_obj_pen.svg" alt="" loading="lazy">
+                    <div class="obj3">
+                        <img class="obj obj3_0" src="/prcenterRenew/img/ico_sec1_obj_light.svg" alt="" loading="lazy">
+                        <img class="obj obj3_1" src="/prcenterRenew/img/ico_sec1_obj_light2.svg" alt="" loading="lazy">
+                    </div>
+                    <img class="obj obj4" src="/prcenterRenew/img/ico_sec1_obj_star.svg" alt="" loading="lazy">
+                    <img class="obj obj5" src="/prcenterRenew/img/ico_sec1_obj_star2.svg" alt="" loading="lazy">
+                    <img class="obj obj6" src="/prcenterRenew/img/ico_sec1_obj_star3.svg" alt="" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section02">
+            <div class="container-wrapper">
+                <div class="wrapper">
+                    <img src="/prcenterRenew/img/ico_tooltip_sec2.png" alt="" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="300" loading="lazy">
+                    <img src="/prcenterRenew/img/img_sec2_txt.svg" alt="" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="300" loading="lazy">
+                    <div class="thumb-swiper-wrap mg top-40" data-aos="fade-down" data-aos-duration="1500">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="https://youtu.be/KLX3CfOu32I" target="_blank" class="thumb-box">
+                                        <div class="img-box">
+                                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Dm3Uf1Kveb4?si=ZooLXrVN6j_SQ_YJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                                        <img src="https://img.youtube.com/vi/KLX3CfOu32I/maxresdefault.jpg" alt="" class="youtube" class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                        <h3>YBM교과서 편집자 인터뷰</h3>
+                                        <span>
+                                            YBM교과서 편집자 인터뷰를 통해 교과서 개발에 담긴 열정과 진심을 느껴보세요.
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://youtu.be/EpLB0cqYWg0" target="_blank" class="thumb-box">
+                                        <div class="img-box">
+                                            <img src="https://img.youtube.com/vi/EpLB0cqYWg0/mqdefault.jpg" alt="" class="youtube"  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <h3>Hit the Road! 2024 YBM 콘텐츠 자문위원 발대식</h3>
+                                            <span>
+                                                전 과목 수업 자료실 Y클라우드가 선생님의 스마트한 수업을 도와드립니다.
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://youtu.be/Dm3Uf1Kveb4" target="_blank" class="thumb-box">
+                                        <div class="img-box">
+                                            <img src="https://img.youtube.com/vi/Dm3Uf1Kveb4/mqdefault.jpg" alt="" class="youtube"  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <h3>2024 Math&Science Camp with MIT students</h3>
+                                            <span>
+                                                MIT 학생들이 수업을 기획, 구성하고 선생님으로 함께한 수학&과학 캠프가 개최됐습니다!🤓🎉
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="https://youtu.be/BK714UCYbIY" target="_blank" class="thumb-box">
+                                        <div class="img-box">
+                                            <img src="https://img.youtube.com/vi/BK714UCYbIY/mqdefault.jpg" alt="" class="youtube"  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <h3>기회를 위해 변화하세요. 변화를 위해 도전하세요.</h3>
+                                            <span>
+                                                더 좋은 교실, 더 좋은 교육을 위해 늘 변화를 꿈꾸는 선생님! CHANGE to CHANCE! 변화를 위해 도전하세요!
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"></div>
+                        <div class="swiper-button swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="obj-wrap">
+                    <img class="obj obj1" src="/prcenterRenew/img/ico_sec2_obj_rocket.svg" alt="" loading="lazy">
+                    <img class="obj obj2" src="/prcenterRenew/img/ico_sec2_obj_star1.svg" alt="" loading="lazy">
+                    <img class="obj obj3" src="/prcenterRenew/img/ico_sec2_obj_star2.svg" alt="" loading="lazy">
+                    <img class="obj obj4" src="/prcenterRenew/img/ico_sec2_obj_moon.svg" alt="" loading="lazy">
+                    <img class="obj obj5" src="/prcenterRenew/img/ico_sec2_obj_book.svg" alt="" loading="lazy">
+                    <img class="obj obj6" src="/prcenterRenew/img/ico_sec2_obj_star3.svg" alt="" loading="lazy">
+                    <img class="obj obj7" src="/prcenterRenew/img/ico_sec2_obj_star4.svg" alt="" loading="lazy">
+                    <img class="obj obj8" src="/prcenterRenew/img/ico_sec2_obj_cloud.svg" alt="" loading="lazy">
+                    <img class="obj obj9" src="/prcenterRenew/img/ico_sec2_obj_glasses.svg" alt="" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section03">
+            <div class="container-wrapper">
+                <div class="wrapper">
+                    <img src="/prcenterRenew/img/ico_tooltip_sec3.png" alt="" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="-400" loading="lazy">
+                    <img src="/prcenterRenew/img/img_sec3_txt.svg" alt="" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="-400" loading="lazy">
+                    <div class="review-swiper-wrap" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="-400">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof1" data-popup="comments1">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face1.svg" alt=""  class="swiper-lazy" >
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                아이들이 첫 화면부터 너무 좋아하네요. 과학 교과의 특성과 미래교육의 특징이 잘 드러나게 화면 구성도 멋진 것 같아요. 개인적으로는 최근 이슈가 되고 있는 과학 관련 자료들을 모아둔 것이 창체나 자투리 시간에 활용하기 좋았습니다. 컨텐츠의 퀄리티가 남다르네요!
+                                            </p>
+                                            <span>
+                                                과목별체험관(과학)<br>
+                                                김*은 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof2" data-popup="comments2">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face2.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                스마트과학 체험관에서 용어 사전과 가상 실험실이 정말 유용하다고 생각하고 있었는데, 이번 이벤트를 통해서 과학 퀴즈로 직접 수업을 운영해보니 아이들이 단원 정리할 때 정말 즐겁게 참여하여서 저도 뜻깊은 수업을 할 수 있었어요! 선택, 단답형, O/X등 다양한 유형의 퀴즈로 내용 정리까지! 최고!
+                                            </p>
+                                            <span>
+                                                과목별체험관(과학)<br>
+                                                윤*희 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof3" data-popup="comments3">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face3.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                수학은 학생들 끼리 한 반에서도 수준차가 심해 고민이 많았는데, 수준별로 문제가 구성이 되어있어서 부진아지도~ 조금 어려운 심화문제까지 다 지도가 가능하다는 점이 좋네요!! 학교 내 학력향상 프로그램 운영시에 문제집을 사지 않고 이 문제를 프린트 해서 책처럼 만들어 주니 너무 좋아요!! 감사해요
+                                            </p>
+                                            <span>
+                                                과목별체험관(수학)<br>
+                                                주*진 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof4" data-popup="comments4">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face4.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                도형과 공간영역 학습에는 실물 교구가 최고라고 생각했는데, 오히려 실물보다 더 직관적이고 조작이 간편해서 아이들이 수업에 더 집중할 수 있겠다 싶어요. 선분과 직선, 반직선 교구는 선모양 선택도 가능하고 기호까지 자동으로 나오니 선분 읽는 연습에도 유용할 것 같아요. 이런 디테일함에 반했습니다!
+                                            </p>
+                                            <span>
+                                                과목별체험관(수학)<br>
+                                                이*현 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof5" data-popup="comments5">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face5.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                지도 만들기 기능이 정말 좋아요! 전국의 모든 시군구가 다 있네요. 우리고장 선택해서 그림 기호, 지도 기호, 사진, 글자, 그리기까지 할 수 있어서 아이들이 정말 좋아합니다. ^^ 지루해하던 지도 학습을 재미있고 신나게 할 수 있네요. 여러 번 다시 만들기 해 볼 수 있어서 쉽고 재미있게 학습합니다!
+                                            </p>
+                                            <span>
+                                                과목별체험관(사회)<br>
+                                                송*경 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof1" data-popup="comments6">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face1.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                지도만들기를 통해 우리 지역에 대해 알아보고 지도를 그려보니 실감나고 아이들이 잘 참여하는 모습을 보였습니다. 그리고 지역화자료에서 각 지역별 누리집 소개, 문화 유산도 함께 소개해 주니 수업 진행이 더 수월해지는 것 같아요. 좋은 툴을 제공해 주셔서 감사합니다 ^^
+                                            </p>
+                                            <span>
+                                                과목별체험관(사회)<br>
+                                                김*한 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof2" data-popup="comments7">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face2.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                중요한 계기교육 자료들이 다양하여 학생들에게 필요한 지도에 정말 도움이 많이 됩니다~^^ 학생들도 활동 꾸러미 자료와 수업PPT에 흥미를 많이 가지고 배우고자 하는 집중도가 좋았습니다! 창체 시간 뿐 아니라 교과 시간에도 활용도가 높습니다~ 영상과 학습지, 게임 등을 사용하며 재미있는 계기교욱을 하고 있습니다^^
+                                            </p>
+                                            <span>
+                                                무료 정기 간행물(나의 한 수)<br>
+                                                조*수 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof3" data-popup="comments8">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face3.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                나의 한 수 구독하고 부터는 계기교육 할 때 자료찾을 고민이 없습니다. 수업 자료, 수업 진행, 꿀팁, 후기까지 있으니 준비물은 제로, 퀄리티는 최고 입니다. PPT와 영상을 활용하고 여러 학습지 중 선택해서 활용할 수 있어 아이들도 참 좋아합니다. 앞으로도 많은 콘텐츠로 사랑받는 나의 한 수 기대합니다!
+                                            </p>
+                                            <span>
+                                                무료 정기 간행물(나의 한 수)<br>
+                                                손*상 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof4" data-popup="comments9">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face4.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                매거진Y를 통해서 수업을 바라보는 시야가 넓어진 것 같아 너무 좋습니다. 요즘 수업의 동향이나 새롭고 유용한 자료들이 많이 소개되어서 교과서 위주의 수업에서 벗어나 다양한 자료들을 적용해보니 학생들도 재미있어 하고 저 역시나 새로움에 대한 설렘과 열정이 생겨나는 것 같습니다. 수업의 질을 높여준 매거진Y 감사합니다.
+                                            </p>
+                                            <span>
+                                                무료 정기 간행물(매거진 Y)<br>
+                                                임*택 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof5" data-popup="comments10">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face5.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                티처빙고, 어린이날, 어버이날 활동이 수업을 더욱 알차게 만들고 영어 그림책 Not a box 수업도 아주 유익했습니다. 그림책 활용 영어 수업에 관심이 많아서 앞으로도 영어 그림책 수업 소개해주세요. 브루노 마스의 팝송 Count on me도 따라부르고 Grammar Noun 자료도 좋았습니다. ^^ 다음 매거진도 벌써부터 기대돼요.
+                                            </p>
+                                            <span>
+                                                무료 정기 간행물(매거진 Y)<br>
+                                                주*호 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof1" data-popup="comments11">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face1.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                게임과 같은 형식이라 학습과 흥미를 조화롭게 결합시킬 수 있어 좋았어요. 추가로 좋았던 점을 정리하자면 아래와 같습니다. : ) 1. 참여도 향상, 2. 아이들 학습 상태 직관적으로 파악 가능(필요한 추가 지원 및 지도 제공 가능), 3. 학습 동기 부여(경쟁적 요인) 좋은 학습 툴 만들어주셔서 감사합니다. : )
+                                            </p>
+                                            <span>
+                                                깜짝퀴즈<br>
+                                                김*진 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof2" data-popup="comments12">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face2.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                학생들이랑 수학 공부 후 개인전 풀어보았습니다. 접속이 간편하고, 차시별로 문제가 있어서 활용하기 좋았어요. 애들이 등수도 알 수 있어서 경쟁심을 갖고 재밌게 하더군요. 다만, 중간에 튕긴 학생들이 다시 접속 못한 거 재접속 가능하고 시간 조절할 수 있으면(3분 보다 길게) 최고의 퀴즈 프로그램이 될 것 같아요
+                                            </p>
+                                            <span>
+                                                깜짝퀴즈<br>
+                                                홍*나 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof3" data-popup="comments13">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face3.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                커네팅북을 활용하기 전까지는 리뷰 문제나 교과서 문제 등을 학생 각자 풀도록 시켰는데 그때마다 학생들이 어디까지 했는지, 어떻게 하고있는지 확인하기가 어려웠는데 커네팅북을 활용하니 이런 고민이 싹 사라지는 마법을 경험했습니다ㅎㅎ 그리고 칠판이 아닌 화면에 판서가 가능한 점도 수업 도구로서 너무 유용해요~
+                                            </p>
+                                            <span>
+                                                커넥팅북<br>
+                                                오*서 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof4" data-popup="comments14">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face4.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                QR코드와 링크 주소로 편리하게 학생들과 교과서 장면을 공유하며 수업을 할 수 있어서 좋습니다. 쓰기, 활동 도우미, 칠판 등 수업 보조 도구도 잘 되어 있네요. 진로교육 교과와 인정 교과(창의력) 있어서 활용해 보았는데 교과서 구성, 디자인, 캐릭터, 학습 내용 등도 좋습니다. 편리하고 즐겁게 학습하는 커넥팅북~!!!
+                                            </p>
+                                            <span>
+                                                커넥팅북<br>
+                                                이*주 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof5" data-popup="comments15">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face5.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                게임형태로 되어 있어서 아이들이 배운 내용에 대해서 쉽게 접근할 수 있고 무엇보다도 아이들이 회원가입이 되어있지 않아도 QR코드만으로 쉽게 접속하여 해볼 수 있는 게임이라 좋네요. 학습형 게임이지만 방과후 보충수업때 활용하여 1명의 친구에게 집중적으로 학습을 할 수 있어 최고입니다.
+                                            </p>
+                                            <span>
+                                                쌍방향 영어 게임<br>
+                                                정*녀 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#;" class="review-box typeof4" data-popup="comments16">
+                                        <div class="img-box">
+                                            <img src="/prcenterRenew/img/ico_sec3_face4.svg" alt=""  class="swiper-lazy">
+                                        </div>
+                                        <div class="desc-box">
+                                            <p>
+                                                반 친구들이 배운 내용에 대해서 즐겁게 수업에 참여하는데, 무엇보다 1) 게임참여 방법이 간단(회원가입 필요없어서 굿) 2) 은근히 긴장감있는 빠른 전개와 더불어 고도의 집중력을 요하는 영어단어학습에 도움이 된다는 것 3) 배운 단어를 다시 한 번 돌아볼 수 있는 복습으로도 활용이 가능해 좋습니다. ^^
+                                            </p>
+                                            <span>
+                                                쌍방향 영어 게임<br>
+                                                장*동 선생님
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-pagination"></div>-->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="obj-wrap">
+                    <img class="obj obj1" src="/prcenterRenew/img/ico_sec3_obj_heart.svg" alt="" loading="lazy">
+                    <img class="obj obj2" src="/prcenterRenew/img/ico_sec3_obj_fly.svg" alt="" loading="lazy">
+                    <img class="obj obj3" src="/prcenterRenew/img/ico_sec3_obj_star.svg" alt="" loading="lazy">
+                    <img class="obj obj4" src="/prcenterRenew/img/ico_sec3_obj_star2.svg" alt="" loading="lazy">
+                    <img class="obj obj5" src="/prcenterRenew/img/ico_sec3_obj_star1.svg" alt="" loading="lazy">
+                    <img class="obj obj6" src="/prcenterRenew/img/ico_sec3_obj_book.svg" alt="" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="only-pc">
+                <div class="footer-bottom">
+                    <div class="inn">
+                        <div class="copyright-left">
+                            <img src="/prcenterRenew/img/ico_logo_w.svg" alt="" loading="lazy">
+                            <ul class="link">
+                                <li><a href="http://www.ybm.co.kr/ybm_company/" target="_blank">회사소개</a></li>
+                                <li><a href="javascript:void(0)" class="show-stipulation">이용약관</a></li>
+                                <li><a href="javascript:void(0)" class="show-privacy">개인정보처리방침</a></li>
+                                </ul>
+                            <div class="compony-info mg top-10">
+                                사업자등록번호 101-81-14655   |   대표이사 허문호, 정용환   |   서울시 종로구 종로 104 ㈜와이비엠<br>
+                                고객센터 : 02-2000-0599 FAX : 02-2000-0426 | E-mail ycloud@ybm.co.kr
+                            </div>
+                            <div class="copyright">Copyright ⓒ (주)와이비엠. All rights reserved.</div>
+                        </div>
+                        <div class="copyright-right">
+                            <select name="" id="familySite" class="form-select ver2" onchange="window.open(value,'_blank');">
+                                <option value="">패밀리사이트</option>
+                                <option value="https://school.ybmsmartschool.com">YBM스마트스쿨</option>
+                                <option value="https://www.ybmbooksam.com">YBM북샘</option>
+                                <option value="https://www.ybmteachers.com">YBM교원연수원</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="only-mobile">
+                <ul class="link">
+                    <li><a href="http://www.ybm.co.kr/ybm_company/">회사소개</a></li>
+                    <li><a href="javascript:void(0);" class="show-stipulation">이용약관</a></li>
+                    <li><a href="javascript:void(0);" class="show-privacy"><strong>개인정보처리방침</strong></a></li>
+                    </ul>
+                <div class="copyright">
+                    <p><img src="/prcenterRenew/img/logo_footer_m.png" alt="" loading="lazy"></p>
+                    <address>Copyright ⓒ (주)와이비엠. All rights reserved.</address>
+                    <a href="javascript:void(0);" class="btn xs view-desktop-mode">PC버전</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="popup-wrap"></div>
+
+    <!-- start: 모달 팝업 / 20240905 추가
+        20241002 제거
+     >
+    <div class="modal-layer-popup2" id="modalPopup2">
+        <div class="inner">
+            <div class="top">
+                <a href="https://www.ybmcloud.com/cscenter/event/view/2024/0904/event-detail.html?name=2022%20%EA%B0%9C%EC%A0%95%20%EA%B5%90%EC%9C%A1%EA%B3%BC%EC%A0%95%20YBM%20%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%96%B4%EB%95%8C%EC%9A%94%3F&id=164&dtlName=2022%20%EA%B0%9C%EC%A0%95%20%EA%B5%90%EC%9C%A1%EA%B3%BC%EC%A0%95%20YBM%20%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%96%B4%EB%95%8C%EC%9A%94%3F&eventStatus=eventIng&advisor=N&siteType=E" target="_blank"><img src="/prcenterRenew/img/popup_20240905_pc.png" alt="" loading="lazy"></a>
+            </div>
+            <div class="bottom">
+                <a href="javascript:;" id="closePopup2"><img src="/prcenterRenew/img/ico_close_popup.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    // end -->
+
+    <!-- start: 메인 모달 팝업 -->
+    <div class="modal-layer-popup" id="modalPopup">
+        <div class="inner">
+            <div class="top">
+                <img src="/prcenterRenew/img/img_modal_conts.svg" alt="" loading="lazy">
+                <a href="/prcenterRenew/YBM-6_YBM.html " class="link-btn link1" style="top: 0; left: 0; width: 100%; height: 100%; transform: translate(0);"></a>
+                <!-- <a href="#" class="link-btn link2"></a> -->
+            </div>
+            <!-- <div class="middle">
+                <a href="#">
+                    <img src="/prcenterRenew/img/img_modal_banner.png" alt="">
+                </a>
+            </div> -->
+            <div class="bottom">
+                <a href="javascript:;" id="hideForToday">오늘 하루 보지않기</a>
+                <a href="javascript:;" id="closePopup">닫기</a>
+            </div>
+        </div>
+    </div>
+    <!-- // end -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script><!-- 불꽃 애니메이션 -->
+    <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script><!-- 불꽃 애니메이션 -->
+
+    <script src="../common/js/ui.js"></script>
+    <script src="../common/js/tab.js"></script>
+    <script src="../common/js/modal.js"></script>
+
+    <script>
+
+    // night event
+    const nightNdate = new Date();
+    const nightSdate = new Date("2024-08-25 00:00:00");
+    const nightEdate = new Date("2024-10-30 23:59:59");
+    const nightStime = '00';
+    const nightEtiem = '24';
+    $('.body-main').removeClass('night');
+    if(nightSdate <= nightNdate && nightNdate <= nightEdate && nightStime <= nightNdate.getHours() && nightNdate.getHours() < nightEtiem){
+        $('.body-main').addClass('night');
+    }
+
+    //불꽃 애니메이션
+    const container = document.querySelector('.fireworks')
+    const fireworks = new Fireworks.default(container,{
+        autoresize: true,
+        opacity: 0.5,
+        acceleration: 1.03,
+        friction: 0.97,
+        gravity: 1.5,
+        particles: 200,
+        traceLength: 2,
+        traceSpeed: 2,
+        explosion: 5,
+        intensity: 20,
+        flickering: 50,
+        lineStyle: 'round',
+        hue: {
+            min: 0,
+            max: 360
+        },
+        delay: {
+            min: 130,
+            max: 160
+        },
+        rocketsPoint: {
+            min: 0,
+            max: 100
+        },
+        lineWidth: {
+            explosion: {
+                min: 1,
+                max: 1.5
+            },
+            trace: {
+                min: 2,
+                max: 5
+            }
+        },
+        brightness: {
+            min: 50,
+            max: 80
+        },
+        decay: {
+            min: 0.015,
+            max: 0.03
+        },
+        // explosion: 3,
+        // particles: 100,
+        // traceSpeed: 0.1, //폭죽 올라가는 속도
+        // traceLength: 3, //폭죽 올라갈때 선 길이
+        // opacity: 0.8,
+        // intensity: 20,
+        // rocketsPoint: { //로켓 시작점
+        //     min: 0,
+        //     max: 100
+        // },
+        // hue: {
+        //     min: 0,
+        //     max: 360
+        // },
+        // lineWidth: {
+        //     explosion: { //폭죽 터질때 굵기
+        //         min: 2,
+        //         max: 2.5
+        //     },
+        //     trace: { //선굵기
+        //         min: 3,
+        //         max: 5
+        //     }
+        // },
+    })
+    fireworks.start()
+
+    //메인 Parallax matchMedia
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.saveStyles(".main");
+
+    ScrollTrigger.matchMedia({
+
+        //desktop
+        "(min-width: 1280px)": function() {
+            window.onresize = window.onload = function(){ gsap.set('.main', {x:'0', opacity:1}) }
+            gsap.timeline({defaults:{duration:45}})
+            .add(function(){
+                $('.contain').on('mousemove', function(e){
+                    gsap.to('.m1_cGroup', {duration:1, x:function(i){return (e.clientX/window.innerWidth)/(i+1)*150}, y:function(i){return i*-10*(e.clientY/window.innerHeight)}, rotation:Math.random()*0.1, overwrite:'auto'});
+                });
+            }, 'orbs+=0.5')
+        },
+
+    });
+
+    // //메인 비주얼 swiper
+    window.onload = function() {
+        setTimeout(function() {
+            document.querySelector('.main-swiper .swiper').style.display = 'block';
+            // 스와이퍼 초기화도 여기서 함께 해줍니다.
+            var swiper = new Swiper('.main-swiper .swiper', {
+                slidesPerView: "3",
+                spaceBetween: 60,
+                loop: true,
+                centeredSlides: true,
+                clickable: false,
+                observer: true,
+                observeParents: true,
+                autoplay: {
+                    delay: 7000,
+                },
+                navigation: {
+                    nextEl: ".main-swiper .swiper-button-next",
+                    prevEl: ".main-swiper .swiper-button-prev",
+                },
+                breakpoints: {
+                    320: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                    },
+                    760: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                    },
+                    1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 60,
+                    },
+                },
+            });
+
+        }, ); // 2초 지연
+    };
+
+    //스와이프 메뉴 object
+    /*
+    const swiperObj = document.querySelector(".main-swiper");
+    const swiperAni = gsap.timeline();
+    swiperAni.to(".main-swiper .obj1", {y:0 , opacity: 1,})
+    gsap.from(swiperObj, {
+        animation: swiperAni,
+        duration: 1.4,
+        delay: 0.5,
+        y: -200,
+        opacity: 0,
+        ease: "bounce.out",
+    })
+    */
+
+    const bookAni2 = gsap.timeline();
+    bookAni2.from(".book-wrap .y",{ duration: 1, repeat: -1, yoyo: true, ease: "power1.out", y: 15})
+        .from(".book-wrap .b",{ duration: 1, repeat: -1, yoyo: true, ease: "power1.out", y: -15})
+        .from(".book-wrap .m",{ duration: 1, repeat: -1, yoyo: true, ease: "power1.out", y: -15});
+
+
+    //우측 플로팅배너 이벤트
+    setInterval(function() {
+        const floatEv = document.querySelector(".floating-wrap .inner ul.typeof img");
+        const floatEvAni = gsap.timeline();
+        floatEvAni.fromTo(floatEv, 1 ,{ duration: 0.5, repeat: -1, y:-30, yoyo: true},{ duration: 0.5,ease: "bounce.out", y: 0, yoyo: true});
+    }, 6000);
+
+
+    //section01
+    //swiper
+    var thumbSwiper = new Swiper('.section01 .board-list .swiper', {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        clickable: false,
+        autoplay: {
+            delay: 4000,
+        },
+        navigation: {
+            nextEl: ".section01 .board-list .swiper-button-next",
+            prevEl: ".section01 .board-list .swiper-button-prev",
+        },
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            },
+            680: {
+            slidesPerView: 1,
+            },
+            1280: {
+            slidesPerView: 3,
+            }
+        }
+    });
+
+    //section02
+    //swiper
+    var thumbSwiper = new Swiper('.thumb-swiper-wrap .swiper', {
+        slidesPerView: 4,
+        spaceBetween: 40,
+        clickable: false,
+        observer: true,
+        observeParents: true,
+        navigation: {
+            nextEl: ".thumb-swiper-wrap .swiper-button-next",
+            prevEl: ".thumb-swiper-wrap .swiper-button-prev",
+        },
+        lazy:{
+            loadPrevNext:true,
+        },
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            },
+            680: {
+            slidesPerView: 2,
+            },
+            1280: {
+            slidesPerView: 4,
+            }
+        },
+        on:{
+            // 이미지 autoheight 안될 때
+            lazyImageReady: function() {
+                var thumbSwiper = this;
+                setTimeout(function() {
+                    swiper_issue.updateAutoHeight();
+                }, 100);
+            },
+        },
+    });
+
+    //section03
+    //swiper
+    var reviewSwiper = new Swiper('.review-swiper-wrap .swiper', {
+        slidesPerView: "3",
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        clickable: false,
+        observer: true,
+        observeParents: true,
+        autoplay: {
+            delay: 5000,
+        },
+        // pagination: {
+        //     el: ".review-swiper-wrap .swiper-pagination",
+        //     type: "progressbar",
+        // },
+        scrollbar: {
+            el: ".review-swiper-wrap .swiper-scrollbar",
+            draggable: true,
+        },
+        lazy:{
+            loadPrevNext:true,
+        },
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            },
+            680: {
+            slidesPerView: 3,
+            },
+            960: {
+            slidesPerView: 5,
+            },
+            1440: {
+            slidesPerView: 7,
+            },
+        },
+    });
+    </script>
+</body>
+</html>

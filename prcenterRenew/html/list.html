@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
+
+    <title>Y클라우드 | 리스트 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <style>
+        html, body { font-family: 'Roboto','Noto Sans KR', sans-serif; font-size:16px; font-weight:400; color:#666 }
+        .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small { font-size:60% }
+        a, a:hover { color:#000 }
+        .guide-nav {display: none; background:#fff; border-bottom:1px solid rgba(0,0,0,0.1) }
+        .guide-nav li>a { font-weight:500 }
+        .content-body { padding:0 0 0 0 }
+        .navbar-toggle .icon-bar { background:#272c38 }
+        .navbar-toggle { padding:9px 10px; margin-right:0 }
+        .page-title { background:#272c38; color:#fff; padding:30px 0 }
+        .page-title h1 { color:#fff }
+        .page-title p { font-weight:300; opacity:0.6 }
+        .table-list { height:400px }
+        .page-header { color:#0a51a2 }
+        .box h4 { color:#272c38 }
+        .box h4:before { content:""; displaY:inline-block; padding:0; vertical-align:4px; width:7px; height:7px; background:#272c38; margin-right:8px;  }
+        .g-list li { line-height:20px; margin:4px 0; font-size:14px; font-weight:400 }
+        ul { margin-left:-20px }
+        td { line-height:20px; font-size:14px; font-weight:400; color:#434343; vertical-align: middle ! important }
+        td strong, th { color:#000; font-size:14px; font-weight:600 }
+        th { background:#f6f6f6 }
+        td ul { margin-bottom:0 ; margin-left:-20px}
+        footer { padding:15px 0; text-align:center; background:#f6f6f6; border-top:1px solid #dadada; margin-top:80px; font-size:12px }
+        footer p { margin:0 }
+        .guide-nav li { position:relative }
+        .guide-nav li ul{ display:none; position:absolute; top:50px; left:0; background: #fff; border:1px solid rgba(0,0,0,0.1); border-top:0px none; margin:0; padding:0; width:150%; padding: 12px }
+        .guide-nav li ul li { list-style: none }
+        .guide-nav li ul li a { display:block; font-weight:300; color:#666; padding: 2px 0; font-size:14px }
+        .guide-nav li:hover ul{ display:block }
+        .done{ text-decoration: line-through; color:rgb(168, 168, 168) }
+    </style>
+
+</head>
+<body>
+
+    <!-- Fixed navbar -->
+    <header class="guide-nav navbar navbar-fixed-top" id="top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="overview.html">기본 가이드</a></li>
+                    <li><a href="../../code.html">작성규칙</a></li>
+                    <li><a href="../../plan.html">마크업설계</a></li>
+                    <li><a href="list.html">화면리스트</a>
+                        <ul>
+                            <li><a href="list.html">교사</a></li>
+                            <li><a href="list.html">학생</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav><!--/.navbar-collapse -->
+        </div>
+    </header>
+    <!-- //Fixed navbar -->
+
+    <div class="content-body">
+        <div class="page-title">
+            <div class="container">
+                <h1>화면리스트</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">YBM 교과서 전시관</h3>
+            </div>
+            <div class="col-lg-12">
+				<div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+							<tr>
+								<th scope="col">Depth1</th>
+                                <th scope="col">Depth2</th>
+                                <th scope="col">Depth3</th>
+								<th scope="col">요건</th>
+                                <th scope="col">폴더명</th>
+                                <th scope="col">파일명</th>
+                                <th scope="col">히스토리</th>
+                                <th scope="col">완료여부</th>
+							</tr>
+						</thead>
+                        <tbody>
+                            <tr>
+								<td>Intro</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html</td>
+                                <td><a href="./YBM-5.html" target="_blank">YBM-5.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td>Main</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html</td>
+                                <td><a href="./YBM-4.html" target="_blank">YBM-4.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td>2022 개정 교육과정</td>
+                                <td>교육과정 이렇게 달라졌어요.</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html</td>
+                                <td><a href="./YBM-6.html" target="_blank">YBM-6.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+                                <td>YBM 교과서</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html</td>
+                                <td><a href="./YBM-6_YBM.html" target="_blank">YBM-6_YBM.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td>초등학교 교과서</td>
+                                <td>서브 메인</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html/sub</td>
+                                <td><a href="./sub/BOOK_MAIN_ELE.html" target="_blank">BOOK_MAIN_ELE.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+                                <td>서브 과목별 상세</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html/sub</td>
+                                <td><a href="./sub/BOOKS.html?grade=ele1" target="_blank">BOOKS.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td>중학교 교과서</td>
+                                <td>서브 메인</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html/sub</td>
+                                <td><a href="./sub/BOOK_MAIN_MID.html" target="_blank">BOOK_MAIN_MID.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+                                <td>서브 과목별 상세</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html/sub</td>
+                                <td><a href="./sub/BOOKS.html?grade=mid1" target="_blank">BOOKS.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td>고등학교 교과서</td>
+                                <td>서브 메인</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html/sub</td>
+                                <td><a href="./sub/BOOK_MAIN_HI.html" target="_blank">BOOK_MAIN_HI.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+                                <td>서브 과목별 상세</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html/sub</td>
+                                <td><a href="./sub/BOOKS.html?grade=hi1" target="_blank">BOOKS.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td>Y클라우드</td>
+                                <td>교수 학습 자료</td>
+								<td></td>
+                                <td></td>
+                                <td>/prcenterRenew/html</td>
+                                <td><a href="./YBM-7.html" target="_blank">YBM-7.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

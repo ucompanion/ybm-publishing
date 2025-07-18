@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="YBM교과서 홍보관">
+    <meta property="og:description" content="YBM 초중고 교과서 전 과목 39종 77책 합격!">
+    <meta property="og:image" content="https://www.ybmcloud.com/prcenterRenew/img/op_image.jpg">
+    <meta property="og:url" content="">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
+    <title>YBM홍보관 - 인트로</title>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js" as="script">
+    <link rel="preconnect" href="https://img.youtube.com">
+
+    <link rel="stylesheet" href="/prcenterRenew/common/css/import.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="body-gate">
+        <div class="typing" id="typing"></div>
+        <div class="item-paper-curl">
+            <div class="curl"></div>
+            <div class="logo"></div>
+            <div class="bg"></div>
+        </div>
+    </div>
+
+    <script>
+        let textDiv = document.getElementById('typing');
+        let text = "교과서의 새로운 내일";
+        let i = 0;
+        let audio = new Audio('keyboard_sound.mp3');
+
+        function type(){
+            if(i < text.length){
+                textDiv.innerHTML += text.charAt(i);
+                audio.play();
+                i++
+                setTimeout(type, Math.floor(Math.random() * 420) + 100);
+            }
+        }
+
+        type();
+        if($(window).width() <= 960) {
+            text = '교과서의\n새로운\n내일';
+        }
+
+        // 5초 뒤 메인 진입
+        setTimeout(function(){
+			location.href = "YBM-4.html";
+		}, 5000);
+
+    </script>
+</body>
+</html>

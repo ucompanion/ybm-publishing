@@ -1,0 +1,112 @@
+@import 'variables';
+
+%zero-set{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NPSfontExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+html, body{
+    @extend %zero-set;
+    width: 100%;
+    //min-width: 1280px;
+    background-color: #{$base-bgcolor};
+    font-family: #{$font-stack};
+    font-size: #{$base-font-size};
+    word-break: break-all;
+    color: #{$base-text-color};
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+    //overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    min-width: 320px;
+}
+
+p, ul, ol, h1, h2, h3, h4, h5, div{
+    @extend %zero-set;
+}
+header, article, section, nav, aside, footer{
+    display: block;
+}
+ul,li,ol{
+    list-style: none;
+}
+input, select, button{
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-family: #{$font-stack};
+    font-size: #{$base-font-size};
+    color: #{$base-text-color};
+}
+
+i, em, address{
+    font-style: normal;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+label, button, input[type=submit]{
+    cursor:pointer;
+    display: inline-block;
+}
+
+a, input, button{
+    border: 0 none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    font-family: #{$font-stack};
+    font-size: #{$base-font-size};
+    color: #{$base-text-color};
+    text-decoration: none;
+    background-color: #{$transparent};
+}
+a:active, button:active, input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #{$guide-color};
+    font-weight: 400;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+@mixin ellipsis{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+.blind {
+    display: none;
+}

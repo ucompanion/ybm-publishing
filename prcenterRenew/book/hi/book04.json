@@ -1,0 +1,72 @@
+{
+    "subject": "eng",
+    "title": "영어 독해와 작문 (김은형)",
+    "subscript": "흥미로운 독해와 다양한 장르의 영작문",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"김은형", 
+            "affiliation":"서울대학교 영어교육과 교수", 
+            "history":["서울대학교 영어영문학 학/석사","State University of New York at Buffalo 미국문학 박사"],
+            "word":"생각 근육을 키우는 재미있는 운동장"
+        },
+        {
+            "name":"엄동희", 
+            "affiliation":"중앙대학교 영어영문학과 교수", 
+            "history":["University of Illinois at Urbana-Champaign 영문학 박사"],
+            "word":"우리 영어 독해와 작문은 1타",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-04.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B4%20%EB%8F%85%ED%95%B4%EC%99%80%20%EC%9E%91%EB%AC%B8%20%EC%A0%80%EC%9E%90%20%EC%97%84%EB%8F%99%ED%9D%AC%2C%20%EC%9D%B4%EC%84%B1%ED%98%B8%20%EA%B5%90%EC%88%98%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"이성호", 
+            "affiliation":"중앙대학교 영어영문학과 교수", 
+            "history":["State University of New York at Buffalo 영문학 박사"],
+            "word":"지식의 여정으로 가는 GPS 교과서",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-04.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B4%20%EB%8F%85%ED%95%B4%EC%99%80%20%EC%9E%91%EB%AC%B8%20%EC%A0%80%EC%9E%90%20%EC%97%84%EB%8F%99%ED%9D%AC%2C%20%EC%9D%B4%EC%84%B1%ED%98%B8%20%EA%B5%90%EC%88%98%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"권예지", 
+            "affiliation":"대구여자고등학교 교사", 
+            "history":["경북대학교 영어교육학 석사"],
+            "word":"소재 융합과 사고 확장의 기본서"
+        },
+        {
+            "name":"이주양", 
+            "affiliation":"백암고등학교 교사", 
+            "history":["서울대학교 영어교육학 석사"],
+            "word":"세상을 보는 눈을 키우는 교과서"
+        },
+        {
+            "name":"전채린", 
+            "affiliation":"선부고등학교 교사", 
+            "history":["서울대학교 외국어교육학 석사"],
+            "word":"읽기, 쓰기가 쉽고 재미있어지는 마법"
+        },
+        {
+            "name":"추진아", 
+            "affiliation":"정왕고등학교 교사", 
+            "history":["서울대학교 외국어교육학 석사"],
+            "word":"세계 시민으로의 성장을 위한 발판 "
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "전략의 단계적 적용을 통해 쉽게 읽고 쓰는 교과서",
+            "과정 중심의 체계화된 쓰기 활동",
+            "미디어와 디지털 자료를 이용한 온라인-오프라인 연계 학습"
+        ],
+        [
+            "온/오프라인 연계 수업을 위한 QR코드 활용 안내, 교과서 확장하기 Link, Digital/Online Tool",
+            "교과서에는 없는 예시 답, 추가 문제, 추가 정보, 수행평가",
+            "쓰기 과정을 돕는 More Expressions for Writing, Quiz, More Revising Tip"
+        ],
+        [
+            "영영풀이, 예문과 함께하는 어휘 학습",
+            "따라 읽기, 셰도잉 연습",
+            "동영상 보기와 본문 문장별 음원 재생"
+        ]
+    ]
+}

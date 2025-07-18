@@ -1,0 +1,86 @@
+{
+    "subject": "eng",
+    "title": "공통영어1/2 (박준언)",
+    "subscript": "참신한 주제! 창의적인 활동!",
+    "cover_img_count": 2,
+    "writing_staff": [
+        {
+            "name":"박준언", 
+            "affiliation":"(전) 숭실대학교 영문학과 교수", 
+            "history":["서울대학교 영어교육과 학사","The University of Illinois at Urbana-Champaign 영어교육학과 석사","The University of Illinois at Urbana-Champaign 이중언어교육 박사"],
+            "word":"영어 학습의 안내자",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-01.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EA%B3%B5%ED%86%B5%EC%98%81%EC%96%B41_2%28%EB%B0%95%29%20%EC%A0%80%EC%9E%90%20%EB%B0%95%EC%A4%80%EC%96%B8%C2%B7%ED%99%A9%EC%9D%80%EA%B2%BD%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%ED%99%A9%ED%98%84%EA%B2%BD%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"윤병우", 
+            "affiliation":"(전) 서울시립대학교 교수", 
+            "history":["서울대학교 영어영문학과 영문학 박사"],
+            "word":"가까이하고 싶은 친구"
+        },
+        {
+            "name":"손나리", 
+            "affiliation":"서울대학교 인문사회학술연구교수", 
+            "history":["서울대학교 영어영문학과 현대영미시 박사"],
+            "word":"친절한 응원"
+        },
+        {
+            "name":"황은경", 
+            "affiliation":"명지대학교 교수",
+            "history":["숙명여자대학교 영어영문학과 영어교육 박사"],
+            "word":"열쇠",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-01.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EA%B3%B5%ED%86%B5%EC%98%81%EC%96%B41_2%28%EB%B0%95%29%20%EC%A0%80%EC%9E%90%20%EB%B0%95%EC%A4%80%EC%96%B8%C2%B7%ED%99%A9%EC%9D%80%EA%B2%BD%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%ED%99%A9%ED%98%84%EA%B2%BD%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"최지영", 
+            "affiliation":"성남외국어고등학교 교사", 
+            "history":["서울대학교 영어교육과 영어교육 박사"],
+            "word":"영어 학습의 나침반"
+        },
+        {
+            "name":"오현주", 
+            "affiliation":"미림여자고등학교 교사", 
+            "history":["서울대학교 영어교육과 영어교육 석사"],
+            "word":"K-고딩의 기본템"
+        },
+        {
+            "name":"여기상", 
+            "affiliation":"부개여자고등학교 교사", 
+            "history":["숙명여자대학교 TESOL 석사"],
+            "word":"나를 성장하게 하는 찐친"
+        },
+        {
+            "name":"장환명", 
+            "affiliation":"인화여자고등학교 교사", 
+            "history":["브리스틀대학교 TESOL 석사"],
+            "word":"영어 학습의 주춧돌"
+        },
+        {
+            "name":"황현경", 
+            "affiliation":"영선고등학교 교사", 
+            "history":["서울대학교 사범대학 글로벌교육협력 석사"],
+            "word":"핫이슈를 탐험하는 플랫폼",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-01.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EA%B3%B5%ED%86%B5%EC%98%81%EC%96%B41_2%28%EB%B0%95%29%20%EC%A0%80%EC%9E%90%20%EB%B0%95%EC%A4%80%EC%96%B8%C2%B7%ED%99%A9%EC%9D%80%EA%B2%BD%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%ED%99%A9%ED%98%84%EA%B2%BD%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        }
+    ],
+    "character":[
+        {"name":"공통영어1"},
+        {"name":"공통영어2"}
+    ],
+    "booktab":[
+        [
+            "트렌디하고 참신한 글감과 활동",
+            "학습 전략으로 자기 주도 학습까지!",
+            "과정 중심의 체계적인 쓰기와 프로젝트 활동"
+        ],
+        [
+            "상세한 구문 해설과 배경지식 자료 수록",
+            "활동별 안내 및 수행 평가 성취 기준표 수록",
+            "풍부한 교수 학습 자료 수록"
+        ],
+        [
+            "가독성 높은 서체와 깔끔한 구성",
+            "흥미를 유발하는 영상 수록",
+            "유용한 예시 대화 및 답 수록"
+        ]
+    ]
+}

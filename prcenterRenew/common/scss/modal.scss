@@ -1,0 +1,156 @@
+@import 'variables';
+@import 'common';
+
+/* Bootstrap Transition */
+.fade {
+	transition: opacity .15s linear;
+	&:not(.show){
+		opacity: 0;
+	}
+}
+
+// s: 기본
+.modal {
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+
+	.modal-dialog {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		transition: transform .3s ease-out;
+		transform: translate(0, 50px);
+		pointer-events: none;
+		.btn-close {
+			margin-left: auto;
+		}
+	}
+	// 인터렉션
+	&.show .modal-dialog {
+		transform: none;
+	}
+	&.modal-static .modal-dialog {
+		transform: scale(1.02);
+	}
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	opacity: 0;
+	&.show {
+		opacity: 0.5;
+	}
+	& + .modal-backdrop {
+		z-index: 2000;
+	}
+}
+.modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 280px;
+	max-width: calc(100% - 40px);
+	max-height: calc(100%);
+	background-color: #fff;
+	pointer-events: auto;
+	transition: all 0.2s ease;
+	.modal-header {
+		display: flex;
+		justify-content: space-between;
+		flex:none;
+
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 48px;
+            height: 48px;
+            padding: 0;
+
+            .icn-modal-close {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='black'/%3E%3Cpath d='M29 19L19 29M19 19L29 29' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
+        }
+	}
+	.modal-body {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		flex-basis: auto;
+		overflow: auto;
+		.tab-style1,
+		.tab-style2 {
+			top: 0;
+		}
+	}
+	.modal-footer {
+		display: flex;
+		flex:none;
+	}
+}
+
+// Full
+.modal-full {
+	.modal-dialog {
+        transform: translate(0, 50px);
+        padding: 30px;
+	}
+
+	.modal-content {
+        width: 100%;
+        max-width: 1160px;
+        max-height: 100%;
+        background: no-repeat right top;
+        background-image: url("data:image/svg+xml,%3Csvg width='1160' height='720' viewBox='0 0 1160 720' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 696V24C0 10.7452 10.7451 0 24 0H1076C1089.25 0 1100 10.7452 1100 24C1100 43.8822 1116.12 60 1136 60C1149.25 60 1160 70.7452 1160 84V696C1160 709.255 1149.25 720 1136 720H24C10.7452 720 0 709.255 0 696Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-color: transparent;
+        border-radius: 20px;
+	}
+
+	.modal-header {
+        display: flex;
+		align-items: center;
+
+		.modal-title {
+            flex: 1 1 auto;
+			margin-right: auto;
+		}
+	}
+
+    @include tablet {
+        &.fade {
+            transition: opacity .15s linear;
+        }
+        .modal-dialog {
+            transform: translate(0, 0);
+        }
+        .modal-content {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+.main-news-page {
+    padding: 60px 60px 20px 60px;
+}
+

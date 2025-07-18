@@ -1,0 +1,177 @@
+@import 'variables';
+@import 'common';
+
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body-gate{    
+    height: 100vh;
+    background: nth($active-colors,6);
+    .typing-txt{
+        display: none;
+    }
+    .typing{
+        position: absolute;
+        top: rem-calc(230px);
+        left: rem-calc(250px);
+        font-size: rem-calc(72px);
+        height: rem-calc(70px);
+        font-weight: 600;
+        line-height: 100%;
+        overflow: hidden;
+        color: #fff;
+        z-index: 10;
+        // .Typewriter__cursor{
+        //     font-size: 0px;
+        //     &:after{
+        //         display: inline-block;
+        //         margin-left: 2px;
+        //         vertical-align: middle;
+        //         content: '';
+        //         background: #fff;
+        //         width: rem-calc(1px);
+        //         height: rem-calc(120px);
+        //     }
+        // }
+        &:after{
+            display: inline-block;
+            margin-left: 2px;
+            vertical-align: middle;
+            content: '';
+            background: #fff;
+            width: rem-calc(1px);
+            height: rem-calc(78px);
+            animation:blink infinite .7s ease;
+        }
+    }
+    .typed-out{        
+        position: absolute;
+        top: rem-calc(230px);
+        left: rem-calc(250px);
+        height: rem-calc(70px);
+        color: #fff;
+        z-index: 10;
+        .word{
+            width: 0;
+            display: inline-block;
+            font-size: rem-calc(70px);
+            height: rem-calc(70px); 
+            letter-spacing: rem-calc(-2px);
+            line-height: 100%;
+            margin-right: rem-calc(10px);
+            overflow: hidden;
+            &.w1{
+                animation: 0.5s typing1 .5s steps(4, end) forwards, blink 1s infinite;
+            }
+            &.w2{
+                animation: 0.35s typing2 1.5s steps(3, end) forwards, blink 1s infinite;
+            }
+            &.w3{
+                animation: 0.35s typing3 2.2s steps(2, end) forwards, blink 1s infinite;
+                border-right: rem-calc(1px) solid rgb(0, 0, 0);
+            }
+        }
+    }
+    .item-paper-curl{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 655px;
+        height: 475px;
+        z-index: 20;
+        .bg{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 522px;
+            height: 301px;
+            background: url(#{$img-url}img_papercurl_bg.svg) no-repeat right bottom / contain;
+            z-index: 0;            
+            animation: ani_papercurl 0.8s ease-in-out 4.6s normal forwards;
+            transform-origin: 100% 100%;
+            transform: scale(1, 1);
+        }
+        .logo{
+            position: absolute;
+            right: rem-calc(40px);
+            bottom: rem-calc(40px);
+            width: rem-calc(290px);
+            height: rem-calc(56px);
+            background: url(#{$img-url}ico_logo.svg) no-repeat center center / contain;
+            z-index: 9;
+            animation: logo-fade 0.5s ease-out 4.6s normal forwards;
+        }
+        .curl{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 655px;
+            height: 475px;
+            background: url(#{$img-url}img_papercurl.svg) no-repeat right bottom / contain;
+            z-index: 10;            
+            animation: ani_papercurl 0.8s ease-in-out 4.6s normal forwards;
+            transform-origin: 100% 100%;
+            transform: scale(1, 1);
+        }
+    }
+    
+    @keyframes typing1 {
+        from { width: 0 }
+        to { width: rem-calc(236px) }
+    }
+    @keyframes typing2 {
+        from { width: 0 }
+        to { width: rem-calc(184px) }
+    }
+    @keyframes typing3 {
+        from { width: 0 }
+        to { width: rem-calc(130px) }
+    }
+    @keyframes blink {
+        0%	{opacity:0;}
+        100% {opacity:1;}
+    }
+    @keyframes ani_papercurl{
+        to{
+            transform: scale(8.8, 8.8);
+        }
+    }
+    @keyframes logo-fade{
+        to{
+            opacity: 0;
+        }
+    }
+}
+
+@include mobile{
+    .body-gate{
+        .typing{
+            top: rem-calc(160px);
+            left: rem-calc(40px);
+            // width: rem-calc(260px);
+            // height: rem-calc(500px);
+            width: 100%;
+            height: 50%;
+            line-height: 120%;
+            white-space: pre-line;
+        }
+        .item-paper-curl{
+            .bg{
+                transform: scale(0.5);
+            }
+            .logo{
+                right: rem-calc(30px);
+                bottom: rem-calc(20px);
+                width: rem-calc(145px);
+            }
+            .curl{
+                transform: scale(0.5);
+            }
+        }
+    }
+}

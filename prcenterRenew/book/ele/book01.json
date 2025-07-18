@@ -1,0 +1,99 @@
+{
+    "subject": "eng",
+    "title": "영어 3~6학년 (김혜리)",
+    "subscript": "재미있는 이야기와 다양한 학습 자료로 꽉 찬 초등 맞춤 영어 교과서 Link the World!",
+    "cover_img_count": 4,
+    "writing_staff": [
+        {
+            "name":"김혜리",
+            "affiliation":"서울교육대학교 영어교육과 교수",
+            "history":["Arizona State University 영어교육 박사", "경북대학교 영어영문학 문학 박사"],
+            "word":"초등 영어의 선두주자",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-01.%20%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B4%28%EA%B9%80%29%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EA%B9%80%ED%98%9C%EB%A6%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B2%BD%EC%A7%80%EC%88%99%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"안경자",
+            "affiliation":"서울교육대학교 영어교육과 교수",
+            "history":["Pennsylvania State University 응용언어학 (영어교육학) 박사"],
+            "word":"영어 학습의 동행"
+        },
+        {
+            "name":"경지숙",
+            "affiliation":"군포능내초등학교 교사",
+            "history":["서울교육대학교 초등영어교육 석사"],
+            "word":"어린이를 영어의 세계로 초대하는 ‘베프’",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-01.%20%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B4%28%EA%B9%80%29%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EA%B9%80%ED%98%9C%EB%A6%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B2%BD%EC%A7%80%EC%88%99%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김태영",
+            "affiliation":"남양주백봉초등학교 교사",
+            "history":["서울교육대학교 초등영어교육 석사"],
+            "word":"다양한 활동, 깊이 있는 학습으로 영어 의사소통 능력을 키워주는 교과서"
+        },
+        {
+            "name":"신재욱",
+            "affiliation":"서울선린초등학교 교사",
+            "history":["서울교육대학교 초등영어교육 석사"],
+            "word":"학생과 교사를 가장 잘 이해하는 교과서"
+        },
+        {
+            "name":"김민희",
+            "affiliation":"서울양진초등학교 교사",
+            "history":["서울교육대학교 초등영어교육 석사"],
+            "word":"다채롭고 즐거운 영어 학습 경험을 제공하는 교과서"
+        },
+        {
+            "name":"박현진",
+            "affiliation":"서울위례솔초등학교 교사",
+            "history":["서울교육대학교 초등영어교육 석사"],
+            "word":"맞춤형 교육을 제공하는 교과서"
+        },
+        {
+            "name":"김수인",
+            "affiliation":"서울숭덕초등학교 교사",
+            "history":["서울교육대학교 초등영어교육 석사"],
+            "word":"여섯 가지 핵심역량의 강화를 돕는 교과서"
+        },
+        {
+            "name":"장이정",
+            "affiliation":"서울장충초등학교 교사",
+            "history":["서울교육대학교 초등영어교육 석사"],
+            "word":"체계적인 이해와 창의적인 표현을 돕는 교과서"
+        },
+        {
+            "name":"Matthew Crawford",
+            "affiliation":"(전) 서울교육대학교 영어교육과 교수",
+            "history":["University of Victoria 영어영문학 석사"],
+            "word":"The book will stimulate your imagination and open your mind to the richness of English."
+        },
+        {
+            "name":"Allan Choi",
+            "affiliation":"서울탑동초등학교 원어민 교사",
+            "history":["University of California, Los Angeles 영어영문학 학사"],
+            "word":"The YBM textbooks guide and encourage students to be self-driven."
+        }
+    ],
+    "character":[
+        {"name":"영어 3학년"},
+        {"name":"영어 4학년"},
+        {"name":"영어 5학년"},
+        {"name":"영어 6학년"}
+    ],
+    "booktab":[
+        [
+            "철자부터 문장 이해까지 이어지는 체계적인 파닉스 학습",
+            "리터러시 학습 트렌드를 반영한 읽기·쓰기 능력 강화",
+            "다양한 학습 전략과 Tip으로 자기주도 학습이 가능"
+        ],
+        [
+            "수업에 필요한 모든 자료를 지원",
+            "학습 수준에 맞는 정확한 TEE 표현이 가득",
+            "차시별 한눈에 보기로 수업의 흐름을 한 번에 파악"
+        ],
+        [
+            "고퀄리티의 애니메이션, 동영상 자료로 완성되는 풍부한 수업",
+            "AI Check 활동을 통해 맞춤형 학습 지원",
+            "다양한 뷰어 기능으로 선생님들의 수업을 지원"
+        ]
+    ]
+}

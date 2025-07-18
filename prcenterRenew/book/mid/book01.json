@@ -1,0 +1,72 @@
+{
+    "subject": "eng",
+    "title": "영어 1 (박준언)",
+    "subscript": "미래 인재를 위한 스마트 영어 가이드",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"박준언", 
+            "affiliation":"(전) 숭실대학교 영어영문학과 교수", 
+            "history":["한국외국어교육학회, 이중언어학회 회장 역임"],
+            "word":"빛(light)<span class='desc'>장차 우리나라뿐 아니라 전 세계로 뻗어나갈 학생들 모두에게 이 교과서가 꿈을 밝히는 빛이 되길 바란다.</span>",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-01.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B41%28%EB%B0%95%29%20%EC%A0%80%EC%9E%90%20%EB%B0%95%EC%A4%80%EC%96%B8%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%9E%A5%EC%9D%80%EA%B2%BD%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"김명희", 
+            "affiliation":"숙명여자대학교 영어영문학부 교수", 
+            "history":["영어교육학 박사"],
+            "word":"풍성한 삶으로의 안내자"
+        },
+        {
+            "name":"김수연", 
+            "affiliation":"한국외국어대학교 영미문학∙문화학과 교수", 
+            "history":["영문학 박사"],
+            "word":"글로벌 영어 가이드"
+        },
+        {
+            "name":"장은경", 
+            "affiliation":"서울 둔촌고등학교 교사",
+            "history":["영어교육학 석사"],
+            "word":"탐험가의 지도",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/02-01.%20%EC%A4%91%ED%95%99%EA%B5%90%20%EC%98%81%EC%96%B41%28%EB%B0%95%29%20%EC%A0%80%EC%9E%90%20%EB%B0%95%EC%A4%80%EC%96%B8%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%9E%A5%EC%9D%80%EA%B2%BD%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+        },
+        {
+            "name":"박병륜", 
+            "affiliation":"인하대학교 사범대학 부속중학교 교사", 
+            "history":["영어교육학 석사"],
+            "word":"영어 공부의 보물 상자"
+        },
+        {
+            "name":"고근희", 
+            "affiliation":"인하대학교 사범대학 부속중학교 교사", 
+            "history":["영문학 졸업"],
+            "word":"꿈을 현실로 만드는 열쇠"
+        },
+        {
+            "name":"고은별", 
+            "affiliation":"서울 윤중중학교 교사", 
+            "history":["영어교육학 졸업"],
+            "word":"세상을 이해하는 창"
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "주제 중심의 유기적 구성 체제",
+            "트렌디하고 흥미로운 소재의 읽기 자료",
+            "디지털 리터러시 향상을 위한 다양한 장치"
+        ],
+        [
+            "선생님들의 수업 준비를 도와줄 다양한 계획서",
+            "체계적인 단원 지도 로드맵",
+            "수준 높은 수업을 도와줄 방대한 자료들"
+        ],
+        [
+            "생동감 넘치는 멀티미디어 자료",
+            "다양한 교수 학습 자료",
+            "지속적인 업데이트"
+        ]
+    ]
+}
