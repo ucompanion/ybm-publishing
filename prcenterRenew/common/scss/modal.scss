@@ -111,7 +111,7 @@
 .modal-full {
 	.modal-dialog {
         transform: translate(0, 50px);
-        padding: 30px;
+        padding: rem-calc(30px) rem-calc(60px);
 	}
 
 	.modal-content {

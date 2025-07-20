@@ -1147,7 +1147,113 @@
 }
 
 // 게시판 상세
+.board-detail-wrap {
+    .board-detail {
+        .board-title {
+            margin-bottom: rem-calc(40px);
+            text-align: center;
 
+            .title {
+                font-weight: 700;
+                font-size: rem-calc(28px);
+                line-height: rem-calc(40px);
+                color: #000;
+                strong {
+                    font-weight: 700;
+                }
+            }
+            .date {
+                margin-top: rem-calc(12px);
+                font-size: rem-calc(16px);
+                line-height: rem-calc(24px);
+                color: #999;
+            }
+        }
+        .board-content {
+            font-weight: 400;
+            font-size: rem-calc(16px);
+            line-height: rem-calc(24px);
+            color: #666;
+
+            img {
+                max-width: 100%;
+            }
+            p:has(img) + p {
+                margin-top: rem-calc(40px);
+            }
+        }
+    }
+
+    .board-pager {
+        display: flex;
+        justify-content: space-between;
+        gap: rem-calc(20px);
+        margin-top: rem-calc(40px);
+
+        .board-pager-nav {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            gap: rem-calc(8px);
+            width: 100%;
+            padding: rem-calc(24px);
+            border-radius: rem-calc(8px);
+            background-color: #eee;
+            &:first-child {
+                padding-left: rem-calc(52px);
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: rem-calc(52px);
+            }
+
+            .prev,
+            .next {
+                position: relative;
+                font-weight: 600;
+                font-size: rem-calc(16px);
+                line-height: rem-calc(24px);
+                color: #999;
+                &::before {
+                    content:'';
+                    position: absolute;
+                    top: rem-calc(2px);
+                    width: rem-calc(20px);
+                    height: rem-calc(20px);
+                    background: no-repeat center center / contain;
+                    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 5L12.5 10L7.5 15' stroke='%23999999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+            }
+
+            .prev {
+                &::before {
+                    left: rem-calc(-28px);
+                    transform: scaleX(-1);
+                }
+            }
+
+            .next {
+                &::before {
+                    right: rem-calc(-28px);
+                    transform: scaleX(1);
+                }
+            }
+
+
+
+            .title {
+                font-weight: 400;
+                font-size: rem-calc(16px);
+                line-height: rem-calc(24px);
+                color: #000;
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
 
 //////////////////////////////media query/////////////////////////////////////
 @include tablet{

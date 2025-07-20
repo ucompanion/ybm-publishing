@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
+    <script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// 모달 바로 볼 수 있도록 호출
+			var TestModal = new bootstrap.Modal(document.getElementById('newsDetailModal'));
+			TestModal.show();
+		});
+    </script>
 </head>
 <body>
     <!-- ntight버전 : body-main에 night 클래스 추가 -->
@@ -1094,7 +1101,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content modal-board-page">
 				<div class="modal-header">
-					<h3 class="modal-title blind" id="newsDetailModalLabel">최신소식 전체보기</h3>
+					<h3 class="modal-title blind" id="newsDetailModalLabel">최신소식 상세</h3>
 					<button type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#newsListModal">
 						<i class="icn icn-modal-back" aria-label="닫기"></i>
                         <span>목록으로</span>
@@ -1106,107 +1113,37 @@
 
                 <!-- modal-body -->
 				<div class="modal-body">
-                    <div class="board-list-wrap">
-                        <div class="board-util">
-                            <p class="board-count">총 <strong>300</strong>건</p>
+                    <div class="board-detail-wrap">
+                        <div class="board-detail">
+                            <div class="board-title">
+                                <p class="title"><strong>AI 코스웨어를 활용한 미래교실은? AI 코스웨어를 활용한 미래교실은?</strong></p>
+                                <p class="date">2025.07.29</p>
+                            </div>
+                            <div class="board-content">
+                                <div class="data-view">
+                                    <p><img src="../img/upload/img_detail_01.png" alt="" /></p>
+                                    <p>
+                                        안녕하세요. Y클라우드입니다.
+                                        <br />
+                                        <br />항상 Y클라우드를 이용해 주시는 여러분께 감사드립니다.
+                                        <br />Y클라우드에서 제공했던 [전자도서관 - 리딩락] 서비스는 내부 운영 정책에 따라 **2025년 7월 6일(일)**부로 공식 종료됩니다.
+                                        <br />그동안 이용해 주신 고객 여러분께 진심으로 감사드리며, 더 나은 서비스 제공을 위해 노력하겠습니다.
+                                        <br />또한, 본 서비스 종료에 따라 개인정보 처리방침 상의 위탁업체 목록에서 [아이파프리카]가 제외됨을 알려드립니다.
+                                        <br />해당 변경 사항은 **2025년 7월 7일(월)**부터 반영될 예정입니다.
+                                        <br />
+                                        <br />감사합니다.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="board-list">
-                            <table>
-                                <caption class="blind">최신 소식</caption>
-                                <colgroup>
-                                    <col style="width: 80px;" />
-                                    <col style="width: auto;" />
-                                    <col style="width: 120px;" />
-                                </colgroup>
-                                <thead class="blind">
-                                    <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col">제목</th>
-                                        <th scope="col">조회수</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="board-pagination">
-                            <div class="pagination">
-                                <button type="button" class="btn-page prev-double" disabled>
-                                    <span class="blind">처음페이지로 이동</span>
-                                </button>
-                                <button type="button" class="btn-page prev-single" disabled>
-                                    <span class="blind">이전페이지로 이동</span>
-                                </button>
-
-                                <!-- 현재 페이지 aria-current="page" 추가 -->
-                                <button type="button" class="btn-num" aria-current="page">1</button>
-                                <button type="button" class="btn-num">2</button>
-                                <button type="button" class="btn-num">3</button>
-                                <button type="button" class="btn-num">4</button>
-                                <button type="button" class="btn-num">5</button>
-
-                                <button type="button" class="btn-page next-single">
-                                    <span class="blind">다음페이지로 이동</span>
-                                </button>
-                                <button type="button" class="btn-page next-double">
-                                    <span class="blind">마지막페이지로 이동</span>
-                                </button>
+                        <div class="board-pager">
+                            <div class="board-pager-nav">
+                                <p class="prev">이전</p>
+                                <p class="title"><a href="#">전자도서관 - 리딩락 서비스 종료 안내</a></p>
+                            </div>
+                            <div class="board-pager-nav">
+                                <p class="next">다음</p>
+                                <p class="title"><a href="#">공유자료실' 6월 우수 자료를 소개합니다!</a></p>
                             </div>
                         </div>
                     </div>
