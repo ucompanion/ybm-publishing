@@ -20,11 +20,23 @@ iframe{
     --max-width: $breakpoint-tablet;
 
     @include tablet {
+        --sidepacer-main: 3rem;
         --max-width: 100%;
     }
 
     @include mobile {
-        --sidepacer: 20px;
+        --sidepacer-main: 2rem;
+        --sidepacer: 2rem;
+    }
+
+    @include mobileSm {
+        --sidepacer-main: 2rem;
+        --sidepacer: 2rem;
+    }
+
+    @include mobileXs {
+        --sidepacer-main: 1.125rem;
+        --sidepacer: 1.125rem;
     }
 }
 
