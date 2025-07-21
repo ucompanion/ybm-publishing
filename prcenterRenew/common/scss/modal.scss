@@ -70,8 +70,6 @@
 	pointer-events: auto;
 	transition: all 0.2s ease;
 	.modal-header {
-		display: flex;
-		justify-content: space-between;
 		flex:none;
 
         .btn-close {
@@ -95,7 +93,36 @@
 		flex-direction: column;
 		flex-grow: 1;
 		flex-basis: auto;
-		overflow: auto;
+		overflow: hidden;
+
+		.modal-inner {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			flex-basis: auto;
+			overflow: auto;
+
+			&::-webkit-scrollbar {
+				width: 8px;
+				height: 8px;
+				background-color: transparent;
+			}
+
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+				border-radius: 5px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: #E6E6E6;
+				border-radius: 5px;
+				transition: all 0.2s ease;
+			}
+
+			&::-webkit-scrollbar-thumb:hover {
+				background-color: #ccc;
+			}
+		}
 		.tab-style1,
 		.tab-style2 {
 			top: 0;
@@ -122,15 +149,13 @@
         background-image: url("data:image/svg+xml,%3Csvg width='1160' height='961' viewBox='0 0 1160 961' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 937V24C0 10.7452 10.7451 0 24 0H1076C1089.25 0 1100 10.7452 1100 24C1100 43.8822 1116.12 60 1136 60C1149.25 60 1160 70.7452 1160 84V937C1160 950.255 1149.25 961 1136 961H24C10.7452 961 0 950.255 0 937Z' fill='white'/%3E%3C/svg%3E%0A");
         background-color: transparent;
         border-radius: 20px;
+		overflow: hidden;
 	}
 
-	.modal-header {
-        display: flex;
-		align-items: center;
-
-		.modal-title {
-            flex: 1 1 auto;
-			margin-right: auto;
+	.modal-body {
+		padding: rem-calc(60px) rem-calc(16px) rem-calc(60px) rem-calc(60px);
+		.modal-inner {
+			padding-right: rem-calc(34px);
 		}
 	}
 
@@ -146,14 +171,16 @@
             height: 100%;
             max-width: 100%;
             max-height: 100%;
+
         }
     }
 }
 
 // 게시판형 모달페이지
 .modal-board-page {
-	padding: rem-calc(60px) rem-calc(16px) rem-calc(60px) rem-calc(60px);
-    .modal-header {
+	padding-top: rem-calc(60px) !important;
+
+	.modal-header {
 		flex: none;
         padding-bottom: rem-calc(40px);
 		.btn-back {
@@ -175,6 +202,35 @@
 		}
     }
 	.modal-body {
-		padding-right: rem-calc(34px);
+		padding-top: 0;
 	}
 }
+
+// 2022개정 교과서 보기 모달 페이지
+.modal-book-page {
+	background: none !important;
+	.modal-header {
+		height: rem-calc(119px);
+		padding: rem-calc(30px) rem-calc(60px);
+		background: url('../../img/main/img_book_header.png');
+		color: #fff;
+
+		.modal-title {
+			font-weight: 700;
+			font-size: rem-calc(24px);
+			line-height: 100%;
+		}
+
+		.modal-explain {
+			margin-top: rem-calc(10px);
+			font-weight: 500;
+			font-size: rem-calc(18px);
+			line-height: rem-calc(24px);
+		}
+	}
+	.modal-body {
+		padding-top: rem-calc(24px);
+		background-color: #fff;
+	}
+}
+

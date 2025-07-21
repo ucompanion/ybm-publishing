@@ -127,6 +127,7 @@
                     }
                     .main-bnr-02 {
                         display: flex;
+                        flex-direction: column;
                         justify-content: center;
                         align-items: center;
                         width: rem-calc(320px);
@@ -134,9 +135,39 @@
                         background: rgba(255, 255, 255, 0.4);
                         backdrop-filter: blur(rem-calc(20px));
                         border-radius: rem-calc(40px);
+                        .main-bnr-label {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            &::before {
+                                content:'';
+                                display: block;
+                                width: rem-calc(80px);
+                                height: rem-calc(80px);
+                                background: no-repeat center center;
+                                background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.33203 20.713V56.0983C9.33203 58.2756 11.3429 59.9234 13.5219 59.5131C19.3594 58.4013 30.3284 57.5807 39.9993 64V20.7262C39.9993 20.7262 26.2596 12.8907 11.7868 17.3975C10.3274 17.8541 9.33203 19.2041 9.33203 20.713Z' fill='%234EA8FF'/%3E%3Cpath d='M70.6673 20.713V56.0983C70.6673 58.2756 68.6564 59.9234 66.4774 59.5131C60.6399 58.4013 49.671 57.5807 40 64V20.7262C40 20.7262 53.7398 12.8907 68.2126 17.3975C69.6719 17.8541 70.6673 19.2041 70.6673 20.713Z' fill='%230055A7'/%3E%3C/svg%3E%0A");
+                            }
+
+                            .label {
+                                display: inline-flex;
+                                align-items: center;
+                                height: rem-calc(20px);
+                                padding: 0 rem-calc(7px);
+                                border: 1px solid #0055A7;
+                                border-radius: rem-calc(20px);
+                                vertical-align: top;
+                                font-weight: 700;
+                                font-size: rem-calc(12px);
+                                line-height: rem-calc(16px);
+                                color: #0055A7;
+                            }
+                        }
                         .main-bnr-title {
+                            margin-top: rem-calc(8px);
                             font-weight: 700;
                             font-size: rem-calc(24px);
+                            line-height: rem-calc(34px);
                             color: #fff;
                         }
                     }
@@ -178,6 +209,34 @@
             .section-header {
                 margin-bottom: rem-calc(60px) !important;
             }
+            .news-swiper {
+                .swiper-pagination {
+                    display: flex;
+                    gap: rem-calc(12px);
+                    width: auto;
+                    position: absolute;
+                    top: rem-calc(70px);
+                    right: rem-calc(20px);
+                    bottom: auto;
+                    left: auto;
+                    z-index: 20;
+
+                    &-bullet {
+                        width: rem-calc(12px);
+                        height: rem-calc(12px);
+                        margin: 0;
+                        border-radius: rem-calc(12px);
+                        background-color: #0055A7;
+                        opacity: 0.2;
+                        transition: all 0.2s ease;
+                        &-active {
+                            width: rem-calc(28px);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
             .news-latest-main {
                 display: flex;
                 justify-content: space-between;
@@ -392,18 +451,20 @@
 
             .main-edu-swiper {
                 .swiper {
-                    opacity: 0;
+                    opacity: 1;
                     overflow: visible;
-                    transition: opacity 1s 1s ease;
+                    transition: opacity 1s 0.3s ease;
 
                     &.is-swiping {
-                        opacity: 1;
+                        // opacity: 1;
                     }
 
                     &-slide {
-                        width: rem-calc(760px);
-                        height: rem-calc(428px);
-                        transform: scale(0.8);
+                        // width: 760px;
+                        // height: 428px;
+                        // width: rem-calc(760px);
+                        aspect-ratio: 760/428;
+                        transform: scale(0.75);
                         transition: all 0.2s ease;
                         &-active {
                             transform: scale(1);
@@ -495,7 +556,7 @@
                 position: relative;
                 width: 100%;
                 height: 100%;
-                border-radius: rem-calc(28px);
+                border-radius: rem-calc(32px);
                 overflow: hidden;
 
                 .main-edu-link {
@@ -537,7 +598,7 @@
                     width: 100%;
                     height: 100%;
                     padding: rem-calc(28px);
-                    background: url('#{$img-main-url}img_sec2_shadow.png');
+                    background: url('#{$img-main-url}img_sec2_shadow.png') no-repeat bottom center / 100% auto;
                     opacity: 0;
                     transition: opacity 0.2s ease;
                     .title {
@@ -779,7 +840,8 @@
                     width: rem-calc(441px);
                     height: rem-calc(165px);
                     background: url("#{$img-main-url}main_sec4_object01.png") no-repeat center center / contain;
-                    mix-blend-mode: luminosity;
+                    mix-blend-mode: overlay;
+                    filter: brightness(6);
                     opacity: 0.6;
 
                 }
@@ -855,158 +917,186 @@
                         margin-right: rem-calc(40px);
                     }
                 }
-            }
 
-            .main-edutech {
-                width: 100%;
-                height: 100%;
-
-                &-link {
-                    position: relative;
-                    display: block;
+                .main-edutech {
                     width: 100%;
                     height: 100%;
-                    background: rgba(255, 255, 255, 0.4);
-                    backdrop-filter: blur(rem-calc(12px));
-                    border-radius: rem-calc(24px);
-                    overflow: hidden;
-                    box-sizing: border-box;
-                    & {
-                        transition: all 0.2s ease;
 
-                        .main-edutech-overay {
-                            display: none;
-                            pointer-events: none;
-                            opacity: 0;
-                            transition: all 0.2s ease;
-                        }
-                    }
-                    &:hover {
-                        transform: scale(1.1);
-                        transition: all 0.2s ease;
-                        border-color: transparent;
-                        box-shadow: rem-calc(10px) rem-calc(10px) rem-calc(24px) rgba(0, 0, 0, 0.2);
-                        .main-edutech-overay {
-                            display: flex;
-                            pointer-events: auto;
-                            opacity: 1;
-                        }
-                    }
-                }
-
-                &-normal {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    padding: rem-calc(20px) rem-calc(32px);
-                    border-radius: rem-calc(24px);
-                    border:1px solid rgba(255, 255, 255, 0.6);
-
-                    .util-area {
-                        display: flex;
-                        gap: rem-calc(8px);
-
-                        .icn {
-                            margin-right: auto;
-                            display: block;
-                            width: rem-calc(40px);
-                            height: rem-calc(40px);
-                            background: no-repeat center center / contain;
-                            &-edutech-01 {
-                                background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.1678 35.8027H10.1017C7.43121 35.8027 5.26953 33.6377 5.26953 30.9705V11.9045C5.26953 9.23395 7.43453 7.07227 10.1017 7.07227H29.1678C31.8383 7.07227 34 9.23728 34 11.9045V30.9705C34 33.6377 31.835 35.8027 29.1678 35.8027Z' fill='%2300B29D'/%3E%3Cpath d='M12.8816 10.7266C11.9637 10.7266 11.2188 9.98169 11.2188 9.0638V5.07299C11.2188 4.15511 11.9637 3.41016 12.8816 3.41016C13.7995 3.41016 14.5444 4.15511 14.5444 5.07299V9.0638C14.5444 9.98169 13.7995 10.7266 12.8816 10.7266Z' fill='white'/%3E%3Cpath d='M19.6335 10.7266C18.7157 10.7266 17.9707 9.98169 17.9707 9.0638V5.07299C17.9707 4.15511 18.7157 3.41016 19.6335 3.41016C20.5514 3.41016 21.2964 4.15511 21.2964 5.07299V9.0638C21.2964 9.98169 20.5514 10.7266 19.6335 10.7266Z' fill='white'/%3E%3Cpath d='M26.3835 10.7266C25.4657 10.7266 24.7207 9.98169 24.7207 9.0638V5.07299C24.7207 4.15511 25.4657 3.41016 26.3835 3.41016C27.3014 3.41016 28.0464 4.15511 28.0464 5.07299V9.0638C28.0464 9.98169 27.3014 10.7266 26.3835 10.7266Z' fill='white'/%3E%3Cpath d='M24.8721 26.9395L21.3468 17.8504V17.8471C21.154 17.3682 20.9178 17.0456 20.6185 16.8593C20.0565 16.5035 19.2317 16.5035 18.6531 16.856C18.3438 17.0489 18.1043 17.3748 17.9247 17.8537L14.3995 27.0193C14.18 27.5813 14.2964 27.9804 14.4361 28.2165C14.619 28.5291 14.9017 28.7519 15.2775 28.8783C15.4804 28.9448 15.6832 28.9781 15.8828 28.9781C16.0224 28.9781 16.1655 28.9615 16.2985 28.9282C16.5845 28.8584 16.9703 28.6489 17.1964 28.0502L17.9946 25.832H21.1972L21.9754 27.9804C22.1982 28.6222 22.604 28.8451 22.9066 28.9182C23.2591 29.0047 23.6183 28.9914 23.9708 28.8783C24.3632 28.7519 24.6659 28.5058 24.8455 28.1633C25.035 27.8008 25.0417 27.3917 24.8721 26.9395ZM19.5477 21.5419C19.5676 21.4887 19.5842 21.4388 19.6009 21.3889C19.6175 21.4388 19.6375 21.4887 19.6574 21.5419L20.2161 23.1016H18.9756L19.5477 21.5419Z' fill='white'/%3E%3C/svg%3E%0A");
-                            }
-                        }
-
-                        .label {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: rem-calc(40px);
-                            height: rem-calc(40px);
-                            border-radius: rem-calc(16px);
-                            background-color: rgba(255, 255, 255, 0.6);
-                            font-weight: 700;
-                            font-size: rem-calc(16px);
-                            line-height: rem-calc(24px);
-
-                            &.type-ele {
-                                color: $color-ele;
-                            }
-                            &.type-mid {
-                                color: $color-mid;
-                            }
-                            &.type-hi {
-                                color: $color-hi;
-                            }
-                        }
-                    }
-                    .cont-area {
-                        margin-top: auto;
-
-                        .title {
-                            font-weight: 700;
-                            font-size: rem-calc(22px);
-                            line-height: rem-calc(32px);
-                            color: #fff;
-                        }
-                        .explain {
-                            font-weight: 700;
-                            font-size: rem-calc(18px);
-                            line-height: rem-calc(28px);
-                            color: #fff;
-                        }
-                    }
-                }
-
-                &-overay {
-                    position: absolute;
-                    left: -1px;
-                    top: -1px;
-                    width: calc(100% + 3px);
-                    height: calc(100% + 3px);
-
-                    .youtube-thumb,
-                    .main-edutech-thumb,
-                    img,
-                    iframe {
-                        object-fit: cover;
+                    &-link {
+                        position: relative;
+                        display: block;
                         width: 100%;
-                        height: 100% !important;
+                        height: 100%;
+                        background: rgba(255, 255, 255, 0.4);
+                        backdrop-filter: blur(rem-calc(12px));
+                        border-radius: rem-calc(24px);
+                        overflow: hidden;
+                        box-sizing: border-box;
+                        & {
+                            transition: all 0.2s ease;
+
+                            .main-edutech-overay {
+                                display: none;
+                                pointer-events: none;
+                                opacity: 0;
+                                transition: all 0.2s ease;
+                            }
+                        }
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: all 0.2s ease;
+                            border-color: transparent;
+                            box-shadow: rem-calc(10px) rem-calc(10px) rem-calc(24px) rgba(0, 0, 0, 0.2);
+                            .main-edutech-overay {
+                                display: flex;
+                                pointer-events: auto;
+                                opacity: 1;
+                            }
+                        }
                     }
-                    .main-edutech-thumb {
-                        .btn-play {
+
+                    &-normal {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        padding: rem-calc(20px) rem-calc(32px);
+                        border-radius: rem-calc(24px);
+                        border:1px solid rgba(255, 255, 255, 0.6);
+
+                        .util-area {
                             display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            gap: rem-calc(8px);
+
+                            .icn {
+                                margin-right: auto;
+                                display: block;
+                                width: rem-calc(40px);
+                                height: rem-calc(40px);
+                                background: no-repeat center center / contain;
+                                &-edutech-01 {
+                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.1678 35.8027H10.1017C7.43121 35.8027 5.26953 33.6377 5.26953 30.9705V11.9045C5.26953 9.23395 7.43453 7.07227 10.1017 7.07227H29.1678C31.8383 7.07227 34 9.23728 34 11.9045V30.9705C34 33.6377 31.835 35.8027 29.1678 35.8027Z' fill='%2300B29D'/%3E%3Cpath d='M12.8816 10.7266C11.9637 10.7266 11.2188 9.98169 11.2188 9.0638V5.07299C11.2188 4.15511 11.9637 3.41016 12.8816 3.41016C13.7995 3.41016 14.5444 4.15511 14.5444 5.07299V9.0638C14.5444 9.98169 13.7995 10.7266 12.8816 10.7266Z' fill='white'/%3E%3Cpath d='M19.6335 10.7266C18.7157 10.7266 17.9707 9.98169 17.9707 9.0638V5.07299C17.9707 4.15511 18.7157 3.41016 19.6335 3.41016C20.5514 3.41016 21.2964 4.15511 21.2964 5.07299V9.0638C21.2964 9.98169 20.5514 10.7266 19.6335 10.7266Z' fill='white'/%3E%3Cpath d='M26.3835 10.7266C25.4657 10.7266 24.7207 9.98169 24.7207 9.0638V5.07299C24.7207 4.15511 25.4657 3.41016 26.3835 3.41016C27.3014 3.41016 28.0464 4.15511 28.0464 5.07299V9.0638C28.0464 9.98169 27.3014 10.7266 26.3835 10.7266Z' fill='white'/%3E%3Cpath d='M24.8721 26.9395L21.3468 17.8504V17.8471C21.154 17.3682 20.9178 17.0456 20.6185 16.8593C20.0565 16.5035 19.2317 16.5035 18.6531 16.856C18.3438 17.0489 18.1043 17.3748 17.9247 17.8537L14.3995 27.0193C14.18 27.5813 14.2964 27.9804 14.4361 28.2165C14.619 28.5291 14.9017 28.7519 15.2775 28.8783C15.4804 28.9448 15.6832 28.9781 15.8828 28.9781C16.0224 28.9781 16.1655 28.9615 16.2985 28.9282C16.5845 28.8584 16.9703 28.6489 17.1964 28.0502L17.9946 25.832H21.1972L21.9754 27.9804C22.1982 28.6222 22.604 28.8451 22.9066 28.9182C23.2591 29.0047 23.6183 28.9914 23.9708 28.8783C24.3632 28.7519 24.6659 28.5058 24.8455 28.1633C25.035 27.8008 25.0417 27.3917 24.8721 26.9395ZM19.5477 21.5419C19.5676 21.4887 19.5842 21.4388 19.6009 21.3889C19.6175 21.4388 19.6375 21.4887 19.6574 21.5419L20.2161 23.1016H18.9756L19.5477 21.5419Z' fill='white'/%3E%3C/svg%3E%0A");
+                                }
+                            }
+
+                            .label {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: rem-calc(40px);
+                                height: rem-calc(40px);
+                                border-radius: rem-calc(16px);
+                                font-weight: 700;
+                                font-size: rem-calc(16px);
+                                line-height: rem-calc(24px);
+                                color: #fff;
+
+                                &.type-ele {
+                                    background-color: $color-ele;
+                                }
+                                &.type-mid {
+                                    background-color: $color-mid;
+                                }
+                                &.type-hi {
+                                    background-color: $color-hi;
+                                }
+                            }
+                        }
+                        .cont-area {
+                            margin-top: auto;
+                            color: #08403A;
+
+                            .title {
+                                font-weight: 700;
+                                font-size: rem-calc(24px);
+                                line-height: rem-calc(34px);
+                            }
+                            .explain {
+                                margin-top: rem-calc(4px);
+                                font-weight: 400;
+                                font-size: rem-calc(16px);
+                                line-height: rem-calc(22px);
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                    &-overay {
+                        position: absolute;
+                        left: -1px;
+                        top: -1px;
+                        width: calc(100% + 3px);
+                        height: calc(100% + 3px);
+
+                        .youtube-thumb,
+                        .main-edutech-thumb,
+                        img,
+                        iframe {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100% !important;
+                        }
+                        .main-edutech-thumb {
+                            .btn-play {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba($color: #000000, $alpha: 0.4);
+                                &::before {
+                                    content:'';
+                                    display: block;
+                                    width: rem-calc(60px);
+                                    height: rem-calc(60px);
+                                    background: no-repeat center center;
+                                    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject x='0' y='0' width='0' height='0'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(20px);clip-path:url(%23bgblur_0_2256_6554_clip_path);height:100%25;width:100%25'%3E%3C/div%3E%3C/foreignObject%3E%3Cpath data-figma-bg-blur-radius='40' d='M44.0916 26.6563L20.5905 11.259C17.9303 9.51615 14.3984 11.4246 14.3984 14.6049V45.3994C14.3984 48.5797 17.9303 50.4881 20.5905 48.7453L44.0916 33.348C46.5021 31.7687 46.5022 28.2356 44.0916 26.6563Z' fill='white'/%3E%3Cdefs%3E%3CclipPath id='bgblur_0_2256_6554_clip_path' transform='translate(0 0)'%3E%3Cpath d='M44.0916 26.6563L20.5905 11.259C17.9303 9.51615 14.3984 11.4246 14.3984 14.6049V45.3994C14.3984 48.5797 17.9303 50.4881 20.5905 48.7453L44.0916 33.348C46.5021 31.7687 46.5022 28.2356 44.0916 26.6563Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                                }
+                            }
+                        }
+                        .youtube-thumb {
+                            display: none;
                             position: absolute;
                             left: 0;
                             top: 0;
                             width: 100%;
                             height: 100%;
-                            background-color: rgba($color: #000000, $alpha: 0.4);
-                            &::before {
-                                content:'';
-                                display: block;
-                                width: rem-calc(60px);
-                                height: rem-calc(60px);
-                                background: no-repeat center center;
-                                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject x='0' y='0' width='0' height='0'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(20px);clip-path:url(%23bgblur_0_2256_6554_clip_path);height:100%25;width:100%25'%3E%3C/div%3E%3C/foreignObject%3E%3Cpath data-figma-bg-blur-radius='40' d='M44.0916 26.6563L20.5905 11.259C17.9303 9.51615 14.3984 11.4246 14.3984 14.6049V45.3994C14.3984 48.5797 17.9303 50.4881 20.5905 48.7453L44.0916 33.348C46.5021 31.7687 46.5022 28.2356 44.0916 26.6563Z' fill='white'/%3E%3Cdefs%3E%3CclipPath id='bgblur_0_2256_6554_clip_path' transform='translate(0 0)'%3E%3Cpath d='M44.0916 26.6563L20.5905 11.259C17.9303 9.51615 14.3984 11.4246 14.3984 14.6049V45.3994C14.3984 48.5797 17.9303 50.4881 20.5905 48.7453L44.0916 33.348C46.5021 31.7687 46.5022 28.2356 44.0916 26.6563Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+                            &.is-playing {
+                                display: flex;
                             }
                         }
                     }
-                    .youtube-thumb {
-                        display: none;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
+                }
+            }
 
-                        &.is-playing {
-                            display: flex;
-                        }
+        }
+
+        // 섹션 05
+        &.section05 {
+            padding: 0;
+            background-color: #1F1F1F;
+
+            .main-edutech-class {
+                display: flex;
+                width: 100%;
+
+                .main-edutech-link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1 1 auto;
+                    width: 100%;
+                    height: rem-calc(88px);
+                    img {
+                        height: rem-calc(40px);
                     }
                 }
+
             }
         }
     }
@@ -1249,6 +1339,131 @@
                 color: #000;
                 a {
                     color: inherit;
+                }
+            }
+        }
+    }
+}
+
+// 아코디언 공통
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
+.collapse:not(.show) {
+	display: none;
+}
+
+// 교과서 아코디언 목록
+.classBook-wrap {
+    .classBook-desc {
+        margin-bottom: rem-calc(12px);
+        font-weight: 400;
+        font-size: rem-calc(16px);
+        line-height: rem-calc(24px);
+        text-align: right;
+    }
+    .classBook-board {
+        .accordion {
+            border-top: 1px solid #000;
+            &-button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: rem-calc(26px) rem-calc(16px) rem-calc(26px) rem-calc(24px);
+                border-bottom: 1px solid #eaeaea;
+                font-weight: 700;
+                font-size: rem-calc(24px);
+                line-height: rem-calc(36px);
+                color: $color-ele;
+                &::after {
+                    content:'';
+                    display: block;
+                    width: rem-calc(40px);
+                    height: rem-calc(40px);
+                    mask: no-repeat center center;
+                    mask-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 15L20 25L30 15' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    background-color: $color-ele;
+                    transform: scaleY(-1);
+                }
+                &.collapsed {
+                    color: #000;
+                    &::after {
+                        background-color: #000;
+                        transform: scaleY(1);
+                    }
+                }
+            }
+            &-collapse {
+                background-color: #FFF6F5;
+            }
+        }
+        .classBook-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: rem-calc(12px);
+            padding: rem-calc(24px);
+            border-bottom: 1px solid #eaeaea;
+
+            .classBook-btn {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: rem-calc(48px);
+                padding: 0 rem-calc(12px) 0 rem-calc(20px);
+                border: 1px solid #dedede;
+                background-color: #fff;
+                border-radius: rem-calc(4px);
+
+                .name {
+                    font-weight: 500;
+                    font-size: rem-calc(16px);
+                    kerning: rem-calc(24px);
+                    color: #000;
+                }
+                .badge {
+                    display: flex;
+                    align-items: center;
+                    margin-left: rem-calc(4px);
+                    height: rem-calc(16px);
+                    padding: 0 rem-calc(6px) 1px;
+                    background-color: #000;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: rem-calc(10px);
+                    color: #fff;
+                }
+                .teacher {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    margin-left: auto;
+                    font-weight: 400;
+                    font-size: rem-calc(16px);
+                    line-height: rem-calc(24px);
+                    color: #666;
+                    &::after {
+                        content:'';
+                        display: block;
+                        width: rem-calc(16px);
+                        height: rem-calc(16px);
+                        mask: no-repeat center center;
+                        mask-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12L10 8L6 4' stroke='%23666666' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                        background-color: #666;
+                    }
+                }
+                &:hover {
+                    border-color: $color-ele;
+                    background-color: $color-ele;
+                    .name,
+                    .teacher {
+                        color: #fff;
+                        &::after {
+                            background-color: #fff;
+                        }
+                    }
                 }
             }
         }

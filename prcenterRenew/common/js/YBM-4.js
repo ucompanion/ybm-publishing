@@ -1,31 +1,55 @@
-document.addEventListener("DOMContentLoaded", () => {
-    /*
-     *  Section2: 미래교육
-     */
-    function updateNumbering(swiper) {
-        const numberingEl = document.querySelector('.main-edu-swiper .swiper-numbering');
-        if (!numberingEl) return;
+/***********************************************************
+ *  Section1: 최근소식
+************************************************************/
+let mainNewsSwiper; // Swiper 인스턴스를 저장할 전역 변수
+function initializeNewsSwiper(){
+    const swiperOptions = {
+        threshold: 3,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        slidesPerView: 1,
+        spaceBetween: 100,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: ".news-swiper .swiper-pagination",
+            clickable: false,
+            type: 'bullets',
+        },
+    };
 
-        const current = swiper.realIndex + 1;
-        const total = swiper.slides.length - (swiper.loopedSlides * 2);
+    const swiperContainerEl = document.querySelector(".news-swiper"); // Swiper HTML 요소 캐싱
+    mainNewsSwiper = new Swiper(swiperContainerEl, swiperOptions);
+}
+/***********************************************************
+ *  Section2: 미래교육
+************************************************************/
+function updateNumbering(swiper) {
+    const numberingEl = document.querySelector('.main-edu-swiper .swiper-numbering');
+    if (!numberingEl) return;
 
-        while (numberingEl.firstChild) {
-            numberingEl.removeChild(numberingEl.firstChild);
-        }
+    const current = swiper.realIndex + 1;
+    const total = swiper.slides.length - (swiper.loopedSlides * 2);
 
-        const currentTextNode = document.createTextNode(`${current} / `);
-        const totalSpan = document.createElement('span');
-        totalSpan.classList.add('total');
-        totalSpan.textContent = total;
-
-        numberingEl.appendChild(currentTextNode);
-        numberingEl.appendChild(totalSpan);
+    while (numberingEl.firstChild) {
+        numberingEl.removeChild(numberingEl.firstChild);
     }
 
-    var mainEduSwiper = new Swiper(".main-edu-swiper .swiper", {
+    const currentTextNode = document.createTextNode(`${current} / `);
+    const totalSpan = document.createElement('span');
+    totalSpan.classList.add('total');
+    totalSpan.textContent = total;
+
+    numberingEl.appendChild(currentTextNode);
+    numberingEl.appendChild(totalSpan);
+}
+
+let mainEduSwiper; // Swiper 인스턴스를 저장할 전역 변수
+function initializeMainEduSwiper(){
+    const swiperOptions = {
         threshold: 3,
-        slidesPerView: 'auto',
-        spaceBetween: 120,
+        slidesPerView: 1.5,
+        spaceBetween: 30,
         centeredSlides: true,
         loop: true,
         navigation: {
@@ -40,17 +64,114 @@ document.addEventListener("DOMContentLoaded", () => {
         on: {
             init: function () {
                 updateNumbering(this);
-                $('.main-edu-swiper .swiper').addClass('is-swiping');
+                // .addClass('is-swiping')은 initializeMainEduSwiper 밖에서 처리
             },
             slideChange: function () {
                 updateNumbering(this);
             },
         },
-    })
+        breakpoints: {
+            768: {
+                slidesPerView: 1.5,     // 3개의 슬라이드 표시
+                spaceBetween: 40,    // 간격 조절
+                // centeredSlides: false, // 필요하면 중앙 정렬 해제 등 옵션 변경 가능
+            },
+            // 브라우저 너비가 1024px 이상일 때 (데스크탑 이상)
+            1024: {
+                slidesPerView: 2,     // 4개의 슬라이드 표시
+                spaceBetween: 60,    // 간격 조절
+            },
+            // 브라우저 너비가 1440px 이상일 때 (큰 데스크탑)
+            1440: {
+                slidesPerView: 2.4,     // 5개의 슬라이드 표시
+                spaceBetween: 120,
+            }
+        }
+    };
 
-    /*
-     *  Section3: Y클라우드
-     */
+    const swiperContainerEl = document.querySelector(".main-edu-swiper .swiper"); // Swiper HTML 요소 캐싱
+    mainEduSwiper = new Swiper(swiperContainerEl, swiperOptions);
+}
+
+// Swiper를 생성하는 함수
+// function initializeMainEduSwiper() {
+//     if (!mainEduSwiper) {
+//         mainEduSwiper = new Swiper(swiperContainerEl, swiperOptions);
+//         $(swiperContainerEl).addClass('is-swiping'); // jQuery 사용하여 클래스 추가
+//         console.log('Swiper 인스턴스 생성됨.');
+//     }
+// }
+
+// Swiper를 파괴하는 함수
+// function destroyMainEduSwiper() {
+//     if (mainEduSwiper) {
+//         mainEduSwiper.destroy(true, true); // true: DOM 정리, true: 이벤트 제거
+//         mainEduSwiper = null; // 인스턴스 참조 제거
+//         $(swiperContainerEl).removeClass('is-swiping'); // 클래스도 제거 (선택 사항)
+//         console.log('Swiper 인스턴스 파괴됨.');
+//     }
+// }
+
+// function initializeMainEdu() {
+//     let resizeTimer; // 리사이징 종료를 위한 타이머
+//     let isResizing = false; // 리사이징 시작을 위한 플래그
+
+//     // Debounce 함수 (리사이징 종료 시 호출)
+//     const debounce = (func, delay) => {
+//         let timeout;
+//         return function(...args) {
+//             const context = this;
+//             clearTimeout(timeout);
+//             timeout = setTimeout(() => func.apply(context, args), delay);
+//         };
+//     };
+
+//     // Throttle 함수 (리사이징 시작 시 호출 - 너무 자주 destroy 되는 것 방지)
+//     const throttle = (func, limit) => {
+//         let inThrottle;
+//         return function() {
+//             const args = arguments;
+//             const context = this;
+//             if (!inThrottle) {
+//                 func.apply(context, args);
+//                 inThrottle = true;
+//                 setTimeout(() => inThrottle = false, limit);
+//             }
+//         };
+//     };
+
+//     // 리사이징 시작 시 호출될 함수 (destroy)
+//     const handleResizeStart = throttle(() => {
+//         if (!isResizing) { // 리사이징이 시작된 것이 아닐 때만
+//             isResizing = true;
+//             destroyMainEduSwiper(); // 기존 Swiper 파괴
+//             console.log('--- 리사이징 시작 --- Swiper 파괴 및 숨김.');
+//         }
+//     }, 100); // 100ms 이내에는 여러번 destroy 호출 안 되게 조절
+
+//     // 리사이징 종료 시 호출될 함수 (re-init)
+//     const handleResizeEnd = debounce(() => {
+//         isResizing = false;
+//         // Swiper 컨테이너를 다시 보이게 함
+//         if (swiperContainerEl) {
+//             swiperContainerEl.style.visibility = ''; // 또는 'display: block;'
+//         }
+//         initializeMainEduSwiper(); // Swiper 재설정
+//         console.log('--- 리사이징 종료 --- Swiper 재설정 및 보임.');
+//     }, 200); // 리사이징 멈춘 후 200ms 뒤 실행
+
+
+//     // window resize 이벤트 리스너
+//     window.addEventListener('resize', () => {
+//         handleResizeStart(); // 리사이징 시작 처리
+//         handleResizeEnd();   // 리사이징 종료 처리 (계속 타이머 갱신)
+//     });
+// }
+
+/***********************************************************
+ *  Section3: Y클라우드
+************************************************************/
+function initializeMainCloud(){
     const mainCloudContainers = document.querySelectorAll('.main-cloud-swiper');
     mainCloudContainers.forEach(container => {
         let originalRealIndexOnHover = -1; // 호버 시점의 실제 슬라이드 인덱스를 저장할 변수
@@ -92,155 +213,158 @@ document.addEventListener("DOMContentLoaded", () => {
             // console.log(`[${container.id || container.className}] 복귀 후 현재 슬라이드 인덱스: ${mainCloud.realIndex}`);
         });
     });
-    /*
-     *  Section4: 에듀테크
-     */
-    // GSAP를 이용한 무한 스크롤 애니메이션을 초기화하는 함수
-    function initGsapInfiniteScroll(container) {
-        // console.log(`[INIT] initGsapInfiniteScroll 호출:`, container); // 디버깅용 로그
+}
 
-        if (!container) {
-            console.error(`Error: Invalid container element provided.`);
-            return;
-        }
+/***********************************************************
+ *  Section4: 에듀테크
+************************************************************/
+// GSAP를 이용한 무한 스크롤 애니메이션을 초기화하는 함수
+function initGsapInfiniteScroll(container) {
+    // console.log(`[INIT] initGsapInfiniteScroll 호출:`, container); // 디버깅용 로그
 
-        // 원본 아이템들을 저장해둘 변수 (리사이즈 시 필요)
-        // initGsapInfiniteScroll 함수 스코프 내에서 유지되어야 함
-        const initialItems = Array.from(container.querySelector('.main-edutech-wrapper').querySelectorAll('.main-edutech-item'));
-        if (initialItems.length === 0) {
-            console.error(`Error: No initial scroll items found inside wrapper.`);
-            return;
-        }
-
-        const direction = container.dataset.direction;
-        const speedSeconds = parseFloat(container.dataset.speed) || 5;
-
-        let scrollTimeline = null; // 타임라인 인스턴스를 외부에 선언하여 재사용 가능하게 함
-
-        // 애니메이션을 생성하고 시작하는 내부 함수
-        // 리사이즈 시 이 함수를 다시 호출하여 애니메이션을 재계산하고 시작
-        const createAndStartAnimation = () => {
-            const scrollWrapper = container.querySelector('.main-edutech-wrapper');
-            if (!scrollWrapper) {
-                console.error(`Error: Scroll wrapper not found inside container.`);
-                return;
-            }
-
-            // 기존 타임라인이 있다면 kill하여 리소스 해제
-            if (scrollTimeline) {
-                scrollTimeline.kill();
-                scrollTimeline = null;
-            }
-
-            // 1. 아이템 동적 복제 및 래퍼 너비 계산
-            // 기존에 복제된 아이템들을 제거하고 원본 아이템들만 남김
-            while (scrollWrapper.firstChild) { // 래퍼 내부의 모든 자식 요소를 안전하게 제거
-                scrollWrapper.removeChild(scrollWrapper.firstChild);
-            }
-            // 첫 번째 세트의 아이템 클론들을 먼저 추가합니다.
-            initialItems.forEach(item => scrollWrapper.appendChild(item.cloneNode(true)));
-
-            // 이제 scrollWrapper에 추가된 클론들을 기반으로 singleSetWidth를 계산합니다.
-            const firstSetOfClonedItems = Array.from(scrollWrapper.querySelectorAll('.main-edutech-item')).slice(0, initialItems.length);
-
-            let singleSetWidth = 0;
-            firstSetOfClonedItems.forEach((item, idx) => {
-                const itemStyle = window.getComputedStyle(item);
-                const marginRight = parseFloat(itemStyle.marginRight);
-                singleSetWidth += item.offsetWidth + marginRight;
-            });
-            // console.log(`[CREATE] singleSetWidth: ${singleSetWidth}`);
-
-            const containerWidth = container.offsetWidth;
-            // console.log(`[CREATE] containerWidth: ${containerWidth}`);
-
-            // numCopies 계산은 singleSetWidth가 정상화되면 자동으로 해결됩니다.
-            const numCopies = Math.ceil(containerWidth * 2 / singleSetWidth) + 1;
-            // console.log(`[CREATE] numCopies: ${numCopies}`);
-
-            // 나머지 필요한 수량의 아이템들을 추가합니다.
-            for (let i = 0; i < numCopies; i++) {
-                initialItems.forEach(item => {
-                    scrollWrapper.appendChild(item.cloneNode(true));
-                });
-            }
-
-            // 모든 아이템을 한 줄에 배치하기 위한 wrapper의 최종 너비 계산
-            const allCurrentItems = Array.from(scrollWrapper.querySelectorAll('.main-edutech-item'));
-            let totalWrapperWidth = 0;
-            allCurrentItems.forEach(item => {
-                const itemStyle = window.getComputedStyle(item);
-                const marginRight = parseFloat(itemStyle.marginRight);
-                totalWrapperWidth += item.offsetWidth + marginRight;
-            });
-            scrollWrapper.style.width = totalWrapperWidth + 'px';
-            // console.log(`[CREATE] Final Wrapper Width: ${scrollWrapper.style.width}`);
-
-            // 2. 애니메이션 정의 및 타임라인 생성
-            let startX, endX; // 애니메이션의 시작과 끝 지점
-
-            if (direction === 'forward') {
-                startX = 0;
-                endX = -singleSetWidth; // 왼쪽으로 한 세트 너비만큼 이동
-                gsap.set(scrollWrapper, { x: startX }); // 시작 위치 설정
-            } else if (direction === 'reverse') {
-                // 역방향일 경우 시작 위치를 맨 오른쪽으로 이동시켜야 함
-                startX = -singleSetWidth; // 역방향 시작점 (음수)
-                endX = 0; // 0까지 이동
-                gsap.set(scrollWrapper, { x: startX }); // 시작 위치 설정
-            } else {
-                console.error(`Error: Invalid direction '${direction}' for container. Use 'forward' or 'reverse'.`);
-                return;
-            }
-
-            // GSAP 타임라인 생성
-            scrollTimeline = gsap.timeline({
-                repeat: -1, // 무한 반복
-                ease: "none", // 일정한 속도
-                onRepeat: () => {
-                    // 애니메이션이 한 바퀴 돌고 반복될 때마다 실행됩니다.
-                    // 이 시점에 x 값을 시작점으로 '점프'시킵니다.
-                    gsap.set(scrollWrapper, { x: startX });
-                }
-            });
-
-            // 애니메이션 추가
-            scrollTimeline.to(scrollWrapper, {
-                x: endX, // 목표 지점
-                duration: speedSeconds,
-                ease: "none"
-            });
-
-            // 초기 재생
-            scrollTimeline.play();
-        };
-
-        // 초기 애니메이션 시작
-        createAndStartAnimation();
-
-        // 호버 시 멈추고, 호버 해제 시 재생 유지
-        container.addEventListener('mouseenter', () => {
-            // console.log(`마우스 진입 (${direction} 스크롤): 일시 정지`);
-            if (scrollTimeline) scrollTimeline.pause();
-        });
-
-        container.addEventListener('mouseleave', () => {
-            // console.log(`마우스 이탈 (${direction} 스크롤): 다시 재생`);
-            if (scrollTimeline) scrollTimeline.play();
-        });
-
-        // 리사이즈 이벤트 리스너 추가
-        // 성능을 위해 디바운싱 적용
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                // console.log(`창 리사이즈 감지 (${direction} 스크롤): 애니메이션 재계산`);
-                createAndStartAnimation(); // 애니메이션 재시작
-            }, 200); // 200ms 후에 실행
-        });
+    if (!container) {
+        console.error(`Error: Invalid container element provided.`);
+        return;
     }
 
+    // 원본 아이템들을 저장해둘 변수 (리사이즈 시 필요)
+    // initGsapInfiniteScroll 함수 스코프 내에서 유지되어야 함
+    const initialItems = Array.from(container.querySelector('.main-edutech-wrapper').querySelectorAll('.main-edutech-item'));
+    if (initialItems.length === 0) {
+        console.error(`Error: No initial scroll items found inside wrapper.`);
+        return;
+    }
+
+    const direction = container.dataset.direction;
+    const speedSeconds = parseFloat(container.dataset.speed) || 5;
+
+    let scrollTimeline = null; // 타임라인 인스턴스를 외부에 선언하여 재사용 가능하게 함
+
+    // 애니메이션을 생성하고 시작하는 내부 함수
+    // 리사이즈 시 이 함수를 다시 호출하여 애니메이션을 재계산하고 시작
+    const createAndStartAnimation = () => {
+        const scrollWrapper = container.querySelector('.main-edutech-wrapper');
+        if (!scrollWrapper) {
+            console.error(`Error: Scroll wrapper not found inside container.`);
+            return;
+        }
+
+        // 기존 타임라인이 있다면 kill하여 리소스 해제
+        if (scrollTimeline) {
+            scrollTimeline.kill();
+            scrollTimeline = null;
+        }
+
+        // 1. 아이템 동적 복제 및 래퍼 너비 계산
+        // 기존에 복제된 아이템들을 제거하고 원본 아이템들만 남김
+        while (scrollWrapper.firstChild) { // 래퍼 내부의 모든 자식 요소를 안전하게 제거
+            scrollWrapper.removeChild(scrollWrapper.firstChild);
+        }
+        // 첫 번째 세트의 아이템 클론들을 먼저 추가합니다.
+        initialItems.forEach(item => scrollWrapper.appendChild(item.cloneNode(true)));
+
+        // 이제 scrollWrapper에 추가된 클론들을 기반으로 singleSetWidth를 계산합니다.
+        const firstSetOfClonedItems = Array.from(scrollWrapper.querySelectorAll('.main-edutech-item')).slice(0, initialItems.length);
+
+        let singleSetWidth = 0;
+        firstSetOfClonedItems.forEach((item, idx) => {
+            const itemStyle = window.getComputedStyle(item);
+            const marginRight = parseFloat(itemStyle.marginRight);
+            singleSetWidth += item.offsetWidth + marginRight;
+        });
+        // console.log(`[CREATE] singleSetWidth: ${singleSetWidth}`);
+
+        const containerWidth = container.offsetWidth;
+        // console.log(`[CREATE] containerWidth: ${containerWidth}`);
+
+        // numCopies 계산은 singleSetWidth가 정상화되면 자동으로 해결됩니다.
+        const numCopies = Math.ceil(containerWidth * 2 / singleSetWidth) + 1;
+        // console.log(`[CREATE] numCopies: ${numCopies}`);
+
+        // 나머지 필요한 수량의 아이템들을 추가합니다.
+        for (let i = 0; i < numCopies; i++) {
+            initialItems.forEach(item => {
+                scrollWrapper.appendChild(item.cloneNode(true));
+            });
+        }
+
+        // 모든 아이템을 한 줄에 배치하기 위한 wrapper의 최종 너비 계산
+        const allCurrentItems = Array.from(scrollWrapper.querySelectorAll('.main-edutech-item'));
+        let totalWrapperWidth = 0;
+        allCurrentItems.forEach(item => {
+            const itemStyle = window.getComputedStyle(item);
+            const marginRight = parseFloat(itemStyle.marginRight);
+            totalWrapperWidth += item.offsetWidth + marginRight;
+        });
+        scrollWrapper.style.width = totalWrapperWidth + 'px';
+        // console.log(`[CREATE] Final Wrapper Width: ${scrollWrapper.style.width}`);
+
+        // 2. 애니메이션 정의 및 타임라인 생성
+        let startX, endX; // 애니메이션의 시작과 끝 지점
+
+        if (direction === 'forward') {
+            startX = 0;
+            endX = -singleSetWidth; // 왼쪽으로 한 세트 너비만큼 이동
+            gsap.set(scrollWrapper, { x: startX }); // 시작 위치 설정
+        } else if (direction === 'reverse') {
+            // 역방향일 경우 시작 위치를 맨 오른쪽으로 이동시켜야 함
+            startX = -singleSetWidth; // 역방향 시작점 (음수)
+            endX = 0; // 0까지 이동
+            gsap.set(scrollWrapper, { x: startX }); // 시작 위치 설정
+        } else {
+            // console.error(`Error: Invalid direction '${direction}' for container. Use 'forward' or 'reverse'.`);
+            return;
+        }
+
+        // GSAP 타임라인 생성
+        scrollTimeline = gsap.timeline({
+            repeat: -1, // 무한 반복
+            ease: "none", // 일정한 속도
+            onRepeat: () => {
+                // 애니메이션이 한 바퀴 돌고 반복될 때마다 실행됩니다.
+                // 이 시점에 x 값을 시작점으로 '점프'시킵니다.
+                gsap.set(scrollWrapper, { x: startX });
+            }
+        });
+
+        // 애니메이션 추가
+        scrollTimeline.to(scrollWrapper, {
+            x: endX, // 목표 지점
+            duration: speedSeconds,
+            ease: "none"
+        });
+
+        // 초기 재생
+        scrollTimeline.play();
+    };
+
+    // 초기 애니메이션 시작
+    createAndStartAnimation();
+
+    // 호버 시 멈추고, 호버 해제 시 재생 유지
+    container.addEventListener('mouseenter', () => {
+        // console.log(`마우스 진입 (${direction} 스크롤): 일시 정지`);
+        if (scrollTimeline) scrollTimeline.pause();
+    });
+
+    container.addEventListener('mouseleave', () => {
+        // console.log(`마우스 이탈 (${direction} 스크롤): 다시 재생`);
+        if (scrollTimeline) scrollTimeline.play();
+    });
+
+    // 리사이즈 이벤트 리스너 추가
+    // 성능을 위해 디바운싱 적용
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // console.log(`창 리사이즈 감지 (${direction} 스크롤): 애니메이션 재계산`);
+            createAndStartAnimation(); // 애니메이션 재시작
+        }, 200); // 200ms 후에 실행
+    });
+}
+
+function initializeMainEduTech(){
     // DOM 콘텐츠가 모두 로드된 후 모든 스크롤 초기화
     const allScrollContainers = document.querySelectorAll('.main-edutech-scroll');
     allScrollContainers.forEach(container => {
@@ -337,5 +461,19 @@ document.addEventListener("DOMContentLoaded", () => {
         yoyo: true,
         repeat: -1,
     });
+}
 
-})
+document.addEventListener('DOMContentLoaded', () => {
+    // Section1 Init
+    initializeNewsSwiper();
+
+    // Section2 Init
+    initializeMainEduSwiper();
+    // initializeMainEdu();
+
+    // Section3 Init
+    initializeMainCloud();
+
+    // Section4 Init
+    initializeMainEduTech();
+});

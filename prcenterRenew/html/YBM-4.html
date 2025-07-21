@@ -22,10 +22,10 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
     <script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// 모달 바로 볼 수 있도록 호출
-			var TestModal = new bootstrap.Modal(document.getElementById('newsDetailModal'));
-			TestModal.show();
+        document.addEventListener("DOMContentLoaded", function() {
+            // 모달 바로 볼 수 있도록 호출
+			// var TestModal = new bootstrap.Modal(document.getElementById('classBookModalModal'));
+			// TestModal.show();
 		});
     </script>
 </head>
@@ -75,7 +75,7 @@
             <div class="inner">
                 <ul>
                     <li>
-                        <a href="https://www.ybmcloud.com/home.html" target="_blank">
+                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#classBookModal">
                             <img src="/prcenterRenew/img/ico_2022_book.svg" alt="" loading="lazy">
                             <span>2022개정 교과서 보기</span>
                         </a>
@@ -112,14 +112,15 @@
                         <p class="main-title">교과서의 새로운 내일, <br> <em>YBM과 함께하세요.</em></p>
                     </div>
                     <div class="main-bnr-area">
-                        <div class="main-bnr-01" data-aos="fade-left" data-aos-duration="800" data-aos-offset="100" data-aos-delay="100">
-                            <div class="title-group">
+                        <a href="#" class="main-bnr-01" data-aos="fade-left" data-aos-duration="800" data-aos-offset="100" data-aos-delay="100">
+                            <div class="title-group blind">
                                 <span class="title">남다름.</span>
                                 <span class="title">돋보임.</span>
                                 <span class="title">탁월함.</span>
                             </div>
-                        </div>
+                        </a>
                         <div class="main-bnr-02" data-aos="fade-left" data-aos-duration="800" data-aos-offset="100" data-aos-delay="200">
+                            <p class="main-bnr-label"><span class="label">2022 개정</span></p>
                             <p class="main-bnr-title">전과목 교과서 출원</p>
                         </div>
                         <div class="main-bnr-03" data-aos="fade-left" data-aos-duration="800" data-aos-offset="100" data-aos-delay="300">
@@ -145,33 +146,69 @@
                 <div class="section-header" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
                     <h2 class="section-title">최신 소식</h2>
                 </div>
-                <div class="section-body">
-                    <div class="news-latest-main" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
-                        <div class="thumb-area">
-                            <img src="../img/main/img_sec1_thumb.png" alt="" loading="lazy" />
-                            <button type="button" class="btn">
-                                <span class="blind">자세히보기</span>
-                            </button>
-                        </div>
-                        <div class="news-area">
-                            <div class="news-latest">
-                                <a href="javascript:void(0)" class="post-link">
-                                    <div class="post-label">
-                                        <span class="label type-ybm">YBM 교과서</span>
+                <div class="section-body" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+                    <div class="news-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="news-latest-main">
+                                    <div class="thumb-area">
+                                        <img src="../img/main/img_sec1_thumb.png" alt="" loading="lazy" />
+                                        <button type="button" class="btn">
+                                            <span class="blind">자세히보기</span>
+                                        </button>
                                     </div>
-                                    <div class="post-title">
-                                        <p>AI 코스웨이를 활용한 미래교실은 어떤 모습일까?</p>
-                                    </div>
-                                    <div class="post-meta">
-                                        <div class="tags">
-                                            <span class="tag">#미래교실</span>
-                                            <span class="tag">#코스웨이</span>
+                                    <div class="news-area">
+                                        <div class="news-latest">
+                                            <a href="javascript:void(0)" class="post-link">
+                                                <div class="post-label">
+                                                    <span class="label type-ybm">YBM 교과서</span>
+                                                </div>
+                                                <div class="post-title">
+                                                    <p>AI 코스웨이를 활용한 미래교실은 어떤 모습일까?</p>
+                                                </div>
+                                                <div class="post-meta">
+                                                    <div class="tags">
+                                                        <span class="tag">#미래교실</span>
+                                                        <span class="tag">#코스웨이</span>
+                                                    </div>
+                                                    <p class="date">2025.06.04</p>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <p class="date">2025.06.04</p>
                                     </div>
-                                </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-latest-main">
+                                    <div class="thumb-area">
+                                        <img src="../img/main/img_sec1_thumb.png" alt="" loading="lazy" />
+                                        <button type="button" class="btn">
+                                            <span class="blind">자세히보기</span>
+                                        </button>
+                                    </div>
+                                    <div class="news-area">
+                                        <div class="news-latest">
+                                            <a href="javascript:void(0)" class="post-link">
+                                                <div class="post-label">
+                                                    <span class="label type-ybm">YBM 교과서</span>
+                                                </div>
+                                                <div class="post-title">
+                                                    <p>2024 에듀테크 코리아 페어</p>
+                                                </div>
+                                                <div class="post-meta">
+                                                    <div class="tags">
+                                                        <span class="tag">#미래교실</span>
+                                                        <span class="tag">#코스웨이</span>
+                                                    </div>
+                                                    <p class="date">2025.06.04</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                     <div class="news-latest-sub">
                         <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="100">
@@ -538,12 +575,12 @@
         <!-- section section04 -->
         <section class="section section04 skin-white">
             <div class="wrapper">
-                <div class="section-header" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0">
                     <h2 class="section-title">수업의 새로운 가능성, <br>YBM의 에듀테크와 함께</h2>
                     <p class="section-explain">초등부터 고등까지, <br>전과목 맞춤형 에듀테크 서비스로 수업에 생동감을 더하세요.</p>
                 </div>
                 <div class="section-body">
-                    <div class="main-edutech-scroll" data-direction="forward" data-speed="30" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+                    <div class="main-edutech-scroll" data-direction="forward" data-speed="30">
                         <div class="main-edutech-wrapper">
                             <div class="main-edutech-item">
                                 <div class="main-edutech">
@@ -556,7 +593,7 @@
                                                 <span class="label type-hi">고</span>
                                             </div>
                                             <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
+                                                <p class="title"><strong>커넥팅북</strong></p>
                                                 <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
                                             </div>
                                         </div>
@@ -591,8 +628,8 @@
                                                 <span class="label type-hi">고</span>
                                             </div>
                                             <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
+                                                <p class="title"><strong>깜짝퀴즈</strong></p>
+                                                <p class="explain">수업의 모든 순간 활용할 수 있는 교과서 연계/기반 실시간 퀴즈</p>
                                             </div>
                                         </div>
                                         <div class="main-edutech-overay">
@@ -626,8 +663,8 @@
                                                 <span class="label type-hi">고</span>
                                             </div>
                                             <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
+                                                <p class="title"><strong>콴다봇</strong></p>
+                                                <p class="explain">Y클라우드x콴다, 생성형 AI 기술 기반 초/중/고 수학 문제 풀이 서비스</p>
                                             </div>
                                         </div>
                                         <div class="main-edutech-overay">
@@ -661,8 +698,8 @@
                                                 <span class="label type-hi">고</span>
                                             </div>
                                             <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
+                                                <p class="title"><strong>탭보드</strong></p>
+                                                <p class="explain">학생들의 의견과 아이디어를 공유할 수 있는 온라인 게시판</p>
                                             </div>
                                         </div>
                                         <div class="main-edutech-overay">
@@ -696,8 +733,78 @@
                                                 <span class="label type-hi">고</span>
                                             </div>
                                             <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
+                                                <p class="title"><strong>마인드맵</strong></p>
+                                                <p class="explain">학습 주제를 시각적으로 정리하고 아이디어를 확장할 수 있는 온라인 마인드맵</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-edutech-overay">
+                                            <div class="main-edutech-thumb">
+                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
+                                                <button type="button" class="btn-play"></button>
+                                            </div>
+                                            <div class="youtube-thumb">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
+                                                    title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-edutech-item">
+                                <div class="main-edutech">
+                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
+                                        <div class="main-edutech-normal">
+                                            <div class="util-area">
+                                                <i class="icn icn-edutech-01"></i>
+                                                <span class="label type-ele">초</span>
+                                                <span class="label type-mid">중</span>
+                                                <span class="label type-hi">고</span>
+                                            </div>
+                                            <div class="cont-area">
+                                                <p class="title"><strong>클래스 캔버스</strong></p>
+                                                <p class="explain">퀴즈 제작 도구와 교육용 템플릿을 제공하는 학습 플랫폼</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-edutech-overay">
+                                            <div class="main-edutech-thumb">
+                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
+                                                <button type="button" class="btn-play"></button>
+                                            </div>
+                                            <div class="youtube-thumb">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
+                                                    title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-edutech-item">
+                                <div class="main-edutech">
+                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
+                                        <div class="main-edutech-normal">
+                                            <div class="util-area">
+                                                <i class="icn icn-edutech-01"></i>
+                                                <span class="label type-ele">초</span>
+                                                <span class="label type-mid">중</span>
+                                                <span class="label type-hi">고</span>
+                                            </div>
+                                            <div class="cont-area">
+                                                <p class="title"><strong>쌍방향 영어 게임</strong></p>
+                                                <p class="explain">수업 참여도를 높이고 학습의 재미를 더하는 실시간 쌍방향 게임</p>
                                             </div>
                                         </div>
                                         <div class="main-edutech-overay">
@@ -723,7 +830,7 @@
                         </div>
                     </div>
 
-                    <div class="main-edutech-scroll" data-direction="reverse" data-speed="30" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+                    <div class="main-edutech-scroll" data-direction="reverse" data-speed="30">
                         <div class="main-edutech-wrapper">
                             <div class="main-edutech-item">
                                 <div class="main-edutech">
@@ -732,12 +839,109 @@
                                             <div class="util-area">
                                                 <i class="icn icn-edutech-01"></i>
                                                 <span class="label type-ele">초</span>
-                                                <span class="label type-mid">중</span>
-                                                <span class="label type-hi">고</span>
+                                            </div>
+                                            <div class="cont-area">
+                                                <p class="title"><strong>파닉스 센터</strong></p>
+                                                <p class="explain">AI 원어민 선생님과 함께하는 파닉스 수업, 게임과 e-book으로 재미있게 학습</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-edutech-overay">
+                                            <div class="main-edutech-thumb">
+                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
+                                                <button type="button" class="btn-play"></button>
+                                            </div>
+                                            <div class="youtube-thumb">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
+                                                    title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-edutech-item">
+                                <div class="main-edutech">
+                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
+                                        <div class="main-edutech-normal">
+                                            <div class="util-area">
+                                                <i class="icn icn-edutech-01"></i>
+                                                <span class="label type-ele">초</span>
                                             </div>
                                             <div class="cont-area">
                                                 <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
+                                                <p class="explain">교과서의 수학 교구를 생동감 있게 조작할 수 있는 디지털 수학 교구관</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-edutech-overay">
+                                            <div class="main-edutech-thumb">
+                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
+                                                <button type="button" class="btn-play"></button>
+                                            </div>
+                                            <div class="youtube-thumb">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
+                                                    title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-edutech-item">
+                                <div class="main-edutech">
+                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
+                                        <div class="main-edutech-normal">
+                                            <div class="util-area">
+                                                <i class="icn icn-edutech-01"></i>
+                                                <span class="label type-ele">초</span>
+                                            </div>
+                                            <div class="cont-area">
+                                                <p class="title"><strong>사회 지역화 자료실</strong></p>
+                                                <p class="explain">역사와 사회를 생생하게 배우는 데 꼭 필요한 지역 특화 자료의 보고</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-edutech-overay">
+                                            <div class="main-edutech-thumb">
+                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
+                                                <button type="button" class="btn-play"></button>
+                                            </div>
+                                            <div class="youtube-thumb">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
+                                                    title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-edutech-item">
+                                <div class="main-edutech">
+                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
+                                        <div class="main-edutech-normal">
+                                            <div class="util-area">
+                                                <i class="icn icn-edutech-01"></i>
+                                                <span class="label type-ele">초</span>
+                                            </div>
+                                            <div class="cont-area">
+                                                <p class="title"><strong>스마트 과학 체험관</strong></p>
+                                                <p class="explain">호기심을 자극하고 탐구력을 키워주는 상상력 가득한 가상 과학 교실</p>
                                             </div>
                                         </div>
                                         <div class="main-edutech-overay">
@@ -771,8 +975,42 @@
                                                 <span class="label type-hi">고</span>
                                             </div>
                                             <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
+                                                <p class="title"><strong>음악 노래 익히기</strong></p>
+                                                <p class="explain">교과서 제재곡 노래 익히기 모음으로 스마트한 음악 수업 준비</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-edutech-overay">
+                                            <div class="main-edutech-thumb">
+                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
+                                                <button type="button" class="btn-play"></button>
+                                            </div>
+                                            <div class="youtube-thumb">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
+                                                    title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-edutech-item">
+                                <div class="main-edutech">
+                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
+                                        <div class="main-edutech-normal">
+                                            <div class="util-area">
+                                                <i class="icn icn-edutech-01"></i>
+                                                <span class="label type-mid">중</span>
+                                                <span class="label type-hi">고</span>
+                                            </div>
+                                            <div class="cont-area">
+                                                <p class="title"><strong>AI Writing</strong></p>
+                                                <p class="explain">AI가 학생들의 영어 작문을 평가해주는 자동 채점 서비스</p>
                                             </div>
                                         </div>
                                         <div class="main-edutech-overay">
@@ -806,78 +1044,8 @@
                                                 <span class="label type-hi">고</span>
                                             </div>
                                             <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
-                                            </div>
-                                        </div>
-                                        <div class="main-edutech-overay">
-                                            <div class="main-edutech-thumb">
-                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
-                                                <button type="button" class="btn-play"></button>
-                                            </div>
-                                            <div class="youtube-thumb">
-                                                <iframe
-                                                    width="100%"
-                                                    height="100%"
-                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
-                                                    title="YouTube video player"
-                                                    frameborder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowfullscreen>
-                                                </iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-edutech-item">
-                                <div class="main-edutech">
-                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
-                                        <div class="main-edutech-normal">
-                                            <div class="util-area">
-                                                <i class="icn icn-edutech-01"></i>
-                                                <span class="label type-ele">초</span>
-                                                <span class="label type-mid">중</span>
-                                                <span class="label type-hi">고</span>
-                                            </div>
-                                            <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
-                                            </div>
-                                        </div>
-                                        <div class="main-edutech-overay">
-                                            <div class="main-edutech-thumb">
-                                                <img src="https://img.youtube.com/vi/KLX3CfOu32I/sddefault.jpg" alt="">
-                                                <button type="button" class="btn-play"></button>
-                                            </div>
-                                            <div class="youtube-thumb">
-                                                <iframe
-                                                    width="100%"
-                                                    height="100%"
-                                                    src="https://www.youtube.com/embed/KLX3CfOu32I?controls=0&enablejsapi=1"
-                                                    title="YouTube video player"
-                                                    frameborder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowfullscreen>
-                                                </iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-edutech-item">
-                                <div class="main-edutech">
-                                    <div class="main-edutech-link youtube-link" data-youtube-id="KLX3CfOu32I" tabindex="0">
-                                        <div class="main-edutech-normal">
-                                            <div class="util-area">
-                                                <i class="icn icn-edutech-01"></i>
-                                                <span class="label type-ele">초</span>
-                                                <span class="label type-mid">중</span>
-                                                <span class="label type-hi">고</span>
-                                            </div>
-                                            <div class="cont-area">
-                                                <p class="title"><strong>디지털 수학 교구관</strong></p>
-                                                <p class="explain">선생님과 학생을 이어주는 실시간 쌍방향 교과서</p>
+                                                <p class="title"><strong>AI 스토리챗</strong></p>
+                                                <p class="explain">교과서 단어를 활용한 신규 스토리 생성 및 실시간 AI Chat</p>
                                             </div>
                                         </div>
                                         <div class="main-edutech-overay">
@@ -904,6 +1072,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="object-group">
                 <div class="object-01"></div>
                 <div class="object-02"></div>
@@ -913,26 +1083,47 @@
         </section>
         <!-- //section section04 -->
 
-        <footer>
-            <div class="only-pc">
-                <div class="footer-bottom">
-                    <div class="inn">
+        <section class="section section05">
+            <div class="wrapper">
+                <div class="main-edutech-class">
+                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_ele.png" alt="Y클라우드 초등" /></a>
+                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_mid.png" alt="Y클라우드 중학" /></a>
+                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_hi.png" alt="Y클라우드 고등" /></a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="for-pc">
+            <div class="footer-bottom">
+                <div class="inn">
+                    <div class="copyright">
                         <div class="copyright-left">
-                            <img src="/prcenterRenew/img/ico_logo_w.svg" alt="" loading="lazy">
+                            <img src="/asset/img/ele/logo_white.svg" alt="">
+                        </div>
+                        <div class="copyright-mid">
                             <ul class="link">
                                 <li><a href="http://www.ybm.co.kr/ybm_company/" target="_blank">회사소개</a></li>
                                 <li><a href="javascript:void(0)" class="show-stipulation">이용약관</a></li>
                                 <li><a href="javascript:void(0)" class="show-privacy">개인정보처리방침</a></li>
-                                </ul>
-                            <div class="compony-info mg top-10">
+                            </ul>
+                            <div class="compony-info">
                                 사업자등록번호 101-81-14655   |   대표이사 허문호, 정용환   |   서울시 종로구 종로 104 ㈜와이비엠<br>
                                 고객센터 : 02-2000-0599 FAX : 02-2000-0426 | E-mail ycloud@ybm.co.kr
                             </div>
-                            <div class="copyright">Copyright ⓒ (주)와이비엠. All rights reserved.</div>
+                            <div class="copyright">Copyright Co.(주)YBM. All rights reserved.</div>
                         </div>
                         <div class="copyright-right">
-                            <select name="" id="familySite" class="form-select ver2" onchange="window.open(value,'_blank');">
-                                <option value="">패밀리사이트</option>
+                            <div class="sns-wrap">
+                                <p>YBM교과서 공식 SNS 채널</p>
+                                <ul class="sns">
+                                    <li><a href="https://blog.naver.com/ybm_text" target="_blank"><img src="/asset/img/common/ico_sns_Blog.png" alt=""></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCyKbZcYKETOY1E1BcaLOh-A" target="_blank"><img src="/asset/img/common/ico_sns_youtube.png" alt=""></a></li>
+                                    <li><a href="https://www.instagram.com/ybm_textbook/" target="_blank"><img src="/asset/img/common/ico_sns_insta.png" alt=""></a></li>
+                                    <li><a href="https://www.facebook.com/ybm.textbook/" target="_blank"><img src="/asset/img/common/ico_sns_facebook.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <select name="" id="familySite" class="form-select ver2">
+                                <option value="" disabled selected style="color:white;">패밀리사이트</option>
                                 <option value="https://school.ybmsmartschool.com">YBM스마트스쿨</option>
                                 <option value="https://www.ybmbooksam.com">YBM북샘</option>
                                 <option value="https://www.ybmteachers.com">YBM교원연수원</option>
@@ -941,18 +1132,57 @@
                     </div>
                 </div>
             </div>
+        </footer>
 
-            <div class="only-mobile">
-                <ul class="link">
-                    <li><a href="http://www.ybm.co.kr/ybm_company/">회사소개</a></li>
-                    <li><a href="javascript:void(0);" class="show-stipulation">이용약관</a></li>
-                    <li><a href="javascript:void(0);" class="show-privacy"><strong>개인정보처리방침</strong></a></li>
-                    </ul>
-                <div class="copyright">
-                    <p><img src="/prcenterRenew/img/logo_footer_m.png" alt="" loading="lazy"></p>
-                    <address>Copyright ⓒ (주)와이비엠. All rights reserved.</address>
-                    <a href="javascript:void(0);" class="btn xs view-desktop-mode">PC버전</a>
-                </div>
+        <footer class="for-mobile">
+            <div class="top">
+                <div class="logo"><img src="/asset/img/ele/logo_white.svg" alt=""></div>
+                <ul class="sns">
+                    <li><a href="https://blog.naver.com/ybm_text" target="_blank"><img src="/asset/img/common/ico_sns_Blog.png" alt=""></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCyKbZcYKETOY1E1BcaLOh-A" target="_blank"><img src="/asset/img/common/ico_sns_youtube.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/ybm_textbook/" target="_blank"><img src="/asset/img/common/ico_sns_insta.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/ybm.textbook/" target="_blank"><img src="/asset/img/common/ico_sns_facebook.png" alt=""></a></li>
+                </ul>
+            </div>
+            <ul class="link">
+                <li><a href="http://www.ybm.co.kr/ybm_company/" target="_blank">회사소개</a></li>
+                <li><a href="javascript:void(0);" class="show-stipulation">이용약관</a></li>
+                <li><a href="javascript:void(0);" class="show-privacy"><strong>개인정보처리방침</strong></a></li>
+            </ul>
+            <div class="copyright">
+                <dl>
+                    <dt>사업자등록번호</dt>
+                    <dd>101-81-14655</dd>
+                </dl>
+                <dl>
+                    <dt>대표이사</dt>
+                    <dd>허문호, 정용환</dd>
+                </dl>
+                <dl>
+                    <dt>주소</dt>
+                    <dd>서울시 종로구 종로 104 ㈜와이비엠</dd>
+                </dl>
+                <dl>
+                    <dt>고객센터</dt>
+                    <dd>02-2000-0599</dd>
+                </dl>
+                <dl>
+                    <dt>FAX</dt>
+                    <dd>02-2000-0426</dd>
+                </dl>
+                <dl>
+                    <dt>E-mail</dt>
+                    <dd>ycloud@ybm.co.kr</dd>
+                </dl>
+            </div>
+            <div class="launch">
+                <select name="" id="familySite2">
+                    <option value="">패밀리사이트</option>
+                    <option value="https://school.ybmsmartschool.com">YBM스마트스쿨</option>
+                    <option value="https://www.ybmbooksam.com">YBM북샘</option>
+                    <option value="https://www.ybmteachers.com">YBM교원연수원</option>
+                </select>
+                <address>Copyright Co.(주)YBM. All rights reserved.</address>
             </div>
         </footer>
     </div>
@@ -986,107 +1216,109 @@
 
                 <!-- modal-body -->
 				<div class="modal-body">
-                    <div class="board-list-wrap">
-                        <div class="board-util">
-                            <p class="board-count">총 <strong>300</strong>건</p>
-                        </div>
-                        <div class="board-list">
-                            <table>
-                                <caption class="blind">최신 소식</caption>
-                                <colgroup>
-                                    <col style="width: 80px;" />
-                                    <col style="width: auto;" />
-                                    <col style="width: 120px;" />
-                                </colgroup>
-                                <thead class="blind">
-                                    <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col">제목</th>
-                                        <th scope="col">조회수</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cel-count">9999</td>
-                                        <td class="cel-title">
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
-                                        </td>
-                                        <td class="cel-date">2025.07.10</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="board-pagination">
-                            <div class="pagination">
-                                <button type="button" class="btn-page prev-double" disabled>
-                                    <span class="blind">처음페이지로 이동</span>
-                                </button>
-                                <button type="button" class="btn-page prev-single" disabled>
-                                    <span class="blind">이전페이지로 이동</span>
-                                </button>
+                    <div class="modal-inner">
+                        <div class="board-list-wrap">
+                            <div class="board-util">
+                                <p class="board-count">총 <strong>300</strong>건</p>
+                            </div>
+                            <div class="board-list">
+                                <table>
+                                    <caption class="blind">최신 소식</caption>
+                                    <colgroup>
+                                        <col style="width: 80px;" />
+                                        <col style="width: auto;" />
+                                        <col style="width: 120px;" />
+                                    </colgroup>
+                                    <thead class="blind">
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">제목</th>
+                                            <th scope="col">조회수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-count">9999</td>
+                                            <td class="cel-title">
+                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#newsDetailModal" class="post-link">AI 코스웨어를 활용한 미래교실은?</a>
+                                            </td>
+                                            <td class="cel-date">2025.07.10</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="board-pagination">
+                                <div class="pagination">
+                                    <button type="button" class="btn-page prev-double" disabled>
+                                        <span class="blind">처음페이지로 이동</span>
+                                    </button>
+                                    <button type="button" class="btn-page prev-single" disabled>
+                                        <span class="blind">이전페이지로 이동</span>
+                                    </button>
 
-                                <!-- 현재 페이지 aria-current="page" 추가 -->
-                                <button type="button" class="btn-num" aria-current="page">1</button>
-                                <button type="button" class="btn-num">2</button>
-                                <button type="button" class="btn-num">3</button>
-                                <button type="button" class="btn-num">4</button>
-                                <button type="button" class="btn-num">5</button>
+                                    <!-- 현재 페이지 aria-current="page" 추가 -->
+                                    <button type="button" class="btn-num" aria-current="page">1</button>
+                                    <button type="button" class="btn-num">2</button>
+                                    <button type="button" class="btn-num">3</button>
+                                    <button type="button" class="btn-num">4</button>
+                                    <button type="button" class="btn-num">5</button>
 
-                                <button type="button" class="btn-page next-single">
-                                    <span class="blind">다음페이지로 이동</span>
-                                </button>
-                                <button type="button" class="btn-page next-double">
-                                    <span class="blind">마지막페이지로 이동</span>
-                                </button>
+                                    <button type="button" class="btn-page next-single">
+                                        <span class="blind">다음페이지로 이동</span>
+                                    </button>
+                                    <button type="button" class="btn-page next-double">
+                                        <span class="blind">마지막페이지로 이동</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1113,37 +1345,39 @@
 
                 <!-- modal-body -->
 				<div class="modal-body">
-                    <div class="board-detail-wrap">
-                        <div class="board-detail">
-                            <div class="board-title">
-                                <p class="title"><strong>AI 코스웨어를 활용한 미래교실은? AI 코스웨어를 활용한 미래교실은?</strong></p>
-                                <p class="date">2025.07.29</p>
-                            </div>
-                            <div class="board-content">
-                                <div class="data-view">
-                                    <p><img src="../img/upload/img_detail_01.png" alt="" /></p>
-                                    <p>
-                                        안녕하세요. Y클라우드입니다.
-                                        <br />
-                                        <br />항상 Y클라우드를 이용해 주시는 여러분께 감사드립니다.
-                                        <br />Y클라우드에서 제공했던 [전자도서관 - 리딩락] 서비스는 내부 운영 정책에 따라 **2025년 7월 6일(일)**부로 공식 종료됩니다.
-                                        <br />그동안 이용해 주신 고객 여러분께 진심으로 감사드리며, 더 나은 서비스 제공을 위해 노력하겠습니다.
-                                        <br />또한, 본 서비스 종료에 따라 개인정보 처리방침 상의 위탁업체 목록에서 [아이파프리카]가 제외됨을 알려드립니다.
-                                        <br />해당 변경 사항은 **2025년 7월 7일(월)**부터 반영될 예정입니다.
-                                        <br />
-                                        <br />감사합니다.
-                                    </p>
+                    <div class="modal-inner">
+                        <div class="board-detail-wrap">
+                            <div class="board-detail">
+                                <div class="board-title">
+                                    <p class="title"><strong>AI 코스웨어를 활용한 미래교실은? AI 코스웨어를 활용한 미래교실은?</strong></p>
+                                    <p class="date">2025.07.29</p>
+                                </div>
+                                <div class="board-content">
+                                    <div class="data-view">
+                                        <p><img src="../img/upload/img_detail_01.png" alt="" /></p>
+                                        <p>
+                                            안녕하세요. Y클라우드입니다.
+                                            <br />
+                                            <br />항상 Y클라우드를 이용해 주시는 여러분께 감사드립니다.
+                                            <br />Y클라우드에서 제공했던 [전자도서관 - 리딩락] 서비스는 내부 운영 정책에 따라 **2025년 7월 6일(일)**부로 공식 종료됩니다.
+                                            <br />그동안 이용해 주신 고객 여러분께 진심으로 감사드리며, 더 나은 서비스 제공을 위해 노력하겠습니다.
+                                            <br />또한, 본 서비스 종료에 따라 개인정보 처리방침 상의 위탁업체 목록에서 [아이파프리카]가 제외됨을 알려드립니다.
+                                            <br />해당 변경 사항은 **2025년 7월 7일(월)**부터 반영될 예정입니다.
+                                            <br />
+                                            <br />감사합니다.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="board-pager">
-                            <div class="board-pager-nav">
-                                <p class="prev">이전</p>
-                                <p class="title"><a href="#">전자도서관 - 리딩락 서비스 종료 안내</a></p>
-                            </div>
-                            <div class="board-pager-nav">
-                                <p class="next">다음</p>
-                                <p class="title"><a href="#">공유자료실' 6월 우수 자료를 소개합니다!</a></p>
+                            <div class="board-pager">
+                                <div class="board-pager-nav">
+                                    <p class="prev">이전</p>
+                                    <p class="title"><a href="#">전자도서관 - 리딩락 서비스 종료 안내</a></p>
+                                </div>
+                                <div class="board-pager-nav">
+                                    <p class="next">다음</p>
+                                    <p class="title"><a href="#">공유자료실' 6월 우수 자료를 소개합니다!</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1152,6 +1386,376 @@
         </div>
     </div>
     <!-- //모달: 최신 소식 상세 -->
+
+    <!-- 모달: 2022개정 교과서 보기 -->
+    <div class="modal modal-full fade" id="classBookModalModal" tabindex="-1" role="dialog" aria-labelledby="classBookModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-book-page">
+				<div class="modal-header">
+					<h3 class="modal-title" id="classBookModalLabel">2022 개정 교육과정 YBM 교과서가 함께합니다.</h3>
+                    <p class="modal-explain">계속해서, 혹은 새롭게 - YBM과 함께 해주세요.</p>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="icn icn-modal-close" aria-label="닫기"></i>
+					</button>
+				</div>
+
+                <!-- modal-body -->
+				<div class="modal-body">
+                    <div class="modal-inner">
+                        <div class="classBook-wrap">
+                            <div class="classBook-desc">
+                                <p>교과서를 클릭하면 내용을 자세히 볼 수 있어요.</p>
+                            </div>
+                            <div class="classBook-board">
+                                <div class="accordion" id="accordionClassBook">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEle"
+                                                aria-expanded="true" aria-controls="collapseEle">
+                                                초등학교 교과서
+                                            </button>
+                                        </h2>
+                                        <div id="collapseEle" class="accordion-collapse collapse show" data-bs-parent="#accordionClassBook">
+                                            <div class="accordion-body">
+                                                <ul class="classBook-list">
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">영어</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">김혜리</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">영어</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">최희경</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">수학</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">류희찬</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">사회</span>
+                                                            <span class="teacher">남상준</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">음악</span>
+                                                            <span class="teacher">양소영</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">체육</span>
+                                                            <span class="teacher">이기청</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">보건</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">실과</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">생활 속 인공지능</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseMid" aria-expanded="false" aria-controls="collapseMid">
+                                                중학교 교과서
+                                            </button>
+                                        </h2>
+                                        <div id="collapseMid" class="accordion-collapse collapse" data-bs-parent="#accordionClassBook">
+                                            <div class="accordion-body">
+                                                <ul class="classBook-list">
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">영어</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">김은형</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">영어</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">박준언</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">수학</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">류희찬</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">과학</span>
+                                                            <span class="teacher">권우진</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">기술가정 ①/②</span>
+                                                            <span class="teacher">문성환</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">체육 ①/②</span>
+                                                            <span class="teacher">박재범</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">음악 ①/②</span>
+                                                            <span class="teacher">박준영</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">보건</span>
+                                                            <span class="teacher">우옥영</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">진로와 직업</span>
+                                                            <span class="teacher">장현진</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">한문</span>
+                                                            <span class="teacher">김용재</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">IB 개념 기반 탐구</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">인공지능과 문제 해결</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">미디어와 민주시민</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseHi" aria-expanded="false" aria-controls="collapseHi">
+                                                고등학교 교과서
+                                            </button>
+                                        </h2>
+                                        <div id="collapseHi" class="accordion-collapse collapse" data-bs-parent="#accordionClassBook">
+                                            <div class="accordion-body">
+                                                <ul class="classBook-list">
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">공통영어 1/2</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">김은형</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">공통영어 1/2</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">박준언</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">영어 I/II</span>
+                                                            <span class="teacher">박준언</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">영어 독해와 작문</span>
+                                                            <span class="teacher">김은형</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">실생활 영어 회화</span>
+                                                            <span class="teacher">김현정</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">세계 문화와 영어</span>
+                                                            <span class="teacher">김수연</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">심화 영어</span>
+                                                            <span class="teacher">김명희</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">심화 영어 독해와 작문</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">미디어 영어</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">공통수학 1/2</span>
+                                                            <span class="badge">AI</span>
+                                                            <span class="teacher">류희찬</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">대수</span>
+                                                            <span class="teacher">류희찬</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">미적분 I/II</span>
+                                                            <span class="teacher">류희찬</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">확률과 통계</span>
+                                                            <span class="teacher">류희찬</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">기하</span>
+                                                            <span class="teacher">류희찬</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">체육 1/2</span>
+                                                            <span class="teacher">김경래</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">운동과 건강</span>
+                                                            <span class="teacher">김경래</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">스포츠 생활</span>
+                                                            <span class="teacher">김경래</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">음악</span>
+                                                            <span class="teacher">강민선</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">음악 감상과 비평</span>
+                                                            <span class="teacher">강민선</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">정보</span>
+                                                            <span class="teacher">정재화</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">인공지능 기초</span>
+                                                            <span class="teacher">서인순</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">인공지능 기초</span>
+                                                            <span class="teacher">서인순</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">데이터 과학</span>
+                                                            <span class="teacher">서인순</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">보건</span>
+                                                            <span class="teacher">우옥영</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">한문</span>
+                                                            <span class="teacher">김용재</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="classBook-item">
+                                                        <button type="button" class="classBook-btn">
+                                                            <span class="name">스포츠 과학</span>
+                                                            <span class="teacher">저자명</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //모달: 2022개정 교과서 보기 -->
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
