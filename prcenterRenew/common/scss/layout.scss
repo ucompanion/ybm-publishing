@@ -16,27 +16,33 @@ iframe{
 // Sidespacer
 :root {
     --sidepacer: 3.75rem;
-    --sidepacer-main: 7.5rem;
     --max-width: $breakpoint-tablet;
+    --max-width-main: 1800px;
+
 
     @include tablet {
-        --sidepacer-main: 3rem;
-        --max-width: 100%;
+        --sidepacer: 3rem;
     }
 
     @include mobile {
-        --sidepacer-main: 2rem;
-        --sidepacer: 2rem;
-    }
-
-    @include mobileSm {
-        --sidepacer-main: 2rem;
         --sidepacer: 2rem;
     }
 
     @include mobileXs {
-        --sidepacer-main: 1.125rem;
         --sidepacer: 1.125rem;
+    }
+}
+
+.only-mobile {
+    display: none;
+}
+
+@include mobile {
+    .only-pc {
+        display: none;
+    }
+    .only-mobile {
+        display: block;
     }
 }
 
@@ -451,9 +457,10 @@ html{
 .floating-wrap{
     position: fixed;
     right: 0;
-    top: calc(50% - 215px);
+    top: 50%;
     z-index: 200;
     width: 80px;
+    transform: translateY(-50%);
     transition: all .5s ease-in-out;
     .inner{
         display: flex;
@@ -539,86 +546,9 @@ html{
     }
 }
 
-footer{
+footer {
     &.for-mobile{
         display: none;
-    }
-    .footer-top{
-        @include flex-row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        max-width: #{$inner-container};
-        margin: 0 auto;
-        padding: 21px 0;
-        .as-info{
-            @include flex-row;
-            align-items: center;
-            gap: 20px;
-            height: 32px;
-            font-weight: 700;
-            .title-box{
-                display: flex;
-                align-items: center;
-            }
-            .title{
-                font-size: rem-calc(16px);
-                color: #1b1b1b;
-            }
-            .tel{
-                font-size: rem-calc(24px);
-                color: $color-ele;
-            }
-            .tooltip-box{
-                margin-left: 5px;
-                .tool-tip-conts{
-                    .inn{
-                        strong{
-                            font-size: rem-calc(13px);
-                            font-weight: 500;
-                            color: #3B3B3B;
-                        }
-                        .list{
-                            display: flex;
-                            flex-direction: column;
-                            gap: 5px;
-                            span{
-                                font-size: rem-calc(13px);
-                                font-weight: 400;
-                                color: #666666;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .link-box{
-            @include flex-row;
-            align-items: center;
-            gap: 12px;
-            .link{
-                @include flex-row;
-                gap: 35px;
-                color: #1b1b1b;
-
-                li{
-                    position:relative;
-                    &:not(:last-of-type):after{
-                        content: "";
-                        position:absolute;
-                        right: -17.5px;
-                        top: 6px;
-                        width: 1px;
-                        height: 12px;
-                        background-color: #dadada;
-                    }
-                }
-            }
-            .snslink{
-                @include flex-row;
-                gap: 10px;
-            }
-        }
     }
     .footer-bottom{
         background-color: #3B3B3B;
@@ -671,7 +601,9 @@ footer{
     // main2
     .footer-bottom{
         background: #292929;
-        .inn{
+        .inn {
+            padding-left: var(--sidepacer);
+            padding-right: var(--sidepacer);
             .copyright{
                 width: 100%;
                 display: flex;
@@ -1377,98 +1309,6 @@ footer{
             }
         }
     }
-
-    footer{
-        &.for-mobile{
-            display: block !important;
-            padding: 40px 20px;
-            background: #292929;
-            .top{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                .logo{
-                    width: 58px;
-                }
-                .sns{
-                    display: flex;
-                    flex-direction: row;
-                    gap: 12px;
-                }
-            }
-            .link{
-                display: flex;
-                flex-direction: row;
-                margin-top: 40px;
-                gap: 20px;
-                li{
-                    a{
-                        font-size: 16px;
-                        color: #fff;
-                    }
-                }
-            }
-            .copyright{
-                font-size: 13px;
-                color: #afafaf;
-                margin-top: 40px;
-                font-weight: 300;
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                dl{
-                    margin: 0;
-                    display: flex;
-                    flex-direction: row;
-                    dt{
-                        width: 126px;
-                        flex-shrink: 0;
-                    }
-                    dd{
-                        flex: 1;
-                        min-width: 0;
-                        padding: 0;
-                        margin: 0;
-                    }
-                }
-            }
-            .launch{
-                margin-top: 40px;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                select {
-                    width: 100%;
-                    padding: 12px 16px;
-                    border-radius: 8px;
-                    background: #333; // 셀렉트 박스 배경
-                    color: #fff;
-                    border: none;
-                    font-size: 14px;
-                    appearance: none;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    position: relative;
-                    background-image: url('/asset/img/common/ico_arrow_down.svg');
-                    background-repeat: no-repeat;
-                    background-position: right 12px center;
-                    background-size: 10px;
-
-                    // iOS long-press 이슈 대응
-                    &:focus {
-                      outline: none;
-                    }
-                }
-                address{
-                    color: #666;
-                    font-size: 12px;
-                }
-            }
-        }
-        &.for-pc{
-            display: none;
-        }
-    }
 }
 
 @include mobile{
@@ -1483,6 +1323,40 @@ footer{
             max-width: 70%;
         }
     }
+
+    .floating-wrap {
+        width: auto;
+        right: 20px;
+
+        .inner {
+            gap: 8px;
+
+            .btn-plus {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 36px;
+                height: 36px;
+                background: linear-gradient(180deg, #E83844 0%, #0055A7 100%);
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.06);
+                border-radius: 50%;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: no-repeat center center;
+                    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0013 4.16663V15.8333M4.16797 9.99996H15.8346' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+            }
+            .btn-bottom {
+                width: 36px;
+                height: 36px;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.06);
+            }
+        }
+    }
+
     header{
         .wrapper{
             justify-content: center;
@@ -1645,6 +1519,98 @@ footer{
                     }
                 }
             }
+        }
+    }
+
+    footer{
+        &.for-mobile{
+            display: block !important;
+            padding: 40px 20px;
+            background: #292929;
+            .top{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .logo{
+                    width: 58px;
+                }
+                .sns{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 12px;
+                }
+            }
+            .link{
+                display: flex;
+                flex-direction: row;
+                margin-top: 40px;
+                gap: 20px;
+                li{
+                    a{
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                }
+            }
+            .copyright{
+                font-size: 13px;
+                color: #afafaf;
+                margin-top: 40px;
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                dl{
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    dt{
+                        width: 126px;
+                        flex-shrink: 0;
+                    }
+                    dd{
+                        flex: 1;
+                        min-width: 0;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            .launch{
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                select {
+                    width: 100%;
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    background: #333; // 셀렉트 박스 배경
+                    color: #fff;
+                    border: none;
+                    font-size: 14px;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    position: relative;
+                    background-image: url('/asset/img/common/ico_arrow_down.svg');
+                    background-repeat: no-repeat;
+                    background-position: right 12px center;
+                    background-size: 10px;
+
+                    // iOS long-press 이슈 대응
+                    &:focus {
+                      outline: none;
+                    }
+                }
+                address{
+                    color: #666;
+                    font-size: 12px;
+                }
+            }
+        }
+        &.for-pc{
+            display: none;
         }
     }
 }

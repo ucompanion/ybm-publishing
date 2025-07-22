@@ -21,6 +21,7 @@ function initializeNewsSwiper(){
     const swiperContainerEl = document.querySelector(".news-swiper"); // Swiper HTML 요소 캐싱
     mainNewsSwiper = new Swiper(swiperContainerEl, swiperOptions);
 }
+
 /***********************************************************
  *  Section2: 미래교육
 ************************************************************/
@@ -48,7 +49,7 @@ let mainEduSwiper; // Swiper 인스턴스를 저장할 전역 변수
 function initializeMainEduSwiper(){
     const swiperOptions = {
         threshold: 3,
-        slidesPerView: 1.5,
+        slidesPerView: 1.1,
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
@@ -64,109 +65,29 @@ function initializeMainEduSwiper(){
         on: {
             init: function () {
                 updateNumbering(this);
-                // .addClass('is-swiping')은 initializeMainEduSwiper 밖에서 처리
             },
             slideChange: function () {
                 updateNumbering(this);
             },
         },
         breakpoints: {
-            768: {
-                slidesPerView: 1.5,     // 3개의 슬라이드 표시
-                spaceBetween: 40,    // 간격 조절
-                // centeredSlides: false, // 필요하면 중앙 정렬 해제 등 옵션 변경 가능
+            // 720 ~
+            720: {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
             },
-            // 브라우저 너비가 1024px 이상일 때 (데스크탑 이상)
+            // 1024 ~ (pc 최적화)
             1024: {
-                slidesPerView: 2,     // 4개의 슬라이드 표시
-                spaceBetween: 60,    // 간격 조절
+                slidesPerView: 'auto',
+                spaceBetween: 100,
             },
-            // 브라우저 너비가 1440px 이상일 때 (큰 데스크탑)
-            1440: {
-                slidesPerView: 2.4,     // 5개의 슬라이드 표시
-                spaceBetween: 120,
-            }
         }
+
     };
 
-    const swiperContainerEl = document.querySelector(".main-edu-swiper .swiper"); // Swiper HTML 요소 캐싱
+    const swiperContainerEl = document.querySelector(".main-edu-swiper"); // Swiper HTML 요소 캐싱
     mainEduSwiper = new Swiper(swiperContainerEl, swiperOptions);
 }
-
-// Swiper를 생성하는 함수
-// function initializeMainEduSwiper() {
-//     if (!mainEduSwiper) {
-//         mainEduSwiper = new Swiper(swiperContainerEl, swiperOptions);
-//         $(swiperContainerEl).addClass('is-swiping'); // jQuery 사용하여 클래스 추가
-//         console.log('Swiper 인스턴스 생성됨.');
-//     }
-// }
-
-// Swiper를 파괴하는 함수
-// function destroyMainEduSwiper() {
-//     if (mainEduSwiper) {
-//         mainEduSwiper.destroy(true, true); // true: DOM 정리, true: 이벤트 제거
-//         mainEduSwiper = null; // 인스턴스 참조 제거
-//         $(swiperContainerEl).removeClass('is-swiping'); // 클래스도 제거 (선택 사항)
-//         console.log('Swiper 인스턴스 파괴됨.');
-//     }
-// }
-
-// function initializeMainEdu() {
-//     let resizeTimer; // 리사이징 종료를 위한 타이머
-//     let isResizing = false; // 리사이징 시작을 위한 플래그
-
-//     // Debounce 함수 (리사이징 종료 시 호출)
-//     const debounce = (func, delay) => {
-//         let timeout;
-//         return function(...args) {
-//             const context = this;
-//             clearTimeout(timeout);
-//             timeout = setTimeout(() => func.apply(context, args), delay);
-//         };
-//     };
-
-//     // Throttle 함수 (리사이징 시작 시 호출 - 너무 자주 destroy 되는 것 방지)
-//     const throttle = (func, limit) => {
-//         let inThrottle;
-//         return function() {
-//             const args = arguments;
-//             const context = this;
-//             if (!inThrottle) {
-//                 func.apply(context, args);
-//                 inThrottle = true;
-//                 setTimeout(() => inThrottle = false, limit);
-//             }
-//         };
-//     };
-
-//     // 리사이징 시작 시 호출될 함수 (destroy)
-//     const handleResizeStart = throttle(() => {
-//         if (!isResizing) { // 리사이징이 시작된 것이 아닐 때만
-//             isResizing = true;
-//             destroyMainEduSwiper(); // 기존 Swiper 파괴
-//             console.log('--- 리사이징 시작 --- Swiper 파괴 및 숨김.');
-//         }
-//     }, 100); // 100ms 이내에는 여러번 destroy 호출 안 되게 조절
-
-//     // 리사이징 종료 시 호출될 함수 (re-init)
-//     const handleResizeEnd = debounce(() => {
-//         isResizing = false;
-//         // Swiper 컨테이너를 다시 보이게 함
-//         if (swiperContainerEl) {
-//             swiperContainerEl.style.visibility = ''; // 또는 'display: block;'
-//         }
-//         initializeMainEduSwiper(); // Swiper 재설정
-//         console.log('--- 리사이징 종료 --- Swiper 재설정 및 보임.');
-//     }, 200); // 리사이징 멈춘 후 200ms 뒤 실행
-
-
-//     // window resize 이벤트 리스너
-//     window.addEventListener('resize', () => {
-//         handleResizeStart(); // 리사이징 시작 처리
-//         handleResizeEnd();   // 리사이징 종료 처리 (계속 타이머 갱신)
-//     });
-// }
 
 /***********************************************************
  *  Section3: Y클라우드
@@ -364,7 +285,7 @@ function initGsapInfiniteScroll(container) {
     });
 }
 
-function initializeMainEduTech(){
+function initializeMainEduTechPC(){
     // DOM 콘텐츠가 모두 로드된 후 모든 스크롤 초기화
     const allScrollContainers = document.querySelectorAll('.main-edutech-scroll');
     allScrollContainers.forEach(container => {
@@ -427,14 +348,14 @@ function initializeMainEduTech(){
     });
 
     // Object 이미지
-    gsap.to(".object-01", {
+    gsap.to(".object-group.only-pc .object-01", {
         yPercent: -40, // 오브젝트 높이의 50%만큼 위로 이동
         duration: 2.5,   // 2초 동안 애니메이션
         ease: "sine.inOut", // 부드러운 시작과 끝
         yoyo: true,    // 애니메이션이 끝나면 역방향으로 재생 (다시 제자리로)
         repeat: -1,    // 무한 반복 (-1은 무한대)
     });
-    gsap.fromTo(".object-02",
+    gsap.fromTo(".object-group.only-pc .object-02",
     { yPercent: -30 }, // 시작 위치: 현재보다 30% 위 (이동할 범위의 가장 위)
     {
         yPercent: 30,    // 끝 위치: 현재보다 30% 아래 (이동할 범위의 가장 아래)
@@ -444,7 +365,7 @@ function initializeMainEduTech(){
         repeat: -1,
     }
     );
-    gsap.fromTo(".object-03",
+    gsap.fromTo(".object-group.only-pc .object-03",
     { yPercent: 40 }, // 시작 위치: 현재보다 40% 아래 (이동할 범위의 가장 아래)
     {
         yPercent: -40,   // 끝 위치: 현재보다 40% 위 (이동할 범위의 가장 위)
@@ -454,13 +375,53 @@ function initializeMainEduTech(){
         repeat: -1,
     }
     );
-    gsap.to(".object-04", {
+    gsap.to(".object-group.only-pc .object-04", {
         yPercent: 25,  // 오브젝트 높이의 50%만큼 아래로 이동
         duration: 2.5,
         ease: "sine.inOut",
         yoyo: true,
         repeat: -1,
     });
+}
+
+let mainEduTechSwiper; // Swiper 인스턴스를 저장할 전역 변수
+function initializeMainEduTechMobile() {
+    const swiperOptions = {
+        threshold: 3,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: ".main-edutech-swiper .swiper-pagination",
+            clickable: false,
+            type: 'bullets',
+        },
+    };
+
+    const swiperContainerEl = document.querySelector(".main-edutech-swiper"); // Swiper HTML 요소 캐싱
+    mainEduTechSwiper = new Swiper(swiperContainerEl, swiperOptions);
+
+    // Object 이미지
+    gsap.to(".object-group.only-mobile .object-01", {
+        yPercent: -40, // 오브젝트 높이의 50%만큼 위로 이동
+        duration: 2.5,   // 2초 동안 애니메이션
+        ease: "sine.inOut", // 부드러운 시작과 끝
+        yoyo: true,    // 애니메이션이 끝나면 역방향으로 재생 (다시 제자리로)
+        repeat: -1,    // 무한 반복 (-1은 무한대)
+    });
+    gsap.to(".object-group.only-mobile .object-02", {
+        yPercent: 25,  // 오브젝트 높이의 50%만큼 아래로 이동
+        duration: 2.5,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+    });
+}
+
+function initializeMainEduTech(){
+    initializeMainEduTechPC();
+    initializeMainEduTechMobile();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
