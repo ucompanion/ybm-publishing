@@ -116,8 +116,10 @@
             <div class="wrapper">
                 <!-- YBM교과서 알아보기 -->
                 <div class="main-visual">
-                    <div class="main-title-area" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100" data-aos-delay="0">
-                        <p class="main-title">교과서의 새로운 내일, <br> <em>YBM과 함께하세요.</em></p>
+                    <div class="main-visual-bg">
+                        <div class="main-title-area" data-aos="fade-right" data-aos-duration="800" data-aos-offset="100" data-aos-delay="0">
+                            <p class="main-title">교과서의 새로운 내일, <br> <em>YBM과 함께하세요.</em></p>
+                        </div>
                     </div>
                     <div class="main-bnr-area">
                         <a href="#" class="main-bnr-01" data-aos="fade-left" data-aos-duration="800" data-aos-offset="100" data-aos-delay="100">
@@ -219,7 +221,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                     <div class="news-latest-sub">
-                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="100">
+                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0" data-aos-delay="100">
                             <a href="javascript:void(0)" class="post-link">
                                 <div class="post-label">
                                     <span class="label type-ai">AI 디지털교과서</span>
@@ -232,7 +234,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="200">
+                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0" data-aos-delay="200">
                             <a href="javascript:void(0)" class="post-link">
                                 <div class="post-label">
                                     <span class="label type-ybm">YBM 교과서</span>
@@ -245,7 +247,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="300">
+                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0" data-aos-delay="300">
                             <a href="javascript:void(0)" class="post-link">
                                 <div class="post-label">
                                     <span class="label type-ai">AI 디지털교과서</span>
@@ -258,7 +260,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="400">
+                        <div class="news-latest" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0" data-aos-delay="400">
                             <a href="javascript:void(0)" class="post-link">
                                 <div class="post-label">
                                     <span class="label type-ybm">YBM 교과서</span>
@@ -272,7 +274,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="news-latest-more" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="0">
+                    <div class="news-latest-more" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0" data-aos-delay="0">
                         <button type="button" class="btn btn-more" data-bs-toggle="modal" data-bs-target="#newsListModal">
                             <span>전체보기</span>
                         </button>
@@ -539,7 +541,13 @@
                                             <p class="title">교과서 자료</p>
                                         </div>
                                         <div class="swiper-slide main-cloud-face back">
-                                            두 번째 면 (좌측으로 돌아간 느낌)
+                                            <div class="tag-group">
+                                                <span class="tag">#1~6학년</span>
+                                                <span class="tag">#기초 다지기 자료</span>
+                                                <span class="tag">#매일 완북</span>
+                                                <span class="tag">#보충 학습지</span>
+                                                <span class="tag">#방과후 수업</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1693,19 +1701,7 @@
         <!-- //section section04 -->
 
         <!-- section section05 -->
-        <section class="section section05">
-            <div class="wrapper">
-                <div class="main-edutech-class">
-                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_ele.png" alt="Y클라우드 초등" /></a>
-                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_mid.png" alt="Y클라우드 중학" /></a>
-                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_hi.png" alt="Y클라우드 고등" /></a>
-                </div>
-            </div>
-        </section>
-        <!-- //section section05 -->
-
-        <!-- section section06 -->
-        <section class="section section06 only-mobile">
+        <section class="section section05 only-mobile">
             <div class="wrapper">
                 <div class="section-header">
                     <h2 class="section-title">2022 개정 교육과정</h2>
@@ -2058,7 +2054,19 @@
                 </div>
             </div>
         </section>
-        <!-- //section section06 -->
+        <!-- //section section05 -->
+
+        <!-- section section06 -->
+        <section class="section section06">
+            <div class="wrapper">
+                <div class="main-edutech-class">
+                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_ele.png" alt="Y클라우드 초등" /></a>
+                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_mid.png" alt="Y클라우드 중학" /></a>
+                    <a href="javascript:;" class="main-edutech-link"><img src="../img/main/img_sec4_hi.png" alt="Y클라우드 고등" /></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section section05 -->
 
         <footer class="for-pc">
             <div class="footer-bottom">
