@@ -14,25 +14,26 @@
         <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
 
         <title>페이지명 | AI 스토리챗 </title>
-        <link rel="stylesheet" href="../../../asset/inc/common/css/import.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/mobile.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/popup.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../asset/inc/ele/css/import.css">
+        <link rel="stylesheet" href="../../asset/inc/ele/css/set-ele.css">
     </head>
     <body>
         <!-- page-wrap -->
-        <div class="page-wrap">
+        <div class="page-wrap fill-height">
             <header class="page-header">
                 <div class="logo-area">
                     <h1 class="logo"><a href="/">AI 스토리챗</a></h1>
                 </div>
-                <div class="step-area">
+                <div class="util-area">
                     <ol class="step-list">
-                        <li class="step-item is-old" aria-label="1. 교과서 선택" aria-current="step">
+                        <!--
+                            완료: is-completed
+                            현재: is-current  aria-current="step"
+                        -->
+                        <li class="step-item is-current" aria-label="1. 교과서 선택" aria-current="step">
                             <span class="step-num">1</span>
                             <span class="step-label">교과서 선택</span>
                         </li>
-                        <li class="step-item is-current" aria-label="2. 단원 및 단어 선택">
+                        <li class="step-item" aria-label="2. 단원 및 단어 선택">
                             <span class="step-num">2</span>
                             <span class="step-label">단원 및 단어 선택</span>
                         </li>
@@ -45,8 +46,6 @@
                             <span class="step-label">학생 초대</span>
                         </li>
                     </ol>
-                </div>
-                <div class="home-area">
                     <a href="./setting_step1.html" class="btn btn-home"><span class="blind">설정 홈</span></a>
                 </div>
             </header>
@@ -221,7 +220,6 @@
 
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
-        <script src="../../asset/inc/common/js/modal.js"></script>
         <script src="../../asset/inc/common/js/publish-only.js"></script>
 
     </body>

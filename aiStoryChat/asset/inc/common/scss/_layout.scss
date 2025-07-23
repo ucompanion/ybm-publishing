@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import 'variables', 'functions', 'breakpoint';
+
+html {
+    font-size: 1px;
+}
+
+html, body, .page-wrap {
+    height: 100%;
+}
+
+.page-wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: #31324D;
+    .page-header {
+        flex: none;
+    }
+    .page-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        overflow: hidden;
+        border-radius: 0 58rem 0 0;
+        background-color: #fff;
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+    }
+}
+
+// Header
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 92rem;
+    background-color: #fff;
+    padding: 0;
+
+    .logo-area {
+        margin-right: auto;
+    }
+    .util-area {
+        position: relative;
+        display: flex;
+        gap: 24rem;
+        height: 100%;
+        align-items: center;
+        padding-right: var(--spacer);
+        background-color: #31324D;
+        &::before {
+            content:'';
+            display: block;
+            position: absolute;
+            right: 100%;
+            top: 0;
+            width: 180rem;
+            height: 100%;
+            background: url('../../../img/common/img-header-round-pc.png') no-repeat;
+        }
+    }
+
+    .logo {
+        a {
+            font-weight: 900;
+            font-size: 34rem;
+            color: #000;
+        }
+    }
+
+    .step-list {
+        display: flex;
+        align-items: center;
+        gap: 16rem;
+
+        .step-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8rem;
+
+            &::before {
+                content:'';
+                display: none;
+                width: 28rem;
+                height: 28rem;
+                border-radius: 50%;
+                background-color: #87889E;
+            }
+
+            .step-num {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 28rem;
+                height: 28rem;
+                padding-bottom: 2px;
+                border-radius: 50%;
+                color: #fff;
+                font-weight: 700;
+                font-size: 16rem;
+                line-height: 24rem;
+                background-color: #55566C;
+            }
+
+            .step-label {
+                display: none;
+                position: relative;
+                top: -1px;
+                font-weight: 700;
+                font-size: 24rem;
+                line-height: 100%;
+                color: #fff;
+            }
+
+            &.is-completed {
+                &::before {
+                    display: flex;
+                    background-color: none;
+                    background: url(#{$com-url}icn-28-step-check-wh.svg);
+                }
+                .step-num {
+                    display: none;
+                }
+            }
+
+            &.is-current {
+                &::before {
+                    display: none;
+                }
+                .step-num, .step-label {
+                    display: flex;
+                }
+                .step-num {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    .btn-home {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: url(#{$com-url}icn-60-home.svg);
+        border: 0;
+        border-radius: 50%;
+    }
+}

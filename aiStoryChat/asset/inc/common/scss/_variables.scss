@@ -25,14 +25,13 @@ $ele-url: '../../../img/ele/';
 $mid-url: '../../../img/mid/';
 $hi-url: '../../../img/hi/';
 
-$pc-padding: 40px;
-$mobile-padding: 20px;
-
 // Breakpoints
-$breakpoint-mobile: 960px;
-$breakpoint-tablet: 1220px;
-$mobile-max-width: 680px;
-$mobile-min-width: 360px;
+$breakpoint-pc: 1600px;
+$breakpoint-tablet: 1280px;
+$breakpoint-mobile-xl: 1023px;
+$breakpoint-mobile-xm: 719px;
+$breakpoint-mobile-xs: 419px;
 
 // Color
 $color-primary: var(--color-primary);
+

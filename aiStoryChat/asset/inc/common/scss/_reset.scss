@@ -14,7 +14,6 @@ html{
 html, body{
     @include zero-set;
     font-family: #{$font-stack};
-    font-size: 16px;
     line-height: #{$base-line-height};
     font-weight: #{$base-font-weight};
     letter-spacing: #{$base-letter-spacing};
@@ -51,19 +50,19 @@ a, input, button, textarea, select, textarea{
     font-size: 1em;
     vertical-align: middle;
 }
-input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    appearance: none; 
-} 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
-/* 파이어폭스에서의 초기화 방법 */ 
-input[type=number] { 
-    -moz-appearance: textfield; 
+/* 파이어폭스에서의 초기화 방법 */
+input[type=number] {
+    -moz-appearance: textfield;
 }
 button{
-    cursor: pointer;    
+    cursor: pointer;
     background: transparent none;
 }
 a:active, button:active, input:focus{
@@ -102,4 +101,26 @@ ul[type="disc"]{
 
 .layerpop, .toast-alert-box{
     display: none;
+}
+
+.blind {
+	position: fixed;
+	overflow: hidden;
+	border: 0;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+}
+
+:root {
+    --spacer: 40rem;
+}
+
+@include tablet {
+    :root {
+        --spacer: 20rem;
+    }
 }

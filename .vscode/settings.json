@@ -17,7 +17,7 @@
     ],
     "liveSassCompile.settings.excludeList": [
         // 필요한것만 컴파일 하기위한 제외목록 (컴파일 대상 주석처리)
-        "/aiStoryChat/**",
+        // "/aiStoryChat/**",
         "/asset/**",
         "/classGame/**",
         "/ConnectingBook/**",
@@ -25,7 +25,7 @@
         "/expcenter/**",
         "/gate/**",
         "/prcenter/**",
-        // "/prcenterRenew/**",
+        "/prcenterRenew/**",
         "/pub_etc/**",
         "/viewer/**",
     ],

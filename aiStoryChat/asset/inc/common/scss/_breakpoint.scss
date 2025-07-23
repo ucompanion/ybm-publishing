@@ -1,18 +1,34 @@
-// 모바일 레이아웃
-@mixin tablet {
-    @media (max-width: #{$breakpoint-tablet}) {
-      @content;
-    }
-  }
-// 태블릿~PC 레이아웃 (태블릿환경에서는 PC레이아웃 유지)
-@mixin mobile {
-    @media (max-width: #{$breakpoint-mobile}) {
-        @content;
-    }
+// 데스크탑
+@mixin pc {
+	@media (max-width: #{$breakpoint-pc}) {
+		@content;
+	}
 }
-// 태블릿~mo 레이아웃 (태블릿환경에서는 PC레이아웃 유지)
+
+// 테블릿
+@mixin tablet {
+	@media (max-width: #{$breakpoint-tablet}) {
+		@content;
+	}
+}
+
+// 모바일 시작
+@mixin mobile {
+	@media (max-width: #{$breakpoint-mobile-xl}) {
+		@content;
+	}
+}
+
+// 모바일 전용
 @mixin mobileS {
-  @media (max-width: #{$mobile-max-width}) {
-      @content;
-  }
+	@media (max-width: #{$breakpoint-mobile-xm}) {
+		@content;
+	}
+}
+
+// 모바일 최적
+@mixin mobileS {
+	@media (max-width: #{$breakpoint-mobile-xs}) {
+		@content;
+	}
 }

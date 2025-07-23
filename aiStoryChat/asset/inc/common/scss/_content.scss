@@ -1,136 +1,23 @@
 @charset "UTF-8";
 
-html {
-    font-size: 1px;
-    height: 100%;
-}
-
-body {
-    background-color: #F4F4F4;
-    height: 100%;
-}
-
-.blind {
-	position: fixed;
-	overflow: hidden;
-	border: 0;
-	margin: -1px;
-	width: 1px;
-	height: 1px;
-	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
-	clip-path: inset(50%);
-}
-
-// Header
-.page-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100rem;
-    background-color: #2D304D;
-    padding: 0 $pc-padding;
-
-    .logo-area {
-        margin-right: auto;
-    }
-    .step-area {
-        margin-right: 40px;
-    }
-
-    .logo {
-        a {
-            font-weight: 900;
-            font-size: 34rem;
-            color: #fff;
-        }
-    }
-
-    .step-list {
-        display: flex;
-        align-items: center;
-        gap: 16rem;
-
-        .step-item {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 8rem;
-
-            &::before {
-                content:'';
-                display: flex;
-                width: 28rem;
-                height: 28rem;
-                border-radius: 50%;
-                background-color: #87889E;
-            }
-
-            .step-num {
-                display: none;
-                justify-content: center;
-                align-items: center;
-                width: 28rem;
-                height: 28rem;
-                border-radius: 50%;
-                color: #fff;
-                background-color: $color-primary;
-            }
-
-            .step-label {
-                display: none;
-                position: relative;
-                top: 1px;
-                font-weight: 700;
-                font-size: 24rem;
-                line-height: 100%;
-                color: #fff;
-            }
-
-            &.is-old {
-                &::before {
-                    background-color: none;
-                    background: url(#{$com-url}icn-28-step-check-wh.svg);
-                }
-            }
-
-            &.is-current {
-                &::before {
-                    display: none;
-                }
-                .step-num, .step-label {
-                    display: flex;
-                }
-            }
-        }
-    }
-
-    .btn-home {
-        display: block;
-        width: 60px;
-        height: 60px;
-        background: url(#{$com-url}icn-60-home.svg);
-        border: 0;
-        border-radius: 50%;
-    }
-}
-
 // 설정하기
 .setting-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 40rem;
-    background-color: #F4F4F4;
 
     .setting-list {
-        display:flex;
-        flex-direction:column;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
         gap: 16rem;
 
         .setting-item {
             display: flex;
-            align-items: flex-start;
-            // flex-wrap: wrap;
+            flex: 1 1 auto;
             width: 100%;
-            padding: 30rem;
+            padding: 20rem;
             border:1px solid #D3D3D3;
             border-radius: 8rem;
             background-color: #fff;
@@ -222,6 +109,7 @@ body {
             }
 
             &.is-active {
+                flex-grow: 1;
                 border-color: $color-primary;
                 .setting-header {
                     .setting-title {
