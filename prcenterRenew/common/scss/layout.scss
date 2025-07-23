@@ -34,15 +34,15 @@ iframe{
 }
 
 .only-mobile {
-    display: none;
+    display: none !important;
 }
 
 @include mobile {
     .only-pc {
-        display: none;
+        display: none !important;
     }
     .only-mobile {
-        display: block;
+        display: block !important;
     }
 }
 

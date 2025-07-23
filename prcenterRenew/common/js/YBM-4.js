@@ -1,8 +1,137 @@
 /***********************************************************
+ *  공통: Youtube
+************************************************************/
+// ⭐ 클릭 이벤트 위임 리스너가 한 번만 등록되도록 하는 플래그
+let isClickDelegationInitialized = false;
+
+// 복제되는 엘리먼트를 처리하기 위한 Map (클릭/마우스이탈 로직 상태 관리)
+const youtubeBoxStates = new Map();
+// YT.Player 인스턴스를 저장하기 위한 객체
+let players = {};
+
+// 유튜브 썸네일 기능을 초기화하는 함수
+// 이 함수는 필요에 따라 여러 번 호출될 수 있습니다 (예: 새 유튜브 요소가 DOM에 추가될 때).
+function initYoutubeThumbnails() {
+    console.log("YouTube 썸네일 초기화 함수 실행됨!");
+
+    // ✅ 클릭 이벤트는 document 전체에 단 한 번만 등록되도록 합니다.
+    if (!isClickDelegationInitialized) {
+        document.addEventListener('click', (event) => {
+            const box = event.target.closest('.youtube-link');
+            if (!box) return;
+
+            const currentState = youtubeBoxStates.get(box) || {
+                timeoutId: null,
+                isLoaded: false,
+                originalThumbHTML: box.querySelector('.youtube-thumb').innerHTML,
+                currentIframe: null,
+                thumbElement: box.querySelector('.youtube-thumb')
+            };
+            youtubeBoxStates.set(box, currentState);
+
+            event.preventDefault(); // 기본 링크 이동 방지 (box가 <a> 태그일 경우)
+
+            // 이미 로드된 상태에서 클릭 시, iframe이 숨겨져 있다면 보이게 하고 재생 시도
+            if (currentState.isLoaded || currentState.timeoutId) {
+                if (currentState.isLoaded && currentState.currentIframe && currentState.currentIframe.classList.contains('hide-youtube')) {
+                    currentState.currentIframe.classList.remove('hide-youtube');
+                    currentState.thumbElement.innerHTML = '';
+                    currentState.thumbElement.appendChild(currentState.currentIframe);
+                    if (players[box.id] && typeof players[box.id].playVideo === 'function') {
+                        players[box.id].playVideo();
+                    }
+                }
+                return;
+            }
+
+            currentState.timeoutId = setTimeout(() => {
+                const thumbContainer = box.querySelector('.youtube-thumb');
+                const videoId = box.dataset.youtubeId;
+
+                const iframeId = `ytplayer-${Date.now()}`;
+                const iframe = document.createElement('iframe');
+                iframe.id = iframeId;
+                iframe.width = "100%";
+                iframe.height = "100%";
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&enablejsapi=1`;
+                iframe.title = "YouTube video player";
+                iframe.frameBorder = "0";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                iframe.allowFullscreen = true;
+                iframe.setAttribute('loading', 'lazy');
+
+                thumbContainer.innerHTML = '';
+                thumbContainer.appendChild(iframe);
+
+                currentState.isLoaded = true;
+                currentState.currentIframe = iframe;
+                currentState.timeoutId = null;
+
+                if (typeof YT !== 'undefined' && YT.Player) {
+                    players[box.id || iframeId] = new YT.Player(iframe.id, {
+                        events: {
+                            'onStateChange': function(event) {
+                                const currentBox = Array.from(youtubeBoxStates.keys()).find(key => players[key.id || key.dataset.youtubeId] === event.target);
+                                if (event.data === YT.PlayerState.ENDED && currentBox) {
+                                    const state = youtubeBoxStates.get(currentBox);
+                                    if (state) {
+                                        state.currentIframe.classList.add('hide-youtube');
+                                        state.thumbElement.innerHTML = state.originalThumbHTML;
+                                        event.target.stopVideo();
+                                        event.target.seekTo(0);
+                                    }
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    console.warn("YT.Player is not defined. YouTube API may not be loaded, or initYoutubeThumbnails should be called inside onYouTubeIframeAPIReady.");
+                }
+            }, 500); // 0.5초 딜레이
+        });
+        isClickDelegationInitialized = true; // 클릭 위임 리스너가 등록되었음을 표시
+    }
+
+    // ✅ mouseleave 이벤트는 '.youtube-link' 요소가 동적으로 추가될 때마다 붙여져야 합니다.
+    // 따라서 forEach 루프는 매 호출마다 실행되지만, 중복 방지 로직을 추가합니다.
+    document.querySelectorAll('.youtube-link').forEach(box => {
+        // ⭐⭐ 이 요소가 이미 mouseleave 리스너로 초기화되었는지 확인
+        if (box.dataset.youtubeListenersInitialized === 'true') {
+            return; // 이미 초기화된 요소라면 건너뜀
+        }
+
+        const thumbContainer = box.querySelector('.youtube-thumb');
+        const state = youtubeBoxStates.get(box) || {
+            timeoutId: null, isLoaded: false, originalThumbHTML: thumbContainer.innerHTML, currentIframe: null, thumbElement: thumbContainer
+        };
+        youtubeBoxStates.set(box, state);
+
+        box.addEventListener('mouseleave', () => {
+            const currentState = youtubeBoxStates.get(box);
+            if (currentState.timeoutId) {
+                clearTimeout(currentState.timeoutId);
+                currentState.timeoutId = null;
+            }
+            if (currentState.isLoaded) {
+                if (currentState.currentIframe && currentState.thumbElement.contains(currentState.currentIframe)) {
+                    currentState.thumbElement.removeChild(currentState.currentIframe);
+                }
+                currentState.thumbElement.innerHTML = currentState.originalThumbHTML;
+                currentState.isLoaded = false;
+                currentState.currentIframe = null;
+            }
+        });
+
+        // ⭐⭐ 이 요소는 mouseleave 리스너 초기화가 완료되었음을 표시
+        box.dataset.youtubeListenersInitialized = 'true';
+    });
+}
+
+/***********************************************************
  *  Section1: 최근소식
 ************************************************************/
 let mainNewsSwiper; // Swiper 인스턴스를 저장할 전역 변수
-function initializeNewsSwiper(){
+function initNewsSwiper(){
     const swiperOptions = {
         threshold: 3,
         effect: 'fade',
@@ -46,7 +175,7 @@ function updateNumbering(swiper) {
 }
 
 let mainEduSwiper; // Swiper 인스턴스를 저장할 전역 변수
-function initializeMainEduSwiper(){
+function initMainEduSwiper(){
     const swiperOptions = {
         threshold: 3,
         slidesPerView: 1.1,
@@ -92,7 +221,7 @@ function initializeMainEduSwiper(){
 /***********************************************************
  *  Section3: Y클라우드
 ************************************************************/
-function initializeMainCloud(){
+function initMainCloud(){
     const mainCloudContainers = document.querySelectorAll('.main-cloud-swiper');
     mainCloudContainers.forEach(container => {
         let originalRealIndexOnHover = -1; // 호버 시점의 실제 슬라이드 인덱스를 저장할 변수
@@ -257,6 +386,8 @@ function initGsapInfiniteScroll(container) {
 
         // 초기 재생
         scrollTimeline.play();
+
+        initYoutubeThumbnails();
     };
 
     // 초기 애니메이션 시작
@@ -285,66 +416,11 @@ function initGsapInfiniteScroll(container) {
     });
 }
 
-function initializeMainEduTechPC(){
+function initMainEduTechPC(){
     // DOM 콘텐츠가 모두 로드된 후 모든 스크롤 초기화
     const allScrollContainers = document.querySelectorAll('.main-edutech-scroll');
     allScrollContainers.forEach(container => {
         initGsapInfiniteScroll(container);
-    });
-
-    // Youtube
-    // 페이지의 모든 .main-edutech-link 요소를 선택한다.
-    const edutechLinks = document.querySelectorAll('.main-edutech-link');
-
-    // 각 링크 요소에 대해 반복하며 기능을 추가한다.
-    edutechLinks.forEach(link => {
-        // 현재 링크 요소 내부에서 재생 버튼, iframe 컨테이너, 초기 썸네일 요소를 찾는다.
-        const btnPlay = link.querySelector('.btn-play'); // 실제 재생 버튼
-        const youtubeThumbContainer = link.querySelector('.youtube-thumb'); // iframe을 감싸는 div
-        const initialThumb = link.querySelector('.main-edutech-thumb'); // 유튜브 영상 재생 전 보이는 썸네일 이미지 영역
-        const iframeElement = youtubeThumbContainer ? youtubeThumbContainer.querySelector('iframe') : null; // 미리 HTML에 있는 iframe 요소
-
-        // 만약 재생 버튼이나 iframe 요소를 찾지 못했다면, 이 링크는 스킵한다.
-        if (!btnPlay || !iframeElement) {
-            console.warn('경고: 재생 버튼 또는 iframe 요소를 찾을 수 없습니다. (데이터 ID: ' + link.dataset.youtubeId + ')');
-            return;
-        }
-
-        link.addEventListener('mouseleave', () => {
-            // 마우스가 링크 영역 밖으로 나가면 'is-hovered' 클래스를 제거한다.
-            // 이 클래스 제거로 CSS에서 오버레이를 다시 숨길 수 있다.
-            youtubeThumbContainer.classList.remove('is-playing');
-            // ⭐ 중요: 여기서 is-playing 클래스는 제거하지 않는다. ⭐
-            // (사용자가 직접 닫지 않는 한 영상은 계속 재생되거나 표시 상태 유지)
-        });
-
-        // 2. 재생 버튼 클릭 이벤트: 유튜브 영상 재생 시작
-        btnPlay.addEventListener('click', (event) => {
-            // a 태그의 기본 동작(링크 이동)을 막는다.
-            event.preventDefault();
-            // 이벤트 버블링(부모 요소로 이벤트 전파)을 막아 불필요한 동작을 방지한다.
-            event.stopPropagation();
-
-            const youtubeId = link.dataset.youtubeId; // 'data-youtube-id' 속성에서 유튜브 영상 ID를 가져온다.
-
-            // 유튜브 ID가 없으면 재생하지 않고 종료한다.
-            if (!youtubeId) {
-                console.error('오류: 유튜브 영상 ID가 설정되지 않았습니다.');
-                return;
-            }
-
-            youtubeThumbContainer.classList.add('is-playing');
-            // iframe의 src 속성을 동적으로 변경하여 유튜브 영상을 로드하고 자동 재생 설정
-            // - controls=0: 플레이어 컨트롤러를 숨김
-            // - autoplay=1: 자동 재생
-            // - mute=1: 크롬 등 브라우저 정책상 자동 재생은 음소거 상태에서만 허용될 수 있다.
-            // - loop=1&playlist=${youtubeId}: 영상을 반복 재생하려면 'loop=1'과 함께 'playlist' 파라미터에 현재 영상 ID를 넣어줘야 한다.
-            iframeElement.src = `https://www.youtube.com/embed/${youtubeId}?controls=0&autoplay=1&mute=1&loop=1&playlist=${youtubeId}`;
-
-            // 최상위 main-edutech-link 요소에 'is-playing' 클래스를 추가한다.
-            // 이 클래스로 CSS에서 초기 썸네일 숨기고 유튜브 영상(iframe)을 표시한다.
-            console.log(`유튜브 영상 재생 시작: ${youtubeId}`);
-        });
     });
 
     // Object 이미지
@@ -385,7 +461,7 @@ function initializeMainEduTechPC(){
 }
 
 let mainEduTechSwiper; // Swiper 인스턴스를 저장할 전역 변수
-function initializeMainEduTechMobile() {
+function initMainEduTechMobile() {
     const swiperOptions = {
         threshold: 3,
         slidesPerView: 'auto',
@@ -419,22 +495,26 @@ function initializeMainEduTechMobile() {
     });
 }
 
-function initializeMainEduTech(){
-    initializeMainEduTechPC();
-    initializeMainEduTechMobile();
+function initMainEduTech(){
+    initMainEduTechPC();
+    initMainEduTechMobile();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     // Section1 Init
-    initializeNewsSwiper();
+    initNewsSwiper();
 
     // Section2 Init
-    initializeMainEduSwiper();
-    // initializeMainEdu();
+    initMainEduSwiper();
+    // initMainEdu();
 
     // Section3 Init
-    initializeMainCloud();
+    initMainCloud();
 
     // Section4 Init
-    initializeMainEduTech();
+    initMainEduTech();
+
+    // 곻통 Init
+    // initYoutubeThumbnails();
+
 });

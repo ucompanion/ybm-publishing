@@ -158,22 +158,6 @@
 			padding-right: rem-calc(34px);
 		}
 	}
-
-    @include tablet {
-        &.fade {
-            transition: opacity .15s linear;
-        }
-        .modal-dialog {
-            transform: translate(0, 0);
-        }
-        .modal-content {
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            max-height: 100%;
-
-        }
-    }
 }
 
 // 게시판형 모달페이지
@@ -182,7 +166,7 @@
 
 	.modal-header {
 		flex: none;
-        padding-bottom: rem-calc(40px);
+		padding-left: rem-calc(60px);
 		.btn-back {
 			display: flex;
 			align-items: center;
@@ -192,18 +176,85 @@
 			font-size: rem-calc(16px);
 			line-height: rem-calc(28px);
 			color: #000;
-
 			.icn-modal-back {
 				display: block;
 				width: rem-calc(32px);
 				height: rem-calc(32px);
+				background: no-repeat center center / contain;
 				background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='15.5' transform='rotate(180 16 16)' fill='white' stroke='%23CDCDCD'/%3E%3Cpath d='M21.332 16L10.6654 16M10.6654 16L14.6654 20M10.6654 16L14.6654 12' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 			}
 		}
     }
+	.modal-nav {
+		padding-bottom: rem-calc(40px);
+	}
 	.modal-body {
 		padding-top: 0;
+		padding-bottom: rem-calc(24px);
 	}
+    .modal-footer {
+		padding: rem-calc(24px) rem-calc(24px) rem-calc(60px);
+
+        .pagination {
+			width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .btn-num,
+            .btn-page {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: rem-calc(48px);
+                height: rem-calc(48px);
+            }
+
+            .prev-single + .btn-num {
+                margin-left: rem-calc(16px);
+            }
+            .btn-num + .btn-num {
+                margin-left: rem-calc(2px);
+            }
+            .btn-num + .next-single {
+                margin-left: rem-calc(16px);
+            }
+
+            .btn-page {
+                background: no-repeat center center;
+                &.next-double {
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 29L23 24L18 19M25 29L30 24L25 19' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &.next-single {
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 30L27 24L21 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &.prev-single {
+                    transform: scaleX(-1);
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 30L27 24L21 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &.prev-double {
+                    transform: scaleX(-1);
+                    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 29L23 24L18 19M25 29L30 24L25 19' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+                &:disabled {
+                    opacity: 0.25;
+                }
+            }
+
+            .btn-num {
+                font-weight: 400;
+                font-size: rem-calc(16px);
+                color: #000;
+
+                &[aria-current="page"] {
+                    border-radius: 50%;
+                    background-color: #E83844;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
 }
 
 // 2022개정 교과서 보기 모달 페이지
@@ -234,3 +285,121 @@
 	}
 }
 
+@include mobile {
+	.modal-full {
+		&.fade {
+			transition: opacity .15s linear;
+		}
+
+		.modal-dialog {
+			transform: none;
+			padding: 0;
+		}
+
+		.modal-content {
+			width: 100%;
+			height: 100%;
+			max-width: 1160px;
+			max-height: 100%;
+			padding-top: 0;
+			background-color: #fff;
+			border-radius: 0;
+			overflow: hidden;
+		}
+
+		.modal-header {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			min-height: 72px;
+			padding: 20px;
+			.btn-close {
+				position: static;
+				width: 32px;
+				height: 32px;
+				margin-left: auto;
+
+				.icn-modal-close {
+					background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6654 9.3335L9.33203 22.6668M9.33203 9.3335L22.6654 22.6668' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+				}
+			}
+		}
+
+		.modal-body {
+			padding: rem-calc(24px) rem-calc(0px) rem-calc(20px) rem-calc(20px);
+			.modal-inner {
+				padding-right: rem-calc(20px);
+			}
+		}
+
+		.modal-footer {
+			margin: 0;
+			padding: 20px;
+
+			.btn.module-a {
+				width: 100%;
+				height: 48px;
+				border-radius: 48px;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 24px;
+
+				&.outlined-normal {
+					border: 1px solid #CDCDCD;
+					color: #000;
+				}
+			}
+		}
+	}
+
+	// 게시판형 모달페이지
+	.modal-board-page {
+		padding-top: 0 !important;
+
+		.modal-header {
+			flex: none;
+			.btn-back {
+				display: flex;
+				align-items: center;
+				gap: rem-calc(12px);
+				padding: 0;
+				font-weight: 700;
+				font-size: rem-calc(16px);
+				line-height: rem-calc(28px);
+				color: #000;
+
+			}
+		}
+		.modal-body {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	.modal-book-page {
+		background: none !important;
+		.modal-header {
+			height: rem-calc(119px);
+			padding: rem-calc(30px) rem-calc(60px);
+			background: url('../../img/main/img_book_header.png');
+			color: #fff;
+
+			.modal-title {
+				font-weight: 700;
+				font-size: rem-calc(24px);
+				line-height: 100%;
+			}
+
+			.modal-explain {
+				margin-top: rem-calc(10px);
+				font-weight: 500;
+				font-size: rem-calc(18px);
+				line-height: rem-calc(24px);
+			}
+		}
+		.modal-body {
+			padding-top: rem-calc(24px);
+			background-color: #fff;
+		}
+	}
+}
