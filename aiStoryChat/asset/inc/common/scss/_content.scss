@@ -14,13 +14,21 @@
         gap: 16rem;
 
         .setting-item {
-            display: flex;
-            flex: 1 1 auto;
             width: 100%;
             padding: 20rem;
             border:1px solid #D3D3D3;
             border-radius: 8rem;
             background-color: #fff;
+
+            &.is-selected {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &.is-selection {
+                display: flex;
+                flex-direction: row;
+            }
 
             .setting-header {
                 display: flex;
@@ -422,6 +430,21 @@
                 font-size: 14rem;
                 line-height: 1.5;
             }
+        }
+    }
+}
+
+// 교과서 선택목록
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 30rem 50rem;
+}
+.book-card {
+    &.module-a {
+        .book-thumb {
+            width: 100%;
+            aspect-ratio: 184/240;
         }
     }
 }
