@@ -2254,6 +2254,7 @@
                         flex-direction: column;
                         height: 100%;
                         border: 1px solid rgba(255,255,255,.6);
+                        pointer-events: auto;
                         &:hover {
                             transform: scale(1);
                         }
