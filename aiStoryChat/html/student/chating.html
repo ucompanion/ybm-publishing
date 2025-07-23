@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
+
+        <title>페이지명 | AI 스토리챗 </title>
+        <link rel="stylesheet" href="../../../asset/inc/common/css/import.css"> <!-- header , footer 영역 y클라우드 css -->
+        <link rel="stylesheet" href="../../../asset/inc/common/css/mobile.css"> <!-- header , footer 영역 y클라우드 css -->
+        <link rel="stylesheet" href="../../../asset/inc/common/css/popup.css"> <!-- header , footer 영역 y클라우드 css -->
+        <link rel="stylesheet" href="../../asset/inc/ele/css/import.css">
+    </head>
+    <body>
+        <!-- page-wrap -->
+        <div class="page-wrap">
+            <header class="page-header">
+                <div class="logo-area">
+                    <h1 class="logo"><a href="/">AI 스토리챗</a></h1>
+                </div>
+                <div class="step-area">
+                    <ol class="step-list">
+                        <li class="step-item is-old" aria-label="1. 교과서 선택" aria-current="step">
+                            <span class="step-num">1</span>
+                            <span class="step-label">교과서 선택</span>
+                        </li>
+                        <li class="step-item is-current" aria-label="2. 단원 및 단어 선택">
+                            <span class="step-num">2</span>
+                            <span class="step-label">단원 및 단어 선택</span>
+                        </li>
+                        <li class="step-item" aria-label="3. 스토리 확인">
+                            <span class="step-num">3</span>
+                            <span class="step-label">스토리 확인</span>
+                        </li>
+                        <li class="step-item" aria-label="4. 학생 초대">
+                            <span class="step-num">4</span>
+                            <span class="step-label">학생 초대</span>
+                        </li>
+                    </ol>
+                </div>
+                <div class="home-area">
+                    <a href="./setting_step1.html" class="btn btn-home"><span class="blind">설정 홈</span></a>
+                </div>
+            </header>
+
+            <!-- page-body -->
+            <main class="page-body">
+                <!-- content -->
+                <div class="content">
+                    <div class="chat-box">
+                        <ul class="chat-list">
+                            <!-- My Story -->
+                            <li class="chat-item user">
+                                <div class="chat-avata">
+                                    <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                </div>
+                                <div class="chat-body">
+                                    <div class="story-chat">
+                                        <p class="story-original">story-originalstory-original</p>
+                                        <p class="story-translated">story-translated</p>
+                                        <div class="story-utils">
+                                            <button type="button" class="btn btn-speaker"><span>스피커</span></button>
+                                            <button type="button" class="btn btn-trans"><span>번역</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- AI Hint Chat -->
+                            <li class="chat-item order">
+                                <div class="chat-avata">
+                                    <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                </div>
+                                <div class="chat-body">
+                                    <div class="story-record-chat">
+                                        <button type="button" class="btn"><span>녹음</span></button>
+                                        <p class="hint-explan">녹음 버튼을 누른 후 말하세요</p>
+                                        <span class="hint-label">힌트</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- AI Story Chat -->
+                            <li class="chat-item order">
+                                <div class="chat-avata">
+                                    <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                </div>
+                                <div class="chat-body">
+                                    <div class="story-chat">
+                                        <p class="story-hint">힌트</p>
+                                        <p class="story-original">story-originalstory-original</p>
+                                        <div class="story-utils">
+                                            <button type="button" class="btn"><span>스피커</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- AI Feedback Chat -->
+                            <li class="chat-item order">
+                                <div class="chat-avata">
+                                    <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                </div>
+                                <div class="chat-body">
+                                    <div class="story-corect-chat">
+                                        <p>my 어쩌구</p>
+                                    </div>
+                                    <div class="story-feedback-chat">
+                                        <p class="title"><strong>교정이 필요합니다</strong></p>
+                                        <p class="explan">이름은 대문자로 시작해야 합니다</p>
+                                        <dl class="corect">
+                                            <dt class="corect-label">교정된 문장</dt>
+                                            <dd class="corect-translated">My 얼씨구</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- //content -->
+            </main>
+            <!-- //page-body -->
+
+            <div data-include="/aiStoryChat/html/include/include_footer.html"></div>
+        </div>
+        <!-- //page-wrap -->
+
+        <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
+        <script src="../../asset/inc/common/js/common-ui.js"></script>
+        <script src="../../asset/inc/common/js/modal.js"></script>
+        <script src="../../asset/inc/common/js/publish-only.js"></script>
+
+    </body>
+</html>

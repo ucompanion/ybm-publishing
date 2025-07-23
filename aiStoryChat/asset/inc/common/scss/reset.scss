@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import 'variables', 'functions', 'breakpoint';
+html{
+    //overflow-y: scroll;
+    &.auto{
+        overflow-y: auto;
+        // min-width: auto;
+        // body{
+        //     min-width: auto;
+        // }
+    }
+}
+
+html, body{
+    @include zero-set;
+    font-family: #{$font-stack};
+    font-size: 16px;
+    line-height: #{$base-line-height};
+    font-weight: #{$base-font-weight};
+    letter-spacing: #{$base-letter-spacing};
+    word-break: break-all;
+    color: #{$base-text-color};
+    -webkit-overflow-scrolling: touch;
+    min-width: #{$breakpoint-tablet};
+    //-webkit-user-select: none;
+    //-moz-user-select: none;
+    //-ms-user-select: none;
+    //user-select: none;
+    &.popup{
+        min-width: auto;
+        overflow-y: auto;
+    }
+}
+
+div, html, p, span, em, h1, h2, h3, h4, h5, ul, li, ol{
+    @include zero-set;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+a, input, button, textarea, select, textarea{
+    @include zero-set;
+    border: 0 none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: $base-text-color;
+    font-family: #{$font-stack};
+    font-size: 1em;
+    vertical-align: middle;
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+} 
+
+/* 파이어폭스에서의 초기화 방법 */ 
+input[type=number] { 
+    -moz-appearance: textfield; 
+}
+button{
+    cursor: pointer;    
+    background: transparent none;
+}
+a:active, button:active, input:focus{
+    outline: none;
+}
+::after, ::before{
+    box-sizing: border-box;
+}
+
+[hidden]{
+    display: none ! important;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a:hover{
+    transition: all .3s ease;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+ul[type="disc"]{
+    margin-left: 25px;
+    li{
+        list-style: disc;
+    }
+}
+
+.layerpop, .toast-alert-box{
+    display: none;
+}

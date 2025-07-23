@@ -1,0 +1,539 @@
+@charset "UTF-8";
+
+html {
+    font-size: 1px;
+    height: 100%;
+}
+
+body {
+    background-color: #F4F4F4;
+    height: 100%;
+}
+
+.blind {
+	position: fixed;
+	overflow: hidden;
+	border: 0;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+}
+
+// Header
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100rem;
+    background-color: #2D304D;
+    padding: 0 $pc-padding;
+
+    .logo-area {
+        margin-right: auto;
+    }
+    .step-area {
+        margin-right: 40px;
+    }
+
+    .logo {
+        a {
+            font-weight: 900;
+            font-size: 34rem;
+            color: #fff;
+        }
+    }
+
+    .step-list {
+        display: flex;
+        align-items: center;
+        gap: 16rem;
+
+        .step-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8rem;
+
+            &::before {
+                content:'';
+                display: flex;
+                width: 28rem;
+                height: 28rem;
+                border-radius: 50%;
+                background-color: #87889E;
+            }
+
+            .step-num {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                width: 28rem;
+                height: 28rem;
+                border-radius: 50%;
+                color: #fff;
+                background-color: $color-primary;
+            }
+
+            .step-label {
+                display: none;
+                position: relative;
+                top: 1px;
+                font-weight: 700;
+                font-size: 24rem;
+                line-height: 100%;
+                color: #fff;
+            }
+
+            &.is-old {
+                &::before {
+                    background-color: none;
+                    background: url(#{$com-url}icn-28-step-check-wh.svg);
+                }
+            }
+
+            &.is-current {
+                &::before {
+                    display: none;
+                }
+                .step-num, .step-label {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .btn-home {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: url(#{$com-url}icn-60-home.svg);
+        border: 0;
+        border-radius: 50%;
+    }
+}
+
+// 설정하기
+.setting-box {
+    padding: 40rem;
+    background-color: #F4F4F4;
+
+    .setting-list {
+        display:flex;
+        flex-direction:column;
+        gap: 16rem;
+
+        .setting-item {
+            display: flex;
+            align-items: flex-start;
+            // flex-wrap: wrap;
+            width: 100%;
+            padding: 30rem;
+            border:1px solid #D3D3D3;
+            border-radius: 8rem;
+            background-color: #fff;
+
+            .setting-header {
+                display: flex;
+                align-items: center;
+                height: 50rem;
+                .setting-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 16rem;
+                    flex: none;
+                    width: 260rem;
+                    margin-right: 30rem;
+                    .num {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 32rem;
+                        height: 32rem;
+                        border-radius: 8rem;
+                        background-color: #2a2a2a;
+                        color: #fff;
+                        font-size: 20rem;
+                        font-weight: 700;
+                        line-height: 20rem;
+                    }
+                    .tit {
+                        position: relative;
+                        top: 1px;
+                        font-size: 24rem;
+                        font-weight: 700;
+                        line-height: 24rem;
+                        color: #2A2A2A;
+                    }
+                }
+
+            }
+            .setting-body {
+                flex: 1 1 auto;
+                .setting-active {
+                    display: none;
+                }
+                .setting-after {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .setting-content {
+                        flex: 1 1 auto;
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 24rem;
+                        line-height: 140%;
+                        color: #565656;
+                    }
+
+                    .setting-refresh {
+                        display: flex;
+                        flex: none;
+
+                        .btn-refresh {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 50rem;
+                            padding: 0 19px;
+                            gap: 6rem;
+                            border:1px solid #C0C0C0;
+                            border-radius: 4rem;
+                            background-color: #fff;
+                            font-weight: 700;
+                            font-size: 20rem;
+                            color: #757575;
+                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+                            &::before {
+                                content:'';
+                                display: block;
+                                width: 20rem;
+                                height: 20rem;
+                                background: url(#{$com-url}icn-20-refresh-gr.svg);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.is-active {
+                border-color: $color-primary;
+                .setting-header {
+                    .setting-title {
+                        .num {
+                            background-color: $color-primary;
+                            color: #fff;
+                        }
+                        .tit {
+                            color: $color-primary;
+                        }
+                    }
+                }
+                .setting-body {
+                    .setting-active {
+                        display: flex;
+                        width: 100%;
+                    }
+                    .setting-after {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .setting-action {
+        width: 100%;
+        margin-top: 40rem;
+
+        .btn-action {
+            width: 100%;
+            height: 88rem;
+            background-color: $color-primary;
+            border-radius: 8rem;
+            font-weight: 700;
+            font-size: 30rem;
+            line-height: 1.5;
+            color: #fff;
+        }
+    }
+    // 2. 단원 및 단어 선택
+    .selected-word {
+        margin-top: 8rem;
+        display: flex;
+        gap: 8rem;
+
+        .word {
+            display: flex;
+            align-items: center;
+            height: 32rem;
+            padding: 2rem 16rem 0;
+            border:1px solid #c0c0c0;
+            border-radius: 4rem;
+            font-size: 16rem;
+            line-height: 140%;
+            color: #9B9B9B;
+        }
+    }
+
+    // 3. 스토리 확인
+    .story-confirm {
+        position: relative;
+        width: 100%;
+
+        .util-create {
+            position: absolute;
+            top: 24rem;
+            right: 24rem;
+        }
+
+        .util-edit {
+            position: absolute;
+            bottom: 24rem;
+            right: 24rem;
+        }
+    }
+
+    // 4. 추가학습 단계
+    .selection-learning {
+        display: flex;
+        gap: 24rem;
+
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            border-radius: 8rem;
+            padding: 60rem;
+            gap: 48rem;
+            border:1px solid #C0C0C0;
+            word-break: keep-all;
+            transition: all 0.2s ease;
+
+            &::before {
+                content:'';
+                display: block;
+                flex: none;
+                width: 148rem;
+                height: 148rem;
+                background: no-repeat center center / 100%;
+            }
+
+            &::after {
+                content:'';
+                position: absolute;
+                top: 24rem;
+                right: 24rem;
+                display: block;
+                flex: none;
+                width: 48rem;
+                height: 48rem;
+                background: no-repeat center center / 100%;
+                background-image: url(#{$com-url}icn-48-chcke-off.svg);
+            }
+
+            .btn-body {
+                position: relative;
+                display: block;
+                line-height: 1.4;
+                text-align: left;
+
+                .btn-tit {
+                    display: block;
+                    font-size: 36rem;
+                    font-weight: 700;
+                    color: #2a2a2a;
+                }
+                .btn-explan {
+                    display: block;
+                    margin-top: 24rem;
+                    font-size: 20rem;
+                    font-weight: 400;
+                    color: #565656;
+                }
+            }
+
+            &.type-basic {
+                &::before {
+                    background-image: url(#{$ele-url}img-basic-learning.svg);
+                }
+            }
+
+            &.type-deep {
+                &::before {
+                    background-image: url(#{$ele-url}img-deep-learning.svg);
+                }
+            }
+
+            &.is-checked {
+                background: rgba(255, 240, 240, 0.6);
+                border: 1px solid rgba(255, 102, 82, 0.4);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                &::after {
+                    background-image: url(#{$ele-url}icn-48-chcke-on.svg);
+                }
+            }
+        }
+    }
+}
+
+// 채팅하기
+.chat-box {
+    background-color: #F4F4F4;
+    padding: 20rem;
+
+    // 채팅 레이아웃
+    .chat-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32rem;
+
+        .chat-item {
+            display: flex;
+            justify-content: flex-start;
+            gap: 12rem;
+            width: 100%;
+
+            .chat-avata {
+                order: 1;
+                flex: none;
+                width: 60rem;
+                height: 60rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .chat-body {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                order: 2;
+            }
+
+            // Case 상대방
+            &.order {
+                justify-content: flex-end;
+                .chat-avata {
+                    order: 2;
+                }
+                .chat-body {
+                    order: 1;
+                    align-items: flex-end;
+                }
+            }
+        }
+    }
+
+    // 스토리 채팅 - 스토리
+    .story-chat {
+        padding: 16rem;
+        background-color: #fff;
+        border-radius: 8rem;
+        .story-hint {
+            color: green;
+        }
+        .story-original {
+            font-weight: 700;
+            font-size: 14rem;
+            color: #222;
+            line-height: 1.5;
+        }
+        .story-translated {
+            margin-top: 8rem;
+            font-weight: 500;
+            font-size: 14rem;
+            color: #999;
+            line-height: 1.5;
+        }
+        .story-utils {
+            margin-top: 8rem;
+        }
+    }
+
+    // 스토리 채팅 - 힌트
+    .story-record-chat {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+        padding: 16rem;
+        background-color: green;
+        border-radius: 8rem;
+        color: #fff;
+
+        .hint-explan {
+            font-weight: 500;
+            font-size: 14rem;
+            line-height: 1.5;
+        }
+        .hint-label {
+            display: inline-block;
+            padding: 2rem 6rem;
+            border-radius: 4rem;
+            background-color: darkgreen;
+            font-size: 14rem;
+            line-height: 1.5;
+        }
+    }
+
+    // 스토리 채팅 - 교정 대상
+    .story-corect-chat {
+        display: inline-flex;
+        align-items: center;
+        gap: 8rem;
+        padding: 16rem;
+        background-color: green;
+        border-radius: 8rem;
+        color: #fff;
+    }
+
+    // 스토리 채팅 - 교정 피드백
+    .story-feedback-chat {
+        margin-top: 12rem;
+        background-color: blanchedalmond;
+        border-radius: 16rem;
+        padding: 16rem;
+
+        .title {
+            font-weight: 500;
+            font-size: 16rem;
+            line-height: 1.5;
+            color: red;
+        }
+        .explan {
+            font-weight: 500;
+            font-size: 14rem;
+            line-height: 1.5;
+            color: #666;
+        }
+        .corect {
+            margin-top: 8rem;
+            font-weight: 500;
+            font-size: 14rem;
+            line-height: 1.5;
+            color: #222;
+
+            .corect-label {
+                font-weight: 500;
+                font-size: 14rem;
+                line-height: 1.5;
+            }
+            .corect-translated {
+                margin: 2rem 0 0 0;
+                font-weight: 400;
+                font-size: 14rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}

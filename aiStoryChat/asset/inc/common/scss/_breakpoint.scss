@@ -1,0 +1,18 @@
+// 모바일 레이아웃
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+  }
+// 태블릿~PC 레이아웃 (태블릿환경에서는 PC레이아웃 유지)
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+// 태블릿~mo 레이아웃 (태블릿환경에서는 PC레이아웃 유지)
+@mixin mobileS {
+  @media (max-width: #{$mobile-max-width}) {
+      @content;
+  }
+}

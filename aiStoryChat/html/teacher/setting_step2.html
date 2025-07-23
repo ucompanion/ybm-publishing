@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
+
+        <title>페이지명 | AI 스토리챗 </title>
+        <link rel="stylesheet" href="../../../asset/inc/common/css/import.css"> <!-- header , footer 영역 y클라우드 css -->
+        <link rel="stylesheet" href="../../../asset/inc/common/css/mobile.css"> <!-- header , footer 영역 y클라우드 css -->
+        <link rel="stylesheet" href="../../../asset/inc/common/css/popup.css"> <!-- header , footer 영역 y클라우드 css -->
+        <link rel="stylesheet" href="../../asset/inc/ele/css/import.css">
+    </head>
+    <body>
+        <!-- page-wrap -->
+        <div class="page-wrap">
+            <header class="page-header">
+                <div class="logo-area">
+                    <h1 class="logo"><a href="/">AI 스토리챗</a></h1>
+                </div>
+                <div class="step-area">
+                    <ol class="step-list">
+                        <li class="step-item is-old" aria-label="1. 교과서 선택" aria-current="step">
+                            <span class="step-num">1</span>
+                            <span class="step-label">교과서 선택</span>
+                        </li>
+                        <li class="step-item is-current" aria-label="2. 단원 및 단어 선택">
+                            <span class="step-num">2</span>
+                            <span class="step-label">단원 및 단어 선택</span>
+                        </li>
+                        <li class="step-item" aria-label="3. 스토리 확인">
+                            <span class="step-num">3</span>
+                            <span class="step-label">스토리 확인</span>
+                        </li>
+                        <li class="step-item" aria-label="4. 학생 초대">
+                            <span class="step-num">4</span>
+                            <span class="step-label">학생 초대</span>
+                        </li>
+                    </ol>
+                </div>
+                <div class="home-area">
+                    <a href="./setting_step1.html" class="btn btn-home"><span class="blind">설정 홈</span></a>
+                </div>
+            </header>
+
+            <!-- page-body -->
+            <main class="page-body">
+                <!-- content -->
+                <div class="content setting-page">
+                    <!-- setting-box -->
+                    <div class="setting-box">
+                        <!-- setting-list -->
+                        <ol class="setting-list">
+                            <!-- 1. 교과서 선택 -->
+                            <li class="setting-item">
+                                <div class="setting-header">
+                                    <strong class="setting-title">
+                                        <b class="num">1</b><span class="tit">교과서 선택</span>
+                                    </strong>
+                                </div>
+                                <div class="setting-body">
+                                    <div class="setting-active"></div>
+                                    <div class="setting-after">
+                                        <div class="setting-content">
+                                            <p class="setting-text">결과값</p>
+                                        </div>
+                                        <div class="setting-refresh">
+                                            <button type="button" class="btn-refresh"><span>다시 선택</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- //1. 교과서 선택 -->
+
+                            <!-- 2. 단원 및 단어 선택 -->
+                            <li class="setting-item">
+                                <div class="setting-header">
+                                    <strong class="setting-title">
+                                        <b class="num">2</b><span class="tit">단원 및 단어 선택</span>
+                                    </strong>
+                                </div>
+                                <div class="setting-body">
+                                    <div class="setting-active">
+                                        <!-- setting-chapter -->
+                                        <div class="setting-chapter">
+                                            <!-- selection-chapter -->
+                                            <div class="selection-chapter">
+                                                <div class="selection-header">
+                                                    <p class="selection-title">단원 선택</p>
+                                                    <div class="selection-content">
+                                                        <ul class="chapter-list"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //selection-chapter -->
+                                            <!-- selection-word -->
+                                            <div class="selection-word">
+                                                <div class="selection-header">
+                                                    <p class="selection-title">단어 선택</p>
+                                                    <div class="selection-content">
+                                                        <ul class="word-list"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //selection-word -->
+                                        </div>
+                                        <!-- //setting-chapter -->
+                                    </div>
+                                    <div class="setting-after">
+                                        <div class="setting-content">
+                                            <div class="selected-chapter">Lesson 1. What grade are you in?</div>
+                                            <div class="selected-word">
+                                                <span class="word">move</span>
+                                                <span class="word">grade</span>
+                                                <span class="word">town</span>
+                                                <span class="word">friends</span>
+                                                <span class="word">together</span>
+                                            </div>
+                                        </div>
+                                        <div class="setting-refresh">
+                                            <button type="button" class="btn-refresh"><span>다시 선택</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- //2. 단원 및 단어 선택 -->
+
+                            <!-- 3. 스토리 확인 -->
+                            <li class="setting-item is-active">
+                                <div class="setting-header">
+                                    <strong class="setting-title">
+                                        <b class="num">3</b><span class="tit">스토리 확인</span>
+                                    </strong>
+                                </div>
+                                <div class="setting-body">
+                                    <div class="setting-active">
+                                        <!-- story-confirm -->
+                                        <div class="story-confirm">
+                                            <div class="util-create">
+                                                <button type="button" class="btn">번역</button>
+                                                <button type="button" class="btn">다시생성</button>
+                                            </div>
+
+                                            <div class="story-original">
+                                                <p>I'm... <b class="keyword"></b></p>
+                                            </div>
+                                            <div class="story-translated">
+                                                <p>저는...</p>
+                                            </div>
+
+                                            <div class="util-edit">
+                                                <button type="button" class="btn">수정하기</button>
+                                                <button type="button" class="btn">수정완료</button>
+                                            </div>
+                                        </div>
+                                        <!-- //story-confirm -->
+                                    </div>
+                                    <div class="setting-after">
+                                        <div class="setting-content">
+                                            <div class="selected-chapter"></div>
+                                        </div>
+                                        <div class="setting-refresh">
+                                            <button type="button" class="btn-refresh"><span>다시 선택</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- //3. 스토리 확인 -->
+
+                            <!-- 4. 추가 학습 단계 선택 -->
+                            <li class="setting-item is-active">
+                                <div class="setting-header">
+                                    <strong class="setting-title">
+                                        <b class="num">4</b><span class="tit">추가 학습 단계 선택</span>
+                                    </strong>
+                                </div>
+                                <div class="setting-body">
+                                    <div class="setting-active">
+                                        <div class="selection-learning">
+                                            <button type="button" class="btn type-basic">
+                                                <span class="btn-body">
+                                                    <strong class="btn-tit">기본학습</strong>
+                                                    <span class="btn-explan">스토리의 문장을 한 문장씩 나눠서 읽어보는 추가 학습을 진행합니다.</span>
+                                                </span>
+                                            </button>
+                                            <button type="button" class="btn type-deep is-checked">
+                                                <span class="btn-body">
+                                                    <strong class="btn-tit">심화학습</strong>
+                                                    <span class="btn-explan">스토리 내용을 기반으로 AI가 생성한 질문에 대해 답을 작성해보는 추가 학습을 진행합니다.</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- //4. 추가 학습 단계 선택 -->
+                        </ol>
+                        <!-- //setting-list -->
+
+                        <div class="setting-action">
+                            <button type="button" class="btn-action">
+                                <span>학생 초대하기</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- //setting-box -->
+                </div>
+                <!-- //content -->
+            </main>
+            <!-- //page-body -->
+        </div>
+        <!-- //page-wrap -->
+
+        <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
+        <script src="../../asset/inc/common/js/common-ui.js"></script>
+        <script src="../../asset/inc/common/js/modal.js"></script>
+        <script src="../../asset/inc/common/js/publish-only.js"></script>
+
+    </body>
+</html>

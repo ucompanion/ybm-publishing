@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// 공통 규격 사용
+@import '../../common/scss/reset';
+@import '../../common/scss/popup';
+@import '../../common/scss/layout';
+@import '../../common/scss/content';
+@import '../../common/scss/mobile';
+
+// 초등 테마
+@import './content';

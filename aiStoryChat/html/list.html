@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
+
+    <title>Y클라우드 | 리스트 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <style>
+        html, body { font-family: 'Roboto','Noto Sans KR', sans-serif; font-size:16px; font-weight:400; color:#666 }
+        .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small { font-size:60% }
+        a, a:hover { color:#000 }
+        .guide-nav {display: none; background:#fff; border-bottom:1px solid rgba(0,0,0,0.1) }
+        .guide-nav li>a { font-weight:500 }
+        .content-body { padding:0 0 0 0 }
+        .navbar-toggle .icon-bar { background:#272c38 }
+        .navbar-toggle { padding:9px 10px; margin-right:0 }
+        .page-title { background:#272c38; color:#fff; padding:30px 0 }
+        .page-title h1 { color:#fff }
+        .page-title p { font-weight:300; opacity:0.6 }
+        .table-list { height:400px }
+        .page-header { color:#0a51a2 }
+        .box h4 { color:#272c38 }
+        .box h4:before { content:""; displaY:inline-block; padding:0; vertical-align:4px; width:7px; height:7px; background:#272c38; margin-right:8px;  }
+        .g-list li { line-height:20px; margin:4px 0; font-size:14px; font-weight:400 }
+        ul { margin-left:-20px }
+        td { line-height:20px; font-size:14px; font-weight:400; color:#434343; vertical-align: middle ! important }
+        td strong, th { color:#000; font-size:14px; font-weight:600 }
+        th { background:#f6f6f6 }
+        td ul { margin-bottom:0 ; margin-left:-20px}
+        footer { padding:15px 0; text-align:center; background:#f6f6f6; border-top:1px solid #dadada; margin-top:80px; font-size:12px }
+        footer p { margin:0 }
+        .guide-nav li { position:relative }
+        .guide-nav li ul{ display:none; position:absolute; top:50px; left:0; background: #fff; border:1px solid rgba(0,0,0,0.1); border-top:0px none; margin:0; padding:0; width:150%; padding: 12px }
+        .guide-nav li ul li { list-style: none }
+        .guide-nav li ul li a { display:block; font-weight:300; color:#666; padding: 2px 0; font-size:14px }
+        .guide-nav li:hover ul{ display:block }
+        .done{ text-decoration: line-through; color:rgb(168, 168, 168) }
+    </style>
+
+</head>
+<body>
+
+    <!-- Fixed navbar -->
+    <header class="guide-nav navbar navbar-fixed-top" id="top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="overview.html">기본 가이드</a></li>
+                    <li><a href="../../code.html">작성규칙</a></li>
+                    <li><a href="../../plan.html">마크업설계</a></li>
+                    <li><a href="list.html">화면리스트</a>
+                        <ul>
+                            <li><a href="list.html">교사</a></li>
+                            <li><a href="list.html">학생</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav><!--/.navbar-collapse -->
+        </div>
+    </header>
+    <!-- //Fixed navbar -->
+
+    <div class="content-body">
+        <div class="page-title">
+            <div class="container">
+                <h1>화면리스트</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">AI Story Chat</h3>
+            </div>
+            <div class="col-lg-12">
+				<div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+							<tr>
+								<th scope="col">분류</th>
+								<th scope="col">Depth1</th>
+                                <th scope="col">Depth2</th>
+                                <th scope="col">Depth3</th>
+								<th scope="col">요건</th>
+                                <th scope="col">폴더명</th>
+                                <th scope="col">파일명</th>
+                                <th scope="col">히스토리</th>
+                                <th scope="col">완료여부</th>
+							</tr>
+						</thead>
+                        <tbody>
+                            <tr>
+								<td>교사화면</td>
+								<td>메인</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/index.html" target="_blank">index.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>설정화면</td>
+                                <td>단원 및 단어 선택</td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/setting_step2.html" target="_blank">setting_step2.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td></td>
+                                <td>스토리확인</td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/setting_step3.html" target="_blank">setting_step3.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td></td>
+                                <td>추가 학습 단계 선택</td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/setting_step4.html" target="_blank">setting_step4.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+                                <td></td>
+								<td>접속자 확인</td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/visiter.html" target="_blank">visiter.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+                                <td></td>
+								<td>학생 진행 현황</td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/status.html" target="_blank">status.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+                                <td></td>
+								<td>결과 확인</td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/result.html" target="_blank">result.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>결과 리포트</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/report.html" target="_blank">report.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>교사 팝업 목록</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/teacher</td>
+                                <td><a href="teacher/popup-list.html" target="_blank">popup-list.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+								<td>학생화면</td>
+								<td>접속화면</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/index.html" target="_blank">index.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>접속완료</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/waiting.html" target="_blank">waiting.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>스토리책 확인</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/storyChat_check.html" target="_blank">storyChat_check.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>기본학습</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/basic_learning.html" target="_blank">basic_learning.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>심화학습</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/deep_learning.html" target="_blank">deep_learning.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>대화 진행 화면</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/chating.html" target="_blank">chating.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>학생 결과 화면</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/result.html" target="_blank">result.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                            <tr>
+								<td></td>
+								<td>학생 팝업 목록</td>
+                                <td></td>
+								<td></td>
+                                <td></td>
+                                <td>aiStoryChat/html/student</td>
+                                <td><a href="student/popup-list.html" target="_blank">popup-list.html</a></td>
+                                <td>
+                                    <ul>
+                                        <li class="done"></li>
+                                    </ul>
+                                </td>
+                                <td>X</td>
+							</tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
