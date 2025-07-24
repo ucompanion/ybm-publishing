@@ -5,8 +5,12 @@
     @include fill-height;
     padding: var(--spacer);
 
+    // 설정 목록
     .setting-list {
         @include fill-height;
+        width: calc(100% + 20rem);
+        padding: 10rem;
+        margin: -10rem;
         gap: 16rem;
 
         .setting-item {
@@ -34,6 +38,7 @@
                         align-items: center;
                         width: 28rem;
                         height: 28rem;
+                        padding-bottom: 2px;
                         border-radius: 8rem;
                         background-color: #2a2a2a;
                         color: #fff;
@@ -43,7 +48,6 @@
                     }
                     .tit {
                         position: relative;
-                        top: 1px;
                         font-size: 20rem;
                         font-weight: 700;
                         line-height: 28rem;
@@ -53,23 +57,65 @@
 
             }
 
+            // Case 선택된 결과
             &.is-selection {
                 display: flex;
                 flex-direction: row;
+                background-color: #F9F9F9;
+
+                .setting-body {
+                    flex: 1 1 auto;
+                }
+
+                .setting-selection {
+                    display: flex;
+                    align-items: center;
+                    .setting-content {
+                        .setting-text {
+                            font-weight: 400;
+                            font-size: 20rem;
+                            line-height: 28rem;
+                            color: #666666;
+                        }
+                    }
+                    .setting-util {
+                        display: flex;
+                        align-items: center;
+                        height: 28rem;
+                        margin-left: auto;
+                        .btn-refresh {
+                            @include btn-base-48;
+                            @include btn-base-48-shadow;
+                            @include btn-line-normal;
+                            &::before {
+                                content:'';
+                                display: block;
+                                margin-right: 6rem;
+                                width: 20rem;
+                                height: 20rem;
+                                background: no-repeat center center / contain;
+                                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 7.49935H13.75C15.8211 7.49935 17.5 9.17828 17.5 11.2493C17.5 13.3204 15.8211 14.9993 13.75 14.9993H10M2.5 7.49935L5.83333 4.16602M2.5 7.49935L5.83333 10.8327' stroke='%23767676' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                            }
+                        }
+                    }
+                }
             }
 
+            // Case 활성화 상태
             &.is-active {
                 @include fill-height;
-                border-color: $color-primary;
+                border-color: var(--color-primary);
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+
                 .setting-header {
                     flex: none;
                     .setting-title {
                         .num {
-                            background-color: $color-primary;
+                            background-color: var(--color-primary);
                             color: #fff;
                         }
                         .tit {
-                            color: $color-primary;
+                            color: var(--color-primary);
                         }
                     }
                 }
@@ -79,35 +125,15 @@
                     .setting-active {
                         @include fill-height;
                         overflow: auto;
-                        margin-top: 28rem;
-                        padding-top: 18rem;
-                        padding-left: 20rem;
-                        padding-right: calc(27rem - 8rem); //스크롤 너비 제거
+                        margin-top: 20rem;
+                        padding-right: 8rem; //스크롤 너비 제거
                     }
                     .setting-selection {
                         display: none;
                         padding-right: 14rem;
                     }
                 }
-
             }
-        }
-    }
-
-    .setting-action {
-        width: 100%;
-        margin-top: 32rem;
-
-        .btn-action {
-            width: 100%;
-            height: 60rem;
-            background: linear-gradient(180deg, #FF6652 0%, #E24E3B 105.68%);
-
-            border-radius: 8rem;
-            font-weight: 700;
-            font-size: 18rem;
-            line-height: 1.5;
-            color: #fff;
         }
     }
 
@@ -116,6 +142,12 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 32rem 30rem;
+
+        &-wrap {
+            padding-top: 18rem;
+            padding-left: 18rem;
+            padding-right: 13rem;
+        }
 
         .book-card {
             &.module-a {
@@ -159,11 +191,11 @@
 
                 &.is-selected {
                     .book-thumb {
-                        outline: 2px solid $color-primary;
+                        outline: 2px solid var(--color-primary);
                     }
                     .book-cont {
                         .title {
-                            color: $color-primary;
+                            color: var(--color-primary);
                         }
                     }
                     &::after {
@@ -175,7 +207,7 @@
                         width: 32rem;
                         height: 32rem;
                         background: no-repeat center center / contain;
-                        background-image: url("data:image/svg+xml,%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16.3984' cy='16' r='16' fill='%23FF6652'/%3E%3Cpath d='M13.8282 23.3332C13.5479 23.333 13.2713 23.2725 13.0194 23.156C12.7675 23.0396 12.547 22.8704 12.3746 22.6613L8.15424 17.4262C7.9969 17.2464 7.87929 17.0386 7.80836 16.8151C7.73742 16.5915 7.71461 16.3568 7.74127 16.1248C7.76793 15.8927 7.84352 15.6681 7.96357 15.4642C8.08361 15.2603 8.24567 15.0813 8.44016 14.9377C8.63465 14.7941 8.85761 14.6888 9.09585 14.6282C9.33409 14.5676 9.58276 14.5528 9.82716 14.5847C10.0716 14.6166 10.3067 14.6945 10.5187 14.8139C10.7307 14.9333 10.9152 15.0917 11.0613 15.2798L13.8282 18.7542L21.733 9.378C21.8791 9.18995 22.0636 9.03153 22.2756 8.91213C22.4876 8.79273 22.7227 8.71478 22.9671 8.68288C23.2115 8.65098 23.4602 8.66579 23.6984 8.72642C23.9367 8.78705 24.1596 8.89228 24.3541 9.03588C24.5486 9.17948 24.7107 9.35853 24.8307 9.56243C24.9508 9.76633 25.0263 9.99095 25.053 10.223C25.0797 10.455 25.0568 10.6897 24.9859 10.9133C24.915 11.1368 24.7974 11.3446 24.64 11.5244L15.2817 22.6613C15.1093 22.8704 14.8888 23.0396 14.6369 23.156C14.3851 23.2725 14.1085 23.333 13.8282 23.3332Z' fill='white'/%3E%3C/svg%3E%0A");
+                        background-image: var(--bg-check-on);
                     }
                 }
             }
@@ -183,21 +215,151 @@
     }
 
     // 2. 단원 및 단어 선택
-    .selected-word {
-        margin-top: 8rem;
-        display: flex;
-        gap: 8rem;
+    .setting-chapter {
+        @include fill-height;
+        flex-direction: row;
+        gap: 20rem;
 
-        .word {
-            display: flex;
-            align-items: center;
-            height: 32rem;
-            padding: 2rem 16rem 0;
-            border:1px solid #c0c0c0;
-            border-radius: 4rem;
-            font-size: 16rem;
-            line-height: 140%;
-            color: #9B9B9B;
+        // 공통 레이아웃
+        > div {
+            flex: 1 1 auto;
+            width: 100%;
+            border-radius: 8rem;
+            overflow: hidden;
+
+            .selection-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex: none;
+                height: 48rem;
+                background-color: #545682;
+                .selection-title {
+                    padding: 0 20rem;
+                    font-weight: 700;
+                    font-size: 16rem;
+                    line-height: 24rem;
+                    color: #fff;
+                }
+            }
+
+            .selection-body {
+                @include fill-height;
+                padding-right: 4rem;
+                border-top: 0;
+                border-radius: 0 0 8rem 8rem;
+                border:1px solid #CCCCCC;
+            }
+
+            .selection-scroll {
+                @include fill-height;
+                overflow: auto;
+                padding: 20rem 16rem 20rem 20rem;
+            }
+        }
+
+        // 단원 선택
+        .selection-chapter {
+            @include fill-height;
+            .chapter-list {
+                flex: none;
+                .chapter-item {
+                    padding: 16rem 0;
+                    border-bottom: 1px solid #EAEAEA;
+                }
+            }
+            .chapter-chk {
+                position: relative;
+                display: flex;
+                --chk-size: 24rem;
+
+                .chk {
+                    appearance: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                    width: var(--chk-size);
+                    height: var(--chk-size);
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+
+                    & {
+                        + .chapter-label {
+                            display: flex;
+                            position: relative;
+                            width: 100%;
+                            min-height: var(--chk-size);
+                            padding-left: calc(var(--chk-size) + 12rem);
+
+                            &::before {
+                                content:'';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                z-index: 2;
+                                display: block;
+                                width: var(--chk-size);
+                                height: var(--chk-size);
+                                background: no-repeat center center / contain;
+                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' fill='white' stroke='%23D2D2D2'/%3E%3Cpath d='M10.0733 17.5C9.86304 17.4999 9.65559 17.4545 9.4667 17.3672C9.2778 17.2798 9.11242 17.153 8.98313 16.9961L5.81783 13.0698C5.69983 12.9349 5.61162 12.7791 5.55842 12.6114C5.50522 12.4438 5.48811 12.2677 5.5081 12.0937C5.5281 11.9197 5.58479 11.7512 5.67482 11.5983C5.76486 11.4454 5.8864 11.3111 6.03227 11.2034C6.17814 11.0957 6.34536 11.0168 6.52404 10.9713C6.70271 10.9258 6.88922 10.9147 7.07252 10.9386C7.25581 10.9626 7.43217 11.021 7.59116 11.1106C7.75015 11.2001 7.88853 11.3189 7.99812 11.46L10.0733 14.0658L16.0019 7.03362C16.1115 6.89258 16.2499 6.77377 16.4088 6.68422C16.5678 6.59467 16.7442 6.53621 16.9275 6.51228C17.1108 6.48836 17.2973 6.49946 17.476 6.54494C17.6546 6.59041 17.8219 6.66933 17.9677 6.77703C18.1136 6.88473 18.2351 7.01902 18.3252 7.17195C18.4152 7.32487 18.4719 7.49333 18.4919 7.66735C18.5119 7.84138 18.4948 8.01742 18.4416 8.18508C18.3884 8.35274 18.3002 8.50859 18.1822 8.64343L11.1634 16.9961C11.0341 17.153 10.8688 17.2798 10.6799 17.3672C10.491 17.4545 10.2835 17.4999 10.0733 17.5Z' fill='%23E0E0E0'/%3E%3C/svg%3E%0A");
+                            }
+
+                            .title {
+                                font-weight: 400;
+                                font-size: 16rem;
+                                line-height: 24rem;
+                                color: #000000;
+                            }
+
+                            .words {
+                                margin-left: auto;
+                                font-weight: 400;
+                                font-size: 16rem;
+                                line-height: 24rem;
+                                font-style: normal;
+                                color: var(--color-primary);
+                            }
+                        }
+                    }
+
+                    &:checked {
+                        + .chapter-label {
+
+                            &::before {
+                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23FF6652'/%3E%3Cpath d='M10.0733 17.5C9.86304 17.4999 9.65559 17.4545 9.4667 17.3672C9.2778 17.2798 9.11242 17.153 8.98313 16.9961L5.81783 13.0698C5.69983 12.9349 5.61162 12.7791 5.55842 12.6114C5.50522 12.4438 5.48811 12.2677 5.5081 12.0937C5.5281 11.9197 5.58479 11.7512 5.67482 11.5983C5.76486 11.4454 5.8864 11.3111 6.03227 11.2034C6.17814 11.0957 6.34536 11.0168 6.52404 10.9713C6.70271 10.9258 6.88922 10.9147 7.07252 10.9386C7.25581 10.9626 7.43217 11.021 7.59116 11.1106C7.75015 11.2001 7.88853 11.3189 7.99812 11.46L10.0733 14.0658L16.0019 7.03362C16.1115 6.89258 16.2499 6.77377 16.4088 6.68422C16.5678 6.59467 16.7442 6.53621 16.9275 6.51228C17.1108 6.48836 17.2973 6.49946 17.476 6.54494C17.6546 6.59041 17.8219 6.66933 17.9677 6.77703C18.1136 6.88473 18.2351 7.01902 18.3252 7.17195C18.4152 7.32487 18.4719 7.49333 18.4919 7.66735C18.5119 7.84138 18.4948 8.01742 18.4416 8.18508C18.3884 8.35274 18.3002 8.50859 18.1822 8.64343L11.1634 16.9961C11.0341 17.153 10.8688 17.2798 10.6799 17.3672C10.491 17.4545 10.2835 17.4999 10.0733 17.5Z' fill='white'/%3E%3C/svg%3E%0A");
+                            }
+
+                            .title {
+                                color: var(--color-primary);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // 단어 선택
+        .selection-word {
+            @include fill-height;
+            .word-list {
+                flex: none;
+                font-size: 16rem;
+                height: 1000rem;
+                .word {
+                    display: flex;
+                    align-items: center;
+                    height: 32rem;
+                    padding: 2rem 16rem 0;
+                    border:1px solid #c0c0c0;
+                    border-radius: 4rem;
+                    font-size: 16rem;
+                    line-height: 140%;
+                    color: #9B9B9B;
+                }
+            }
+
         }
     }
 
@@ -300,6 +462,18 @@
                     background-image: url(#{$ele-url}icn-48-chcke-on.svg);
                 }
             }
+        }
+    }
+
+    // 최종버튼
+    .setting-action {
+        width: 100%;
+        margin-top: 32rem;
+
+        .btn-action {
+            width: 100%;
+            @include btn-base-60;
+            @include btn-fill-primary;
         }
     }
 }

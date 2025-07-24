@@ -2,10 +2,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap);
 
-body {
-    --color-primary: #FF6652;
-}
-
 // font, color
 //$font-stack: 'SUIT Variable', 'Roboto', 'Noto Sans KR', sans-serif;
 $font-stack: 'Roboto', 'Noto Sans KR', 'Noto Sans SC', sans-serif;
@@ -43,3 +39,40 @@ $color-primary: var(--color-primary);
     width: 100%;
 }
 
+// 컴포넌트
+@mixin btn-base-60 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 60rem;
+    border-radius: 8rem;
+    font-weight: 700;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: #767676;
+}
+@mixin btn-base-48 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 48rem;
+    padding: 0 20rem;
+    border-radius: 8rem;
+    font-weight: 700;
+    font-size: 16rem;
+    line-height: 24rem;
+    color: #767676;
+}
+@mixin btn-base-48-shadow {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+}
+@mixin btn-fill-primary {
+    background: var(--color-primary-gradation);
+    color: #fff;
+}
+@mixin btn-line-normal {
+    border: 1px solid #CCCCCC;
+    background-color: #fff;
+}
