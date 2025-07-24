@@ -22,13 +22,14 @@ $mid-url: '../../../img/mid/';
 $hi-url: '../../../img/hi/';
 
 // Breakpoints
-$breakpoint-tablet: 1140px;
-$breakpoint-mobile-xl: 719px;
-$breakpoint-mobile-xm: 419px;
-$breakpoint-mobile-xs: 359px;
+$breakpoint-tablet: 1279px;
+$breakpoint-mobile-xl: 1023px;
+$breakpoint-mobile-xm: 719px;
+$breakpoint-mobile-xs: 479px;
 
 // Color
 $color-primary: var(--color-primary);
+$color-primary-light: var(--color-primary-light);
 
 // Fill Height
 @mixin fill-height {
@@ -40,7 +41,7 @@ $color-primary: var(--color-primary);
 }
 
 // 컴포넌트
-@mixin btn-base-60 {
+@mixin btn-base-48 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,20 +53,20 @@ $color-primary: var(--color-primary);
     line-height: 1.5;
     color: #767676;
 }
-@mixin btn-base-48 {
+@mixin btn-base-40 {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 48rem;
-    padding: 0 20rem;
-    border-radius: 8rem;
+    height: 40rem;
+    padding: 0 16rem;
+    border-radius: 4rem;
     font-weight: 700;
     font-size: 16rem;
     line-height: 24rem;
     color: #767676;
 }
-@mixin btn-base-48-shadow {
+@mixin btn-base-40-shadow {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
 }
 @mixin btn-fill-primary {
