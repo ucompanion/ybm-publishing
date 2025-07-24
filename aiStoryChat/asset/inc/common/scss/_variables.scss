@@ -26,11 +26,10 @@ $mid-url: '../../../img/mid/';
 $hi-url: '../../../img/hi/';
 
 // Breakpoints
-$breakpoint-pc: 1600px;
-$breakpoint-tablet: 1280px;
-$breakpoint-mobile-xl: 1023px;
-$breakpoint-mobile-xm: 719px;
-$breakpoint-mobile-xs: 419px;
+$breakpoint-tablet: 1140px;
+$breakpoint-mobile-xl: 719px;
+$breakpoint-mobile-xm: 419px;
+$breakpoint-mobile-xs: 359px;
 
 // Color
 $color-primary: var(--color-primary);
@@ -43,3 +42,4 @@ $color-primary: var(--color-primary);
     overflow: hidden;
     width: 100%;
 }
+

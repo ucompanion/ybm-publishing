@@ -3,14 +3,13 @@
 
 // 시스템
 :root {
-    --spacer: 20px;
+    --spacer: 40px;
     --max-width: 1280px;
 
     @include tablet {
         --spacer: 20px;
     }
 }
-
 
 html {
     font-size: 1px;
@@ -46,7 +45,7 @@ html, body, .page-wrap {
             justify-content: space-between;
             flex: none;
             width: 100%;
-            height: 80rem;
+            height: 64rem;
             max-width: var(--max-width);
             padding-left: var(--spacer);
             background-color: #fff;
@@ -58,7 +57,7 @@ html, body, .page-wrap {
             .util-area {
                 position: relative;
                 display: flex;
-                gap: 24rem;
+                gap: 28rem;
                 height: 100%;
                 align-items: center;
                 padding-right: var(--spacer);
@@ -69,9 +68,9 @@ html, body, .page-wrap {
                     position: absolute;
                     right: 100%;
                     top: 0;
-                    width: 170rem;
+                    width: 90rem;
                     height: 100%;
-                    background: url('../../../img/common/img-header-round-ta.png') no-repeat;
+                    background: url('../../../img/common/img-header-round-ta.png') no-repeat center center / contain;
                 }
             }
             .logo {
@@ -98,8 +97,8 @@ html, body, .page-wrap {
                     &::before {
                         content:'';
                         display: none;
-                        width: 28rem;
-                        height: 28rem;
+                        width: 24rem;
+                        height: 24rem;
                         border-radius: 50%;
                         background-color: #87889E;
                     }
@@ -156,8 +155,8 @@ html, body, .page-wrap {
 
             .btn-home {
                 display: block;
-                width: 48rem;
-                height: 48rem;
+                width: 40rem;
+                height: 40rem;
                 background: no-repeat center center / contain;
                 background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='white'/%3E%3Cpath d='M21.8672 25.9199H26.1338V32.6413H21.8672V25.9199Z' fill='%23333450'/%3E%3Cpath d='M32.9817 22.2508L24.7578 14.6844C24.6586 14.5944 24.5406 14.523 24.4107 14.4742C24.2807 14.4255 24.1413 14.4004 24.0005 14.4004C23.8596 14.4004 23.7202 14.4255 23.5902 14.4742C23.4603 14.523 23.3423 14.5944 23.2431 14.6844L15.0192 22.2604C14.8202 22.441 14.663 22.6554 14.5568 22.8911C14.4506 23.1268 14.3975 23.3791 14.4005 23.6335V31.68C14.3997 32.1715 14.6083 32.6446 14.9833 33.0019C15.3583 33.3592 15.8713 33.5734 16.4165 33.6004H19.7338V24.9586C19.7338 24.7039 19.8462 24.4597 20.0462 24.2796C20.2463 24.0995 20.5176 23.9984 20.8005 23.9984H27.2004C27.4833 23.9984 27.7546 24.0995 27.9547 24.2796C28.1547 24.4597 28.2671 24.7039 28.2671 24.9586V33.6004H31.5844C32.1296 33.5734 32.6426 33.3592 33.0176 33.0019C33.3926 32.6446 33.6012 32.1715 33.6004 31.68V23.6335C33.6012 23.1178 33.3794 22.622 32.9817 22.2508Z' fill='%23333450'/%3E%3C/svg%3E%0A");
                 border: 0;

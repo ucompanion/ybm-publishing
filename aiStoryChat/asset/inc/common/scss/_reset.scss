@@ -114,12 +114,6 @@ ul[type="disc"]{
 	clip-path: inset(50%);
 }
 
-:root {
-    --spacer: 40rem;
-}
-
-@include tablet {
-    :root {
-        --spacer: 20rem;
-    }
+[role="button"] {
+    cursor: pointer;
 }
