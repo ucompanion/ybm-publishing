@@ -20,7 +20,6 @@ html, body{
     word-break: break-all;
     color: #{$base-text-color};
     -webkit-overflow-scrolling: touch;
-    min-width: #{$breakpoint-tablet};
     //-webkit-user-select: none;
     //-moz-user-select: none;
     //-ms-user-select: none;

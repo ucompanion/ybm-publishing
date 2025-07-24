@@ -2,38 +2,24 @@
 
 // 설정하기
 .setting-box {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 40rem;
+    @include fill-height;
+    padding: 20rem;
 
     .setting-list {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+        @include fill-height;
         gap: 16rem;
 
         .setting-item {
             width: 100%;
-            padding: 20rem;
+            padding: 24rem;
             border:1px solid #D3D3D3;
             border-radius: 8rem;
             background-color: #fff;
 
-            &.is-selected {
-                display: flex;
-                flex-direction: column;
-            }
-
-            &.is-selection {
-                display: flex;
-                flex-direction: row;
-            }
-
             .setting-header {
                 display: flex;
                 align-items: center;
-                height: 50rem;
+
                 .setting-title {
                     display: flex;
                     align-items: center;
@@ -45,81 +31,37 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 32rem;
-                        height: 32rem;
+                        width: 28rem;
+                        height: 28rem;
                         border-radius: 8rem;
                         background-color: #2a2a2a;
                         color: #fff;
-                        font-size: 20rem;
+                        font-size: 18rem;
                         font-weight: 700;
                         line-height: 20rem;
                     }
                     .tit {
                         position: relative;
                         top: 1px;
-                        font-size: 24rem;
+                        font-size: 20rem;
                         font-weight: 700;
-                        line-height: 24rem;
+                        line-height: 28rem;
                         color: #2A2A2A;
                     }
                 }
 
             }
-            .setting-body {
-                flex: 1 1 auto;
-                .setting-active {
-                    display: none;
-                }
-                .setting-after {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
 
-                    .setting-content {
-                        flex: 1 1 auto;
-                        width: 100%;
-                        font-weight: 400;
-                        font-size: 24rem;
-                        line-height: 140%;
-                        color: #565656;
-                    }
-
-                    .setting-refresh {
-                        display: flex;
-                        flex: none;
-
-                        .btn-refresh {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            height: 50rem;
-                            padding: 0 19px;
-                            gap: 6rem;
-                            border:1px solid #C0C0C0;
-                            border-radius: 4rem;
-                            background-color: #fff;
-                            font-weight: 700;
-                            font-size: 20rem;
-                            color: #757575;
-                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
-                            &::before {
-                                content:'';
-                                display: block;
-                                width: 20rem;
-                                height: 20rem;
-                                background: url(#{$com-url}icn-20-refresh-gr.svg);
-                            }
-                        }
-                    }
-
-                }
+            &.is-selection {
+                display: flex;
+                flex-direction: row;
             }
 
             &.is-active {
-                flex-grow: 1;
+                @include fill-height;
                 border-color: $color-primary;
                 .setting-header {
+                    flex: none;
                     .setting-title {
                         .num {
                             background-color: $color-primary;
@@ -131,11 +73,14 @@
                     }
                 }
                 .setting-body {
+                    @include fill-height;
+
                     .setting-active {
-                        display: flex;
-                        width: 100%;
+                        @include fill-height;
+                        overflow: auto;
+                        margin-top: 20rem;
                     }
-                    .setting-after {
+                    .setting-selection {
                         display: none;
                     }
                 }
@@ -146,19 +91,50 @@
 
     .setting-action {
         width: 100%;
-        margin-top: 40rem;
+        margin-top: 32rem;
 
         .btn-action {
             width: 100%;
-            height: 88rem;
+            height: 60rem;
             background-color: $color-primary;
             border-radius: 8rem;
             font-weight: 700;
-            font-size: 30rem;
+            font-size: 18rem;
             line-height: 1.5;
             color: #fff;
         }
     }
+
+    // 1. 교과서 선택
+    .book-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 30rem 0rem;
+
+        .book-card {
+            &.module-a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 130rem;
+                text-align: center;
+
+                .book-thumb {
+                    width: 86rem;
+                    aspect-ratio: 184/240;
+                }
+                .book-cont {
+                    margin-top: 12rem;
+                    .title {
+                        font-weight: 700;
+                        font-size: 16rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+
     // 2. 단원 및 단어 선택
     .selected-word {
         margin-top: 8rem;
@@ -430,21 +406,6 @@
                 font-size: 14rem;
                 line-height: 1.5;
             }
-        }
-    }
-}
-
-// 교과서 선택목록
-.book-list {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 30rem 50rem;
-}
-.book-card {
-    &.module-a {
-        .book-thumb {
-            width: 100%;
-            aspect-ratio: 184/240;
         }
     }
 }

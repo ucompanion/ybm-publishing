@@ -35,3 +35,11 @@ $breakpoint-mobile-xs: 419px;
 // Color
 $color-primary: var(--color-primary);
 
+// Fill Height
+@mixin fill-height {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: hidden;
+    width: 100%;
+}
