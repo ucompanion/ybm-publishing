@@ -1,8 +1,55 @@
 @charset "UTF-8";
 @import 'variables', 'functions', 'breakpoint';
 
-@include mobile {
+// $breakpoint-tablet: 1279px;
+// $breakpoint-mobile-xl: 1023px;
+// $breakpoint-mobile-xm: 719px;
+// $breakpoint-mobile-xs: 479px;
+
+// 테블릿
+@include tablet {
+    .setting-box {
+        // 설정 목록
+        .setting-list {
+            .setting-item {
+                padding: 18rem;
+                padding-right: calc(18rem - 14rem);
+
+                &.is-active {
+                    .setting-body {
+                        .setting-active {
+                            padding-right: 16rem;
+                        }
+                    }
+                }
+                &.is-selection {
+                    .setting-selection {
+                        .setting-util {
+                            .btn-reselect {
+                                @include btn-base-40;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .setting-action {
+            .btn-action {
+                @include btn-base-48;
+                @include btn-fill-primary;
+            }
+        }
+    }
 }
 
-@include mobileS {
+// 모바일 시작
+@include mobile-xl {
+}
+
+// 모바일 전용
+@include mobile-sm {
+}
+
+// 모바일 최적
+@include mobileS-xs {
 }

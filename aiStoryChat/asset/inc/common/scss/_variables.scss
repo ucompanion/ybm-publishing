@@ -41,16 +41,43 @@ $color-primary-light: var(--color-primary-light);
 }
 
 // 컴포넌트
-@mixin btn-base-48 {
+@mixin btn-base-60 {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     height: 60rem;
+    padding: 0 16rem;
     border-radius: 8rem;
     font-weight: 700;
     font-size: 18rem;
     line-height: 1.5;
+    color: #767676;
+}
+@mixin btn-base-48 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 48rem;
+    padding: 0 16rem;
+    border-radius: 8rem;
+    font-weight: 700;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: #767676;
+}
+@mixin btn-base-44 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 44rem;
+    padding: 0 16rem;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 16rem;
+    line-height: 24rem;
     color: #767676;
 }
 @mixin btn-base-40 {
@@ -62,18 +89,36 @@ $color-primary-light: var(--color-primary-light);
     padding: 0 16rem;
     border-radius: 4rem;
     font-weight: 700;
-    font-size: 16rem;
-    line-height: 24rem;
+    font-size: 14rem;
+    line-height: 20rem;
     color: #767676;
 }
-@mixin btn-base-40-shadow {
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+@mixin btn-base-32 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    position: relative;
+    height: 32rem;
+    padding: 0 12rem;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 16rem;
+    color: #767676;
 }
 @mixin btn-fill-primary {
     background: var(--color-primary-gradation);
     color: #fff;
 }
+@mixin btn-fill-dark {
+    background: #333450;
+    color: #fff;
+}
 @mixin btn-line-normal {
     border: 1px solid #CCCCCC;
     background-color: #fff;
+}
+@mixin btn-base-shadow {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
 }

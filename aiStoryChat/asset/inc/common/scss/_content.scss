@@ -15,11 +15,11 @@
 
         .setting-item {
             width: 100%;
-            padding: 18rem;
+            padding: 24rem;
             padding-right: calc(var(--spacer-inner) - 14rem);
             border:1px solid #D3D3D3;
             border-radius: 8rem;
-            background-color: #fff;
+            background-color: #f9f9f9;
 
             .setting-header {
                 display: flex;
@@ -30,8 +30,8 @@
                     align-items: center;
                     gap: 12rem;
                     flex: none;
-                    width: 260rem;
-                    margin-right: 30rem;
+                    min-width: 200rem;
+                    margin-right: 10rem;
                     .num {
                         display: flex;
                         justify-content: center;
@@ -74,8 +74,8 @@
                     .setting-content {
                         .setting-text {
                             font-weight: 400;
-                            font-size: 16rem;
-                            line-height: 22rem;
+                            font-size: 14rem;
+                            line-height: 20rem;
                             color: #666666;
                         }
                     }
@@ -84,9 +84,9 @@
                         align-items: center;
                         height: 28rem;
                         margin-left: auto;
-                        .btn-refresh {
-                            @include btn-base-40;
-                            @include btn-base-40-shadow;
+                        .btn-reselect {
+                            @include btn-base-44;
+                            @include btn-base-shadow;
                             @include btn-line-normal;
                             &::before {
                                 content:'';
@@ -105,6 +105,7 @@
             // Case 활성화 상태
             &.is-active {
                 @include fill-height;
+                flex-grow: 0;
                 border-color: var(--color-primary);
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
 
@@ -456,99 +457,194 @@
     .story-confirm {
         position: relative;
         width: 100%;
+        display: flex;
+        flex-direction: column;
 
-        .util-create {
+        .story-util {
             position: absolute;
             top: 24rem;
             right: 24rem;
         }
 
-        .util-edit {
-            position: absolute;
-            bottom: 24rem;
-            right: 24rem;
+        .story-original {
+            width: 100%;
+            padding: 20rem;
+            background-color: var(--color-primary-light);
+            border-radius: 8rem;
+            p {
+                font-weight: 700;
+                font-size: 16rem;
+                line-height: 24rem;
+                .keyword {
+                    font-weight: inherit;
+                    font-size: inherit;
+                    line-height: inherit;
+                    color: var(--color-primary);
+                }
+            }
+        }
+
+        .story-translated {
+            width: 100%;
+            margin-top: var(--gap);
+            padding: 20rem;
+            background-color: #F6F6F6;
+            border-radius: 8rem;
+            p {
+                font-weight: 400;
+                font-size: 14rem;
+                line-height: 20rem;
+            }
+        }
+
+        .story-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+            margin-top: var(--spacer-inner);
+            padding-bottom: 6rem;
+
+            button {
+                @include btn-base-32;
+                &::before {
+                    content:'';
+                    display: block;
+                    width: 12rem;
+                    height: 12rem;
+                    background: no-repeat center center / contain;
+                }
+                &.btn-translate {
+                    @include btn-line-normal;
+                    @include btn-base-shadow;
+                    &::before {
+                        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_382_3897)'%3E%3Cpath d='M1 6H11M1 6C1 8.76142 3.23858 11 6 11M1 6C1 3.23858 3.23858 1 6 1M11 6C11 8.76142 8.76142 11 6 11M11 6C11 3.23858 8.76142 1 6 1M6 1C7.25064 2.36918 7.96138 4.14602 8 6C7.96138 7.85398 7.25064 9.63082 6 11M6 1C4.74936 2.36918 4.03862 4.14602 4 6C4.03862 7.85398 4.74936 9.63082 6 11' stroke='%23767676' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_382_3897'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                    }
+                }
+                &.btn-refresh {
+                    @include btn-line-normal;
+                    @include btn-base-shadow;
+                    &::before {
+                        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5C1 5 2.00249 3.63411 2.81692 2.81912C3.63134 2.00413 4.7568 1.5 6 1.5C8.48528 1.5 10.5 3.51472 10.5 6C10.5 8.48528 8.48528 10.5 6 10.5C3.94845 10.5 2.21756 9.12714 1.67588 7.25M1 5V2M1 5H4' stroke='%23767676' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    }
+                }
+                &.btn-edit {
+                    @include btn-line-normal;
+                    @include btn-base-shadow;
+                    &::before {
+                        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_382_3903)'%3E%3Cpath d='M10.5 10.5002H6.50001M1.25 10.7502L4.02463 9.68299C4.2021 9.61473 4.29084 9.5806 4.37386 9.53603C4.4476 9.49645 4.5179 9.45077 4.58402 9.39946C4.65846 9.34169 4.72569 9.27447 4.86014 9.14001L10.5 3.50015C11.0523 2.94787 11.0523 2.05244 10.5 1.50015C9.94773 0.947867 9.0523 0.947866 8.50001 1.50015L2.86014 7.14001C2.72569 7.27446 2.65846 7.34169 2.6007 7.41613C2.54939 7.48225 2.5037 7.55255 2.46412 7.62629C2.41955 7.70931 2.38542 7.79805 2.31717 7.97552L1.25 10.7502ZM1.25 10.7502L2.27906 8.07463C2.3527 7.88317 2.38952 7.78744 2.45267 7.74359C2.50786 7.70527 2.57615 7.69078 2.64215 7.70338C2.71767 7.7178 2.79019 7.79033 2.93524 7.93538L4.06479 9.06493C4.20984 9.20997 4.28236 9.2825 4.29678 9.35802C4.30939 9.42401 4.29489 9.49231 4.25657 9.5475C4.21272 9.61065 4.11699 9.64747 3.92553 9.72111L1.25 10.7502Z' stroke='%23767676' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_382_3903'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                    }
+                }
+                &.btn-confirm {
+                    @include btn-fill-dark;
+                    &::before {
+                        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3L4.5 8.5L2 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    }
+                }
+            }
         }
     }
 
     // 4. 추가학습 단계
-    .selection-learning {
+    .learning-selection {
         display: flex;
-        gap: 24rem;
+        flex: 1 1 auto;
+        gap: var(--gap);
 
-        .btn {
-            position: relative;
-            display: flex;
-            align-items: center;
+        .learning-rdo {
+            display: block;
             width: 100%;
-            border-radius: 8rem;
-            padding: 60rem;
-            gap: 48rem;
-            border:1px solid #C0C0C0;
-            word-break: keep-all;
-            transition: all 0.2s ease;
 
-            &::before {
-                content:'';
-                display: block;
-                flex: none;
-                width: 148rem;
-                height: 148rem;
-                background: no-repeat center center / 100%;
-            }
-
-            &::after {
-                content:'';
+            .rdo {
                 position: absolute;
-                top: 24rem;
-                right: 24rem;
-                display: block;
-                flex: none;
-                width: 48rem;
-                height: 48rem;
-                background: no-repeat center center / 100%;
-                background-image: url(#{$com-url}icn-48-chcke-off.svg);
+                top: 16rem;
+                right: 16rem;
+                appearance: none;
             }
 
-            .btn-body {
+            .learning-body {
                 position: relative;
-                display: block;
-                line-height: 1.4;
-                text-align: left;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 160rem;
+                border-radius: 8rem;
+                padding: 20rem;
+                gap: 32rem;
+                border:1px solid #C0C0C0;
+                word-break: keep-all;
+                transition: all 0.2s ease;
 
-                .btn-tit {
-                    display: block;
-                    font-size: 36rem;
-                    font-weight: 700;
-                    color: #2a2a2a;
-                }
-                .btn-explan {
-                    display: block;
-                    margin-top: 24rem;
-                    font-size: 20rem;
-                    font-weight: 400;
-                    color: #565656;
-                }
-            }
 
-            &.type-basic {
                 &::before {
-                    background-image: url(#{$ele-url}img-basic-learning.svg);
+                    content:'';
+                    display: block;
+                    flex: none;
+                    width: 80rem;
+                    height: 80rem;
+                    background: no-repeat center center / 100%;
                 }
-            }
-
-            &.type-deep {
-                &::before {
-                    background-image: url(#{$ele-url}img-deep-learning.svg);
-                }
-            }
-
-            &.is-checked {
-                background: rgba(255, 240, 240, 0.6);
-                border: 1px solid rgba(255, 102, 82, 0.4);
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
                 &::after {
-                    background-image: url(#{$ele-url}icn-48-chcke-on.svg);
+                    content:'';
+                    position: absolute;
+                    top: 16rem;
+                    right: 16rem;
+                    display: block;
+                    flex: none;
+                    width: 32rem;
+                    height: 32rem;
+                    background: no-repeat center center / 100%;
+                    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='15.5' fill='white' stroke='%23D2D2D2'/%3E%3Cpath d='M13.4307 23.3327C13.1504 23.3325 12.8738 23.272 12.6219 23.1556C12.3701 23.0391 12.1496 22.8699 11.9772 22.6608L7.75677 17.4257C7.59944 17.2459 7.48183 17.0381 7.41089 16.8146C7.33996 16.591 7.31715 16.3563 7.34381 16.1243C7.37047 15.8923 7.44606 15.6676 7.5661 15.4637C7.68615 15.2598 7.84821 15.0808 8.0427 14.9372C8.23719 14.7936 8.46015 14.6884 8.69839 14.6277C8.93663 14.5671 9.1853 14.5523 9.4297 14.5842C9.67409 14.6161 9.90924 14.694 10.1212 14.8134C10.3332 14.9328 10.5177 15.0913 10.6638 15.2793L13.4307 18.7537L21.3355 9.37751C21.4816 9.18946 21.6661 9.03104 21.8781 8.91164C22.0901 8.79225 22.3253 8.71429 22.5697 8.68239C22.814 8.65049 23.0627 8.6653 23.301 8.72593C23.5392 8.78656 23.7622 8.89179 23.9566 9.03539C24.1511 9.17899 24.3132 9.35804 24.4332 9.56194C24.5533 9.76585 24.6289 9.99046 24.6555 10.2225C24.6822 10.4545 24.6594 10.6892 24.5885 10.9128C24.5175 11.1363 24.3999 11.3441 24.2426 11.5239L14.8842 22.6608C14.7118 22.8699 14.4913 23.0391 14.2395 23.1556C13.9876 23.272 13.711 23.3325 13.4307 23.3327Z' fill='%23E0E0E0'/%3E%3C/svg%3E%0A");
+                }
+
+                .learning-cont {
+                    position: relative;
+                    display: block;
+                    line-height: 1.4;
+                    text-align: left;
+
+                    .tit {
+                        display: block;
+                        font-weight: 700;
+                        font-size: 22rem;
+                        color: #333450;
+                    }
+                    .explan {
+                        display: block;
+                        margin-top: 8rem;
+                        font-weight: 400;
+                        font-size: 14rem;
+                        color: #666666;
+                    }
+                }
+
+                &.type-basic {
+                    &::before {
+                        background-image: url(#{$ele-url}img-basic-learning.png);
+                    }
+                }
+
+                &.type-deep {
+                    &::before {
+                        background-image: url(#{$ele-url}img-deep-learning.png);
+                    }
+                }
+            }
+
+            .rdo:checked {
+                + .learning-body {
+                    background: var(--color-primary-light);
+                    border: 1px solid rgba(255, 102, 82, 0.4);
+                    .learning-cont {
+                        .tit {
+                            color: var(--color-primary);
+                        }
+
+                    }
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23FF6652'/%3E%3Cpath d='M13.4307 23.3327C13.1504 23.3325 12.8738 23.272 12.6219 23.1556C12.3701 23.0391 12.1496 22.8699 11.9772 22.6608L7.75677 17.4257C7.59944 17.2459 7.48183 17.0381 7.41089 16.8146C7.33996 16.591 7.31715 16.3563 7.34381 16.1243C7.37047 15.8923 7.44606 15.6676 7.5661 15.4637C7.68615 15.2598 7.84821 15.0808 8.0427 14.9372C8.23719 14.7936 8.46015 14.6884 8.69839 14.6277C8.93663 14.5671 9.1853 14.5523 9.4297 14.5842C9.67409 14.6161 9.90924 14.694 10.1212 14.8134C10.3332 14.9328 10.5177 15.0913 10.6638 15.2793L13.4307 18.7537L21.3355 9.37751C21.4816 9.18946 21.6661 9.03104 21.8781 8.91164C22.0901 8.79225 22.3253 8.71429 22.5697 8.68239C22.814 8.65049 23.0627 8.6653 23.301 8.72593C23.5392 8.78656 23.7622 8.89179 23.9566 9.03539C24.1511 9.17899 24.3132 9.35804 24.4332 9.56194C24.5533 9.76585 24.6289 9.99046 24.6555 10.2225C24.6822 10.4545 24.6594 10.6892 24.5885 10.9128C24.5175 11.1363 24.3999 11.3441 24.2426 11.5239L14.8842 22.6608C14.7118 22.8699 14.4913 23.0391 14.2395 23.1556C13.9876 23.272 13.711 23.3325 13.4307 23.3327Z' fill='white'/%3E%3C/svg%3E%0A");
+                    }
                 }
             }
         }
@@ -561,7 +657,7 @@
 
         .btn-action {
             width: 100%;
-            @include btn-base-48;
+            @include btn-base-60;
             @include btn-fill-primary;
         }
     }

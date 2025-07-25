@@ -1,9 +1,7 @@
-// 데스크탑
-@mixin pc {
-	@media (max-width: #{$breakpoint-pc}) {
-		@content;
-	}
-}
+// $breakpoint-tablet: 1279px;
+// $breakpoint-mobile-xl: 1023px;
+// $breakpoint-mobile-xm: 719px;
+// $breakpoint-mobile-xs: 479px;
 
 // 테블릿
 @mixin tablet {
@@ -13,21 +11,21 @@
 }
 
 // 모바일 시작
-@mixin mobile {
+@mixin mobile-xl {
 	@media (max-width: #{$breakpoint-mobile-xl}) {
 		@content;
 	}
 }
 
 // 모바일 전용
-@mixin mobileS {
+@mixin mobile-sm {
 	@media (max-width: #{$breakpoint-mobile-xm}) {
 		@content;
 	}
 }
 
 // 모바일 최적
-@mixin mobileS {
+@mixin mobileS-xs {
 	@media (max-width: #{$breakpoint-mobile-xs}) {
 		@content;
 	}
