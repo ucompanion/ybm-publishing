@@ -107,6 +107,20 @@ $color-primary-light: var(--color-primary-light);
     line-height: 16rem;
     color: #767676;
 }
+@mixin btn-round-28 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    position: relative;
+    height: 28rem;
+    padding: 0 12rem;
+    border-radius: 28rem;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 16rem;
+    color: #fff;
+}
 @mixin btn-fill-primary {
     background: var(--color-primary-gradation);
     color: #fff;
