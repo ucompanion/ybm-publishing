@@ -10,8 +10,14 @@
 
     @include tablet {
         --spacer: 20px;
-        --spacer-inner: 20px;
+        --spacer-inner: 18px;
         --gap: 12px;
+    }
+
+    @include mobile-xl {
+        --spacer: 20px;
+        --spacer-inner: 16px;
+        --gap: 8px;
     }
 }
 
@@ -70,7 +76,7 @@ html, body, .page-wrap {
                     content:'';
                     display: block;
                     position: absolute;
-                    right: 100%;
+                    right: calc(100% - 16rem);
                     top: 0;
                     width: 90rem;
                     height: 100%;

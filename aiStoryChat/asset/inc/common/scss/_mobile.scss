@@ -3,18 +3,15 @@
 
 // $breakpoint-tablet: 1279px;
 // $breakpoint-mobile-xl: 1023px;
-// $breakpoint-mobile-xm: 719px;
+// $breakpoint-mobile-xm: 679px;
 // $breakpoint-mobile-xs: 479px;
 
-// 테블릿
+// 테블릿 가로모드
 @include tablet {
     .setting-box {
         // 설정 목록
         .setting-list {
             .setting-item {
-                padding: 18rem;
-                padding-right: calc(18rem - 14rem);
-
                 &.is-active {
                     .setting-body {
                         .setting-active {
@@ -33,6 +30,19 @@
                 }
             }
         }
+
+        .book-list-wrap {
+            padding: 8rem 4rem;
+            .book-list {
+                gap: 16rem 30rem;
+                .book-card.module-a {
+                    .book-thumb {
+                        width: 118rem;
+                    }
+                }
+            }
+        }
+
         .setting-action {
             .btn-action {
                 @include btn-base-48;
@@ -40,16 +50,190 @@
             }
         }
     }
+
 }
 
 // 모바일 시작
 @include mobile-xl {
+    // 레이아웃
+    .page-wrap.type-setting {
+        .page-header {
+            height: 56rem;
+            .logo a {
+                width: 120rem;
+                height: 20rem;
+            }
+            .util-area {
+                gap: 12rem;
+                &::before {
+                    width: 80rem;
+                }
+                .step-list {
+                    gap: 4rem;
+                    .step-item {
+                        .step-num {
+                            width: 20rem;
+                            height: 20rem;
+                            font-size: 12rem;
+                            line-height: 16rem;
+                        }
+                    }
+                }
+                .btn-home {
+                    width: 32rem;
+                    height: 32rem;
+                }
+            }
+        }
+
+        .page-body {
+            border-radius: 0 20rem 0 0;
+        }
+    }
+
+    // 설정하기
+    .setting-box {
+        .setting-list {
+            .setting-item {
+                .setting-header {
+                    .setting-title {
+                        gap: 8rem;
+                        .num {
+                            width: 20rem;
+                            height: 20rem;
+                            font-size: 12rem;
+                            line-height: 16rem;
+                        }
+                        .tit {
+                            font-size: 14rem;
+                            line-height: 20rem;
+                        }
+                    }
+                }
+                &.is-active {
+                    .setting-body {
+                        .setting-active {
+                            margin-top: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 1. 교과서 선택
+        .book-list-wrap {
+            padding: 8rem 4rem;
+            .book-list {
+                gap: 16rem 20rem;
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                .book-card.module-a {
+                    .book-thumb {
+                        width: 100%;
+                        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+                    }
+                    .book-cont {
+                        margin-top: 8rem;
+                        .title {
+                            font-size: 12rem;
+                            line-height: 18rem;
+                        }
+                        .name {
+                            font-size: 10rem;
+                            line-height: 14rem;
+                        }
+                    }
+                    &.is-selected {
+                        &::after {
+                            width: 20rem;
+                            height: 20rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 2. 단원 및 단어 선택
+        .setting-chapter {
+            .selection-word {
+                .word-list {
+                    grid-template-columns: repeat(auto-fill, minmax(130rem, 1fr));
+                }
+            }
+        }
+    }
 }
 
-// 모바일 전용
+// 모바일 전용 ~ 반응형구간
 @include mobile-sm {
+    // 레이아웃 시스템 해제
+    html, body, .page-wrap {
+        height: auto;
+    }
+    .setting-box {
+        padding-bottom: calc((var(--spacer) * 3) + 48rem); // 3중 여백 + 버튼높이
+
+        .setting-action {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            margin-top: 0;
+            padding: var(--spacer);
+            background: #FFFFFF;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    // 페이지 레이아웃
+    .page-wrap.type-setting {
+        .page-header {
+            .util-area {
+                .step-list {
+                    .step-item {
+                        &.is-current {
+                            .step-label {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 설정하기
+    .setting-box {
+        // 설정목록
+        .setting-list .setting-item.is-selection .setting-selection {
+            .setting-content {
+                display: none;
+            }
+        }
+
+        // 1. 교과서 선택
+        .book-list-wrap {
+            .book-list {
+                gap: 16rem 16rem;
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+        }
+
+        // 2. 단원 및 단어 선택
+        .setting-chapter {
+            flex-direction: column;
+        }
+    }
 }
 
-// 모바일 최적
+// 모바일 리얼 ~
 @include mobileS-xs {
+    .setting-box {
+        // 1. 교과서 선택
+        .book-list-wrap {
+            .book-list {
+                gap: 16rem 6rem;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
 }

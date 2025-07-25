@@ -1,6 +1,6 @@
 // $breakpoint-tablet: 1279px;
 // $breakpoint-mobile-xl: 1023px;
-// $breakpoint-mobile-xm: 719px;
+// $breakpoint-mobile-xm: 679px;
 // $breakpoint-mobile-xs: 479px;
 
 // 테블릿
@@ -28,5 +28,12 @@
 @mixin mobileS-xs {
 	@media (max-width: #{$breakpoint-mobile-xs}) {
 		@content;
+	}
+}
+
+// 모바일 최적
+@media (max-width: 359px) {
+	html {
+		font-size: calc(100vw * (1 / 360));
 	}
 }

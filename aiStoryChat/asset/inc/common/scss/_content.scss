@@ -15,7 +15,7 @@
 
         .setting-item {
             width: 100%;
-            padding: 24rem;
+            padding: var(--spacer-inner);
             padding-right: calc(var(--spacer-inner) - 14rem);
             border:1px solid #D3D3D3;
             border-radius: 8rem;
@@ -33,6 +33,7 @@
                     min-width: 200rem;
                     margin-right: 10rem;
                     .num {
+                        flex: none;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -203,8 +204,8 @@
     // 1. 교과서 선택
     .book-list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 32rem 30rem;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40rem 30rem;
 
         &-wrap {
             padding-top: 18rem;
@@ -223,7 +224,7 @@
                 text-align: center;
 
                 .book-thumb {
-                    width: 160rem;
+                    width: 100%;
                     aspect-ratio: 160/209;
                     overflow: hidden;
                     border-radius: 8rem;
@@ -240,14 +241,17 @@
                     flex: none;
                     .title {
                         font-weight: 700;
-                        font-size: 16rem;
-                        line-height: 24rem;
+                        font-size: 14rem;
+                        line-height: 20rem;
                         color: #000000;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
                     }
                     .name {
                         font-weight: 400;
-                        font-size: 14rem;
-                        line-height: 20rem;
+                        font-size: 12rem;
+                        line-height: 16rem;
                         color: #666666;
                     }
                 }
@@ -255,6 +259,7 @@
                 &.is-selected {
                     .book-thumb {
                         outline: 2px solid var(--color-primary);
+                        outline-offset: -2px;
                     }
                     .book-cont {
                         .title {
@@ -334,12 +339,12 @@
                     border-bottom: 1px solid #EAEAEA;
                 }
             }
-            .chapter-chk {
+            .chapter-rdo {
                 position: relative;
                 display: flex;
                 --chk-size: 20rem;
 
-                .chk {
+                .rdo {
                     appearance: none;
                     position: absolute;
                     left: 0;
@@ -451,7 +456,7 @@
                         justify-content: center;
                         position: relative;
                         width: 100%;
-                        min-height: 64rem;
+                        min-height: 70rem;
                         padding: 4rem 8rem 0 8rem;
                         background-color: #F9F9F9;
                         border: 1px solid #ccc;
