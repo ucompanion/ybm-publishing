@@ -31,6 +31,7 @@
             }
         }
 
+        // 1. 교과서 선택
         .book-list-wrap {
             padding: 8rem 4rem;
             .book-list {
@@ -40,6 +41,15 @@
                         width: 118rem;
                     }
                 }
+            }
+        }
+
+        // 2. 단원 및 단어 선택
+        .setting-chapter .selection-word .word-list {
+            grid-template-columns: repeat(3, 1fr);
+
+            .word-chk .chk+.word-label {
+                min-height: 66rem;
             }
         }
 
@@ -71,6 +81,11 @@
                 .step-list {
                     gap: 4rem;
                     .step-item {
+                        &.is-completed::before {
+                            width: 20rem;
+                            height: 20rem;
+                        }
+
                         .step-num {
                             width: 20rem;
                             height: 20rem;
@@ -108,6 +123,11 @@
                             font-size: 14rem;
                             line-height: 20rem;
                         }
+                    }
+
+                    .btn-tooltip {
+                        width: 20rem;
+                        height: 20rem;
                     }
                 }
                 &.is-active {
@@ -154,10 +174,68 @@
 
         // 2. 단원 및 단어 선택
         .setting-chapter {
+            >div {
+                .selection-header {
+                    height: 40rem;
+                    padding: 0 16rem;
+                    .selection-title {
+                        font-size: 14rem;
+                    }
+                }
+            }
             .selection-word {
                 .word-list {
                     grid-template-columns: repeat(auto-fill, minmax(130rem, 1fr));
                 }
+                .word-chk .chk:checked+.word-label .keyword {
+                    font-size: 12rem;
+                    line-height: 16rem;
+                }
+            }
+        }
+
+        // 3. 스토리 확인
+        .story-confirm .story-original {
+            p {
+               font-size: 14rem;
+               line-height: 20rem;
+           }
+        }
+
+        // 4. 추가 학습 단계 선택
+        .learning-selection .learning-rdo {
+            .learning-body {
+                gap: 16rem;
+                height: 100%;
+                padding: 20rem;
+                box-sizing: border-box;
+                &::before {
+                    width: 64rem;
+                    height: 64rem;
+                }
+                &::after {
+                    top: 12rem;
+                    right: 12rem;
+                    width: 24rem;
+                    height: 24rem;
+                }
+                .learning-cont {
+                   .tit {
+                      font-size: 16rem;
+                      line-height: 24rem;
+                   }
+                   .explan {
+                       margin-top: 4rem;
+                       font-size: 12rem;
+                       line-height: 16rem;
+                       br {
+                        display: none;
+                       }
+                   }
+                   .btn-learnCheck {
+                       margin-top: 12rem;
+                   }
+               }
             }
         }
     }
@@ -172,10 +250,15 @@
     .setting-box {
         padding-bottom: calc((var(--spacer) * 3) + 48rem); // 3중 여백 + 버튼높이
 
+        .setting-list {
+            gap: 8rem;
+        }
+
         .setting-action {
             position: fixed;
             left: 0;
             bottom: 0;
+            z-index: 10;
             width: 100%;
             margin-top: 0;
             padding: var(--spacer);
@@ -204,9 +287,40 @@
     // 설정하기
     .setting-box {
         // 설정목록
-        .setting-list .setting-item.is-selection .setting-selection {
-            .setting-content {
-                display: none;
+        .setting-list .setting-item {
+            padding-top: 12rem;
+            padding-bottom: 12rem;
+
+            &.is-selection {
+                .setting-selection {
+                    .setting-content {
+                        display: none;
+                    }
+                    .setting-util .btn-reselect {
+                        width: 24rem;
+                        height: 24rem;
+                        padding: 0;
+                        box-shadow: none;
+                        background-color: transparent;
+                        border: 0;
+                        margin-right: -4rem;
+                        span {
+                            display: none;
+                        }
+                        &::before {
+                            margin: 0;
+                            width: 24rem;
+                            height: 24rem;
+                            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 18L15 12L9 6' stroke='%23333450' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                        }
+                    }
+                }
+            }
+
+            &.is-active {
+                .setting-body .setting-active {
+                    margin-top: 16rem;
+                }
             }
         }
 
@@ -221,6 +335,22 @@
         // 2. 단원 및 단어 선택
         .setting-chapter {
             flex-direction: column;
+            >div {
+                .selection-scroll {
+                    padding: 16rem;
+                }
+            }
+            .selection-chapter {
+                min-width: 100%;
+                .selection-word .word-chk .chk:checked+.word-label .keyword {
+                    font-size: 12rem;
+                }
+            }
+        }
+
+        // 4. 추가 학습 단계 선택
+        .learning-selection {
+            flex-direction: column;
         }
     }
 }
@@ -233,6 +363,18 @@
             .book-list {
                 gap: 16rem 6rem;
                 grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        // 3. 스토리 확인
+        .story-confirm {
+            .story-actions {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                button {
+                    flex: 1 1 auto;
+                    width: 100%;
+                }
             }
         }
     }

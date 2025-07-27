@@ -57,6 +57,7 @@
                 }
                 .btn-tooltip {
                     position: relative;
+                    z-index: 10;
                     display: flex;
                     width: 24rem;
                     height: 24rem;
@@ -77,7 +78,7 @@
                         position: absolute;
                         right: calc(100% + 8rem);
                         top: 50%;
-                        transform: translateY(-50%);
+                        transform: translateY(-25%);
                         padding: 8rem;
                         border-radius: 8rem;
                         font-weight: 400;
@@ -92,7 +93,7 @@
                             display: block;
                             position: absolute;
                             left: calc(100% - 2px);
-                            top: calc(50% - 2rem);
+                            top: calc(25% - 2rem);
                             width: 8rem;
                             height: 4rem;
                             transform: rotate(270deg);
@@ -302,9 +303,9 @@
                 align-items: center;
                 flex: none;
                 height: 48rem;
+                padding: 0 20rem;
                 background-color: #545682;
                 .selection-title {
-                    padding: 0 20rem;
                     font-weight: 700;
                     font-size: 16rem;
                     line-height: 24rem;
@@ -332,11 +333,21 @@
         // 단원 선택
         .selection-chapter {
             @include fill-height;
+            width: 100%;
+            max-width: 480rem;
+            flex: 1 1 auto;
             .chapter-list {
                 flex: none;
                 .chapter-item {
                     padding: 16rem 0;
                     border-bottom: 1px solid #EAEAEA;
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                    &:last-child {
+                        padding-bottom: 0;
+                        border-bottom: 0;
+                    }
                 }
             }
             .chapter-rdo {
@@ -414,8 +425,8 @@
         // 단어 선택
         .selection-word {
             @include fill-height;
-            width: 52%;
-            flex: none;
+            width: 100%;
+            flex: 1 1 auto;
             .word-desc {
                 margin-bottom: 8rem;
                 font-size: 14rem;
@@ -429,8 +440,7 @@
             .word-list {
                 flex: none;
                 display: grid;
-                // grid-template-columns: repeat(auto-fill, minmax(110rem, 1fr));
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(auto-fill, minmax(135rem, 1fr));
                 gap: 8rem;
             }
             .word-chk {
@@ -456,7 +466,7 @@
                         justify-content: center;
                         position: relative;
                         width: 100%;
-                        min-height: 70rem;
+                        min-height: 90rem;
                         padding: 4rem 8rem 0 8rem;
                         background-color: #F9F9F9;
                         border: 1px solid #ccc;
@@ -480,9 +490,8 @@
                             align-items: center;
                             justify-content: center;
                             font-weight: 700;
-                            font-size: 12rem;
-                            line-height: 16rem;
-                            min-height: 20rem;
+                            font-size: 14rem;
+                            line-height: 20rem;
                             padding: 2rem 0;
                             color: #000000;
                             text-align: center;
@@ -492,8 +501,8 @@
                         .info {
                             flex: none;
                             font-weight: 400;
-                            font-size: 11rem;
-                            line-height: 13rem;
+                            font-size: 10rem;
+                            line-height: 16rem;
                             font-style: normal;
                             color: #666666;
                         }
@@ -565,6 +574,7 @@
 
         .story-actions {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 8rem;
@@ -631,9 +641,9 @@
             .learning-body {
                 position: relative;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 width: 100%;
-                height: 160rem;
+                height: 100%;
                 border-radius: 8rem;
                 padding: 20rem;
                 gap: 32rem;
