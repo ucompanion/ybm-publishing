@@ -12,14 +12,14 @@
         // 설정 목록
         .setting-list {
             .setting-item {
-                &.is-active {
+                &.is-current {
                     .setting-body {
                         .setting-active {
                             padding-right: 16rem;
                         }
                     }
                 }
-                &.is-selection {
+                &.is-completed {
                     .setting-selection {
                         .setting-util {
                             .btn-reselect {
@@ -130,7 +130,7 @@
                         height: 20rem;
                     }
                 }
-                &.is-active {
+                &.is-current {
                     .setting-body {
                         .setting-active {
                             margin-top: 10rem;
@@ -302,7 +302,7 @@
             padding-top: 12rem;
             padding-bottom: 12rem;
 
-            &.is-selection {
+            &.is-completed {
                 .setting-selection {
                     .setting-content {
                         display: none;
@@ -328,7 +328,7 @@
                 }
             }
 
-            &.is-active {
+            &.is-current {
                 .setting-body .setting-active {
                     margin-top: 16rem;
                 }

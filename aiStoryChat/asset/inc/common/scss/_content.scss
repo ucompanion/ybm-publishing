@@ -112,7 +112,7 @@
             }
 
             // Case 선택된 결과
-            &.is-selection {
+            &.is-completed {
                 display: flex;
                 flex-direction: row;
                 background-color: #F9F9F9;
@@ -165,7 +165,7 @@
             }
 
             // Case 활성화 상태
-            &.is-active {
+            &.is-current {
                 @include fill-height;
                 flex-grow: 0;
                 border-color: var(--color-primary);
