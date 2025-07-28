@@ -181,9 +181,20 @@
                     .selection-title {
                         font-size: 14rem;
                     }
+                    .selection-count {
+                        height: 20rem;
+                        padding: 8rem;
+                        font-size: 12rem;
+                        line-height: 16rem;
+                    }
                 }
             }
             .selection-word {
+                .word-desc {
+                    margin-bottom: 12rem;
+                    font-size: 12rem;
+                    line-height: 16rem;
+                }
                 .word-list {
                     grid-template-columns: repeat(auto-fill, minmax(130rem, 1fr));
                 }
