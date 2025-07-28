@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import 'variables', 'functions', 'breakpoint';
+
+
+.layerpop{
+    &.show{
+        display: block;
+    }
+    .popup-content{
+        &.mini{
+            .popup-header{
+                background: #{$base-color};
+                border-bottom: 0;
+                h2{
+                    color: #{$base-text-color};
+                    font-size: 1.125rem;
+                }
+                .btn-box{
+                    .close{
+                        background: url(#{$com-url}ico_btn_pop_close.svg) no-repeat center / contain;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+            .popup-body{
+                padding: 20px;
+            }
+        }
+        &.mmd{
+            min-width: 500px;
+            max-width: 500px;
+        }
+    }
+}

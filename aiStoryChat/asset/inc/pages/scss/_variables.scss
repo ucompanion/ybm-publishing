@@ -1,0 +1,34 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap);
+
+// font, color
+//$font-stack: 'SUIT Variable', 'Roboto', 'Noto Sans KR', sans-serif;
+$font-stack: 'Roboto', 'Noto Sans KR', 'Noto Sans SC', sans-serif;
+$base-font-size: 10px;
+$base-text-color: #666;
+$base-dark-color: #333;
+$base-font-weight: 400;
+$base-letter-spacing: -0.5px;
+$base-line-height: 1.12;
+$base-radius: 5px;
+
+$base-color: #ffffff;
+
+// url
+$root-url: '../../../../../asset/img/common/';
+$com-url: '../../../img/common/';
+$pages-url: '../../../img/pages/';
+$ele-url: '../../../img/ele/';
+$mid-url: '../../../img/mid/';
+$hi-url: '../../../img/hi/';
+
+// Breakpoints
+$breakpoint-tablet: 1279px;
+$breakpoint-mobile-xl: 1023px;
+$breakpoint-mobile-xm: 719px;
+$breakpoint-mobile-xs: 479px;
+
+// Color
+$color-primary: var(--color-primary);
+$color-primary-light: var(--color-primary-light);
