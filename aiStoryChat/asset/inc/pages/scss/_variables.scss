@@ -32,3 +32,31 @@ $breakpoint-mobile-xs: 479px;
 // Color
 $color-primary: var(--color-primary);
 $color-primary-light: var(--color-primary-light);
+
+@mixin dropdown-default {
+    position: relative;
+    .dropdown-menu {
+        display: none;
+        z-index: 30;
+        &.show {
+            display: block;
+        }
+    }
+}
+
+@mixin tabContent-default {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+@mixin tabPane-default {
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: auto;
+    width: 100%;
+    &.active {
+        display: flex;
+    }
+}

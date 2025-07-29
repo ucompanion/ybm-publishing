@@ -1,1 +1,265 @@
 @charset "UTF-8";
+
+// 페이지: AI 스토리챗 메인
+.main-page {
+
+    // 섹션: 소개
+    .main-intro-sec {
+        position: relative;
+        z-index: 30;
+
+        .h1-area {
+            .h1 {
+                width: 250rem;
+                height: 42rem;
+                background: no-repeat center center / contain;
+                background-image: var(--bg-logo);
+            }
+            .explain {
+                margin-top: 28rem;
+                font-weight: 700;
+                font-size: 28rem;
+                line-height: 40rem;
+                color: #000;
+            }
+            .dropdown {
+                margin-top: 40rem;
+                @include dropdown-default;
+                .dropdown-toggle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 200rem;
+                    height: 60rem;
+                    padding: 0 20rem 0 28rem;
+                    background-color: #333450;
+                    border-radius: 12rem;
+                    font-weight: 700;
+                    font-size: 20rem;
+                    line-height: 28rem;
+                    color: #fff;
+                    &::after {
+                        content:'';
+                        display: block;
+                        width: 24rem;
+                        height: 24rem;
+                        background: no-repeat center center / contain;
+                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9L12 15L18 9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    }
+                }
+                .dropdown-menu {
+                    width: 200rem;
+                    padding: 16rem;
+                    background: #fff;
+                    border-radius: 12rem;
+                    font-weight: 700;
+                    font-size: 16rem;
+                    line-height: 24rem;
+                    .dropdown-item {
+                        display: block;
+                        padding: 8rem 12rem;
+                        border-radius: 8rem;
+                        &:hover {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .visual-area {
+            position: absolute;
+            bottom: -56rem;
+            right: 55rem;
+            width: 524rem;
+            height: 426rem;
+            background: url('#{$pages-url}img-main-visual-pc.png');
+        }
+    }
+
+    // 섹션: 탭
+    .main-tab-sec {
+        position: relative;
+        z-index: 20;
+        margin-top: 120rem;
+
+        .tab-list {
+            position: relative;
+            display: inline-flex;
+            overflow: hidden;
+
+            &::after {
+                content:'';
+                position: absolute;
+                display: block;
+                left: -50%;
+                top: 50%;
+                width: 200%;
+                bottom: 0;
+                background-color: #fff;
+            }
+
+
+            .tab-item {
+                &:first-child .tab-link {
+                    border-end-start-radius: 0;
+                }
+                &:last-child .tab-link {
+                    border-end-end-radius: 0;
+                }
+            }
+
+            .tab-link {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 76rem;
+                padding: 0 40rem;
+                font-weight: 700;
+                font-size: 20rem;
+                line-height: 28rem;
+                background-color: $color-primary-light;
+                border-radius: 32rem 32rem 20rem 20rem;
+
+                span {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &::before {
+                    content:'';
+                    position: relative;
+                    z-index: 2;
+                    display: block;
+                    width: 24rem;
+                    height: 24rem;
+                    margin-right: 8rem;
+                    mask: no-repeat center center / contain;
+                    mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 9H9.01M15 15H15.01M16 8L8 16M9.5 9C9.5 9.27614 9.27614 9.5 9 9.5C8.72386 9.5 8.5 9.27614 8.5 9C8.5 8.72386 8.72386 8.5 9 8.5C9.27614 8.5 9.5 8.72386 9.5 9ZM15.5 15C15.5 15.2761 15.2761 15.5 15 15.5C14.7239 15.5 14.5 15.2761 14.5 15C14.5 14.7239 14.7239 14.5 15 14.5C15.2761 14.5 15.5 14.7239 15.5 15ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    background-color: #000;
+                }
+                &.active {
+                    color: $color-primary;
+                    background-color: #fff;
+                    &::before {
+                        background-color: $color-primary;
+                    }
+                }
+            }
+            .tab-link:disabled {
+                opacity: 0.75;
+            }
+        }
+
+        .tab-content {
+            @include tabContent-default;
+            background-color: #fff;
+            border-radius: 0 32rem 32rem 32rem;
+        }
+
+        .tab-pane {
+            @include tabPane-default;
+            padding: 60rem;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 45rem;
+        }
+
+        .book-card {
+            display: flex;
+            flex-direction: column;
+            .book-thumb {
+                width: 100%;
+                aspect-ratio: 172/224;
+                box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+                border-radius: 12rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .book-cont {
+                margin-top: 12rem;
+                text-align: center;
+                .title {
+                    font-weight: 700;
+                    font-size: 16rem;
+                    line-height: 24rem;
+                    color: #000;
+                }
+                .name {
+                    font-weight: 400;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    // 꾸미기 오브젝트
+    .object-group {
+        .only-pc {
+            .object-01 {
+                position: absolute;
+                left: 50%;
+                top: -119px;
+                transform: translateX(250rem);
+                width: 534px;
+                height: 534px;
+                border-radius: 50%;
+                background: var(--main-object-01);
+                opacity: 0.2;
+            }
+            .object-02 {
+                position: absolute;
+                top: 1105rem;
+                right: 50%;
+                transform: translateX(-778rem);
+                width: 350px;
+                height: 350px;
+                border-radius: 50%;
+                background: var(--main-object-02);
+                opacity: 0.2;
+            }
+            .object-03 {
+                position: absolute;
+                left: 50%;
+                top: 540rem;
+                transform: translateX(495rem);
+                z-index: 30;
+                width: 167rem;
+                height: 131rem;
+                background: url('#{$pages-url}img-object-03.png');
+            }
+            .object-04 {
+                position: absolute;
+                top: 1069rem;
+                right: 50%;
+                transform: translateX(-740rem);
+                z-index: 30;
+                width: 122rem;
+                height: 107rem;
+                background: url('#{$pages-url}img-object-04.png');
+            }
+            .object-05 {
+                position: absolute;
+                top: 1441rem;
+                right: 50%;
+                transform: translateX(-775rem);
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #D3D3D3;
+                opacity: 0.4;
+            }
+        }
+    }
+}

@@ -27,7 +27,18 @@ html, body {
     height: 100%;
 }
 
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: var(--main-background);
+
+}
+
 .header{
+    flex: none;
     @include flex-clm;
     position: relative;
     z-index: 100;
@@ -177,6 +188,18 @@ html, body {
                 }
             }
         }
+    }
+}
+
+.container {
+    width: 100%;
+    flex-grow: 1;
+
+    .content {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 120rem var(--sidepacer);
     }
 }
 
