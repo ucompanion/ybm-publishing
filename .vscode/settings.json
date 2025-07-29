@@ -25,7 +25,7 @@
         "/expcenter/**",
         "/gate/**",
         "/prcenter/**",
-        "/prcenterRenew/**",
+        "/prcenter/**",
         "/pub_etc/**",
         "/viewer/**",
     ],
