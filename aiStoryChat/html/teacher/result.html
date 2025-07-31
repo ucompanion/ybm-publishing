@@ -18,74 +18,296 @@
         <link rel="stylesheet" href="../../../asset/inc/common/css/mobile.css"> <!-- header , footer 영역 y클라우드 css -->
         <link rel="stylesheet" href="../../../asset/inc/common/css/popup.css"> <!-- header , footer 영역 y클라우드 css -->
         <link rel="stylesheet" href="../../asset/inc/ele/css/import.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // 모달 바로 볼 수 있도록 호출
+                var TestModal = new bootstrap.Modal(document.getElementById('chatModal'));
+                TestModal.show();
+            });
+        </script>
     </head>
     <body>
         <!-- page-wrap -->
-        <div class="page-wrap">
-            <div data-include="/aiStoryChat/html/include/include_header.html"></div>
+        <div class="page-wrap type-setting">
+            <header class="page-header">
+                <div class="logo-area">
+                    <h1 class="logo"><a href="/"><span class="blind">AI 스토리챗</span></a></h1>
+                </div>
+                <div class="util-area">
+                    <a href="./setting_step1.html" class="btn btn-home"><span class="blind">설정 홈</span></a>
+                </div>
+            </header>
 
             <!-- page-body -->
             <main class="page-body">
                 <!-- content -->
                 <div class="content student-results-page">
-                    <!-- student-results-box -->
-                    <div class="student-results-box">
-                        <div class="student-results-header">
-                            <h2 class="student-results-title">결과 확인</h2>
-                            <button>결과 리포트</button>
+                    <div class="content-header">
+                        <h2 class="content-h2">결과 확인</h2>
+                        <button type="button" class="btn-report">결과 리포트</button>
+                    </div>
+                    <div class="content-body">
+                        <div class="stats-box">
+                            <ul class="stats-list">
+                                <li class="stats-item">
+                                    <strong class="stats-tit">평균 말한 단어수</strong>
+                                    <em class="stats-val">16</em>
+                                </li>
+                                <li class="stats-item">
+                                    <strong class="stats-tit">평균 대화 시간</strong>
+                                    <em class="stats-val">3분 12초</em>
+                                </li>
+                                <li class="stats-item">
+                                    <strong class="stats-tit">대화 완료율</strong>
+                                    <em class="stats-val">12명 / 16명</em>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="student-results-body">
-                            <div class="status-box">
-                                <ul class="status-stats-list">
-                                    <li>
-                                        <div class="status-stats"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="student-box">
-                                <ul class="status-legend-list">
-                                    <li>
-                                        <div class="status-legend"></div>
-                                    </li>
-                                </ul>
-                                <div class="status-board">
-                                    <ul class="status-data-list">
-                                        <li>
-                                            <!-- status-data -->
-                                            <div class="status-data">
-                                                <div class="status-col type-profile">
-                                                    <div class="student-profile">
-                                                        <div class="avata"></div>
-                                                        <div class="name"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="status-col type-count"></div>
-                                                <div class="status-col type-count"></div>
-                                                <div class="status-col type-count"></div>
-                                                <div class="status-col type-count"></div>
-                                                <div class="status-col type-util"></div>
-                                            </div>
-                                            <!-- //status-data -->
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="status-box">
+                            <!-- status-legend-list -->
+                            <ul class="status-legend-list">
+                                <li class="status-legend-item">
+                                    <span class="status-legend type-msg">말한 단어</span>
+                                </li>
+                                <li class="status-legend-item">
+                                    <span class="status-legend type-time">대화 시간</span>
+                                </li>
+                                <li class="status-legend-item">
+                                    <span class="status-legend type-caution">교정 문장</span>
+                                </li>
+                                <li class="status-legend-item">
+                                    <span class="status-legend type-good">더 좋은 표현 문장</span>
+                                </li>
+                            </ul>
+                            <!-- //status-legend-list -->
+                            <!-- status-data-list -->
+                            <ul class="status-data-list">
+                                <li class="status-data-item">
+                                    <div class="status-data">
+                                        <div class="status-col type-profile">
+                                            <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                            <strong class="name">1번 강감찬</strong>
+                                        </div>
+                                        <div class="status-col type-msg">19개</div>
+                                        <div class="status-col type-time">3분 25초</div>
+                                        <div class="status-col type-caution">4개</div>
+                                        <div class="status-col type-good">6개</div>
+                                        <div class="status-col type-btn">
+                                            <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                <span>대화 다시 보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="status-data-item">
+                                    <div class="status-data">
+                                        <div class="status-col type-profile">
+                                            <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                            <strong class="name">1번 강감찬</strong>
+                                        </div>
+                                        <div class="status-col type-msg">19개</div>
+                                        <div class="status-col type-time">3분 25초</div>
+                                        <div class="status-col type-caution">4개</div>
+                                        <div class="status-col type-good">6개</div>
+                                        <div class="status-col type-btn">
+                                            <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                <span>대화 다시 보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="status-data-item">
+                                    <div class="status-data">
+                                        <div class="status-col type-profile">
+                                            <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                            <strong class="name">1번 강감찬</strong>
+                                        </div>
+                                        <div class="status-col type-msg">19개</div>
+                                        <div class="status-col type-time">3분 25초</div>
+                                        <div class="status-col type-caution">4개</div>
+                                        <div class="status-col type-good">6개</div>
+                                        <div class="status-col type-btn">
+                                            <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                <span>대화 다시 보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="status-data-item">
+                                    <div class="status-data">
+                                        <div class="status-col type-profile">
+                                            <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                            <strong class="name">1번 강감찬</strong>
+                                        </div>
+                                        <div class="status-col type-msg">19개</div>
+                                        <div class="status-col type-time">3분 25초</div>
+                                        <div class="status-col type-caution">4개</div>
+                                        <div class="status-col type-good">6개</div>
+                                        <div class="status-col type-btn">
+                                            <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                <span>대화 다시 보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="status-data-item">
+                                    <div class="status-data">
+                                        <div class="status-col type-profile">
+                                            <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                            <strong class="name">1번 강감찬</strong>
+                                        </div>
+                                        <div class="status-col type-msg">19개</div>
+                                        <div class="status-col type-time">3분 25초</div>
+                                        <div class="status-col type-caution">4개</div>
+                                        <div class="status-col type-good">6개</div>
+                                        <div class="status-col type-btn">
+                                            <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                <span>대화 다시 보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="status-data-item">
+                                    <div class="status-data">
+                                        <div class="status-col type-profile">
+                                            <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                            <strong class="name">1번 강감찬</strong>
+                                        </div>
+                                        <div class="status-col type-msg">19개</div>
+                                        <div class="status-col type-time">3분 25초</div>
+                                        <div class="status-col type-caution">4개</div>
+                                        <div class="status-col type-good">6개</div>
+                                        <div class="status-col type-btn">
+                                            <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                <span>대화 다시 보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- //status-data-list -->
                         </div>
                     </div>
-                    <!-- //student-results-box -->
                 </div>
                 <!-- //content -->
             </main>
             <!-- //page-body -->
-
-            <div data-include="/aiStoryChat/html/include/include_footer.html"></div>
         </div>
         <!-- //page-wrap -->
 
+        <!-- 모달: 대화 다시 보기 -->
+        <div class="modal modal-full fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="chatModalLabel">대화 다시 보기<span class="middot">&middot;</span>1번 김학일</h3>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icn icn-modal-close" aria-label="닫기"></i>
+                        </button>
+                    </div>
+
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <div class="chat-community">
+                                <ul class="chat-list">
+                                    <!-- My Story -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-chat">
+                                                    <p class="story-original">
+                                                        I’m in the sixth grade. My family will move to a new town.
+                                                        We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.
+                                                    </p>
+                                                    <p class="story-translated">
+                                                        안녕하세요! 삐삐가 새로운 마을에서 긴장을 했는지 기억하시나요?
+                                                    </p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-volume">
+                                                            <span class="blind">볼륨</span>
+                                                        </button>
+                                                        <button type="button" class="btn-translate">
+                                                            <span class="blind">번역</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- AI Hint -->
+                                    <!-- <li class="chat-item order">
+                                        <div class="chat-body">
+                                            <div class="story-hint-chat">
+                                                <i class="icn"></i>
+                                                <p>힌트메세지</p>
+                                                <label>힌트</label>
+                                            </div>
+                                        </div>
+                                    </li> -->
+
+                                    <!-- AI Hint Chat -->
+                                    <!-- <li class="chat-item order">
+                                        <div class="chat-body">
+                                            <div class="story-chat">
+                                                <p class="story-hint"></p>
+                                                <p class="story-original"></p>
+                                                <div class="story-utils"></div>
+                                            </div>
+                                        </div>
+                                    </li> -->
+
+                                    <!-- AI Record -->
+                                    <!-- <li class="chat-item order">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-record-chat">
+                                                    <p class="explan">녹음 버튼을 누른 후 말하세요</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li> -->
+
+                                    <!-- AI Story -->
+                                    <li class="chat-item order">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-target-chat">
+                                                    <p>I’m in the sixth grade.</p>
+                                                </div>
+                                                <div class="story-feedback-chat">
+                                                    <p class="title"><strong>교정이 필요합니다</strong></p>
+                                                    <p class="explan">이름은 대문자로 시작해야 합니다</p>
+                                                    <dl class="corect">
+                                                        <dt class="corect-label">교정된 문장</dt>
+                                                        <dd class="corect-translated">My 얼씨구</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: 대화 다시 보기 -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
-        <script src="../../asset/inc/common/js/modal.js"></script>
-        <script src="../../asset/inc/common/js/publish-only.js"></script>
-
     </body>
 </html>
