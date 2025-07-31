@@ -107,6 +107,20 @@ $color-primary-light: var(--color-primary-light);
     line-height: 16rem;
     color: #767676;
 }
+@mixin btn-base-24 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    position: relative;
+    height: 24rem;
+    padding: 0 7rem;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 16rem;
+    color: #000;
+}
 @mixin btn-round-28 {
     display: flex;
     align-items: center;
@@ -135,4 +149,10 @@ $color-primary-light: var(--color-primary-light);
 }
 @mixin btn-base-shadow {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+}
+@mixin content-box {
+    padding: var(--spacer-inner);
+    border:1px solid #CCCCCC;
+    background-color: #f6f6f6;
+    border-radius: 8rem;
 }

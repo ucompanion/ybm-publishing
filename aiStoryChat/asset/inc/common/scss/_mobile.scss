@@ -8,7 +8,20 @@
 
 // 테블릿 가로모드
 @include tablet {
-    .setting-box {
+    // 레이아웃
+    .page-wrap.type-setting {
+        .content {
+            .content-footer {
+                .btn-action {
+                    @include btn-base-48;
+                    @include btn-fill-primary;
+                }
+            }
+        }
+    }
+
+    // 설정화면
+    .setting-page {
         // 설정 목록
         .setting-list {
             .setting-item {
@@ -52,15 +65,7 @@
                 min-height: 66rem;
             }
         }
-
-        .setting-action {
-            .btn-action {
-                @include btn-base-48;
-                @include btn-fill-primary;
-            }
-        }
     }
-
 }
 
 // 모바일 시작
@@ -107,7 +112,7 @@
     }
 
     // 설정하기
-    .setting-box {
+    .setting-page {
         .setting-list {
             .setting-item {
                 .setting-header {
@@ -258,25 +263,6 @@
     html, body, .page-wrap {
         height: auto;
     }
-    .setting-box {
-        padding-bottom: calc((var(--spacer) * 3) + 48rem); // 3중 여백 + 버튼높이
-
-        .setting-list {
-            gap: 8rem;
-        }
-
-        .setting-action {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            z-index: 10;
-            width: 100%;
-            margin-top: 0;
-            padding: var(--spacer);
-            background: #FFFFFF;
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
-        }
-    }
 
     // 페이지 레이아웃
     .page-wrap.type-setting {
@@ -293,10 +279,32 @@
                 }
             }
         }
+        .content {
+            // 설정화면
+            &.setting-page {
+                padding-bottom: calc((var(--spacer) * 3) + 48rem); // 3중 여백 + 버튼높이
+
+                .setting-list {
+                    gap: 8rem;
+                }
+            }
+
+            .content-footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                z-index: 10;
+                width: 100%;
+                margin-top: 0;
+                padding: var(--spacer);
+                background: #FFFFFF;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+            }
+        }
     }
 
     // 설정하기
-    .setting-box {
+    .setting-page {
         // 설정목록
         .setting-list .setting-item {
             padding-top: 12rem;
@@ -368,7 +376,7 @@
 
 // 모바일 리얼 ~
 @include mobileS-xs {
-    .setting-box {
+    .setting-page {
         // 1. 교과서 선택
         .book-list-wrap {
             .book-list {
