@@ -1273,7 +1273,7 @@
             align-items: center;
             gap: 8rem;
             margin-top: 8rem;
-            .btn-volume {
+            .btn-speaker {
                 width: 20rem;
                 height: 20rem;
                 background: no-repeat center center / contain;
@@ -1378,7 +1378,85 @@
     }
 }
 
-// 모달
+// 심화 학습 확인
+.depp-learning-wrap {
+    .deep-learning-desc {
+        margin-bottom: 12rem;
+        font-weight: 700;
+        font-size: 14rem;
+        line-height: 20rem;
+        color: #333450;
+    }
+    .deep-learning-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+    }
+    .deep-learning-test {
+        display: flex;
+        .test-box {
+            flex: 1 1 auto;
+            padding: 15rem;
+            border-radius: 8rem;
+            border:1px solid #CCCCCC;
+            .quiz-eng {
+                display: flex;
+                align-items: center;
+                gap: 8rem;
+                font-weight: 700;
+                font-size: 14rem;
+                line-height: 20rem;
+                color: #000;
+                .btn-speaker {
+                    width: 20rem;
+                    height: 20rem;
+                    background: no-repeat center center / contain;
+                    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9.5' fill='white' stroke='%23CCCCCC'/%3E%3Cpath d='M13.874 6.50192C14.5826 7.48704 15 8.69573 15 10.0019C15 11.3081 14.5826 12.5168 13.874 13.5019M11.8727 8.00192C12.2681 8.56883 12.5 9.25829 12.5 10.0019C12.5 10.7455 12.2681 11.435 11.8727 12.0019M8.81716 6.68476L7.23431 8.2676C7.14784 8.35408 7.1046 8.39732 7.05414 8.42824C7.00941 8.45565 6.96063 8.47585 6.90962 8.4881C6.85207 8.50192 6.79092 8.50192 6.66863 8.50192H5.8C5.51997 8.50192 5.37996 8.50192 5.273 8.55641C5.17892 8.60435 5.10243 8.68084 5.0545 8.77492C5 8.88188 5 9.02189 5 9.30192V10.7019C5 10.9819 5 11.122 5.0545 11.2289C5.10243 11.323 5.17892 11.3995 5.273 11.4474C5.37996 11.5019 5.51997 11.5019 5.8 11.5019H6.66863C6.79092 11.5019 6.85207 11.5019 6.90962 11.5157C6.96063 11.528 7.00941 11.5482 7.05414 11.5756C7.1046 11.6065 7.14784 11.6498 7.23431 11.7362L8.81716 13.3191C9.03135 13.5333 9.13844 13.6404 9.23039 13.6476C9.31016 13.6539 9.38813 13.6216 9.4401 13.5607C9.5 13.4906 9.5 13.3391 9.5 13.0362V6.9676C9.5 6.66469 9.5 6.51324 9.4401 6.44311C9.38813 6.38226 9.31016 6.34996 9.23039 6.35624C9.13844 6.36348 9.03135 6.47057 8.81716 6.68476Z' stroke='%23333450' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    vertical-align: middle;
+                }
+            }
+            .quiz-kor {
+                margin-top: 4rem;
+                margin-bottom: 8rem;
+                font-weight: 400;
+                font-size: 12rem;
+                line-height: 16rem;
+                color: #666;
+            }
+            .answer-input input {
+                height: 32rem;
+                width: 100%;
+                padding: 0 11rem;
+                border-radius: 4rem;
+                font-weight: 700;
+                font-size: 12rem;
+                line-height: 16rem;
+                color: $color-primary;
+                border: 1px solid #ccc;
+            }
+            .answer-kor {
+                margin-top: 4rem;
+                font-weight: 400;
+                font-size: 12rem;
+                line-height: 16rem;
+                color: #666;
+            }
+        }
+        .test-util {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60rem;
+            .btn-remove {
+                width: 32rem;
+                height: 32rem;
+                background: no-repeat center center / contain;
+                background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23333450'/%3E%3Cpath d='M10.1665 16H21.8332' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+}
+
 /* Bootstrap Transition */
 .fade {
 	transition: opacity .15s linear;
@@ -1387,7 +1465,7 @@
 	}
 }
 
-// s: 기본
+// 모달 기본
 .modal {
 	position: fixed;
     top: 0;
@@ -1512,11 +1590,11 @@
 	}
 }
 
-// Full
+// 모달 Full
 .modal-full {
 	.modal-dialog {
         transform: translate(0, 50px);
-        padding: rem-calc(30px) rem-calc(60px);
+        padding: 30rem 50rem;
 	}
 
 	.modal-content {

@@ -144,7 +144,7 @@
                                                     <span class="learning-cont">
                                                         <strong class="tit">심화학습</strong>
                                                         <span class="explan">스토리 내용을 기반으로 AI가 생성한 질문에 대해<br> 답을 작성해보는 추가 학습을 진행합니다.</span>
-                                                        <button type="button" class="btn-learnCheck">
+                                                        <button type="button" class="btn-learnCheck" data-bs-toggle="modal" data-bs-target="#deepLearningModal">
                                                             <span>심화 학습 확인하기</span>
                                                         </button>
                                                     </span>
@@ -170,6 +170,156 @@
         </div>
         <!-- //page-wrap -->
 
+
+        <!-- 모달: 대화 다시 보기 -->
+        <div class="modal modal-full fade" id="deepLearningModal" tabindex="-1" role="dialog" aria-labelledby="deepLearningModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="deepLearningModalLabel">심화 학습 확인</h3>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icn icn-modal-close" aria-label="닫기"></i>
+                        </button>
+                    </div>
+
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <div class="depp-learning-wrap">
+                                <div class="deep-learning-desc">
+                                    <p>학생들이 작성해야 하는 문제를 검토하신 후, ‘확인 완료’ 버튼을 눌러주세요.</p>
+                                </div>
+                                <ul class="deep-learning-list">
+                                    <li class="deep-learning-item">
+                                        <div class="deep-learning-test">
+                                            <div class="test-box">
+                                                <div class="quiz-eng">
+                                                    <p>Q. Why did Pippi feel sad?</p>
+                                                    <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                                </div>
+                                                <div class="quiz-kor">
+                                                    <p>삐삐는 왜 슬퍼했을까요?</p>
+                                                </div>
+                                                <div class="answer-input">
+                                                    <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                </div>
+                                                <div class="answer-kor">
+                                                    <p>삐삐는 새로운 마을로 이사를 가야 해서 슬펐어요.</p>
+                                                </div>
+                                            </div>
+                                            <div class="test-util">
+                                                <button type="button" class="btn-remove">
+                                                    <span class="blind">문제 삭제</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="deep-learning-item">
+                                        <div class="deep-learning-test">
+                                            <div class="test-box">
+                                                <div class="quiz-eng">
+                                                    <p>Q. Why did Pippi feel sad?</p>
+                                                    <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                                </div>
+                                                <div class="quiz-kor">
+                                                    <p>삐삐는 왜 슬퍼했을까요?</p>
+                                                </div>
+                                                <div class="answer-input">
+                                                    <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                </div>
+                                                <div class="answer-kor">
+                                                    <p>삐삐는 새로운 마을로 이사를 가야 해서 슬펐어요.</p>
+                                                </div>
+                                            </div>
+                                            <div class="test-util">
+                                                <button type="button" class="btn-remove">
+                                                    <span class="blind">문제 삭제</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="deep-learning-item">
+                                        <div class="deep-learning-test">
+                                            <div class="test-box">
+                                                <div class="quiz-eng">
+                                                    <p>Q. Why did Pippi feel sad?</p>
+                                                    <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                                </div>
+                                                <div class="quiz-kor">
+                                                    <p>삐삐는 왜 슬퍼했을까요?</p>
+                                                </div>
+                                                <div class="answer-input">
+                                                    <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                </div>
+                                                <div class="answer-kor">
+                                                    <p>삐삐는 새로운 마을로 이사를 가야 해서 슬펐어요.</p>
+                                                </div>
+                                            </div>
+                                            <div class="test-util">
+                                                <button type="button" class="btn-remove">
+                                                    <span class="blind">문제 삭제</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="deep-learning-item">
+                                        <div class="deep-learning-test">
+                                            <div class="test-box">
+                                                <div class="quiz-eng">
+                                                    <p>Q. Why did Pippi feel sad?</p>
+                                                    <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                                </div>
+                                                <div class="quiz-kor">
+                                                    <p>삐삐는 왜 슬퍼했을까요?</p>
+                                                </div>
+                                                <div class="answer-input">
+                                                    <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                </div>
+                                                <div class="answer-kor">
+                                                    <p>삐삐는 새로운 마을로 이사를 가야 해서 슬펐어요.</p>
+                                                </div>
+                                            </div>
+                                            <div class="test-util">
+                                                <button type="button" class="btn-remove">
+                                                    <span class="blind">문제 삭제</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="deep-learning-item">
+                                        <div class="deep-learning-test">
+                                            <div class="test-box">
+                                                <div class="quiz-eng">
+                                                    <p>Q. Why did Pippi feel sad?</p>
+                                                    <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                                </div>
+                                                <div class="quiz-kor">
+                                                    <p>삐삐는 왜 슬퍼했을까요?</p>
+                                                </div>
+                                                <div class="answer-input">
+                                                    <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                </div>
+                                                <div class="answer-kor">
+                                                    <p>삐삐는 새로운 마을로 이사를 가야 해서 슬펐어요.</p>
+                                                </div>
+                                            </div>
+                                            <div class="test-util">
+                                                <button type="button" class="btn-remove">
+                                                    <span class="blind">문제 삭제</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: 대화 다시 보기 -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
     </body>
