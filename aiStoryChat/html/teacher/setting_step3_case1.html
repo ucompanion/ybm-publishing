@@ -120,22 +120,23 @@
                                     <!-- Case 설정 중 -->
                                     <div class="setting-active">
                                         <!-- story-confirm -->
+                                        <!-- Case 수정하기 (textarea resize 스트립트 참조) -->
                                         <div class="story-confirm">
                                             <div class="story-original">
-                                                <p>I’m in the sixth <b class="keyword">grade</b>. My family will move to a new <b class="keyword">town</b>. I have friends here. We play <b class="keyword">together</b> every day. In the new town, I’ll make new friends. Let’s explore the <b class="keyword">town together</b>.</p>
+                                                <textarea rows="1" cols="10" id="storyTextarea">I’m in the sixth grade. My family will move to a new town. I have friends here. We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.</textarea>
                                             </div>
-                                            <div class="story-translated">
+                                            <!-- <div class="story-translated">
                                                 <p>저는 6학년 입니다. 우리 가족은 새로운 동네로 이사할 예정입니다. 여기에 친구들이 있어요. 우리는 매일 함께 놀아요. 새 동내에서 제가 새 친구들을 사귈거예요. 같이 동네를 탐험해 봐요.</p>
-                                            </div>
+                                            </div> -->
 
                                             <div class="story-actions">
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn-edit"><span>수정하기</span></button>
-                                                    <button type="button" class="btn-confirm"><span>확인완료</span></button>
+                                                    <button type="button" class="btn-edit"><span>수정완료</span></button>
+                                                    <!-- <button type="button" class="btn-confirm"><span>확인완료</span></button> -->
                                                 </div>
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn-translate"><span>번역</span></button>
-                                                    <button type="button" class="btn-refresh"><span>다시생성</span></button>
+                                                    <button type="button" class="btn-translate" disabled><span>번역</span></button>
+                                                    <button type="button" class="btn-refresh" disabled><span>다시생성</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,5 +164,29 @@
 
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
+        <script>
+            function setupAutoResizeTextarea(textareaId) {
+                const textarea = document.getElementById(textareaId);
+
+                if (!textarea) return; // 요소가 없으면 함수 종료
+
+                function adjustTextareaHeight() {
+                    textarea.style.height = 'auto';
+                    textarea.style.height = textarea.scrollHeight + 'px';
+                }
+
+                textarea.addEventListener('input', adjustTextareaHeight);
+
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(adjustTextareaHeight, 100);
+                });
+
+                adjustTextareaHeight(); // 초기 호출
+            }
+
+            setupAutoResizeTextarea("storyTextarea");
+        </script>
     </body>
 </html>

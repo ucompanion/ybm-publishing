@@ -146,6 +146,15 @@ $color-primary-light: var(--color-primary-light);
 @mixin btn-line-normal {
     border: 1px solid #CCCCCC;
     background-color: #fff;
+    &:disabled {
+        border-color: #EAEAEA;
+        background-color: #EAEAEA;
+        color: #fff;
+        box-shadow: none;
+        &::before {
+            background-color: #fff;
+        }
+    }
 }
 @mixin btn-base-shadow {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);

@@ -25,6 +25,9 @@
         // 설정 목록
         .setting-list {
             .setting-item {
+                .setting-header .btn-tooltip {
+                    margin-right: calc(var(--spacer-inner) - 2rem);
+                }
                 &.is-current {
                     .setting-body {
                         .setting-active {
@@ -65,6 +68,25 @@
                 min-height: 66rem;
             }
         }
+
+        // 3. 스토리 확인
+        .story-confirm {
+            .story-actions {
+                button {
+                    @include btn-base-32;
+                    &::before {
+                        width: 12rem;
+                        height: 12rem;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // 접속자 확인
+    .connect-page .book-setting .btn-setting {
+        top: 10rem;
     }
 }
 
@@ -109,9 +131,26 @@
         .page-body {
             border-radius: 0 20rem 0 0;
         }
+
+        .content {
+            .content-header {
+                margin-bottom: 16rem;
+                .content-h2 {
+                    font-size: 16rem;
+                    line-height: 24rem;
+                }
+            }
+            .content-body {
+                .content-h3 {
+                    margin-bottom: 8rem;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                }
+            }
+        }
     }
 
-    // 설정하기
+    // 교사 - 설정하기
     .setting-page {
         .setting-list {
             .setting-item {
@@ -133,6 +172,7 @@
                     .btn-tooltip {
                         width: 20rem;
                         height: 20rem;
+                        margin-right: calc(var(--spacer-inner));
                     }
                 }
                 &.is-current {
@@ -255,6 +295,103 @@
             }
         }
     }
+
+    // 교사 - 접속자 확인
+    .connect-page {
+        .content-body {
+            gap: 12rem;
+        }
+
+        .content-footer {
+            margin-top: 20rem !important;
+        }
+
+        .connect-top-area {
+            gap: 12rem;
+            height: auto;
+        }
+
+        .connect-qrcode {
+            .qrcode-form {
+                .qrcode-field {
+                    gap: 8rem;
+                    .input {
+                        height: 40rem;
+                        padding: 9rem 11rem;
+                        border-radius: 4rem;
+                        font-size: 14rem;
+                        line-height: 20rem;
+                    }
+                    .btn-copy {
+                        flex: none;
+                        @include btn-base-40;
+                        @include btn-fill-dark;
+                    }
+                }
+                .qrcode-scan {
+                    flex: none;
+                    display: none;
+                }
+            }
+        }
+
+        .book-setting {
+            @include content-box;
+            position: relative;
+            flex: none;
+            width: 268rem;
+
+            .book-detail {
+                display: flex;
+                gap: 20rem;
+
+                .book-thumb {
+                    position: relative;
+                    width: 80rem;
+                    aspect-ratio: 80/104;
+                    border-radius: 8rem;
+                    overflow: hidden;
+                    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+                    outline: 1px solid rgba(0, 0, 0, 0.08);
+                    outline-offset: -1px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .book-info {
+                    li + li {
+                        margin-top: 4rem;
+                    }
+                    .tit {
+                        display: block;
+                        font-weight: 400;
+                        font-size: 12rem;
+                        line-height: 16rem;
+                        color: #000000;
+                    }
+                    .txt {
+                        display: block;
+                        font-weight: 400;
+                        font-size: 10rem;
+                        line-height: 16rem;
+                        color: #666;
+                    }
+                }
+            }
+            .btn-setting {
+                top: 6rem;
+                right: 16rem;
+            }
+        }
+
+        .connect-users {
+            .user-list {
+                gap: 12rem;
+            }
+        }
+    }
 }
 
 // 모바일 전용 ~ 반응형구간
@@ -372,6 +509,85 @@
             flex-direction: column;
         }
     }
+
+
+    // 교사 - 접속자 확인
+    .connect-page {
+        .connect-top-area {
+            flex-direction: column;
+        }
+        .connect-qrcode {
+            .qrcode-form {
+                .qrcode-field {
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+
+        .book-setting {
+            width: 100%;
+
+            .book-detail {
+                display: flex;
+                gap: 20rem;
+
+                .book-thumb {
+                    display: none;
+                }
+                .book-info {
+                    width: 100%;
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        gap: 28rem;
+                        li {
+                            &:first-child {
+                                margin-right: auto;
+                            }
+                            & + li {
+                                margin-top: 0;
+                            }
+
+                        }
+                    }
+                    .tit {
+                        display: block;
+                        font-weight: 400;
+                        font-size: 12rem;
+                        line-height: 16rem;
+                        color: #000000;
+                    }
+                    .txt {
+                        display: block;
+                        font-weight: 400;
+                        font-size: 10rem;
+                        line-height: 16rem;
+                        color: #666;
+                    }
+                }
+            }
+            .btn-setting {
+                @include btn-base-40;
+                @include btn-line-normal;
+                @include btn-base-shadow;
+                position: static;
+                width: 100%;
+                &::before {
+                    width: 16rem;
+                    height: 16rem;
+                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.00029 9.9987C9.10485 9.9987 10.0003 9.10327 10.0003 7.9987C10.0003 6.89413 9.10485 5.9987 8.00029 5.9987C6.89572 5.9987 6.00028 6.89413 6.00028 7.9987C6.00028 9.10327 6.89572 9.9987 8.00029 9.9987Z' stroke='%23767676' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.19301 12.9128L6.58264 13.7891C6.69846 14.0499 6.88749 14.2716 7.12679 14.4271C7.36609 14.5826 7.64538 14.6654 7.93079 14.6654C8.21619 14.6654 8.49549 14.5826 8.73478 14.4271C8.97408 14.2716 9.16311 14.0499 9.27893 13.7891L9.66856 12.9128C9.80726 12.6018 10.0406 12.3426 10.3352 12.172C10.6318 12.001 10.9748 11.9281 11.3152 11.9639L12.2686 12.0654C12.5523 12.0954 12.8387 12.0424 13.093 11.9129C13.3473 11.7834 13.5586 11.5829 13.7012 11.3357C13.8439 11.0887 13.912 10.8056 13.897 10.5206C13.882 10.2357 13.7846 9.96123 13.6167 9.73055L13.0523 8.955C12.8513 8.67679 12.7439 8.34191 12.7456 7.9987C12.7455 7.65642 12.8539 7.32293 13.0552 7.04611L13.6197 6.27055C13.7876 6.03987 13.885 5.76541 13.8999 5.48048C13.9149 5.19555 13.8469 4.91239 13.7041 4.66536C13.5615 4.41819 13.3503 4.21769 13.096 4.08818C12.8417 3.95867 12.5553 3.90572 12.2715 3.93573L11.3182 4.03722C10.9777 4.07297 10.6347 4.00011 10.3382 3.82907C10.0429 3.65753 9.80958 3.39694 9.67153 3.08462L9.27893 2.20833C9.16311 1.94748 8.97408 1.72584 8.73478 1.5703C8.49549 1.41475 8.21619 1.33198 7.93079 1.33203C7.64538 1.33198 7.36609 1.41475 7.12679 1.5703C6.88749 1.72584 6.69846 1.94748 6.58264 2.20833L6.19301 3.08462C6.05496 3.39694 5.82159 3.65753 5.52634 3.82907C5.22982 4.00011 4.88679 4.07297 4.54634 4.03722L3.59005 3.93573C3.30627 3.90572 3.01987 3.95867 2.76559 4.08818C2.51131 4.21769 2.30006 4.41819 2.15745 4.66536C2.01467 4.91239 1.94664 5.19555 1.96163 5.48048C1.97662 5.76541 2.07398 6.03987 2.2419 6.27055L2.80634 7.04611C3.00764 7.32293 3.11603 7.65642 3.11597 7.9987C3.11603 8.34097 3.00764 8.67446 2.80634 8.95129L2.2419 9.72685C2.07398 9.95753 1.97662 10.232 1.96163 10.5169C1.94664 10.8018 2.01467 11.085 2.15745 11.332C2.3002 11.5791 2.51147 11.7795 2.76572 11.909C3.01996 12.0384 3.30629 12.0915 3.59005 12.0617L4.54338 11.9602C4.88382 11.9244 5.22686 11.9973 5.52338 12.1683C5.81973 12.3394 6.05418 12.6 6.19301 12.9128Z' stroke='%23767676' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+
+        .connect-users {
+            .user-list {
+                gap: 12rem;
+            }
+        }
+    }
 }
 
 // 모바일 리얼 ~
@@ -388,13 +604,17 @@
         // 3. 스토리 확인
         .story-confirm {
             .story-actions {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                button {
-                    flex: 1 1 auto;
+                flex-direction: column;
+                .btn-group {
+                    display: flex;
                     width: 100%;
+                    button {
+                        flex: 1 1 auto;
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 }
+

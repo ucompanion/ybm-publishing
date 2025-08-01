@@ -114,6 +114,10 @@ ul[type="disc"]{
 	clip-path: inset(50%);
 }
 
+.is-hide {
+    display: none !important;
+}
+
 [role="button"] {
     cursor: pointer;
 }
