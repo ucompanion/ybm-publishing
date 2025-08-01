@@ -13,43 +13,116 @@
         <meta property="og:url" content="" />
         <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
 
-        <title>페이지명 | AI 스토리챗 </title>
-        <link rel="stylesheet" href="../../../asset/inc/common/css/import.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/mobile.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/popup.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../asset/inc/ele/css/import.css">
+        <title>학생 접속화면 | AI 스토리챗 </title>
+        <link rel="stylesheet" href="../../asset/inc/ele/css/set-ele.css">
     </head>
     <body>
         <!-- page-wrap -->
-        <div class="page-wrap">
-            <div data-include="/aiStoryChat/html/include/include_header.html"></div>
+        <div class="page-wrap type-setting">
+            <header class="page-header">
+                <div class="logo-area">
+                    <h1 class="logo"><a href="/"><span class="blind">AI 스토리챗</span></a></h1>
+                </div>
+                <div class="util-area">
+                    <a href="./setting_step1.html" class="btn btn-home"><span class="blind">설정 홈</span></a>
+                </div>
+            </header>
 
             <!-- page-body -->
             <main class="page-body">
                 <!-- content -->
-                <div class="content intro-page">
-                    <div class="intro-box">
-                        <div class="intro-image">
-
-                        </div>
-                        <div class="intro-sigin">
-                            <div class="sigin-form">
-                                <div class="sigin-filedset">
-                                    <div class="sigin-filed">
-                                        <label for="siginName">이름</label>
-                                        <input type="text">
+                <div class="content sigin-page">
+                    <div class="content-body">
+                        <div class="sigin-wrap">
+                            <div class="visual-area">
+                                <img src="" alt="" />
+                            </div>
+                            <div class="sigin-area">
+                                <div class="sigin-box">
+                                    <!-- sigin-form -->
+                                    <div class="sigin-form">
+                                        <div class="sigin-input-group">
+                                            <div class="sigin-input">
+                                                <label for="siginName" class="blind">이름</label>
+                                                <input type="text" id="siginName"placeholder="이름을 입력해주세요."  class="input" />
+                                            </div>
+                                            <div class="sigin-input">
+                                                <label for="siginNum" class="blind">반 번호</label>
+                                                <input type="tel" id="siginNum" placeholder="반 번호를 입력해주세요." class="input" />
+                                            </div>
+                                        </div>
+                                        <div class="sigin-profile-group">
+                                            <label for="siginProfile" class="sigin-label">내 프로필 선택</label>
+                                            <ul class="sigin-profile-list">
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                                <li class="sigin-profile-item">
+                                                    <label class="sigin-profile">
+                                                        <input type="radio" name="siginProfile" class="rdo" />
+                                                        <span class="avata"><img src="../../asset/img/common/icn-30-avata.png" alt="" /></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sigin-action-group">
+                                            <button type="button" class="btn-action">
+                                                <span>접속하기</span>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="sigin-filed">
-                                        <label for="siginName">반 번호</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="sigin-filed">
-                                        <label for="siginName">내 프로필 선택</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="sigin-action">
-                                    <button>접속하기</button>
+                                    <!-- //sigin-form -->
                                 </div>
                             </div>
                         </div>
@@ -58,15 +131,10 @@
                 <!-- //content -->
             </main>
             <!-- //page-body -->
-
-            <div data-include="/aiStoryChat/html/include/include_footer.html"></div>
         </div>
         <!-- //page-wrap -->
 
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
-        <script src="../../asset/inc/common/js/modal.js"></script>
-        <script src="../../asset/inc/common/js/publish-only.js"></script>
-
     </body>
 </html>

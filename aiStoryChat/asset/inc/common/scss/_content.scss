@@ -795,15 +795,7 @@
                 width: 100%;
                 flex: 1 1 auto;
                 .input {
-                    width: 100%;
-                    height: 48rem;
-                    padding: 13rem 11rem;
-                    border-radius: 8rem;
-                    border:1px solid #ccc;
-                    font-weight: 400;
-                    font-size: 16rem;
-                    line-height: 24rem;
-                    color: #666;
+                    @include input-base;
                 }
                 .btn-copy {
                     flex: none;
@@ -1233,7 +1225,7 @@
     }
 }
 
-// 채팅하기
+// 교사 - 채팅하기
 .chat-community {
     // 채팅 레이아웃
     .chat-list {
@@ -1420,7 +1412,7 @@
     }
 }
 
-// 심화 학습 확인
+// 교사 - 심화 학습 확인
 .depp-learning-wrap {
     .deep-learning-desc {
         margin-bottom: 12rem;
@@ -1498,6 +1490,122 @@
         }
     }
 }
+
+// 학생 - 접속확인
+.sigin-wrap {
+    @include fill-height;
+    flex-direction: row;
+    // align-items: center;
+    justify-content: center;
+    gap: 60rem;
+    padding-top: 20rem;
+    // transform: scale(1.2);
+    transform-origin: center top;
+
+    .visual-area {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 388rem;
+        height: 412rem;
+        background-color: #D9D9D9;
+        overflow: hidden;
+    }
+
+    .sigin-area {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 388rem;
+        height: 412rem;
+        overflow: hidden;
+    }
+
+    .sigin-box {
+        width: 100%;
+        height: 100%;
+        @include content-box;
+        background-color: #fff;
+    }
+
+    .sigin-input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12rem;
+    }
+
+    .sigin-input {
+        .input {
+            @include input-base;
+        }
+    }
+
+    .sigin-profile-group {
+        margin-top: 20rem;
+        .sigin-label {
+            display: block;
+            margin-bottom: 16rem;
+            font-weight: 700;
+            font-size: 14rem;
+            line-height: 20rem;
+            color: #333450;
+        }
+    }
+
+    .sigin-profile-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12rem;
+        .sigin-profile-item {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .sigin-profile {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48rem;
+        height: 48rem;
+        .avata,
+        .rdo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .rdo {
+            z-index: 1;
+            border: none;
+            background-color: transparent;
+            appearance: none;
+
+            + .avata {
+                z-index: 2;
+                overflow: hidden;
+                transition: all 0.1s ease;
+            }
+            &:checked + .avata {
+                outline: 4rem solid var(--color-primary);
+            }
+        }
+    }
+
+    .sigin-action-group {
+        margin-top: 20rem;
+        padding-top: 20rem;
+        border-top: 1px solid #EAEAEA;
+        .btn-action {
+            @include btn-base-48;
+            @include btn-fill-primary;
+            @include btn-base-shadow;
+            width: 100%;
+        }
+    }
+}
+
 
 /* Bootstrap Transition */
 .fade {
