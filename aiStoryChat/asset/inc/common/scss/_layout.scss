@@ -187,13 +187,15 @@ html, body, .page-wrap {
 
         .content {
             @include fill-height;
-            padding: var(--spacer);
+            padding-top: var(--spacer);
 
             .content-header {
                 position: relative;
                 flex: none;
+                padding: 0 var(--spacer);
                 padding-top: 20rem;
                 margin-bottom: 20rem;
+
                 .content-h2 {
                     font-weight: 700;
                     font-size: 20rem;
@@ -216,6 +218,8 @@ html, body, .page-wrap {
             }
             .content-body {
                 @include fill-height;
+                padding: 0 var(--spacer);
+
                 .content-h3 {
                     margin-bottom: 12rem;
                     font-weight: 700;
@@ -227,12 +231,13 @@ html, body, .page-wrap {
             .content-footer {
                 flex: none;
                 width: 100%;
-                margin-top: var(--spacer);
+                padding: var(--spacer);
 
                 .btn-action {
                     width: 100%;
                     @include btn-base-60;
                     @include btn-fill-primary;
+                    @include btn-base-shadow;
                 }
             }
         }

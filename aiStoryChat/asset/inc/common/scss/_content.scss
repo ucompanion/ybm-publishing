@@ -1225,7 +1225,7 @@
     }
 }
 
-// 교사 - 채팅하기
+// 교사 - 채팅하기(모달)
 .chat-community {
     // 채팅 레이아웃
     .chat-list {
@@ -1412,7 +1412,7 @@
     }
 }
 
-// 교사 - 심화 학습 확인
+// 교사 - 심화 학습 확인(모달)
 .depp-learning-wrap {
     .deep-learning-desc {
         margin-bottom: 12rem;
@@ -1433,7 +1433,7 @@
             padding: 15rem;
             border-radius: 8rem;
             border:1px solid #CCCCCC;
-            .quiz-eng {
+            .quse-original {
                 display: flex;
                 align-items: center;
                 gap: 8rem;
@@ -1449,7 +1449,7 @@
                     vertical-align: middle;
                 }
             }
-            .quiz-kor {
+            .quse-translated {
                 margin-top: 4rem;
                 margin-bottom: 8rem;
                 font-weight: 400;
@@ -1468,7 +1468,7 @@
                 color: $color-primary;
                 border: 1px solid #ccc;
             }
-            .answer-kor {
+            .answer-translated {
                 margin-top: 4rem;
                 font-weight: 400;
                 font-size: 12rem;
@@ -1491,121 +1491,407 @@
     }
 }
 
-// 학생 - 접속확인
-.sigin-wrap {
-    @include fill-height;
-    flex-direction: row;
-    // align-items: center;
-    justify-content: center;
-    gap: 60rem;
-    padding-top: 20rem;
-    // transform: scale(1.2);
-    transform-origin: center top;
-
-    .visual-area {
-        flex: 1 1 auto;
-        width: 100%;
-        max-width: 388rem;
-        height: 412rem;
-        background-color: #D9D9D9;
-        overflow: hidden;
-    }
-
-    .sigin-area {
-        flex: 1 1 auto;
-        width: 100%;
-        max-width: 388rem;
-        height: 412rem;
-        overflow: hidden;
-    }
-
-    .sigin-box {
-        width: 100%;
-        height: 100%;
-        @include content-box;
-        background-color: #fff;
-    }
-
-    .sigin-input-group {
-        display: flex;
-        flex-direction: column;
-        gap: 12rem;
-    }
-
-    .sigin-input {
-        .input {
-            @include input-base;
-        }
-    }
-
-    .sigin-profile-group {
-        margin-top: 20rem;
-        .sigin-label {
-            display: block;
-            margin-bottom: 16rem;
-            font-weight: 700;
-            font-size: 14rem;
-            line-height: 20rem;
-            color: #333450;
-        }
-    }
-
-    .sigin-profile-list {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 12rem;
-        .sigin-profile-item {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    .sigin-profile {
-        position: relative;
-        display: flex;
-        align-items: center;
+// 학생 - 접속확인/접속완료
+.sigin-page {
+    .sigin-wrap {
+        @include fill-height;
+        flex-direction: row;
+        // align-items: center;
         justify-content: center;
-        width: 48rem;
-        height: 48rem;
-        .avata,
-        .rdo {
-            position: absolute;
-            left: 0;
-            top: 0;
+        gap: 60rem;
+        padding-top: 20rem;
+        // transform: scale(1.2);
+        transform-origin: center top;
+
+        .visual-area {
+            flex: 1 1 auto;
+            width: 100%;
+            max-width: 388rem;
+            height: 412rem;
+            background-color: #D9D9D9;
+            overflow: hidden;
+        }
+
+        .sigin-area {
+            flex: 1 1 auto;
+            width: 100%;
+            max-width: 388rem;
+            height: 412rem;
+            overflow: hidden;
+        }
+
+        // 접속확인
+        .sigin-box {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
-        }
-        .rdo {
-            z-index: 1;
-            border: none;
-            background-color: transparent;
-            appearance: none;
-
-            + .avata {
-                z-index: 2;
-                overflow: hidden;
-                transition: all 0.1s ease;
+            @include content-box;
+            background-color: #fff;
+            .sigin-input-group {
+                display: flex;
+                flex-direction: column;
+                gap: 12rem;
             }
-            &:checked + .avata {
-                outline: 4rem solid var(--color-primary);
+
+            .sigin-input {
+                .input {
+                    @include input-base;
+                }
+            }
+
+            .sigin-profile-group {
+                margin-top: 20rem;
+                .sigin-label {
+                    display: block;
+                    margin-bottom: 16rem;
+                    font-weight: 700;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    color: #333450;
+                }
+            }
+
+            .sigin-profile-list {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 12rem;
+                .sigin-profile-item {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .sigin-profile {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 48rem;
+                height: 48rem;
+                .avata,
+                .rdo {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+                .rdo {
+                    z-index: 1;
+                    border: none;
+                    background-color: transparent;
+                    appearance: none;
+
+                    + .avata {
+                        z-index: 2;
+                        overflow: hidden;
+                        transition: all 0.1s ease;
+                    }
+                    &:checked + .avata {
+                        outline: 4rem solid var(--color-primary);
+                    }
+                }
+            }
+
+            .sigin-action-group {
+                margin-top: 20rem;
+                padding-top: 20rem;
+                border-top: 1px solid #EAEAEA;
+                .btn-action {
+                    @include btn-base-48;
+                    @include btn-fill-primary;
+                    @include btn-base-shadow;
+                    width: 100%;
+                }
             }
         }
-    }
 
-    .sigin-action-group {
-        margin-top: 20rem;
-        padding-top: 20rem;
-        border-top: 1px solid #EAEAEA;
-        .btn-action {
-            @include btn-base-48;
-            @include btn-fill-primary;
-            @include btn-base-shadow;
-            width: 100%;
+        // 접속완료
+        .waiting-box {
+            padding-top: 37rem;
+            .waiting-cont {
+                .data-tit {
+                    margin-bottom: 20rem;
+                    strong {
+                        font-weight: 700;
+                        font-size: 32rem;
+                        line-height: 44rem;
+                        color: var(--color-primary);
+                        background-image: linear-gradient(to bottom, #fff 25rem, var(--color-primary-light) 16rem);
+                    }
+                }
+                .data-explain {
+                    font-weight: 400;
+                    font-size: 24rem;
+                    line-height: 36rem;
+                    color: #000;
+                }
+            }
+            .waiting-guide {
+                margin-top: 60rem;
+                .data-tip {
+                    .tip {
+                        display: inline-flex;
+                        align-items: center;
+                        height: 24rem;
+                        padding: 0rem 8rem;
+                        border-radius: 24rem;
+                        background-color: #333450;
+                        font-weight: 700;
+                        font-size: 12rem;
+                        line-height: 16rem;
+                        color: #fff;
+                    }
+                }
+                .data-list {
+                    margin-top: 12rem;
+                    li {
+                        position: relative;
+                        padding-left: 12rem;
+                        font-weight: 400;
+                        font-size: 14rem;
+                        line-height: 20rem;
+                        color: #666;
+                        &::before {
+                            content:'';
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 9rem;
+                            width: 4rem;
+                            height: 4rem;
+                            border-radius: 50%;
+                            background-color: #dfdfdf;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
+// 학생 - 스토리확인
+.story-page {
+    .story-box {
+        @include content-box;
+        @include fill-height;
+        padding-right: calc(var(--spacer-inner) - 18rem);
+        .story-scroll {
+            @include fill-height;
+            padding-right: 18rem;
+            overflow: auto;
+        }
+        .story-profile {
+            flex: none;
+            display: flex;
+            align-items: center;
+            gap: 12rem;
+            margin-bottom: 20rem;
+
+            .avata {
+                width: 40rem;
+                height: 40rem;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .name {
+                font-weight: 700;
+                font-size: 22rem;
+                line-height: 32rem;
+                color: #000;
+            }
+        }
+        .story-original {
+            flex: none;
+            font-weight: 700;
+            font-size: 24rem;
+            line-height: 36rem;
+            color: #000;
+            .keyword {
+                color: var(--color-primary);
+            }
+        }
+        .story-translated {
+            flex: none;
+            margin-top: 20rem;
+            font-weight: 400;
+            font-size: 20rem;
+            line-height: 28rem;
+            color: #666;
+        }
+    }
+}
+
+// 학생 - 기본학습
+.basic-learning-page {
+    .story-learning-box {
+        @include content-box;
+        @include fill-height;
+        background-color: #fff;
+        padding-right: calc(var(--spacer-inner) - 18rem);
+    }
+    .story-learning-list {
+        @include fill-height;
+        padding-right: 18rem;
+        overflow: auto;
+        gap: 12rem;
+        .story-learning-item {
+            flex: none;
+        }
+    }
+    .story-learning {
+        position: relative;
+        padding: 24rem;
+        border-radius: 8rem;
+        background-color: #f6f6f6;
+        border:1px solid #f6f6f6;
+        &.is-active {
+            border:1px solid var(--color-primary);
+            background-color: var(--color-primary-light);
+        }
+        .story-original {
+            font-weight: 700;
+            font-size: 18rem;
+            line-height: 28rem;
+            color: #000;
+        }
+        .story-translated {
+            margin-top: 4rem;
+            font-weight: 400;
+            font-size: 14rem;
+            line-height: 20rem;
+            color: #666;
+        }
+        .story-keyword {
+            margin-top: 8rem;
+            font-weight: 500;
+            font-size: 14rem;
+            line-height: 20rem;
+            color: #333450;
+        }
+        .story-util {
+            position: absolute;
+            top: 50%;
+            right: 24rem;
+            transform: translateY(-50%);
+
+            .btn-speaker {
+                width: 40rem;
+                height: 40rem;
+                background: no-repeat center center / contain;
+                background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='19.5' fill='white' stroke='%23CCCCCC'/%3E%3Cpath d='M26.4564 14.166C27.6375 15.8078 28.3332 17.8223 28.3332 19.9993C28.3332 22.1763 27.6375 24.1908 26.4564 25.8326M23.1209 16.666C23.78 17.6108 24.1665 18.7599 24.1665 19.9993C24.1665 21.2387 23.78 22.3878 23.1209 23.3326M18.0284 14.4707L15.3904 17.1088C15.2462 17.2529 15.1742 17.325 15.0901 17.3765C15.0155 17.4222 14.9342 17.4558 14.8492 17.4763C14.7533 17.4993 14.6514 17.4993 14.4476 17.4993H12.9998C12.5331 17.4993 12.2998 17.4993 12.1215 17.5901C11.9647 17.67 11.8372 17.7975 11.7573 17.9543C11.6665 18.1326 11.6665 18.3659 11.6665 18.8326V21.166C11.6665 21.6327 11.6665 21.866 11.7573 22.0443C11.8372 22.2011 11.9647 22.3286 12.1215 22.4085C12.2998 22.4993 12.5331 22.4993 12.9998 22.4993H14.4476C14.6514 22.4993 14.7533 22.4993 14.8492 22.5223C14.9342 22.5427 15.0155 22.5764 15.0901 22.6221C15.1742 22.6736 15.2462 22.7457 15.3904 22.8898L18.0284 25.5279C18.3854 25.8849 18.5639 26.0634 18.7171 26.0754C18.8501 26.0859 18.9801 26.0321 19.0667 25.9306C19.1665 25.8137 19.1665 25.5613 19.1665 25.0565V14.9421C19.1665 14.4373 19.1665 14.1848 19.0667 14.0679C18.9801 13.9665 18.8501 13.9127 18.7171 13.9232C18.5639 13.9352 18.3854 14.1137 18.0284 14.4707Z' stroke='%23333450' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+}
+
+// 학생 - 심화학습
+.deep-learning-page {
+    .story-learning-box {
+        @include content-box;
+        @include fill-height;
+        background-color: #fff;
+        padding-right: calc(var(--spacer-inner) - 18rem);
+    }
+    .deep-learning-list {
+        @include fill-height;
+        padding-right: 18rem;
+        overflow: auto;
+        gap: 12rem;
+    }
+    .deep-learning-test {
+        display: flex;
+        .test-box {
+            flex: 1 1 auto;
+            padding: 24rem;
+            border-radius: 8rem;
+            background-color: #f6f6f6;
+            .quse-original {
+                display: flex;
+                align-items: center;
+                gap: 8rem;
+                font-weight: 700;
+                font-size: 18rem;
+                line-height: 28rem;
+                color: #000;
+                .btn-speaker {
+                    width: 28rem;
+                    height: 28rem;
+                    background: no-repeat center center / contain;
+                    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='13.5' fill='white' stroke='%23CCCCCC'/%3E%3Cpath d='M19.1654 9.33198C20.1103 10.6455 20.6668 12.2571 20.6668 13.9986C20.6668 15.7402 20.1103 17.3518 19.1654 18.6653M16.497 11.332C17.0243 12.0879 17.3335 13.0072 17.3335 13.9986C17.3335 14.9901 17.0243 15.9094 16.497 16.6653M12.423 9.57577L10.3126 11.6862C10.1973 11.8015 10.1396 11.8592 10.0724 11.9004C10.0127 11.937 9.94767 11.9639 9.87965 11.9802C9.80293 11.9986 9.7214 11.9986 9.55834 11.9986H8.40016C8.02679 11.9986 7.84011 11.9986 7.6975 12.0713C7.57206 12.1352 7.47007 12.2372 7.40616 12.3627C7.3335 12.5053 7.3335 12.6919 7.3335 13.0653V14.932C7.3335 15.3054 7.3335 15.492 7.40616 15.6346C7.47007 15.7601 7.57206 15.8621 7.6975 15.926C7.84011 15.9986 8.02679 15.9986 8.40016 15.9986H9.55834C9.7214 15.9986 9.80293 15.9986 9.87965 16.0171C9.94767 16.0334 10.0127 16.0603 10.0724 16.0969C10.1396 16.1381 10.1973 16.1958 10.3126 16.3111L12.423 18.4215C12.7086 18.7071 12.8514 18.8499 12.974 18.8596C13.0804 18.8679 13.1843 18.8249 13.2536 18.7437C13.3335 18.6502 13.3335 18.4483 13.3335 18.0444V9.9529C13.3335 9.54902 13.3335 9.34708 13.2536 9.25357C13.1843 9.17243 13.0804 9.12938 12.974 9.13775C12.8514 9.1474 12.7086 9.29019 12.423 9.57577Z' stroke='%23333450' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    vertical-align: middle;
+                }
+            }
+            .quse-translated {
+                margin-top: 4rem;
+                margin-bottom: 8rem;
+                font-weight: 400;
+                font-size: 14rem;
+                line-height: 20rem;
+                color: #666;
+            }
+            .answer-input {
+                display: flex;
+                gap: 8rem;
+                input {
+                    width: 100%;
+                    @include input-base;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    &.is-error {
+                        font-weight: 700;
+                        color: var(--color-primary);
+                    }
+                }
+                .btn-checked {
+                    flex: none;
+                    width: 120rem;
+                    @include btn-base-48;
+                    @include btn-base-shadow;
+                    @include btn-line-normal;
+                    &::before {
+                        content:'';
+                        display: block;
+                        margin-right: 6rem;
+                        width: 24rem;
+                        height: 24rem;
+                        background: no-repeat center center / contain;
+                        background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12.5' cy='12' r='12' fill='%23333450'/%3E%3Cpath d='M10.5733 17.5C10.363 17.4999 10.1556 17.4545 9.9667 17.3672C9.7778 17.2798 9.61242 17.153 9.48313 16.9961L6.31783 13.0698C6.19983 12.9349 6.11162 12.7791 6.05842 12.6114C6.00522 12.4438 5.98811 12.2677 6.0081 12.0937C6.0281 11.9197 6.08479 11.7512 6.17482 11.5983C6.26486 11.4454 6.3864 11.3111 6.53227 11.2034C6.67814 11.0957 6.84536 11.0168 7.02404 10.9713C7.20271 10.9258 7.38922 10.9147 7.57252 10.9386C7.75581 10.9626 7.93217 11.021 8.09116 11.1106C8.25015 11.2001 8.38853 11.3189 8.49812 11.46L10.5733 14.0658L16.5019 7.03362C16.6115 6.89258 16.7499 6.77377 16.9088 6.68422C17.0678 6.59467 17.2442 6.53621 17.4275 6.51228C17.6108 6.48836 17.7973 6.49946 17.976 6.54494C18.1546 6.59041 18.3219 6.66933 18.4677 6.77703C18.6136 6.88473 18.7351 7.01902 18.8252 7.17195C18.9152 7.32487 18.9719 7.49333 18.9919 7.66735C19.0119 7.84138 18.9948 8.01742 18.9416 8.18508C18.8884 8.35274 18.8002 8.50859 18.6822 8.64343L11.6634 16.9961C11.5341 17.153 11.3688 17.2798 11.1799 17.3672C10.991 17.4545 10.7835 17.4999 10.5733 17.5Z' fill='white'/%3E%3C/svg%3E%0A");
+                    }
+                }
+                .btn-reselect {
+                    flex: none;
+                    width: 120rem;
+                    @include btn-base-48;
+                    @include btn-base-shadow;
+                    @include btn-line-normal;
+                    &::before {
+                        content:'';
+                        display: block;
+                        margin-right: 6rem;
+                        width: 16rem;
+                        height: 16rem;
+                        background: no-repeat center center / contain;
+                        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 7.49935H13.75C15.8211 7.49935 17.5 9.17828 17.5 11.2493C17.5 13.3204 15.8211 14.9993 13.75 14.9993H10M2.5 7.49935L5.83333 4.16602M2.5 7.49935L5.83333 10.8327' stroke='%23767676' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    }
+                }
+
+            }
+            .answer-translated {
+                margin-top: 8rem;
+                font-weight: 400;
+                font-size: 14rem;
+                line-height: 20rem;
+                color: #666;
+            }
+        }
+    }
+}
 
 /* Bootstrap Transition */
 .fade {

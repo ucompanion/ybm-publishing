@@ -13,52 +13,147 @@
         <meta property="og:url" content="" />
         <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
 
-        <title>페이지명 | AI 스토리챗 </title>
-        <link rel="stylesheet" href="../../../asset/inc/common/css/import.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/mobile.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/popup.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../asset/inc/ele/css/import.css">
+        <title>학생 심화학습 | AI 스토리챗 </title>
+        <link rel="stylesheet" href="../../asset/inc/ele/css/set-ele.css">
     </head>
     <body>
         <!-- page-wrap -->
-        <div class="page-wrap">
-            <div data-include="/aiStoryChat/html/include/include_header.html"></div>
+        <div class="page-wrap type-setting">
+            <header class="page-header">
+                <div class="logo-area">
+                    <h1 class="logo"><a href="/"><span class="blind">AI 스토리챗</span></a></h1>
+                </div>
+                <div class="util-area">
+                    <a href="./setting_step1.html" class="btn btn-home"><span class="blind">설정 홈</span></a>
+                </div>
+            </header>
 
             <!-- page-body -->
             <main class="page-body">
                 <!-- content -->
                 <div class="content deep-learning-page">
-                    <div class="story-check-wrap">
-                        <ul class="story-check-list">
-                            <li class="story-check-item">
-                                <div class="story-check">
-                                    <p class="story-original"></p>
-                                    <p class="story-translated"></p>
-                                    <div class="story-textfield">
-                                        <input type="text">
-                                        <button type="button" class="btn"><span></span></button>
+                    <div class="content-header">
+                        <h2 class="content-h2">스토리 내용 체크</h2>
+                        <p class="content-explain">스토리를 바탕으로 한 대화 내용을 미리 확인해 보세요.</p>
+                    </div>
+                    <div class="content-body">
+                        <div class="story-learning-box">
+                            <ul class="deep-learning-list">
+                                <li class="deep-learning-item">
+                                    <div class="deep-learning-test">
+                                        <div class="test-box">
+                                            <div class="quse-original">
+                                                <p>Q. Why did Pippi feel sad?</p>
+                                                <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                            </div>
+                                            <div class="quse-translated">
+                                                <p>삐삐는 왜 슬퍼했을까요?</p>
+                                            </div>
+                                            <div class="answer-input">
+                                                <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                <button type="button" class="btn-checked">
+                                                    <span class="blind">확인완료</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <button type="button" class="btn">
+                                </li>
+                                <li class="deep-learning-item">
+                                    <div class="deep-learning-test">
+                                        <div class="test-box">
+                                            <div class="quse-original">
+                                                <p>Q. Why did Pippi feel sad?</p>
+                                                <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                            </div>
+                                            <div class="quse-translated">
+                                                <p>삐삐는 왜 슬퍼했을까요?</p>
+                                            </div>
+                                            <div class="answer-input">
+                                                <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input is-error" />
+                                                <button type="button" class="btn-reselect">
+                                                    <span>다시 하기</span>
+                                                </button>
+                                            </div>
+                                            <div class="answer-translated">
+                                                <p>삐삐는 새로운 마을로 이사를 가야 해서 슬펐어요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="deep-learning-item">
+                                    <div class="deep-learning-test">
+                                        <div class="test-box">
+                                            <div class="quse-original">
+                                                <p>Q. Why did Pippi feel sad?</p>
+                                                <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                            </div>
+                                            <div class="quse-translated">
+                                                <p>삐삐는 왜 슬퍼했을까요?</p>
+                                            </div>
+                                            <div class="answer-input">
+                                                <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                <button type="button" class="btn-checked">
+                                                    <span class="blind">확인완료</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="deep-learning-item">
+                                    <div class="deep-learning-test">
+                                        <div class="test-box">
+                                            <div class="quse-original">
+                                                <p>Q. Why did Pippi feel sad?</p>
+                                                <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                            </div>
+                                            <div class="quse-translated">
+                                                <p>삐삐는 왜 슬퍼했을까요?</p>
+                                            </div>
+                                            <div class="answer-input">
+                                                <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                <button type="button" class="btn-checked">
+                                                    <span class="blind">확인완료</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="deep-learning-item">
+                                    <div class="deep-learning-test">
+                                        <div class="test-box">
+                                            <div class="quse-original">
+                                                <p>Q. Why did Pippi feel sad?</p>
+                                                <button type="button" class="btn-speaker"><span class="blind">스피커</span></button>
+                                            </div>
+                                            <div class="quse-translated">
+                                                <p>삐삐는 왜 슬퍼했을까요?</p>
+                                            </div>
+                                            <div class="answer-input">
+                                                <input type="text" name="" id="" value="Why did Pippi feel sad?" class="input" />
+                                                <button type="button" class="btn-checked">
+                                                    <span class="blind">확인완료</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="content-footer">
+                        <button type="button" class="btn-action">
                             <span>AI 대화 시작하기</span>
                         </button>
                     </div>
-
                 </div>
                 <!-- //content -->
             </main>
             <!-- //page-body -->
-
-            <div data-include="/aiStoryChat/html/include/include_footer.html"></div>
         </div>
         <!-- //page-wrap -->
 
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
-        <script src="../../asset/inc/common/js/modal.js"></script>
-        <script src="../../asset/inc/common/js/publish-only.js"></script>
-
     </body>
 </html>
