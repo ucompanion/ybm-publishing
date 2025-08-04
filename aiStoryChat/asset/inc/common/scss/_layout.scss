@@ -229,14 +229,23 @@ html, body, .page-wrap {
                 }
             }
             .content-footer {
+                display: flex;
                 flex: none;
                 width: 100%;
                 padding: var(--spacer);
+                gap: 12rem;
 
                 .btn-action {
                     width: 100%;
                     @include btn-base-60;
                     @include btn-fill-primary;
+                    @include btn-base-shadow;
+                }
+
+                .btn-normal {
+                    width: 100%;
+                    @include btn-base-60;
+                    @include btn-line-normal;
                     @include btn-base-shadow;
                 }
             }

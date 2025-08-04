@@ -13,48 +13,87 @@
         <meta property="og:url" content="" />
         <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover" />
 
-        <title>페이지명 | AI 스토리챗 </title>
-        <link rel="stylesheet" href="../../../asset/inc/common/css/import.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/mobile.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../../asset/inc/common/css/popup.css"> <!-- header , footer 영역 y클라우드 css -->
-        <link rel="stylesheet" href="../../asset/inc/ele/css/import.css">
+        <title>학생 접속완료 | AI 스토리챗 </title>
+        <link rel="stylesheet" href="../../asset/inc/ele/css/set-ele.css">
     </head>
     <body>
         <!-- page-wrap -->
-        <div class="page-wrap">
-            <div data-include="/aiStoryChat/html/include/include_header.html"></div>
+        <div class="page-wrap type-setting">
+            <header class="page-header">
+                <div class="logo-area">
+                    <h1 class="logo"><a href="/"><span class="blind">AI 스토리챗</span></a></h1>
+                </div>
+                <div class="util-area">
+                    <a href="./setting_step1.html" class="btn btn-home"><span class="blind">설정 홈</span></a>
+                </div>
+            </header>
 
             <!-- page-body -->
             <main class="page-body">
                 <!-- content -->
                 <div class="content story-result-page">
-                    <div class="result-title">
-                        <div class="avata">
-                            <img src="" alt="">
-                        </div>
-                        <p>재미있는 대화였어요 <br>결과 리포트</p>
-                    </div>
-                    <div class="result-status">
-                        <ul class="stats-list">
-                            <li class="stats-item">
-                                <div class="stats">
-                                    <p class="stats-tit"><strong>말한 단어</strong></p>
-                                    <p class="stats-val">19개</p>
+                    <div class="content-body">
+                        <div class="story-result-wrap">
+                            <div class="result-title">
+                                <div class="avata">
+                                    <img src="../../asset/img/common/icn-30-avata.png" alt="" />
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="result-feedback">
-                        <div class="ai-feedback-box">
-                            <p class="story-original"></p>
-                            <p class="story-translated"></p>
+                                <div class="title">
+                                    <p>재미있는 대화였어요!</p>
+                                    <p><strong>결과 리포트를 확인해 보세요.</strong></p>
+                                </div>
+                            </div>
+                            <div class="result-stats">
+                                <ul class="stats-list">
+                                    <li class="stats-item">
+                                        <div class="stats-box type-word">
+                                             <div class="stats-body">
+                                                 <p class="tit"><strong>말한 단어</strong></p>
+                                                 <p class="stat">19개</p>
+                                             </div>
+                                        </div>
+                                    </li>
+                                    <li class="stats-item">
+                                        <div class="stats-box type-time">
+                                             <div class="stats-body">
+                                                 <p class="tit"><strong>대화 시간</strong></p>
+                                                 <p class="stat">3분 38초</p>
+                                             </div>
+                                        </div>
+                                    </li>
+                                    <li class="stats-item">
+                                        <a href="javascript:;" class="stats-box type-caution">
+                                            <div class="stats-body">
+                                                <p class="tit"><strong>교정 문장</strong></p>
+                                                <p class="stat">3개</p>
+                                            </div>
+                                            <span class="blind">교정 문장 자세히보기</span>
+                                        </a>
+                                    </li>
+                                    <li class="stats-item">
+                                        <a href="javascript:;" class="stats-box type-good">
+                                             <div class="stats-body">
+                                                 <p class="tit"><strong>더 좋은 표현 문장</strong></p>
+                                                 <p class="stat">4개</p>
+                                             </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="result-feedback">
+                                <h2 class="feedback-title">AI 피드백</h2>
+                                <div class="feedback-box">
+                                    <p class="story-original">I’m in the sixth grade. My family will move to a new town. I have friends here. We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.</p>
+                                    <p class="story-translated">저는 6학년 입니다. 우리 가족은 새로운 동네로 이사할 예정입니다. 여기에 친구들이 있어요. 우리는 매일 함께 놀아요. 새 동내에서 제가 새 친구들을 사귈거예요. 같이 동네를 탐험해 봐요.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="result-action">
-                        <button type="button" class="btn">
+                    <div class="content-footer">
+                        <button type="button" class="btn-action">
                             <span>대화 다시 보기</span>
                         </button>
-                        <button type="button" class="btn">
+                        <button type="button" class="btn-normal">
                             <span>종료하기</span>
                         </button>
                     </div>
@@ -62,15 +101,10 @@
                 <!-- //content -->
             </main>
             <!-- //page-body -->
-
-            <div data-include="/aiStoryChat/html/include/include_footer.html"></div>
         </div>
         <!-- //page-wrap -->
 
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
-        <script src="../../asset/inc/common/js/modal.js"></script>
-        <script src="../../asset/inc/common/js/publish-only.js"></script>
-
     </body>
 </html>
