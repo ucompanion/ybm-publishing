@@ -1530,12 +1530,13 @@
 .sigin-page {
     .sigin-wrap {
         @include fill-height;
+        width: 100%;
+        max-width: 840rem;
+        margin: 20rem auto;
         flex-direction: row;
-        // align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 60rem;
         padding-top: 20rem;
-        // transform: scale(1.2);
         transform-origin: center top;
 
         .visual-area {

@@ -548,6 +548,19 @@
             }
         }
     }
+
+    // 학생 - 접속확인/접속완료
+    .sigin-page {
+        .sigin-wrap {
+            gap: 20rem;
+            // 접속확인
+            .sigin-box {
+                .sigin-profile-list {
+                    gap: 12rem 8rem;
+                }
+            }
+        }
+    }
 }
 
 // 모바일 전용 ~ 반응형구간
@@ -759,7 +772,6 @@
         }
     }
 
-
     // 교사 - 학생들 결과확인
     .student-results-page {
         .stats-box {
@@ -784,6 +796,119 @@
             .status-data-list {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+    // 학생 - 접속확인/접속완료
+    .sigin-page {
+        .sigin-wrap {
+            padding-top: 0;
+            .visual-area {
+                display: none;
+            }
+
+            .sigin-area {
+                margin: auto;
+                height: auto;
+            }
+
+            // 접속확인
+            .sigin-box {
+                border: 0;
+                background-color: #fff;
+                .sigin-input-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12rem;
+                }
+
+                .sigin-input {
+                    .input {
+                        @include input-base;
+                    }
+                }
+
+                .sigin-profile-group {
+                    margin-top: 28rem;
+                }
+
+                .sigin-profile-list {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(60rem, 1fr));
+                    gap: 12rem;
+                    .sigin-profile-item {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .sigin-profile {
+                    width: 60rem;
+                    height: 60rem;
+                }
+            }
+
+            // 접속완료
+            .waiting-box {
+                padding-top: 37rem;
+                .waiting-cont {
+                    .data-tit {
+                        margin-bottom: 20rem;
+                        strong {
+                            font-weight: 700;
+                            font-size: 32rem;
+                            line-height: 44rem;
+                            color: var(--color-primary);
+                            background-image: linear-gradient(to bottom, #fff 25rem, var(--color-primary-light) 16rem);
+                        }
+                    }
+                    .data-explain {
+                        font-weight: 400;
+                        font-size: 24rem;
+                        line-height: 36rem;
+                        color: #000;
+                    }
+                }
+                .waiting-guide {
+                    margin-top: 60rem;
+                    .data-tip {
+                        .tip {
+                            display: inline-flex;
+                            align-items: center;
+                            height: 24rem;
+                            padding: 0rem 8rem;
+                            border-radius: 24rem;
+                            background-color: #333450;
+                            font-weight: 700;
+                            font-size: 12rem;
+                            line-height: 16rem;
+                            color: #fff;
+                        }
+                    }
+                    .data-list {
+                        margin-top: 12rem;
+                        li {
+                            position: relative;
+                            padding-left: 12rem;
+                            font-weight: 400;
+                            font-size: 14rem;
+                            line-height: 20rem;
+                            color: #666;
+                            &::before {
+                                content:'';
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                                top: 9rem;
+                                width: 4rem;
+                                height: 4rem;
+                                border-radius: 50%;
+                                background-color: #dfdfdf;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
