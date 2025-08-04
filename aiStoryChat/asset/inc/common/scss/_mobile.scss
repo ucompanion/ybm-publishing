@@ -395,6 +395,159 @@
             }
         }
     }
+
+    // 교사 - 학생들 진행 현황
+    .student-status-page {
+        .student-status-box {
+            .student-box {
+                .student-box-header {
+                    height: 44rem;
+                    padding: 0 16rem;
+                    border-radius: 8rem 8rem 0 0;
+
+                    .student-box-title {
+                        font-size: 14rem;
+                        line-height: 20rem;
+                    }
+                }
+
+                .student-list {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(70rem, 1fr));
+                    grid-template-rows: repeat(auto-fill, minmax(64rem, 1fr));
+                    gap: 16rem;
+                }
+            }
+        }
+
+        .content-footer {
+            .btn-action {
+                min-width: 160rem;
+            }
+        }
+    }
+
+    // 교사 - 학생들 결과확인
+    .student-results-page {
+        .content-header {
+            .btn-report {
+                display: none;
+            }
+        }
+
+        .content-body {
+            padding-right:0 !important;
+            padding-left:0 !important;
+            .btn-report {
+                display: flex;
+                width: 100%;
+                margin-top: 12rem;
+                @include btn-base-shadow;
+            }
+        }
+        .stats-box {
+            padding: 0 var(--spacer);
+            background-color: transparent;
+            border-radius: 0;
+            .stats-list {
+                gap: 8rem;
+                .stats-item {
+                    flex: 1 1 auto;
+                    width: 100%;
+                    flex-direction: column;
+                    padding: 12rem;
+                    background-color: var(--color-primary-light);
+                    border-radius: 8rem;
+                    gap: 0;
+                    .stats-tit {
+                        font-size: 14rem;
+                        line-height: 22rem;
+                    }
+                    .stats-val {
+                        font-size: 14rem;
+                        line-height: 22rem;
+                    }
+                }
+            }
+        }
+        .status-box {
+            margin-top: 20rem;
+            padding: 0 var(--spacer);
+            border:0;
+            border-radius: 0;
+            &::before {
+                content: '';
+                display: block;
+                height: 12rem;
+                width: calc(100% + (var(--spacer) * 2));
+                margin: 0 calc(var(--spacer) * -1) 20rem;
+                background-color: #f6f6f6;
+                border-radius: 0;
+            }
+            .status-legend-list {
+                display: none;
+            }
+
+            .status-data-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(auto-fill, minmax(66rem, 1fr));
+                gap: 12rem;
+                .status-data-item {
+                    + .status-data-item {
+                        border-top: 0;
+                    }
+                    .status-data {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        height: auto;
+                        padding: 12rem;
+                        border: 1px solid #EAEAEA;
+                        border-radius: 8rem;
+
+                        .status-col {
+                            display: none;
+                            width: auto;
+                            font-weight: 400;
+                            font-size: 14rem;
+                            line-height: 20rem;
+
+                            &.type-profile,
+                            &.type-btn {
+                                display: flex;
+                                position: static;
+                                top: 0;
+                                transform: translateY(0);
+                            }
+                            &.type-profile {
+                                left: 0;
+                                gap: 8rem;
+                            }
+                            &.type-btn {
+                                right: 0;
+                                .btn-more {
+                                    gap: 6rem;
+                                    padding: 2px 16rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .status-desc {
+                display: block;
+                margin-top: 12rem;
+                font-weight: 400;
+                font-size: 14rem;
+                line-height: 20rem;
+                color: #666666;
+            }
+        }
+    }
 }
 
 // 모바일 전용 ~ 반응형구간
@@ -419,6 +572,7 @@
                 }
             }
         }
+
         .content:has(.content-footer) {
             // 설정화면
             padding-bottom: calc((var(--spacer) * 3) + 48rem); // 3중 여백 + 버튼높이
@@ -590,6 +744,73 @@
                 gap: 12rem;
             }
         }
+    }
+
+    // 교사 - 학생들 진행 현황
+    .student-status-page {
+        .student-status-box {
+            flex-direction: column;
+        }
+
+        .content-footer {
+            .btn-action {
+                min-width: 100%;
+            }
+        }
+    }
+
+
+    // 교사 - 학생들 결과확인
+    .student-results-page {
+        .stats-box {
+            padding: 0 var(--spacer);
+            background-color: transparent;
+            border-radius: 0;
+            .stats-list {
+                gap: 8rem;
+                .stats-item {
+                    .stats-tit {
+                        font-size: 10rem;
+                        line-height: 14rem;
+                    }
+                    .stats-val {
+                        font-size: 10rem;
+                        line-height: 14rem;
+                    }
+                }
+            }
+        }
+        .status-box {
+            .status-data-list {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+    // 모달 Full
+    .modal-full {
+        .modal-dialog {
+            padding: 0;
+            transform: translate(0px);
+        }
+        .modal-content {
+            height: 100%;
+            border-radius: 0;
+        }
+        .modal-header {
+            height: 56rem;
+            padding: 18rem 20rem;
+        }
+        .modal-body {
+            padding: 20rem;
+            padding-right: 4rem;
+            padding-bottom: 0;
+            .modal-inner {
+                padding-right: 16rem;
+            }
+        }
+
     }
 }
 
