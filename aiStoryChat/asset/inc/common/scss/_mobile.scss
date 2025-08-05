@@ -549,6 +549,25 @@
         }
     }
 
+    // 교사 - 채팅하기(모달)
+    .chat-community {
+        // 채팅 레이아웃
+        .chat-list {
+            gap: 24rem;
+
+            .chat-item {
+                .chat-sender {
+                    gap: 8rem;
+                }
+
+                .chat-avata {
+                    width: 40rem;
+                    height: 40rem;
+                }
+            }
+        }
+    }
+
     // 학생 - 접속확인/접속완료
     .sigin-page {
         .sigin-wrap {
@@ -561,6 +580,239 @@
             }
         }
     }
+
+    // 학생 - 스토리확인
+    .story-page {
+        .story-box {
+            padding: 20rem;
+            .story-scroll {
+                @include fill-height;
+                padding-right: 24rem;
+            }
+            .story-profile {
+                .name {
+                    font-size: 18rem;
+                    line-height: 28rem;
+                }
+            }
+            .story-original {
+                font-size: 16rem;
+                line-height: 24rem;
+            }
+            .story-translated {
+                font-size: 16rem;
+                line-height: 24rem;
+            }
+        }
+    }
+
+    // 학생 - 기본학습
+    .basic-learning-page {
+        .story-learning {
+            padding: 20rem;
+            .story-original {
+                font-size: 14rem;
+                line-height: 20rem;
+            }
+            .story-translated {
+                margin-top: 4rem;
+                font-size: 12rem;
+                line-height: 16rem;
+            }
+            .story-util {
+                right: 20rem;
+            }
+        }
+    }
+
+    // 학생 - 심화학습
+    .deep-learning-page {
+        .deep-learning-test {
+            .test-box {
+                padding: 20rem;
+                border-radius: 8rem;
+               .quse-original {
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    .btn-speaker {
+                        width: 20rem;
+                        height: 20rem;
+                    }
+                }
+                .quse-translated {
+                    margin-top: 4rem;
+                    margin-bottom: 8rem;
+                    font-weight: 400;
+                    font-size: 12rem;
+                    line-height: 16rem;
+                }
+                .answer-input {
+                    input {
+                        @include input-base-40;
+                    }
+                    .btn-checked {
+                        @include btn-base-40;
+                        &::before {
+                            width: 20rem;
+                            height: 20rem;
+                        }
+                    }
+                    .btn-reselect {
+                        @include btn-base-40;
+                        &::before {
+                            width: 16rem;
+                            height: 16rem;
+                        }
+                    }
+
+                }
+                .answer-translated {
+                    margin-top: 4rem;
+                    font-size: 12rem;
+                    line-height: 16rem;
+                }
+            }
+        }
+    }
+
+    // 학생 - 대화하기
+    .chat-page {
+        .chat-desc {
+            font-size: 12rem;
+            line-height: 16rem;
+
+            a {
+                color: #000000;
+                border-bottom: 1px solid #000000;
+            }
+        }
+        .chat-utils {
+            display: flex;
+            justify-content: center;
+            gap: 20rem;
+            margin: 0 auto;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::before {
+                    display: block;
+                    width: 16rem;
+                    height: 16rem;
+                    background: no-repeat center center / contain;
+                }
+            }
+            .btn-recording {
+                background-color: #31324D;
+                width: 40rem;
+                height: 40rem;
+                border-radius: 50%;
+                color: #fff;
+                &::before {
+                    content:'';
+                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6663 6.66536V7.9987C12.6663 10.576 10.577 12.6654 7.99967 12.6654M3.33301 6.66536V7.9987C3.33301 10.576 5.42235 12.6654 7.99967 12.6654M7.99967 12.6654V14.6654M5.33301 14.6654H10.6663M7.99967 9.9987C6.89511 9.9987 5.99967 9.10327 5.99967 7.9987V3.33203C5.99967 2.22746 6.89511 1.33203 7.99967 1.33203C9.10424 1.33203 9.99967 2.22746 9.99967 3.33203V7.9987C9.99967 9.10327 9.10424 9.9987 7.99967 9.9987Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+            }
+            .btn-keyboard {
+                background-color: #31324D;
+                width: 40rem;
+                height: 40rem;
+                border-radius: 50%;
+                color: #fff;
+                &::before {
+                    content:'';
+                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.66683 9.66667H11.3335M4.00016 6.66667H4.00683M6.66683 6.66667H6.6735M9.3335 6.66667H9.34016M12.0002 6.66667H12.0068M3.46683 12H12.5335C13.2802 12 13.6536 12 13.9388 11.8547C14.1897 11.7268 14.3937 11.5229 14.5215 11.272C14.6668 10.9868 14.6668 10.6134 14.6668 9.86667V6.13333C14.6668 5.3866 14.6668 5.01323 14.5215 4.72801C14.3937 4.47713 14.1897 4.27316 13.9388 4.14532C13.6536 4 13.2802 4 12.5335 4H3.46683C2.72009 4 2.34672 4 2.06151 4.14532C1.81063 4.27316 1.60665 4.47713 1.47882 4.72801C1.3335 5.01323 1.3335 5.3866 1.3335 6.13333V9.86667C1.3335 10.6134 1.3335 10.9868 1.47882 11.272C1.60665 11.5229 1.81063 11.7268 2.06151 11.8547C2.34672 12 2.72009 12 3.46683 12Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+            }
+            .btn-story {
+                background-color: var(--color-primary);
+                padding: 0 16rem 2rem;
+                height: 40rem;
+                border-radius: 40rem;
+                font-weight: 700;
+                font-size: 12rem;
+                color: #fff;
+            }
+        }
+    }
+
+    // 학생 - 결과확인
+    .story-result-page {
+        .story-result-wrap {
+            .result-title {
+                .avata {
+                    width: 56rem;
+                    height: 56rem;
+                }
+                .title {
+                    font-size: 20rem;
+                    line-height: 28rem;
+                }
+            }
+            .result-stats {
+                margin-top: 32rem;
+                .stats-list {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 8rem;
+                    .stats-box {
+                        position: relative;
+                        gap: 8rem;
+                        height: 68rem;
+                        padding: 15rem 11rem;
+                        border-radius: 8rem;
+                        .stats-body {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+                            .tit {
+                                font-size: 12rem;
+                                line-height: 16rem;
+                            }
+                            .stat {
+                                font-size: 14rem;
+                                line-height: 20rem;
+                            }
+                        }
+                        &::before {
+                            width: 36rem;
+                            height: 36rem;
+                        }
+                        &::after {
+                            position: absolute;
+                            bottom: 13rem;
+                            right: 11rem;
+                            width: 20rem;
+                            height: 20rem;
+                            margin-right: -6rem;
+                        }
+                    }
+                }
+            }
+            .result-feedback {
+                margin-top: 32rem;
+                .feedback-title {
+                    margin-bottom: 12rem;
+                    font-size: 16rem;
+                    line-height: 24rem;
+                }
+                .feedback-box {
+                    padding: 20rem;
+                    border-radius: 8rem;
+                    .story-original {
+                        font-size: 14rem;
+                        line-height: 20rem;
+                    }
+                    .story-translated {
+                        margin-top: 12rem;
+                        font-size: 14rem;
+                        line-height: 20rem;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // 모바일 전용 ~ 반응형구간
@@ -679,7 +931,6 @@
             flex-direction: column;
         }
     }
-
 
     // 교사 - 접속자 확인
     .connect-page {
@@ -825,7 +1076,7 @@
 
                 .sigin-input {
                     .input {
-                        @include input-base;
+                        @include input-base-48;
                     }
                 }
 
@@ -908,6 +1159,111 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    // 학생 - 기본학습
+    .basic-learning-page {
+        .story-learning-box {
+            padding: 0;
+            border: 0;
+        }
+        .story-learning-list {
+            padding: 0;
+            overflow: hidden;
+        }
+        .story-learning {
+            padding: 20rem;
+            .story-original {
+                font-size: 14rem;
+                line-height: 20rem;
+            }
+            .story-translated {
+                margin-top: 4rem;
+                font-size: 12rem;
+                line-height: 16rem;
+            }
+            .story-util {
+                right: 20rem;
+            }
+        }
+    }
+
+    // 학생 - 심화학습
+    .deep-learning-page {
+        .story-learning-box {
+            padding: 0;
+            border: 0;
+        }
+        .deep-learning-list {
+            padding: 0;
+            overflow: hidden;
+        }
+        .deep-learning-test {
+            .test-box {
+                position: relative;
+                padding: 20rem;
+                padding-bottom: calc(20rem + 16rem + 40rem);
+                border-radius: 8rem;
+                .answer-input {
+                    .btn-checked {
+                        @include btn-base-40;
+                        position: absolute;
+                        left: 20rem;
+                        bottom: 20rem;
+                        width: 112rem;
+                        &::before {
+                            width: 20rem;
+                            height: 20rem;
+                        }
+                    }
+                    .btn-reselect {
+                        @include btn-base-40;
+                        position: absolute;
+                        left: 20rem;
+                        bottom: 20rem;
+                        width: 112rem;
+                        &::before {
+                            width: 16rem;
+                            height: 16rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    // 학생 - 대화하기
+    .chat-page {
+        .chat-desc {
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12rem;
+            line-height: 16rem;
+            p {
+                text-align: left;
+                span {
+                    display: block;
+                }
+            }
+
+            a {
+                color: #000000;
+                border-bottom: 1px solid #000000;
+            }
+        }
+    }
+
+
+    // 학생 - 결과확인
+    .story-result-page {
+        .story-result-wrap {
+            .result-stats {
+                .stats-list {
+                    grid-template-columns: repeat(2, 1fr);
                 }
             }
         }
