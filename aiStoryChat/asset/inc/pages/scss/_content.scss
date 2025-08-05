@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
+@import 'variables', 'functions', 'breakpoint';
+
 // 페이지: AI 스토리챗 메인
 .main-page {
-
     // 섹션: 소개
     .main-intro-sec {
         position: relative;
@@ -163,13 +164,13 @@
             @include tabPane-default;
             padding: 60rem;
         }
+    }
 
-        .book-list {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 45rem;
-        }
-
+    // 스토리북 목록
+    .book-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 45rem;
         .book-card {
             display: flex;
             flex-direction: column;
@@ -204,6 +205,66 @@
         }
     }
 
+    // 게시물 섹션
+    .board-sec {
+        .sec-header {
+            display: flex;
+            justify-content: space-between;
+            .sec-title {
+                font-weight: 700;
+                font-size: 28rem;
+                line-height: 40rem;
+                color: #000;
+            }
+            .sec-util {
+                margin-left: auto;
+                .btn-delete {
+                    @include btn-base-40;
+                    @include btn-line-normal;
+                    @include btn-base-shadow;
+                }
+            }
+        }
+        .sec-body {
+            margin-top: 20rem;
+        }
+    }
+
+    // 게시물 목록
+    .board-table {
+        border-spacing: 0;
+        table-layout: fixed;
+        border-collapse: collapse;
+        th, td {
+            height: 56rem;
+            padding: 12rem 20rem;
+            box-sizing: border-box;
+            vertical-align: middle;
+            text-align: center;
+        }
+        th {
+            background-color: #f9f9f9;
+            font-weight: 700;
+            font-size: 16rem;
+            line-height: 24rem;
+            color: #000000;
+        }
+        td {
+            background-color: #ffffff;
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 24rem;
+            color: #666;
+            &.cel-lesson {
+                text-align: left;
+            }
+        }
+        .frm-chk {
+            @include chk-base-18;
+            vertical-align: top;
+        }
+    }
+
     // 꾸미기 오브젝트
     .object-group {
         .only-pc {
@@ -232,7 +293,7 @@
             .object-03 {
                 position: absolute;
                 left: 50%;
-                top: 540rem;
+                top: 500rem;
                 transform: translateX(495rem);
                 z-index: 30;
                 width: 167rem;
@@ -260,6 +321,35 @@
                 background: #D3D3D3;
                 opacity: 0.4;
             }
+        }
+    }
+}
+
+// 페이지: 결과 리포트
+.report-page {
+    // 게시물 섹션
+    .board-sec {
+        .sec-header {
+            display: flex;
+            justify-content: space-between;
+            .sec-util {
+                display: flex;
+                gap: 12rem;
+                margin-left: auto;
+                .btn-primary {
+                    @include btn-base-40;
+                    @include btn-fill-primary;
+                    @include btn-base-shadow;
+                }
+                .btn-delete {
+                    @include btn-base-40;
+                    @include btn-line-normal;
+                    @include btn-base-shadow;
+                }
+            }
+        }
+        .sec-body {
+            margin-top: 20rem;
         }
     }
 }

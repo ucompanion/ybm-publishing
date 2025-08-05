@@ -37,160 +37,6 @@ html, body {
 
 }
 
-.header{
-    flex: none;
-    @include flex-clm;
-    position: relative;
-    z-index: 100;
-    &.gnb-show{
-        z-index: 300;
-    }
-    .util-menu{
-        background: #F1F1F1;
-        .container-inner{
-            @include flex-row;
-            flex-wrap: wrap;
-            .out-link{
-                @include flex-row;
-                align-items: center;
-                font-size: 14rem;
-                .go-gate{
-                    a{
-                        display: block;
-                        text-indent: -9999px;
-                        background: url(#{$root-url}ico_home.svg) no-repeat center center / 15px auto;
-                        width: 40px;
-                        height: 40px;
-                    }
-                }
-                ul{
-                    @include flex-row;
-                    line-height: 40rem;
-                    li{
-                        padding: 0 16rem;
-                        &.current{
-                            background: #ffffff;
-                            a{
-                                color: #333333;
-                            }
-                        }
-                    }
-                }
-                .go-fm-list{
-                    li{
-                        position: relative;
-                        &:not(:first-child){
-                            &:before{
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                left: 0;
-                                transform: translate(0, -50%);
-                                width: 1px;
-                                height: 30%;
-                                background: #D0D0D0;
-                            }
-                        }
-                    }
-                    a{
-                        &:after{
-                            content: url(#{$root-url}ico_newwindow.svg);
-                            padding-left: 10rem;
-                        }
-                    }
-                    li.type2 { //2023-07
-                        padding-left: 0;
-                        a{
-                            display: inline-block;
-                            font-size: 12rem;
-                            border-radius: 2px;
-                            border: 1px solid #D0D0D0;
-                            height: 24rem;
-                            line-height: 22rem;
-                            padding: 0 9rem;
-                            &:after{
-                                content:'';
-                                padding-left: 0;
-                            }
-                        }
-                    }
-                }
-            }
-            .inner-link{
-                @include flex-row;
-                margin-left: auto;
-                font-size: 13rem;
-                ul{
-                    @include flex-row;
-                    line-height: 40rem;
-                    li{
-                        padding: 0 14rem;
-                        position: relative;
-                        &:not(:first-child){
-                            &:before{
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                left: 0;
-                                transform: translate(0, -36%);
-                                width: 1px;
-                                height: 30%;
-                                background: #D0D0D0;
-                            }
-                        }
-                        .favorite{
-                            vertical-align: bottom;
-                            display: flex;
-                            align-items: center;
-                            &::before{
-                                content:'';
-                                display: block;
-                                width: 15rem;
-                                height: 15rem;
-                                margin-right: 2rem;
-                                background: no-repeat center center / contain;
-                                background-image: url('#{$root-url}ico_favorite.svg');
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        &.ver2{
-            background-color: #ffffff;
-        }
-        .slt-box{
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            z-index: 200;
-            .cont{
-                left: auto;
-                right:0;
-                max-height: 120px;
-                li{
-                    a{
-                        font-size: 13rem;
-                    }
-                }
-            }
-            .slt-title{
-                padding:0;
-                border-radius: 0;
-                background-color: transparent;
-                .first{
-                    color: #1b1b1b;
-                    font-weight: 350;
-                    font-size: 12px;
-                }
-                .arrow{
-                    background: url(#{$root-url}ico_arrow_blow_circle.svg) no-repeat center/contain;
-                }
-            }
-        }
-    }
-}
-
 .container {
     width: 100%;
     flex-grow: 1;
@@ -340,6 +186,42 @@ footer {
             }
         }
     }
+}
+
+// Sub Wrapper
+.sub-wrap {
+    .header{
+        width: 100%;
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 50rem var(--sidepacer) 0;
+
+        .logo {
+            width: 250rem;
+            height: 42rem;
+            background: no-repeat center center / contain;
+            background-image: var(--bg-logo);
+        }
+    }
+    .content {
+        padding-top: 60rem;
+        .content-header {
+            margin-bottom: 60rem;
+            text-align: center;
+            .content-title {
+                font-weight: 700;
+                font-size: 48rem;
+                line-height: 64rem;
+                color: #000;
+            }
+        }
+        .content-body {
+            padding: 60rem;
+            background-color: #fff;
+            border-radius: 32rem;
+        }
+    }
+
 }
 
 @include mobile-xl {

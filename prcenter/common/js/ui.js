@@ -1,3 +1,15 @@
+function toggleFloating() {
+    const floatingWrap = document.querySelector('.floating-wrap');
+    const body = document.body;
+    const willBeActive = !floatingWrap.classList.contains('is-active');
+    floatingWrap.classList.toggle('is-active');
+    if (willBeActive) {
+        body.style.overflow = 'hidden';
+    } else {
+        body.style.overflow = '';
+    }
+}
+
 //header
 var isMobile = window.matchMedia("(max-width: 960px)").matches;
 
@@ -31,8 +43,6 @@ $(window).on('resize', function() {
 $('header .hamburger').on('click',function(){
     $(this).closest('header').find('.gnb-wrap').toggleClass('active');
 })
-
-
 
 //플로팅배너 bottom버튼 클릭시 scroll
 let $w = $(window),
@@ -98,8 +108,6 @@ function resizeYoutube(){
         }
     });
 }
-
-
 
 $('.section.youtube .sketch-wrap .thumb-view').on('click',function(){
     $(this).addClass('active');

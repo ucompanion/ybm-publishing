@@ -19,8 +19,6 @@
     <body>
         <!-- page-wrap -->
         <div class="wrapper main-wrap">
-            <div data-include="/aiStoryChat/html/include/include_header.html"></div>
-
             <!-- page-body -->
             <main class="container">
                 <!-- content -->
@@ -52,18 +50,19 @@
                         <!-- tab-list -->
                         <ul class="tab-list" id="myTab" role="tablist">
                             <li class="tab-item" role="presentation">
-                                <button class="tab-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                                <button class="tab-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
                                     <span>스토리 생성</span>
                                 </button>
                             </li>
                             <li class="tab-item" role="presentation">
-                                <button class="tab-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                                <button class="tab-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
                                     <span>결과 리포트</span>
                                 </button>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                            <!-- 탭: 스토리 생성 -->
+                            <div class="tab-pane" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                                 <div class="book-list-wrap">
                                     <!-- 교과서 목록 -->
                                     <ul class="book-list">
@@ -225,9 +224,246 @@
                                 </div>
 
                             </div>
-                            <div class="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                                결과리포트
+                            <!-- //탭: 스토리 생성 -->
+                            <!-- 탭: 결과 리포트 -->
+                            <div class="tab-pane show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                <div class="board-sec">
+                                    <div class="sec-header">
+                                        <h2 class="sec-title">결과 리포트</h2>
+                                        <div class="sec-util">
+                                            <button type="button" class="btn-delete">
+                                                <span>선택 삭제</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="sec-body">
+                                        <table class="board-table">
+                                            <caption class="blind">결과 리포트</caption>
+                                            <colgroup>
+                                                <col style="width: 60px" />
+                                                <col style="width: 80px" />
+                                                <col style="width: 175px" />
+                                                <col style="width: 150px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 140px" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="전체선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </th>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">일자</th>
+                                                    <th scope="col">교과서</th>
+                                                    <th scope="col">단원</th>
+                                                    <th scope="col">참여인원</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cel-checkbox">
+                                                        <label class="frm-chk">
+                                                            <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
+                                                            <span class="label"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="cel-num">9999</td>
+                                                    <td class="cel-date">2025-04-25 14:30</td>
+                                                    <td class="cel-book">영어 3 (김혜리)</td>
+                                                    <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                                    <td class="cel-users">12</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- //탭: 결과 리포트 -->
                         </div>
                         <!-- //tab-list -->
                     </section>
