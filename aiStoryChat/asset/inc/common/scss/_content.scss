@@ -2216,7 +2216,7 @@
 				display: block;
                 width: 100%;
                 height: 100%;
-                background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6668 9.33203L9.3335 22.6654M9.3335 9.33203L22.6668 22.6654' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6668 9.33203L9.3335 22.6654M9.3335 9.33203L22.6668 22.6654' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
             }
         }
 	}
@@ -2285,12 +2285,12 @@
     .modal-header {
         height: 56rem;
         padding: 18rem 24rem;
-        background-color: #F5F5F5;
+        background-color: #333450;
         .modal-title {
             font-weight: 700;
             font-size: 14rem;
             line-height: 20rem;
-            color: #333450;
+            color: #fff;
         }
     }
 	.modal-body {
@@ -2300,4 +2300,13 @@
 			padding-right: 20rem;
 		}
 	}
+    .modal-footer {
+        display: flex;
+        justify-content: center;
+        padding: 16rem 24rem 24rem;
+        .btn-primary {
+            @include btn-base-40;
+            @include btn-fill-primary;
+        }
+    }
 }

@@ -33,7 +33,7 @@
                         <div class="board-sec">
                             <div class="sec-header">
                                 <div class="sec-util">
-                                    <button type="button" class="btn-primary">
+                                    <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal">
                                         <span>스토리 확인하기</span>
                                     </button>
                                     <button type="button" class="btn-delete">
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="sec-body">
-                                <table class="board-table">
+                                <table class="board-table align-left">
                                     <caption class="blind">단원 상세정보</caption>
                                     <colgroup>
                                         <col style="width: 160px" />
@@ -55,28 +55,20 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row">단원</th>
-                                            <td colspan="3" class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
+                                            <td colspan="5" class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">진행일</th>
                                             <td class="cel-date">2025-04-25 14:30</td>
                                             <th scope="row">단어 수</th>
-                                            <td class="cel-word">6</td>
+                                            <td class="cel-count">6</td>
                                             <th scope="row">참여자 수</th>
-                                            <td class="cel-users">6</td>
+                                            <td class="cel-count">6</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <table class="board-table">
+                                <table class="board-table align-center">
                                     <caption class="blind">단원 상세목록</caption>
-                                    <colgroup>
-                                        <col style="width: 60px" />
-                                        <col style="width: 80px" />
-                                        <col style="width: 175px" />
-                                        <col style="width: 150px" />
-                                        <col style="width: auto" />
-                                        <col style="width: 140px" />
-                                    </colgroup>
                                     <thead>
                                         <tr>
                                             <th scope="col">번호</th>
@@ -90,20 +82,77 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="cel-checkbox">
-                                                <label class="frm-chk">
-                                                    <input type="checkbox" name="reportChk" class="chk" title="Lesson 1. Hello, i’m Dito 선택" />
-                                                    <span class="label"></span>
-                                                </label>
+                                            <td class="cel-num"><p class="nowrap">9999</p></td>
+                                            <td class="cel-name"><p class="nowrap">김학일</p></td>
+                                            <td class="cel-word"><p class="nowrap">30</p></td>
+                                            <td class="cel-time"><p class="nowrap">3분 20초</p></td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">5</a></td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">3</a></td>
+                                            <td class="cel-more">
+                                                <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                    <span>자세히 보기</span>
+                                                </button>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td class="cel-num">9999</td>
-                                            <td class="cel-date">2025-04-25 14:30</td>
-                                            <td class="cel-book">영어 3 (김혜리)</td>
-                                            <td class="cel-lesson">Lesson 1. Hello, i’m Dito</td>
-                                            <td class="cel-users">12</td>
+                                            <td class="cel-name">김학일</td>
+                                            <td class="cel-word">30</td>
+                                            <td class="cel-time">3분 20초</td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">5</a></td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">3</a></td>
+                                            <td class="cel-more">
+                                                <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                    <span>자세히 보기</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-num">9999</td>
+                                            <td class="cel-name">김학일</td>
+                                            <td class="cel-word">30</td>
+                                            <td class="cel-time">3분 20초</td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">5</a></td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">3</a></td>
+                                            <td class="cel-more">
+                                                <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                    <span>자세히 보기</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-num">9999</td>
+                                            <td class="cel-name">김학일</td>
+                                            <td class="cel-word">30</td>
+                                            <td class="cel-time">3분 20초</td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">5</a></td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">3</a></td>
+                                            <td class="cel-more">
+                                                <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                    <span>자세히 보기</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cel-num">9999</td>
+                                            <td class="cel-name">김학일</td>
+                                            <td class="cel-word">30</td>
+                                            <td class="cel-time">3분 20초</td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">5</a></td>
+                                            <td class="cel-count"><a href="#" class="txt-primary">3</a></td>
+                                            <td class="cel-more">
+                                                <button type="button" class="btn-more" data-bs-toggle="modal" data-bs-target="#chatModal">
+                                                    <span>자세히 보기</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                            <div class="sec-footer">
+                                <button type="button" class="btn-list">
+                                    <span>결과 리포트 목록</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -126,6 +175,150 @@
             <div data-include="/aiStoryChat/html/include/include_footer.html"></div>
         </div>
         <!-- //page-wrap -->
+
+        <!-- 모달: 스토리 확인하기 -->
+        <div class="modal modal-full fade" id="storyModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="storyModalLabel">스토리 확인하기</h3>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icn icn-modal-close" aria-label="닫기"></i>
+                        </button>
+                    </div>
+
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <div class="story-confirm">
+                                <p class="story-original">
+                                    I’m in the sixth <b class="keyword">grade</b>. My family will move to a new <b class="keyword">town</b>. I have friends here. We play <b class="keyword">together</b> every day. In the new town, I’ll make new friends. Let’s explore the <b class="keyword">town together</b>.
+                                </p>
+                                <p class="story-translated">
+                                    저는 6학년 입니다. 우리 가족은 새로운 동네로 이사할 예정입니다. 여기에 친구들이 있어요. 우리는 매일 함께 놀아요. 새 동내에서 제가 새 친구들을 사귈거예요. 같이 동네를 탐험해 봐요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-primary">
+                            <span>이 스토리로 새 채팅 만들기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: 스토리 확인하기 -->
+
+        <!-- 모달: 대화 다시 보기 -->
+        <div class="modal modal-full fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="chatModalLabel">대화 다시 보기<span class="middot">&middot;</span>1번 김학일</h3>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icn icn-modal-close" aria-label="닫기"></i>
+                        </button>
+                    </div>
+
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <div class="chat-community">
+                                <ul class="chat-list">
+                                    <!-- My Story -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-chat">
+                                                    <p class="story-original">
+                                                        I’m in the sixth grade. My family will move to a new town.
+                                                        We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.
+                                                    </p>
+                                                    <p class="story-translated">
+                                                        안녕하세요! 삐삐가 새로운 마을에서 긴장을 했는지 기억하시나요?
+                                                    </p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-speaker">
+                                                            <span class="blind">스피커</span>
+                                                        </button>
+                                                        <button type="button" class="btn-translate">
+                                                            <span class="blind">번역</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- AI Hint -->
+                                    <!-- <li class="chat-item order">
+                                        <div class="chat-body">
+                                            <div class="story-hint-chat">
+                                                <i class="icn"></i>
+                                                <p>힌트메세지</p>
+                                                <label>힌트</label>
+                                            </div>
+                                        </div>
+                                    </li> -->
+
+                                    <!-- AI Hint Chat -->
+                                    <!-- <li class="chat-item order">
+                                        <div class="chat-body">
+                                            <div class="story-chat">
+                                                <p class="story-hint"></p>
+                                                <p class="story-original"></p>
+                                                <div class="story-utils"></div>
+                                            </div>
+                                        </div>
+                                    </li> -->
+
+                                    <!-- AI Record -->
+                                    <!-- <li class="chat-item order">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-record-chat">
+                                                    <p class="explan">녹음 버튼을 누른 후 말하세요</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li> -->
+
+                                    <!-- AI Story -->
+                                    <li class="chat-item order">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata.png" alt="" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-target-chat">
+                                                    <p>I’m in the sixth grade.</p>
+                                                </div>
+                                                <div class="story-feedback-chat">
+                                                    <p class="title"><strong>교정이 필요합니다</strong></p>
+                                                    <p class="explan">이름은 대문자로 시작해야 합니다</p>
+                                                    <dl class="corect">
+                                                        <dt class="corect-label">교정된 문장</dt>
+                                                        <dd class="corect-translated">My 얼씨구</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: 대화 다시 보기 -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
