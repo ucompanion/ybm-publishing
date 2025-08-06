@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 좌우 박스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            border: 1px solid #ccc;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .left-box {
+            flex: 1 1 auto;
+            min-width: 0; /* 내용 확장 방지 */
+            background-color: lightblue;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .right-box {
+            flex: 0 0 300px; /* 고정 크기 */
+            background-color: lightcoral;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .script {
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* 최대 3줄만 표시 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-box">
+            <div class="script">
+                영상 설명 글 화면에서 최대 3줄 까지만 노출 영상 설명 글 화면에서 최대 3줄 까지만 노출 
+                영상 설명 글 화면에서 최대 3줄 까지만 노출 영상 설명 글 화면에서 최대 3줄 까지만 노출 
+                영상 설명 글 화면에서 최대 3줄 까지만 노출 영상 설명 글 화면에서 최대 3줄 까지만 노출 
+                영상 설명 글 화면에서 최대 3줄 까지만 노출 영상 설명 글 화면에서...
+            </div>
+        </div>
+        <div class="right-box">
+            우측 300px 고정
+        </div>
+    </div>
+
+</body>
+</html>

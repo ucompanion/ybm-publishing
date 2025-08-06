@@ -50,19 +50,19 @@
                         <!-- tab-list -->
                         <ul class="tab-list" id="myTab" role="tablist">
                             <li class="tab-item" role="presentation">
-                                <button class="tab-link" id="storyTab" data-bs-toggle="tab" data-bs-target="#storyTabPane" type="button" role="tab" aria-controls="storyTabPane" aria-selected="true">
+                                <button class="tab-link active" id="storyTab" data-bs-toggle="tab" data-bs-target="#storyTabPane" type="button" role="tab" aria-controls="storyTabPane" aria-selected="true">
                                     <span>스토리 생성</span>
                                 </button>
                             </li>
                             <li class="tab-item" role="presentation">
-                                <button class="tab-link active" id="reportTab" data-bs-toggle="tab" data-bs-target="#reportTabPane" type="button" role="tab" aria-controls="reportTabPane" aria-selected="false">
+                                <button class="tab-link" id="reportTab" data-bs-toggle="tab" data-bs-target="#reportTabPane" type="button" role="tab" aria-controls="reportTabPane" aria-selected="false">
                                     <span>결과 리포트</span>
                                 </button>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <!-- 탭: 스토리 생성 -->
-                            <div class="tab-pane" id="storyTabPane" role="tabpanel" aria-labelledby="storyTab" tabindex="0">
+                            <div class="tab-pane show active" id="storyTabPane" role="tabpanel" aria-labelledby="storyTab" tabindex="0">
                                 <div class="book-list-wrap">
                                     <!-- 교과서 목록 -->
                                     <ul class="book-list">
@@ -226,7 +226,7 @@
                             </div>
                             <!-- //탭: 스토리 생성 -->
                             <!-- 탭: 결과 리포트 -->
-                            <div class="tab-pane show active" id="reportTabPane" role="tabpanel" aria-labelledby="reportTab" tabindex="0">
+                            <div class="tab-pane" id="reportTabPane" role="tabpanel" aria-labelledby="reportTab" tabindex="0">
                                 <div class="board-sec">
                                     <div class="sec-header">
                                         <h2 class="sec-title">결과 리포트</h2>

@@ -1,0 +1,20 @@
+
+이미지 추가됨/ common.js, main.js 수정/ css파일들 수정함
+
+
+
+서브페이지-
+
+
+-서브페이지 전체 "교사용"이라고 잘못 써진 텍스트 -> "미리보기"로 텍스트 수정
+
+
+
+- 고등 영어 박준언(s3_sb_eng_park.html)  : ex_s2_park()을 ex_s3_park()으로 변경함
+
+<!--(D)1206 onClick 수정 -->
+<button type="button" class="btn_play" onClick="ex_s3_park();"><span class="blind">동영상보기</span></button>
+
+
+
+

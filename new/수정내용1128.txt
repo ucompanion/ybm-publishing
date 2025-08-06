@@ -1,0 +1,39 @@
+수정내용 
+전체
+
+풋터 부분 로고 변경 Logo_ybm_s.svg
+패밀리사이트 y클라우드 추가
+
+메인 
+
+<button type="button" class="btn_v" onClick="card010();">교구 활용 모델</button>을
+<button type="button" class="btn_v" onClick="card10();">교구 활용 모델</button>으로 수정 
+
+
+서브메인
+.diagram_inner 안의 이미지 mp4로 변경
+
+
+
+서브페이지 공통
+
+오른쪽 플로팅 메뉴 (.float_box2 > .float_g)
+ - h4에 <a href="#"></a>추가
+ - AI 디지털교과서 체험하기(.sample) 주석처리
+
+
+왼쪽 플로팅 메뉴  (.float_box1 > .float_g)
+<li class="active"><a href="#1">집필진</a></li>을 <li><a href="#2">집필진</a></li>으로 변경
+
+
+AI 디지털교과서, 조금 더 알려주세요 !(.sb_sec5) 페이지별 수정
+- 기존 사용설명서 텍스트 교사용 설명서로 수정 
+- 현직선생님의 수업사례 내용 수정
+
+
+
+
+
+
+
+

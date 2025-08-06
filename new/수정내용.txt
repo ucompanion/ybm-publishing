@@ -1,0 +1,40 @@
+1.전체 페이지 header부분 ycloud 링크 추가, 이벤트 링크 주소 변경
+2.전체 페이지 head부분 동일하게 맞춤--jquery-confirm.min.js 추가
+
+
+------------메인-------------
+
+.pop_wrap 소스 수정 
+
+.ms5내부 버튼들에 onclick추가
+
+.ms6 내용 전체 소스 수정
+
+
+------------서브 메인-------------
+
+하단 .sbmain_sec3 전체 수정
+
+상단 .book_box들 안에 <button type="button" class="btn_moreview">AI 디지털교과서 자세히 보기</button>버튼 추가
+
+고등 서브메인 상단 수학부분 텍스트 수정
+
+
+------------ 서브 -------------
+
+.event_banner - 이벤트 배너부분 수정
+.qna_bx 텍스트 수정 
+FAQ부분(.faq_bx) 두번째 질문답변 텍스트 수정
+
+
+
+
+초등영어 김혜리(s1_sb_eng_kim.html) 저자들 중 Matthew Crawford 와 김태영 순서와 클래스네임 변경
+
+중등영어 박준언(s2_sb_eng_park.html) 저자들 중 고근희 클래스네임(.w_wide) 추가
+
+고등 공통수학 류희찬(s3_sb_math_ryu.html) 상단 비주얼 부분 책 이미지 교체 
+<div class="img"><img src="../asset/img/s3_m1.png" alt=""/></div>
+<div class="img"><img src="../asset/img/s3_m2.png" alt=""/></div>
+
+

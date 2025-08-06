@@ -1,0 +1,15 @@
+<svg id="Logo_ybm" xmlns="http://www.w3.org/2000/svg" width="56" height="28" viewBox="0 0 56 28">
+  <rect id="area" width="56" height="28" fill="#ffffff" opacity="0"/>
+  <g id="icon" transform="translate(0.332 0)">
+    
+    <path id="패스_5" data-name="패스 5" d="M47.725,4.889V27.862H42.219V.219c0-.2.325-.3.489-.139Z" transform="translate(-3.086 0)" fill="#F0F3FF"/>
+    <path id="패스_6" data-name="패스 6" d="M0,8.6V0H5.506V13.268c0,.206-.324.3-.489.139Z" fill="#F0F3FF"/>
+    <path id="패스_7" data-name="패스 7" d="M13.95,22.973V0H8.443V27.644c0,.2.325.3.49.139Z" transform="translate(-0.617)" fill="#F0F3FF"/>
+    <rect id="사각형_14" data-name="사각형 14" width="5.506" height="27.862" transform="translate(15.652)" fill="#F0F3FF"/>
+    <path id="패스_8" data-name="패스 8" d="M25.822.081c-.165-.158-.49-.066-.49.138v13.04c0,.2.325.3.49.139l5.015-4.81v-3.7Z" transform="translate(-1.852 0)" fill="#F0F3FF"/>
+    <path id="패스_9" data-name="패스 9" d="M25.822,15.6c-.165-.158-.49-.067-.49.139v13.04c0,.2.325.3.49.139l5.015-4.81v-3.7Z" transform="translate(-1.852 -1.135)" fill="#F0F3FF"/>
+    <path id="패스_10" data-name="패스 10" d="M39.281,4.889V27.862H33.775V.219c0-.2.324-.3.49-.139Z" transform="translate(-2.469 0)" fill="#F0F3FF"/>
+    <path id="패스_11" data-name="패스 11" d="M56.169,4.889V27.862H50.663V.219c0-.2.325-.3.489-.139Z" transform="translate(-3.704 0)" fill="#F0F3FF"/>
+   
+  </g>
+</svg>

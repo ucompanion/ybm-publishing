@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="all">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<!-- 파비콘 및 즐겨찾기 아이콘 포맷 등 추가 -->
+<link rel="apple-touch-icon" sizes="57x57" href="../asset/favicon/E/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../asset/favicon/E/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../asset/favicon/E/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../asset/favicon/E/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../asset/favicon/E/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../asset/favicon/E/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../asset/favicon/E/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../asset/favicon/E/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../asset/favicon/E/apple-icon-180x180.png">
+<link rel="apple-touch-icon-precomposed" href="../asset/favicon/E/apple-icon-precomposed.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../asset/favicon/E/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../asset/favicon/E/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../asset/favicon/E/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../asset/favicon/E/favicon-16x16.png">
+<link rel="manifest" href="../asset/favicon/E/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../asset/favicon/E/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- //파비콘 및 즐겨찾기 아이콘 포맷 등 추가 -->
+<title>YBM AI 디지털교과서 홍보관</title>
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="../asset/font/pretendard-subset.css" />
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> 
+
+<!-- jquery --> 
+<script src="../asset/js/jquery-3.4.1.min.js"></script> 
+<script src="../asset/js/jquery-confirm.min.js"></script> 
+
+<!-- gsap --> 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> 
+<script src="../asset/js/ScrollSmoother.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script> 
+
+<!-- CSS -->
+<link rel="stylesheet" href="../asset/css/common.css">
+<link rel="stylesheet" href="../asset/css/style.css">
+<link rel="stylesheet" href="../asset/css/mobs.css">
+</head>
+
+<body>
+<div class="wrap"> 
+  
+  <!-- common header --> 
+  <!-- header -->
+  <header class="header white" id="header">
+    <div class="inner h_inner">
+      <div class="h_logo"  data-aos="fade-in"> <a href="/" class="link"> <img src="../asset/img/Logo_ybm.svg"  alt="YBM와이비엠" /></a> </div>
+      <div class="menu_icon" onclick="menu_toggle();"> <span class="menu_linebox"> <span class="menu_line line_1"></span> <span class="menu_line line_2"></span> <span class="menu_line line_3"></span> </span> </div>
+      <nav>
+        <ul class="depth1">
+          <li><a href="#" class="link">AI 디지털교과서 시작하기</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">수업 모델 및 활용 영상 보기</a></li>
+            </ul>
+          </li>
+          <li class="s1"> <a href="#" class="link">초등학교</a>
+            <ul class="depth2">
+              <li class=""><a href="#" class="link">영어 3~4학년군 (김혜리)</a></li>
+              <li><a href="#" class="link">영어 3~4학년군 (최희경)</a></li>
+              <li><a href="#" class="link">수학 3~4학년군 (류희찬)</a></li>
+            </ul>
+          </li>
+          <li class="s2"> <a href="#" class="link">중학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">영어 1 (김은형)</a></li>
+              <li><a href="#" class="link">영어 1 (박준언)</a></li>
+            </ul>
+          </li>
+          <li class="s3"> <a href="#" class="link">고등학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">공통영어 1/2 (김은형)</a></li>
+              <li><a href="#" class="link">공통영어 1/2 (박준언)</a></li>
+              <li><a href="#" class="link">공통수학 1/2 (류희찬)</a></li>
+            </ul>
+          </li>
+          <li class="ycloud"> <a href="https://www.ybmcloud.com/home.html" target="_blank" class="link "><img src="../asset/img/cloud.svg" alt=""/></a> </li>
+        </ul>
+        <div class="event"><a href="https://www.ybmcloud.com/cscenter/event?siteType=E" class="link blank" target="_blank">이벤트</a></div>
+        <div class="gnb_bg"></div>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- sub section
+	초등 sb_container_1
+	중등 sb_container_2
+	고등 sb_container_3 -->
+  <div class="container sb_container_2">
+    <!-- 플로팅버튼 -->
+    <div class="floating-book ty2">
+      <p>2022 개정 교과서</p>
+      <a href="https://www.ybmcloud.com/prcenter/ybmtextbook/textbookId?grade=mid1">자세히 보기</a>
+      <img src="../asset/img/floating_book.png" alt="">
+    </div>
+    <section class="sb_sec1" id="1">
+      <div class="inner">
+        <div class="sb_header">
+          <hgroup>
+            <h2>YBM 중학교 AI 디지털교과서</h2>
+            <h3>영어 1 
+              (박준언)</h3>
+          </hgroup>
+			<!-- (D)1130 영상보기 추가 -->
+			<div class="card_content">
+                  <div class="img"><img src="../asset/img/main/thum_interview04.jpg" alt="">
+                    <button type="button" class="btn_play" onclick="interview_mv4();"><span class="blind">영상보기</span></button>
+                  </div>
+            </div>
+        </div>
+        <div class="book_bx">
+          <div class="book_box">
+            <div class="img_g">
+              <div class="img"><img src="../asset/img/s2_e1_01.png" alt=""/></div>
+            </div>
+            <div class="object_0"></div>
+            <div class="object_1"></div>
+            <div class="object_3"></div>
+          </div>
+          <div class="launch_btn">
+            <a href="https://www.ybmcloud.com/prcenter_viewer?contentId=C20241216054202rQj93" target="_blank" onclick="scrollToTarget(event)">선정사유서</a>
+            <a href="https://www.ybmcloud.com/prcenter_viewer?contentId=C20241127033804MqUk1" target="_blank" onclick="scrollToTarget(event)">교사용 설명서</a>
+            <a href="https://www.ybmcloud.com/prcenter_viewer?contentId=C20241129052838IxVoI" target="_blank" onclick="scrollToTarget(event)">활용 팁</a>
+            <a href="https://www.ybmcloud.com/prcenter_viewer?contentId=C20241127033259OpevZ" target="_blank" onclick="scrollToTarget(event)">브로셔</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sb_sec2" id="2">
+      <div class="inner">
+        <div class="writer_g">
+          <div class="sb_header">
+            <h3>YBM 영어 1 (박준언) 교과서 집필진</h3>
+          </div>
+          <div class="writer_bx">
+            <div class="writer_main_box">
+              <div class="pic"><img src="../asset/img/sbmain/writer_eng_pju.png" alt="대표 저자 박준언"/></div>
+              <dl class="writer">
+                <dt>대표 저자 <strong>박준언</strong></dt>
+                <dd>(전) 숭실대학교 영어영문학과 교수
+                  <ul>
+                    <li>한국외국어교육학회, 이중언어학회 회장 역임</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            <div class="writer_box">
+              <dl class="writer">
+                <dt>김명희</dt>
+                <dd>숙명여자대학교 영어영문학부 교수</dd>
+              </dl>
+              <dl class="writer w_wide">
+                <dt>김수연</dt>
+                <dd>한국외국어대학교 영미문학∙문화학과 교수</dd>
+              </dl>
+              <dl class="writer">
+                <dt>장은경</dt>
+                <dd>서울 둔촌고등학교 교사</dd>
+              </dl>
+              <dl class="writer w_wide">
+                <dt>박병륜</dt>
+                <dd>인하대학교 사범대학 부속중학교 교사</dd>
+              </dl>
+              <dl class="writer">
+                <dt>고은별</dt>
+                <dd>서울 윤중중학교 교사</dd>
+              </dl>
+              <dl class="writer w_wide">
+                <dt>고근희</dt>
+                <dd>인하대학교 사범대학 부속중학교 교사</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="partner_g">
+          <div class="sb_header">
+            <h3>YBM AI 디지털교과서는 
+              에듀테크 업계 최고의 파트너와 함께합니다.</h3>
+          </div>
+          <div class="card_bx">
+            <ul class="partner_box">
+              <li class="full"><a href="https://enuma.com/ko/" target="_blank">
+                <div class="logo"><img src="../asset/img/sbmain/enuma.png" alt="(주)에누마코리아"/></div>
+                <div class="card_head">
+                  <h3>(주)에누마코리아</h3>
+                  <div class="desc">중학 영어 1, 고등 공통영어 1/2<br>
+                    AI 디지털교과서 공동 개발</div>
+                </div>
+                <div class="card_content">
+                  <ul class="detail">
+                    <li>글로벌 에듀테크 전문 기업</li>
+                    <li>미주, 동남아권 공교육 서비스 진출</li>
+                    <li>기초 학력 솔루션 특화</li>
+                    <li>토도 시리즈 (한글, 영어, 수학) 서비스 제공, 글로벌 1천 3백만명 이상의 사용자 보유</li>
+                  </ul>
+                </div>
+                </a> </li>
+              <!--<li><a href="https://www.edutem.net/" target="_blank">
+                <div class="logo"><img src="../asset/img/sbmain/logo_edutem.png" alt="(주)에듀템"/></div>
+                <div class="card_head">
+                  <h3>(주)에듀템</h3>
+                  <div class="desc">중학 영어 1, 고등 공통영어 1/2<br>
+                    AI 디지털교과서 공동 개발</div>
+                </div>
+                <div class="card_content">
+                  <ul class="detail">
+                    <li>AI 기반으로 한 음성 및 필기 인식 등 맞춤형 에듀테크 기업</li>
+                    <li>대규모 어학 교육 업체 AI 엔진 공급 계약 체결</li>
+                  </ul>
+                </div>
+                </a> </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sb_sec3"  id="3">
+      <div class="inner">
+        <div class="sb_header">
+          <h3>YBM AI 디지털교과서만의 5가지 특징</h3>
+        </div>
+        <div class="tab_bx">
+          <div class="tabs">
+            <button type="button" class="tab on" role="tab"><span>01</span>느린 학습자 집중 케어</button>
+            <button type="button" class="tab"  role="tab"><span>02</span>활동 콘텐츠 중심 설계</button>
+            <button type="button" class="tab"  role="tab"><span>03</span>수준별 학습 구현</button>
+            <button type="button" class="tab"  role="tab"><span>04</span>학습 태도, 참여도<br>
+            까지 분석하는 AI</button>
+            <button type="button" class="tab"  role="tab"><span>05</span>도움없이 바로 쓰는 UI/UX</button>
+          </div>
+          <div class="tab_content_g">
+            <div class="zoom">
+              <p>마우스를 이미지 위로 올려보세요</p>
+            </div>
+            <div class="tab_content active">
+              <h4 class="blind">느린 학습자 집중 케어</h4>
+              <div class="benefit_g swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>AI 분석</h4>
+                      <p>아이들의 수업태도와 성취현황을 잘 분석하여 느린 학습자를 판별</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_01_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_01_1.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_01_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_01_1.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>AI 추천</h4>
+                      <p>자동 진단을 바탕으로 학습자 수준별 최적화 콘텐츠 제공</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_01_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_01_2.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_01_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_01_2.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>AI 튜터</h4>
+                      <p>자기주도 학습 목표 설정과 모르는 단어/문장 검색 기능으로 학습 동기 부여</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_01_3.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_01_3.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_01_3.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_01_3.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="toolbx">
+                  <div class="prv_btn"></div>
+                  <div class="next_btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">활동 콘텐츠 중심 설계</h4>
+              <div class="benefit_g swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>압도적인 게임형 액티비티</h4>
+                      <p>문법 퀴즈 대결, AI와의 대화 등 다양한 게임형 액티비티 보유</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_02_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_02_1.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_02_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_02_1.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>쌍방향 협동 콘텐츠</h4>
+                      <p>학생 참여형 퀴즈, 협동 학습 등 흥미로운 쌍방향 활동 탑재</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_02_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_02_2.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_02_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_02_2.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="toolbx">
+                  <div class="next_btn"></div>
+                  <div class="prv_btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind"> 수준별 학습 구현</h4>
+              <div class="benefit_g swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>AI 맞춤 콘텐츠 1</h4>
+                      <p>학생 수준별 맞춤 과제 발송</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_03_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_03_1.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_03_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_03_1.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4> AI 맞춤 콘텐츠 2</h4>
+                      <p>AI 추천 콘텐츠와 성취기준별 학습 맵으로 자기주도 학습 지원</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_03_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_03_2.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_03_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_03_2.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="toolbx">
+                  <div class="next_btn"></div>
+                  <div class="prv_btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">학습 태도, 참여도까지 분석하는 AI</h4>
+              <div class="benefit_g swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4> AI 분석 1</h4>
+                      <p>성취도 및 참여도 분석 결과를 토대로 한 수준별 학습자 분류</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_04_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_04_1.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_04_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_04_1.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>AI 분석 2</h4>
+                      <p>평가 데이터 분석 및 학생별 수준 진단</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_04_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_04_2.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_04_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_04_2.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="toolbx">
+                  <div class="next_btn"></div>
+                  <div class="prv_btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind"> 도움없이 바로 쓰는 UI/UX</h4>
+              <div class="benefit_g swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>수업설계</h4>
+                      <p>서책 교과서 흐름의 수업안 제공 및 편리한 '나만의 수업안' 재구성 기능 제공</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_05_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_1.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_05_1.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_1.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4> AI 보조교사</h4>
+                      <p>자동 출석 체크와 실시간 활동 모니터링, 평가 결과 기반 보충 콘텐츠 추천</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_05_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_2.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_05_2.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_2.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4>수업 통제</h4>
+                      <p>화면 잠금과 동기화 기능을 활용한 수업 집중 유도 및 활동 관리</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_05_3.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_3.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_05_3.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_3.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="card_head">
+                      <h4> 수업 참여</h4>
+                      <p>학생 화면에 수업 시작 알림과 [수업 참여하기] 버튼으로 참여 유도</p>
+                    </div>
+                    <div class="card_content">
+                      <div class="zoom_minimap">
+                        <div class="original" ><img src="../asset/img/sb/benefit_s2_eng_05_4.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_4.jpg" alt=""></div>
+                        <div class="magnifier"></div>
+                      </div>
+                      <div class="zoom_org">
+                        <div class="original"><img src="../asset/img/sb/benefit_s2_eng_05_4.jpg" alt=""></div>
+                        <div class="viewer"><img src="../asset/img/sb/benefit_s2_eng_05_4.jpg" alt="" ></div>
+                        <div class="magnifier"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="toolbx">
+                  <div class="next_btn"></div>
+                  <div class="prv_btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="qna_bx">
+          <div class="q">
+            <dl>
+              <dt>선생님</dt>
+              <dd>우리 학교는 YBM 서책 교과서를 사용하지 않는데, YBM AI 디지털교과서를 이용할 수 있나요?</dd>
+            </dl>
+          </div>
+          <div class="a">
+            <dl>
+              <dt>YBM교과서</dt>
+              <dd>YBM AI 디지털교과서는 서책 없이도 이용 가능하며, 느린 학습자 케어, 활동 중심 콘텐츠, 수준별 학습, AI 분석, 간편한 UI로 학습 효과를 극대화합니다. <br>
+                선생님께 필요한 맞춤형 학습 환경을 YBM AI 디지털교과서로 실현해 보세요! </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sb_sec4" id="4">
+      <div class="inner">
+        <div class="sb_header">
+          <h3>AI 디지털교과서가 무엇인지 생소한 선생님들께<br>
+            쉽게 따라 할 수 있는 10가지 수업 모델을 제공해 드려요.</h3>
+        </div>
+        <div class="tab_bx">
+			<!-- (D)1130 8번 거꾸로 수업 모델로 변경 -->
+          <div class="tabs">
+            <button type="button" class="tab on" role="tab"><span>01</span>상황(자료) 제시 <br>
+            중심 모델</button>
+            <button type="button" class="tab"  role="tab"><span>02</span>평가 중심 모델</button>
+            <button type="button" class="tab"  role="tab"><span>03</span>개별 탐구 중심 모델</button>
+            <button type="button" class="tab"  role="tab"><span>04</span>협력 학습 중심 모델</button>
+            <button type="button" class="tab"  role="tab"><span>05</span>느린 학습자 관리 모델</button>
+            <button type="button" class="tab"  role="tab"><span>06</span>예습 모델</button>
+            <button type="button" class="tab"  role="tab"><span>07</span>모니터링 활용 수업 모델</button>
+            <button type="button" class="tab"  role="tab"><span>08</span>거꾸로 수업 모델</button>
+            <button type="button" class="tab"  role="tab"><span>09</span>프로젝트형 모델</button>
+            <button type="button" class="tab"  role="tab"><span>10</span>놀이 활동 중심 모델</button>
+          </div>
+          <div class="tab_content_g">
+            <div class="tab_content active">
+              <h4 class="blind">상황(자료) 제시 중심 모델</h4>
+              <ul class="summary">
+                <li>학생들의 학습을 도와줄수 있는 다양한 자료를 AI 디지털교과서로 제시, 학생 스스로 문제 해결을 위한 탐구 활동을 할 수 있도록 도와주는 수업 모델</li>
+                <li>특히, AI 디지털교과서를 통해 학습자 개별 맞춤형 자료를 제공, 학습자가 수업 목표에 도달할 수 있도록 도움을 줍니다.</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_1.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">평가 중심 모델</h4>
+              <ul class="summary">
+                <li>수업의 전 과정 중 학생 개별 탐구는 서책형 교과서를 활용, 진단, 형성, 총괄 평가 장면에서 AI 디지털교과서를 집중적으로 활용하는 수업 모델 </li>
+                <li>평가 결과를 토대로 수준별 과제를 제시하고 학생의 성취도를 누가하여 관리하는데 적합</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_2.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">개별 탐구 중심 모델</h4>
+              <ul class="summary">
+                <li>AI 디지털교과서를 기본으로 학생들이 개별 및 소집단으로 학습할 수 있는 기본 모델</li>
+                <li>사전 진단을 통한 학습자 수준에 따라 개별화된 자료 및 AI 튜터를 활용하여 탐구학습이 이루어지는 모델</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_3.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">협력 학습 중심 모델</h4>
+              <ul class="summary">
+                <li>AI 디지털교과서를 활용하여 학생들이 모둠 탐구 학습을 하는 데 적합한 수업 모델</li>
+                <li>학생들은 교사가 재구성한 외부 자료나 AI 디지털교과서 내의 다양한 교구를 활용하여 탐구 활동을 실시하고 결과를 공유하며, 다른 학생들의 탐구 활동 결과물을 평가하는 등 다양한 활동에 참여</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_4.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">느린 학습자 관리 모델</h4>
+              <ul class="summary">
+                <li>AI 디지털교과서를 활용하여 느린 학습자를 위한 맞춤형 수업을 진행하는 데 적합한 수업 모델</li>
+                <li>교사는 AI 디지털교과서를 활용하여 느린 학습자를 위해 개념 이해와 관련된 다양한 콘텐츠를 반복적으로 제공하고, 느린 학습자의 학습 성취도를 진단하여 맞춤형 문제를 제공</li>
+                <li>학생의 학습 데이터를 기반으로 교사의 개별 피드백 및 보충 지도 실시 등 느린 학습자를 위한 맞춤형 수업을 지원</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_5.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">예습 모델</h4>
+              <ul class="summary">
+                <li>AI 디지털교과서를 활용하여 거꾸로 학습과 같이 사전에 학습할 내용을 학생 스스로 학습하고 학교수업에서는 모둠과 선생님과 함께  다양한 탐구 활동을 진행하는 데 적합한 수업 모델</li>
+                <li>학생들은  AI 디지털교과서를 활용하여 이번 시간에 학습할 개념을 미리 살펴보고, 간단한 활동을 통해 풀이 방법 등을 익힘</li>
+                <li>본 수업 시간에는 미리 학습한 개념을 확인하고 단순한 문제 풀이를 넘어 모둠 구성원과 함께 다양한 수학 활동에 참여하며 개념을 다짐</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_6.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">모니터링 활용 수업 모델</h4>
+              <ul class="summary">
+                <li>수업 중 학생들의 문제 해결 과정을 AI 보조교사 시스템을 이용한 실시간 활동 결과 모니터링으로 점검하고 교사의 피드백을 통해  학생들이 수업 목표에 도달할 수 있도록 구성한 수업 모델</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_7.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">거꾸로 수업 모델</h4>
+              <!--<ul class="summary">
+                <li>교수·학습 활동 내 교구가 필요한 활동을 Y클라우드의 디지털 교구 또는 알지오매 스키즈 등 외부 소스)를 디지털 교구를 자료로 등록하여 AIDT 시스템 내에서 구체적 조작활동을  할 수 있도록 구성한 수업 모델</li>
+              </ul>-->
+              <div class="chart_g"><img src="../asset/img/sb/chart_11.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">프로젝트형 모델</h4>
+              <ul class="summary">
+                <li>각 학기 프로젝트 수업(4차시 분량)을 AIDT의 활동 중 &lang;교사 추가 수업&rang;을 이용, 학생들이 협력하여 프로젝트 산출물을 제작하고 결과물을 함께 공유할 수 있도록 구성한 수업 모델</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_9.png" alt=""/></div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">놀이 활동 중심 모델</h4>
+              <ul class="summary">
+                <li>Y클라우드의 디지털 수학 교구나 교사가 온라인으로 직접 제작한 콘텐츠를 가지고 수업 중 교수·학습 활동으로 형성한 수학적 개념이나 원리를 놀이 활동으로 응용·발전시킬 수 있는 수업 모델</li>
+              </ul>
+              <div class="chart_g"><img src="../asset/img/sb/chart_10.png" alt=""/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sb_sec5" id="5">
+      <div class="inner">
+        <div class="sb_header">
+          <h3>AI 디지털교과서, 조금 더 알려주세요 !</h3>
+        </div>
+        <div class="viewr_bx">
+          <div class="mv_box">
+            <h4>현직 선생님이 소개하는 수업 모델 적용 방안</h4>
+            <div class="v_img"><img src="../asset/img/sb/model_s2_park.jpg" alt=""/>
+              <button type="button" class="btn_play" onClick="ex_s2_park();"><span class="blind">동영상보기</span></button>
+            </div>
+            <div class="mv_txt">
+              <p class="tit">거꾸로 수업 모델</p>
+              <p class="txt">현직 선생님들이 직접 소개하는 수업 적용 방안을 보시면 더 와닿으실 거예요!</p>
+            </div>
+          </div>
+         <div class="ebook_box">
+			  <!-- (D)1130 영역전체 변경 -->            
+            <div class="ebook">
+             <div class="img"><img src="../asset/img/sb/manual_en_02.jpg" alt=""/></div>
+              <dl>
+                <dt>AI 디지털교과서 설명서</dt>
+                <dd>
+                  <div class="txt">AI 디지털교과서 어떻게 사용해야 하는지 자세하게 알려드릴게요. </div>
+                  <div class="btns">
+                    <button type="button" class="btn_vw" onclick="window.open('https://www.ybmcloud.com/prcenter_viewer?contentId=C20241127033804MqUk1')">미리보기</button>
+                    <button type="button" class="btn_dn" onclick="window.open('https://kr.object.ncloudstorage.com/ybm-prd-std/CONTENTS/UPLOAD/2024/CU20241127181942mvba.pdf')">다운로드</button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+			  <div class="ebook">
+             <div class="img"><img src="../asset/img/sb/ebook_info_01.jpg" alt=""/></div>
+              <dl>
+                <dt>AI 디지털교과서 활용 안내</dt>
+                <dd>
+                  <div class="txt">AI 디지털교과서 활용법과 다양한 학습 팁을 확인하세요!</div>
+                  <div class="btns">
+                    <button type="button" class="btn_vw" onclick="window.open('https://www.ybmcloud.com/prcenter_viewer?contentId=C20241129052838IxVoI')">교사</button>
+					 <button type="button" class="btn_vw" onclick="window.open('https://www.ybmcloud.com/prcenter_viewer?contentId=C20241128054624kclSn')">학생</button>  
+                    <button type="button" class="btn_play" onclick="window.open('https://www.ybmcloud.com/4KBnI')">메뉴얼 영상</button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+			  <div class="ebook_plus">            
+              <dl>
+                <dt>서책 교과서 수업과 비교하여 무엇이 달라지나요?</dt>
+                <dd>                 
+                  <div class="btns">
+                    <button type="button" class="btn_go" onclick="window.open('https://www.ybmcloud.com/prcenter_viewer?contentId=C20241127033259OpevZ')">AI 디지털교과서 브로셔에서 확인하기</button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="faq_bx">
+          <div class="sb_header2">
+            <h3>FAQ</h3>
+            <p class="info">YBM AI 디지털교과서, 이런 점이 궁금해요!</p>
+          </div>
+          <div class="faq_g">
+            <div class="faq">
+              <div class="f"><strong>서책 교과서와 같이</strong> 사용하는건가요?</div>
+              <div class="a revealed">
+                <div class="txt">YBM AI 디지털교과서는 자사의 서책 교과서 내용을 기반으로 개발하였습니다. <br>
+                  서책과 같이 사용하시면 가장 효율적인 수업을 하실 수 있습니다.</div>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="f"><strong>우리 학교는 YBM 서책 교과서를 사용하지 않는데,</strong> YBM AI 디지털교과서를 사용할 수 있나요?</div>
+              <div class="a">
+                <div class="txt">YBM 서책 교과서를 사용하지 않으셔도 YBM AI 디지털교과서를 사용하실 수 있습니다.<br>
+YBM AI 디지털교과서는 느린 학습자 케어, 활동 중심 콘텐츠 및 수준별 맞춤 학습 콘텐츠, AI 자동 평가 및 분석, 간편한 UI/UX 등의 편리한 기능로 교수/학습 효과를 극대화합니다.<br>
+선생님께 필요한 학생 개별 맞춤 교수/학습, 유연한 학습 환경을 YBM AI 디지털교과서로 실현해 보세요! </div>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="f"><strong>기존 ‘디지털교과서’와의 차이</strong>가 무엇인가요?</div>
+              <div class="a">
+                <div class="txt">기존 디지털교과서는 학생을 위한 ‘자습용’ 콘텐츠였습니다.<br>
+                  AI 디지털교과서는 선생님과 학생이 하나의 플랫폼 안에서 소통하며 쌍방향 수업이 이루어지게 하는 AI 코스웨어입니다. <br>
+                  교과서 내용은 기본으로 탑재되어 있고, 수준 차이가 있는 개별 학생들을 위한 맞춤형 학습 콘텐츠가 진단에 따라 제공됩니다. </div>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="f"><strong>수업을 따라오지 못하는 학생들 관리</strong>가 가능한가요?</div>
+              <div class="a">
+                <div class="txt">YBM AI 디지털교과서는 ‘느린 학습자’ 케어를 위한 맞춤 콘텐츠를 제공하고 있습니다. <br>
+                  선생님은 학생들의 누적 학습 성취도를 분석을 보고, 느린 학습자들에게 맞춤형 학습 콘텐츠를 제공하여 학습 속도가 다른 학생들도 모두 케어할 수 있습니다. </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sb_sec6" id="6">
+      <div class="inner">
+        <div class="sb_header">
+          <h3>YBM교과서 교수 학습 지원 서비스와 이벤트도 만나보세요!</h3>
+          <div class="event_head">
+            <p class="tit">수업이 필요한 모든 순간 <img src="../asset/img/cloud_w.png" alt=""/></p>
+            <p class="txt">Y클라우드는 YBM교과서 교수 학습 지원 사이트입니다. <br>
+              선생님들께서는 Y클라우드의 모든 수업 자료를 무료로 이용하실 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="tab_bx">
+          <div class="tabs">
+            <button type="button" class="tab on" role="tab">교과서 자료</button>
+            <button type="button" class="tab"  role="tab">깜짝퀴즈</button>
+            <button type="button" class="tab"  role="tab">커넥팅북</button>
+            <button type="button" class="tab"  role="tab">클래스 게임</button>
+          </div>
+          <div class="tab_content_g">
+            <div class="tab_content active">
+              <h4 class="blind">교과서 자료</h4>
+              <div class="img"><img src="../asset/img/sb/ycloud1_ele.gif" alt=""/></div>
+              <div class="detail_g">
+                <div class="desc">“더 풍성해진 전과목 수업 콘텐츠!”</div>
+                <ul class="detail">
+                  <li>단원·차시별 수업 자료, 평가 자료, 교과 연계 자료까지 한 번에!</li>
+                  <li>선생님의 수업이 더욱 알차고 편리해 집니다.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">깜짝퀴즈</h4>
+              <div class="img">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZG-yBqLi6Rc?si=zirTgzdCpvcftcM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="detail_g">
+                <div class="desc">“수업에 흥미를 더해주는 학생 참여형 실시간 쌍방향 퀴즈, 깜짝퀴즈”</div>
+                <p class="detail"> 초등 깜짝퀴즈 체험하기 - Y클라우드 정회원 선생님이시라면 모든 깜짝 퀴즈를 무료로 사용할 수 있어요! </p>
+              </div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">커넥팅북</h4>
+              <div class="img">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/n7vls6eBZPg?si=AYt0ZPN_5hp1oxdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="detail_g">
+                <div class="desc">“선생님과 학생을 이어주는 실시간 쌍방향 교과서, 커넥팅북”</div>
+                <p class="detail"> 초등 커넥팅북 체험하기 - Y클라우드 정회원 선생님이시라면 커넥팅북을 무료로 사용할 수 있어요! </p>
+                <ul class="detail">
+                  <li>선생님 화면을 공유하고 학생 화면 제어가 가능한 실시간 동기화 기능</li>
+                  <li>학습자료를 실시간 전송하고 학생은 채팅보드를 통해 선생님께 의견 전달 가능</li>
+                  <li>단원, 차시별로 맵핑된 자료를 학생에게 과제로 제공하고 자동채점</li>
+                  <li>URL 링크, 그리기, 메모 등으로 나만의 교과서 만들기</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab_content">
+              <h4 class="blind">클래스 게임</h4>
+              <div class="img">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TZdVTUrvxgs?si=AxB1OC8X68m6dymz&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="detail_g">
+                <div class="desc">“실시간 게임으로 즐겁게 외우는 영단어, 쌍방향 영어게임”</div>
+                <ul class="detail">
+                  <li>우리반 아이들과 함께 게임을 하며 영단어를 배우는 활동!</li>
+                  <li>단어들을 여러 번 노출하여 자연스럽게 반복 학습이 이루어지도록 설계</li>
+                  <li>실시간으로 학생들의 참여도를 모니터링하고 피드백을 줄 수 있어 수업 관리에 도움</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="event_banner">
+          <div class="banner"> <a href="https://www.ybmcloud.com/cscenter/event" class="bt_go" target="_blank"><span class="blind">바로가기</span></a>
+            <div class="eventimg pc"><img src="../asset/img/sb/banner_event.png" alt="이벤트 이미지"/></div>
+            <div class="eventimg mobile"><img src="../asset/img/sb/banner_event_m.png" alt="이벤트 이미지"/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="float_box1">
+      <div class="float_g">
+        <ul>
+          <li><a href="#2">집필진</a></li>
+          <li><a href="#3">AI 디지털교과서 특징</a></li>
+          <li><a href="#4">수업 모델</a></li>
+          <li><a href="#5">AI 디지털교과서 가이드</a></li>
+          <li><a href="#6">Y클라우드</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="float_box2">
+      <div class="float_g">
+        <h4><a href="#">중학교 교과서</a></h4>
+        <ul>
+          <li class="active"><a href="#">영어 1 (박준언)</a></li>
+          <li><a href="#">영어 1 (김은형)</a></li>
+        </ul>
+      </div>
+      <!--<div class="sample"><a href="#" target="_blank">AI 디지털교과서 체험하기</a></div>--> 
+    </div>
+  </div>
+  <!-- common footer --> 
+  <!-- footer -->
+  <footer class="footer">
+    <div class="inner">
+      <div class="f_cont">
+        <div class="ybmbox"> <img src="../asset/img/Logo_ybm_s.svg" alt="" class="f_logo"/> <a href="https://www.ybm.co.kr/ybm_company/" class="link" target="_blank">회사소개</a><a href="https://member.ybmnet.co.kr/join/terms/ybmexam_agree.html" class="link" target="_blank">이용약관</a><a href="https://www.ybmbooks.com/policy/privacy_policy.html" class="link" target="_blank">개인정보처리방침</a> </div>
+        <div class="txtbox">
+          <p class="txt"> 사업자등록번호 101-81-14655  대표이사 허문호, 정용환 서울시 종로구 종로 104 ㈜와이비엠 </p>
+          <p class="txt">고객센터: 02-2000-0599 FAX 02-2000-0426 E-mail ycloud@ybm.co.kr</p>
+          <p class="txt"> Copyright ⓒ (주)와이비엠. All rights reserved. </p>
+        </div>
+      </div>
+      <div class="f_family">
+        <button type="button" class="btn_family">패밀리사이트</button>
+        <div class="family_list"><a href="https://school.ybmsmartschool.com/" class="link" target="_blank">YBM스마트스쿨</a> <a href="https://www.ybmbooksam.com/html/main/index" class="link" target="_blank">YBM북샘</a> <a href="https://www.ybmteachers.com/" class="link" target="_blank">YBM교원연수원</a><a href="https://www.ybmcloud.com/home.html" class="link" target="_blank">Y클라우드</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- JS --> 
+<script src="../asset/js/jquery.accord-min.js"></script> 
+<script src="http://www.youtube.com/iframe_api"></script> 
+<!--<script src="../asset/js/jquery.zoom.min.js"></script> -->
+<script src="../asset/js/common.js"></script>
+</body>
+</html>

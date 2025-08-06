@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="all">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<!-- 파비콘 및 즐겨찾기 아이콘 포맷 등 추가 -->
+<link rel="apple-touch-icon" sizes="57x57" href="../asset/favicon/E/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../asset/favicon/E/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../asset/favicon/E/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../asset/favicon/E/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../asset/favicon/E/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../asset/favicon/E/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../asset/favicon/E/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../asset/favicon/E/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../asset/favicon/E/apple-icon-180x180.png">
+<link rel="apple-touch-icon-precomposed" href="../asset/favicon/E/apple-icon-precomposed.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../asset/favicon/E/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../asset/favicon/E/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../asset/favicon/E/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../asset/favicon/E/favicon-16x16.png">
+<link rel="manifest" href="../asset/favicon/E/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../asset/favicon/E/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- //파비콘 및 즐겨찾기 아이콘 포맷 등 추가 -->
+<title>YBM AI 디지털교과서 홍보관</title>
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="../asset/font/pretendard-subset.css" />
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- jquery -->
+<script src="../asset/js/jquery-3.4.1.min.js"></script>
+<script src="../asset/js/jquery-confirm.min.js"></script>
+
+<!-- gsap -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="../asset/js/ScrollSmoother.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="../asset/css/common.css">
+<link rel="stylesheet" href="../asset/css/style.css">
+<link rel="stylesheet" href="../asset/css/mobs.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- common header -->
+  <!-- header -->
+  <header class="header black" id="header">
+    <div class="inner h_inner">
+      <div class="h_logo"  data-aos="fade-in"> <a href="/" class="link"> <img src="../asset/img/Logo_ybm.svg"  alt="YBM와이비엠" /></a> </div>
+      <div class="menu_icon" onclick="menu_toggle();"> <span class="menu_linebox"> <span class="menu_line line_1"></span> <span class="menu_line line_2"></span> <span class="menu_line line_3"></span> </span> </div>
+      <nav>
+        <ul class="depth1">
+          <li><a href="#" class="link">AI 디지털교과서 시작하기</a></li>
+          <li class="s1"> <a href="#" class="link">초등학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">영어 3~4학년군 (김혜리)</a></li>
+              <li><a href="#" class="link">영어 3~4학년군 (최희경)</a></li>
+              <li><a href="#" class="link">수학 3~4학년군 (류희찬)</a></li>
+            </ul>
+          </li>
+          <li class="s2"> <a href="#" class="link">중학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">영어 1 (김은형)</a></li>
+              <li><a href="#" class="link">영어 1 (박준언)</a></li>
+            </ul>
+          </li>
+          <li class="s3"> <a href="#" class="link">고등학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">공통영어 1/2 (김은형)</a></li>
+              <li><a href="#" class="link">공통영어 1/2 (박준언)</a></li>
+              <li><a href="#" class="link">공통수학 1/2 (류희찬)</a></li>
+            </ul>
+          </li>
+          <li class="ycloud"> <a href="https://www.ybmcloud.com/home.html" target="_blank" class="link "><img src="../asset/img/cloud.svg" alt=""/></a> </li>
+        </ul>
+        <div class="event"><a href="https://www.ybmcloud.com/cscenter/event?siteType=E" class="link blank" target="_blank">이벤트</a></div>
+        <div class="gnb_bg"></div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- sub section
+	초등 sb_container_1
+	중등 sb_container_2
+	고등 sb_container_3 -->
+  <div class="container sb_container_0">
+    <section class="sbmain_ai">
+      <div class="inner">
+        <div class="headline">
+          <h1 data-aos="fade-up" data-aos-delay="50" data-aos-easing="ease-in-out">AI 디지털교과서 시작하기</h1>
+          <h2 data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-in-out">반 구성부터 수업안 설계까지, 저자와 함께 배우는 디지털 교과서 활용법!<br>서책과 AI 디지털교과서를 함께 활용하여더욱 효과적인 수업을 만들어 보세요.</h2>
+          <!-- <div class="launch"><a href="#">Get Started</a></div> -->
+          <div class="obj" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-in-out"><img src="../asset/img/sbmain/object_ai_top.png" alt=""></div>
+        </div>
+        <div class="movie_wrap" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out">
+          <div class="tab_wrap">
+            <ul class="tab_list">
+              <li class="tab_nav on type_link">
+                <a href="./s0_submain.html" class="tab_btn">AI 디지털교과서 활용법</a>
+              </li>
+              <li class="tab_nav type_link">
+                <a href="./s0_submain_board.html" class="tab_btn">자료실</a>
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <div class="item">
+              <h3>초등학교</h3>
+              <ul>
+                <li><a href="#" class="tab active" data-target="content1-1">영어 3~4학년군 (김혜리)</a></li>
+                <li><a href="#" class="tab" data-target="content1-2">영어 3~4학년군 (최희경)</a></li>
+                <li><a href="#" class="tab" data-target="content1-3">수학 3~4학년군 (류희찬)</a></li>
+              </ul>
+            </div>
+            <div class="item">
+              <h3>중학교</h3>
+              <ul>
+                <li><a href="#" class="tab" data-target="content2-1">영어 1 (김은형)</a></li>
+              <li><a href="#" class="tab" data-target="content2-2">영어 1 (박준언)</a></li>
+              </ul>
+            </div>
+            <div class="item">
+              <h3>고등학교</h3>
+              <ul>
+                <li><a href="#" class="tab" data-target="content3-1">공통영어 1/2 (김은형)</a></li>
+              <li><a href="#" class="tab" data-target="content3-2">공통영어 1/2 (박준언)</a></li>
+              <li><a href="#" class="tab" data-target="content3-3">공통수학 1/2 (류희찬)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="content active" id="content1-1">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>초등학교</li>
+                  <li>영어 3~4학년군 (김혜리)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video1-1" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title">
+                <div><span>영어 3~4학년군(김혜리)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video1-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_Kim_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_Kim_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_Kim_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_Kim_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">2222모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_com_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_com_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">2222모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_com_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_com_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">2222모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="content1-2">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>초등학교</li>
+                  <li>영어 3~4학년군 (최희경)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video1-2" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title">
+                <div><span>영어 3~4학년군 (최희경)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video1-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_choi_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_choi_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_choi_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_choi_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_com_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_com_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Eng_com_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Eng_com_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="content1-3">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>초등학교</li>
+                  <li>수학 3~4학년군 (류희찬)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video1-3" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title">
+                <div><span>수학 3~4학년군 (류희찬)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video1-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Math_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Math_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Math_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Math_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Math_3.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Math_3.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Math_4.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Math_4.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Math_5.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Math_5.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video1-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Ele_Math_6.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Ele_Math_6.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="content2-1">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>중학교</li>
+                  <li>영어 1 (김은형)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video2-1" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title">
+                <div><span>영어 1 (김은형)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_Eng_park_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_Eng_park_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_Eng_park_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_Eng_park_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="content2-2">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>중학교</li>
+                  <li>영어 1 (박준언)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video2-2" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title">
+                <div><span>영어 1 (박준언)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video2-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_Eng_kim_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_Eng_kim_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_Eng_kim_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_Eng_kim_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="content3-1">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>고등학교</li>
+                  <li>공통영어 1/2 (김은형)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video3-1" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title align-center">
+                <div><span>공통영어 1/2 (김은형)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video3-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Eng_Kim_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Eng_Kim_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Eng_Kim_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Eng_Kim_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="content3-2">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>고등학교</li>
+                  <li>공통영어 1/2 (박준언)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video3-2" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title align-center">
+                <div><span>공통영어 1/2 (박준언)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video3-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Eng_park_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Eng_park_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item active" data-video="video3-2" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Eng_park_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Eng_park_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video2-1" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/Mid_High_Eng_com_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/Mid_High_Eng_com_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="content3-3">
+            <div class="video_container">
+              <nav class="hierarchy">
+                <ol>
+                  <li>고등학교</li>
+                  <li>공통수학 1/2 (류희찬)</li>
+                </ol>
+              </nav>
+              <div class="movie"><video id="video3-3" controls width="500"></video></div>
+              <div class="overview">
+                <h3 class="title">모델(거꾸로 수업 모델)</h3>
+                <div class="script">거꾸로 교실(flipped classroom)이라는 새로운 수업방식을 학교교육에 도입한 사회적 실험이 2014년 “21세기 교육혁명-미래교실을 찾아서”라는 타이틀로 KBS 파노라마를 통해 방영되면서 최근 교육계 안팎에서 그 반응이 뜨겁다.1)  여기에 대해서도 해석이 분분하지만 거꾸로 교실이 그동안 다양한 차원에서 제기되어 온 한국사회의 교육위기를 돌파할 가능성을 제시하였다는 점에서 주목을 받고 있는 듯하다 </div>
+              </div>
+            </div>
+            <div class="video_list_container">
+              <div class="title">
+                <div><span>공통수학 1/2 (류희찬)</span>의 강의</div>
+                <div class="current">(<strong>2</strong>/4)</div>
+              </div>
+              <div class="video_list">
+                <div class="item active" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_1.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_1.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_2.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_2.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_3.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_3.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_4.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_4.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_5.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_5.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_6.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_6.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_7.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_7.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+                <div class="item" data-video="video3-3" data-src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/2025_UPDATE/High_Math_8.mp4">
+                  <div class="thumbs">
+                    <div class="inner"><img src="../asset/img/sbmain/High_Math_8.jpg" alt=""></div>
+                  </div>
+                  <div class="subject">모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)모델(거꾸로 수업 모델)</div>
+                  <div class="info">
+                    <p>장이정 선생님</p>
+                    <p>서울장충초등학교</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="csinfo">
+        <div class="inner">
+          <div class="item ai-info" data-aos="fade-up" data-aos-delay="50" data-aos-easing="ease-in-out">
+            <div>
+              <strong>AI디지털교과서 공통 CS센터에서</strong>
+              <span>궁금하신 사항을 안내 드립니다</span>
+            </div>
+            <ul>
+              <li>사용법 관련 문의</li>
+              <li>내용·기능 관련 문의</li>
+              <li>콘텐츠 관련 문의</li>
+            </ul>
+          </div>
+          <div class="item tt-info" data-aos="fade-up" data-aos-delay="250" data-aos-easing="ease-in-out">
+            <div>
+              <strong>1661-0777</strong>
+              <span>운영시간: 평일 09:00~18:00(주말 및 공휴일 휴무)</span>
+            </div>
+            <a href="#" class="btn">1:1 문의</a>
+            <div class="obj_floating"><img src="../asset/img/sbmain/bg_shape_3.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- common footer -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="inner">
+      <div class="f_cont">
+        <div class="ybmbox"> <img src="../asset/img/Logo_ybm_s.svg" alt="" class="f_logo"/> <a href="https://www.ybm.co.kr/ybm_company/" class="link" target="_blank">회사소개</a><a href="https://member.ybmnet.co.kr/join/terms/ybmexam_agree.html" class="link" target="_blank">이용약관</a><a href="https://www.ybmbooks.com/policy/privacy_policy.html" class="link" target="_blank">개인정보처리방침</a> </div>
+        <div class="txtbox">
+          <p class="txt"> 사업자등록번호 101-81-14655  대표이사 허문호, 정용환 서울시 종로구 종로 104 ㈜와이비엠 </p>
+          <p class="txt">고객센터: 02-2000-0599 FAX 02-2000-0426 E-mail ycloud@ybm.co.kr</p>
+          <p class="txt"> Copyright ⓒ (주)와이비엠. All rights reserved. </p>
+        </div>
+      </div>
+      <div class="f_family">
+        <button type="button" class="btn_family">패밀리사이트</button>
+        <div class="family_list"><a href="https://school.ybmsmartschool.com/" class="link" target="_blank">YBM스마트스쿨</a> <a href="https://www.ybmbooksam.com/html/main/index" class="link" target="_blank">YBM북샘</a> <a href="https://www.ybmteachers.com/" class="link" target="_blank">YBM교원연수원</a><a href="https://www.ybmcloud.com/home.html" class="link" target="_blank">Y클라우드</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- JS -->
+<script src="../asset/js/common.js"></script>
+<script>
+const offset = 78; // GNB 높이 조정 값
+
+function adjustVideoListHeight() {
+  if (window.innerWidth > 767) {
+    document.querySelectorAll('.content.active').forEach(content => {
+        const videoContainer = content.querySelector('.video_container');
+        const videoList = content.querySelector('.video_list');
+        if (videoContainer && videoList) {
+            videoList.style.maxHeight = videoContainer.offsetHeight + 'px';
+        }
+    });
+  }
+  else {
+      // 모바일에서는 maxHeight 제거
+      document.querySelectorAll('.video_list').forEach(videoList => {
+          videoList.style.maxHeight = ''; // 초기화
+      });
+  }
+}
+
+// ✅ 현재 재생 중인 비디오 정보 업데이트 함수
+function updateCurrentVideoInfo(content) {
+    const videoList = content.querySelectorAll('.video_list .item');
+    const activeItem = content.querySelector('.video_list .item.active');
+    const currentInfo = content.querySelector('.current'); // 표시할 요소
+
+    if (videoList.length > 0 && currentInfo) {
+        const currentIndex = activeItem ? [...videoList].indexOf(activeItem) + 1 : 1; // 현재 재생 중인 아이템 번호 (1부터 시작)
+        const totalItems = videoList.length; // 전체 목록 개수
+
+        // 현재 번호를 <strong> 태그로 감싸서 업데이트
+        currentInfo.innerHTML = `(<strong>${currentIndex}</strong>/${totalItems})`;
+    }
+}
+
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.content').forEach(c => {
+            c.classList.remove('active');
+            c.querySelectorAll('video').forEach(v => v.pause());
+        });
+        this.classList.add('active');
+        const targetContent = document.getElementById(this.dataset.target);
+        targetContent.classList.add('active');
+
+        const targetPosition = targetContent.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+
+        // 첫 번째 영상 자동 설정
+        const firstVideoItem = targetContent.querySelector('.video_list .item');
+        if (firstVideoItem) {
+            let videoElement = targetContent.querySelector('video');
+            videoElement.src = firstVideoItem.dataset.src;
+            videoElement.play();
+        }
+        // .tab 클릭 후 높이 다시 계산 & current 업데이트
+        setTimeout(() => {
+          adjustVideoListHeight();
+          updateCurrentVideoInfo(targetContent);
+        }, 50);
+    });
+});
+
+document.querySelectorAll('.video_list .item').forEach(item => {
+    item.addEventListener('click', function() {
+        let videoElement = document.getElementById(this.dataset.video);
+        videoElement.src = this.dataset.src;
+        videoElement.play();
+        this.parentElement.querySelectorAll('.item').forEach(div => div.classList.remove('active'));
+        this.classList.add('active');
+
+        if (window.innerWidth <= 767) {
+            const content = this.closest('.content');
+            if (content) {
+                const contentPosition = content.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top: contentPosition, behavior: 'smooth' });
+            }
+        }
+        // .current 정보 업데이트
+        updateCurrentVideoInfo(this.closest('.content'));
+    });
+});
+
+// 페이지 로드 시 첫 번째 탭의 첫 번째 영상 자동 재생
+document.addEventListener('DOMContentLoaded', function() {
+    adjustVideoListHeight();
+    const firstTabContent = document.querySelector('.content.active');
+    if (firstTabContent) {
+        const firstVideoItem = firstTabContent.querySelector('.video_list .item');
+        if (firstVideoItem) {
+            let videoElement = firstTabContent.querySelector('video');
+            videoElement.src = firstVideoItem.dataset.src;
+            videoElement.muted = true; // 페이지 로드 시 자동 재생은 음소거 상태일 때만 허용하므로 이 설정을 추가함
+            videoElement.play();
+            firstVideoItem.classList.add('active');
+        }
+        // .current 정보 업데이트
+        updateCurrentVideoInfo(firstTabContent);
+    }
+});
+
+window.addEventListener('resize', adjustVideoListHeight);
+</script>
+
+</body>
+</html>

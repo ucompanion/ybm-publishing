@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="all">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<!-- 파비콘 및 즐겨찾기 아이콘 포맷 등 추가 -->
+<link rel="apple-touch-icon" sizes="57x57" href="../asset/favicon/E/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../asset/favicon/E/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../asset/favicon/E/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../asset/favicon/E/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../asset/favicon/E/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../asset/favicon/E/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../asset/favicon/E/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../asset/favicon/E/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../asset/favicon/E/apple-icon-180x180.png">
+<link rel="apple-touch-icon-precomposed" href="../asset/favicon/E/apple-icon-precomposed.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../asset/favicon/E/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../asset/favicon/E/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../asset/favicon/E/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../asset/favicon/E/favicon-16x16.png">
+<link rel="manifest" href="../asset/favicon/E/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../asset/favicon/E/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- //파비콘 및 즐겨찾기 아이콘 포맷 등 추가 -->
+<title>YBM AI 디지털교과서 홍보관</title>
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="../asset/font/pretendard-subset.css" />
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- jquery -->
+<script src="../asset/js/jquery-3.4.1.min.js"></script>
+<script src="../asset/js/jquery-confirm.min.js"></script>
+
+<!-- gsap -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="../asset/js/ScrollSmoother.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="../asset/css/common.css">
+<link rel="stylesheet" href="../asset/css/style.css">
+<link rel="stylesheet" href="../asset/css/mobs.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- common header -->
+  <!-- header -->
+  <header class="header white hide" id="header">
+    <div class="inner h_inner">
+      <div class="h_logo"  data-aos="fade-in"> <a href="/" class="link"> <img src="../asset/img/Logo_ybm.svg"  alt="YBM와이비엠" /></a> </div>
+      <div class="menu_icon" onclick="menu_toggle();"> <span class="menu_linebox"> <span class="menu_line line_1"></span> <span class="menu_line line_2"></span> <span class="menu_line line_3"></span> </span> </div>
+      <nav>
+        <ul class="depth1">
+          <li><a href="#" class="link">AI 디지털교과서 시작하기</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">수업 모델 및 활용 영상 보기</a></li>
+            </ul>
+          </li>
+          <li class="s1"> <a href="#" class="link">초등학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">영어 3~4학년군 (김혜리)</a></li>
+              <li><a href="#" class="link">영어 3~4학년군 (최희경)</a></li>
+              <li><a href="#" class="link">수학 3~4학년군 (류희찬)</a></li>
+            </ul>
+          </li>
+          <li class="s2"> <a href="#" class="link">중학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">영어 1 (김은형)</a></li>
+              <li><a href="#" class="link">영어 1 (박준언)</a></li>
+            </ul>
+          </li>
+          <li class="s3"> <a href="#" class="link">고등학교</a>
+            <ul class="depth2">
+              <li><a href="#" class="link">공통영어 1/2 (김은형)</a></li>
+              <li><a href="#" class="link">공통영어 1/2 (박준언)</a></li>
+              <li><a href="#" class="link">공통수학 1/2 (류희찬)</a></li>
+            </ul>
+          </li>
+          <li class="ycloud"> <a href="https://www.ybmcloud.com/home.html" target="_blank" class="link "><img src="../asset/img/cloud.svg" alt=""/></a> </li>
+        </ul>
+        <div class="event"><a href="https://www.ybmcloud.com/cscenter/event?siteType=E" class="link blank" target="_blank">이벤트</a></div>
+        <div class="gnb_bg"></div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main section -->
+  <div class="container main_page">
+    <section id="ms1_pin" class="main_section ms1">
+      <div class="init">
+        <div class="ms1_txt_g">
+          <!--<div class="ms1_copywrap">
+            <p>교과서의 새로운 내일</p>
+          </div>-->
+        </div>
+        <div class="load_tool">
+          <div class="scroll"><span class="blind">스크롤</span></div>
+          <!-- <div class="event"><a href="https://www.ybmcloud.com/cscenter/event?siteType=E" class="link blank" target="_blank">EVENT</a></div> -->
+        </div>
+      </div>
+      <div class="inner pin_wrap">
+        <div class="ms1_txt_g">
+          <div class="ms1_copywrap">
+            <p>교과서의 새로운 내일</p>
+          </div>
+          <div class="ms1_txtwrap">
+            <p class="fixed_txtbox"> <span class="word kr"><img src="../asset/img/main/logo_kr.svg" alt=""/></span> <span class="word  blank"></span> <span class="word circle">AI</span> <span class="word  blank"></span> <span class="word">디</span> <span class="word">지</span><span class="word">털</span> <span class="word">교</span> <span class="word">과</span> <span class="word">서</span> </p>
+            <p class="ani_txtbox"> <span class="typing typing_effect"
+                                data-text="기초학습 보장을 돕는 느린 학습자 집중 케어,재미있게 학습하는 활동 콘텐츠 중심 설계,모든 교사의 꿈 수준별 학습 구현, 학습 수준 분석을 넘어  학습 태도와 참여도까지 분석하는 AI,종이학습지 만드는 것처럼 쉽게 도움 없이 바로쓰는 UI/UX"></span> </p>
+          </div>
+        </div>
+        <div class="ms1_vidwrap" >
+          <div class="ms1_vidbox">
+            <video class="ms1_video" loop="loop" muted="muted" autoplay="autoplay" playsinline>
+              <source src="../asset/img/main/main_kv.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="scroll"><span class="blind">스크롤</span></div>
+        <!-- <div class="event"><a href="https://www.ybmcloud.com/cscenter/event?siteType=E" class="link blank" target="_blank">EVENT</a></div> -->
+        <!-- 2025-05-22 banner_02 추가 -->
+        <div class="banner_02">
+          <div class="banner_link">
+            <img src="../asset/img/main/main_banner_02.png" alt="2025 K-디지털 브랜드 AI 디지털교과서 부문 대상 수상" />
+          </div>
+        </div>
+
+        <div class="banner">
+          <div class="ai-book">
+            <div>
+              <span>AI 디지털교과서 공동 CS센터</span>
+              <strong>1661-0777</strong>
+              <p>사용법, 내용·기능, 콘텐츠 관련 문의</p>
+            </div>
+            <a href="#">1:1 문의</a>
+          </div>
+          <span>※ 운영시간 : 평일 09~18시 (주말 및 공휴일 휴무)</span>
+        </div>
+      </div>
+    </section>
+    <section class="main_section ms2" id="ms2_pin">
+      <div class="inner ms2_contbox">
+        <div class="ms_head"  >
+          <h2>
+            <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">2022 개정 교육과정을 반영한 </p>
+            <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">YBM AI 디지털교과서를 만나보세요!</p>
+          </h2>
+
+
+
+        </div>
+        <div class="ms_card_g">
+          <ul>
+            <li class="school_1" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" >
+              <h3>초등학교</h3>
+              <div class="book_g">
+                <dl>
+                  <dt>
+                    <div class="book_2"><img src="../asset/img/s1_e3_02.png" alt="영어 3"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">영어 3~4학년군</strong> <strong class="writer">(김혜리)</strong></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <div class="book_2"><img src="../asset/img/s1_e3_01.png" alt="영어 3"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">영어 3~4학년군</strong> <strong class="writer">(최희경)</strong></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <div class="book_4"><img src="../asset/img/s1_m3-1.png" alt="수학 3"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">수학 3~4학년군</strong> <strong class="writer">(류희찬)</strong></p>
+                  </dd>
+                </dl>
+              </div>
+              <button type="button" class="btn_moreview">자세히 보기</button>
+              <!-- <div class="badge"><p>최종합격</p></div>-->
+            </li>
+            <li class="school_2"  data-aos="fade-up" data-aos-delay="450" data-aos-duration="1000" >
+              <h3>중학교</h3>
+              <div class="book_g">
+                <dl>
+                  <dt>
+                    <div class="book_1"><img src="../asset/img/s2_e1_01.png" alt="영어 1"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">영어 1</strong> <strong class="writer">(박준언)</strong></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <div class="book_1"><img src="../asset/img/s2_e1_02.png" alt="영어 1"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">영어 1</strong> <strong class="writer">(김은형)</strong></p>
+                  </dd>
+                </dl>
+              </div>
+              <button type="button" class="btn_moreview">자세히 보기</button>
+              <!--<div class="badge"><p>최종합격</p></div>-->
+            </li>
+            <li class="school_3"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" >
+              <h3>고등학교</h3>
+              <div class="book_g">
+                <dl>
+                  <dt>
+                    <div class="book_2"><img src="../asset/img/s3_e1_01.png" alt="공통영어 1"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">공통영어 1/2</strong> <strong class="writer">(박준언)</strong></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <div class="book_2"><img src="../asset/img/s3_e1_02.png" alt="공통영어 1"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">공통영어 1/2</strong> <strong class="writer">(김은형)</strong></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <div class="book_2"><img src="../asset/img/s3_m1.png" alt="공통수학 1"/></div>
+                  </dt>
+                  <dd>
+                    <p><strong class="class">공통수학 1/2</strong> <strong class="writer">(류희찬)</strong></p>
+                  </dd>
+                </dl>
+              </div>
+              <button type="button" class="btn_moreview">자세히 보기</button>
+              <!--<div class="badge"><p>최종합격</p></div>-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main_section ms3">
+      <div id="ms3_pin" class="inner ms3_pin">
+        <div class="ms_head" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+          <h2>YBM의 60년 교육 노하우를 담았습니다</h2>
+        </div>
+        <div class="pin_wrap">
+          <div class="ms_list_g">
+            <div class="list_item list_item1 open" >
+              <div class="item_inner">
+                <div class="item_head">
+                  <div class="item_number">1</div>
+                  <h3 class="item_title">기초 학습 보장을 돕는 느린 학습자 집중케어</h3>
+                </div>
+                <div class="item_detail">
+                  <div class="desc">한 명의 학생도 소외되지 않는 학습 환경을 조성하며, 기초부터 탄탄히 다질 수 있어 모든 학생이 ‘배움의 즐거움’을 느낄 수 있습니다. </div>
+                </div>
+                <div class="item_visual"> <img src="../asset/img/main/special01.png" alt=""> </div>
+              </div>
+              <div class="item_label">
+                <div class="item_head">
+                  <div class="item_number">1</div>
+                  <h3 class="item_title">느린 학습자 집중 케어</h3>
+                </div>
+              </div>
+            </div>
+            <div class="list_item list_item2" >
+              <div class="item_inner">
+                <div class="item_head">
+                  <div class="item_number">2</div>
+                  <h3 class="item_title">재미있게 학습하는 활동 콘텐츠 중심 설계</h3>
+                </div>
+                <div class="item_detail">
+                  <div class="desc">학생들이 즐겁게 학습하며 성취감을 느낄 수 있는 활동 콘텐츠가 가득한 교과서! 학생들의 자발적인 참여를 이끌어 낼 수 있습니다. </div>
+                </div>
+                <div class="item_visual"> <img src="../asset/img/main/special02.png" alt=""> </div>
+              </div>
+              <div class="item_label">
+                <div class="item_head">
+                  <div class="item_number">2</div>
+                  <h3 class="item_title">활동 중심 재미있는 콘텐츠</h3>
+                </div>
+              </div>
+            </div>
+            <div class="list_item list_item3" >
+              <div class="item_inner">
+                <div class="item_head">
+                  <div class="item_number">3</div>
+                  <h3 class="item_title">모든 교사의 꿈, 수준별 학습 구현 </h3>
+                </div>
+                <div class="item_detail">
+                  <div class="desc">AI가 제공하는 맞춤형 학습 콘텐츠로 교사는 수준별 학습을 쉽게 실현하고, 학생은 자신에게 맞는 학습 콘텐츠로 성취감을 높일 수 있습니다. </div>
+                </div>
+                <div class="item_visual"> <img src="../asset/img/main/special03.png" alt=""> </div>
+              </div>
+              <div class="item_label">
+                <div class="item_head">
+                  <div class="item_number">3</div>
+                  <h3 class="item_title">수준별 맞춤 학습</h3>
+                </div>
+              </div>
+            </div>
+            <div class="list_item list_item4" >
+              <div class="item_inner">
+                <div class="item_head">
+                  <div class="item_number">4</div>
+                  <h3 class="item_title">학습 태도와 참여도까지 분석하는 AI</h3>
+                </div>
+                <div class="item_detail">
+                  <div class="desc">학습 태도와 참여도를 분석하여 교사에게는 깊이 있는 피드백을, 학생에게는 학습 습관 개선과 성장을 위한 기회를 제공합니다.</div>
+                </div>
+                <div class="item_visual"> <img src="../asset/img/main/special04.png" alt=""> </div>
+              </div>
+              <div class="item_label">
+                <div class="item_head">
+                  <div class="item_number">4</div>
+                  <h3 class="item_title">학습 태도 분석 AI</h3>
+                </div>
+              </div>
+            </div>
+            <div class="list_item list_item5" >
+              <div class="item_inner">
+                <div class="item_head">
+                  <div class="item_number">5</div>
+                  <h3 class="item_title">종이 학습지처럼 쉽게 사용할 수 있는 UI/UX</h3>
+                </div>
+                <div class="item_detail">
+                  <div class="desc">수업 자료를 만드는 데 걸리는 시간과 노력을 아껴주어 선생님들이 수업 준비에 집중하실 수 있도록 도와드립니다.</div>
+                </div>
+                <div class="item_visual"><img src="../asset/img/main/special05.png" alt=""></div>
+              </div>
+              <div class="item_label">
+                <div class="item_head">
+                  <div class="item_number">5</div>
+                  <h3 class="item_title">직관적인 학습지형 UI/UX</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pop_wrap">
+          <div class="pop_inner">
+            <div class="pop_head">
+              <h2>YBM AI 디지털교과서와 함께 학습의 새로운 가능성을 열어보세요!</h2>
+              <button type="button" class="btn_on" onClick="mv_open();"><span class="blind">창열기</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main_section ms4">
+      <div  id="ms4_pin" class="inner ms4_contbox">
+        <div class="ms_head" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+          <h2>YBM AI 디지털교과서로 어떤 수업을?</h2>
+        </div>
+        <div class="ms_list_g">
+          <div class="list_item" data-aos="fade-up"  data-aos-duration="1000">
+            <dl class="item_detail_1" >
+              <dt>
+                <div class="item_number">1</div>
+                <div class="item_title">학생의 성취 수준과 학습 현황을</div>
+              </dt>
+              <dd>
+                <div class="desc">학습진단 및 분석</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="list_item" data-aos="fade-up"  data-aos-duration="1000">
+            <dl class="item_detail_2" >
+              <dt>
+                <div class="item_number">2</div>
+                <div class="item_title">진단결과를 바탕으로 학생에게</div>
+              </dt>
+              <dd>
+                <div class="desc">맞춤형 콘텐츠 제공</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="list_item" data-aos="fade-up"  data-aos-duration="1000">
+            <dl class="item_detail_3">
+              <dt>
+                <div class="item_number">3</div>
+                <div class="item_title">필요한 정보를 시각적으로 분석한</div>
+              </dt>
+              <dd>
+                <div class="desc">대시보드</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="list_item" data-aos="fade-up"  data-aos-duration="1000">
+            <dl class="item_detail_4">
+              <dt>
+                <div class="item_number">4</div>
+                <div class="item_title">학생에게 힌트나 안내 등의 도움을 제공하는</div>
+              </dt>
+              <dd>
+                <div class="desc">AI 튜터</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="list_item" data-aos="fade-up"  data-aos-duration="1000">
+            <dl class="item_detail_5">
+              <dt>
+                <div class="item_number">5</div>
+                <div class="item_title">교사에게 수업 설계, 평가, 모니터링 등의 도움을 주는</div>
+              </dt>
+              <dd>
+                <div class="desc">AI 보조교사</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="list_item" data-aos="fade-up"  data-aos-duration="1000">
+            <dl class="item_detail_6">
+              <dt>
+                <div class="item_number">6</div>
+                <div class="item_title">교사가 콘텐츠를 재구성하고 관리할 수 있는</div>
+              </dt>
+              <dd>
+                <div class="desc">수업 재구성 기능</div>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="ms4_vidwrap">
+        <div class="msbg_vidbox">
+          <video class="msbg_video" loop="loop" muted="muted" autoplay="autoplay" playsinline>
+            <source src="../asset/img/main/main_cntbg01.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="main_section ms5">
+      <div id="ms5_pin" class="inner ms5_contbox">
+        <div class="ms_head" data-aos="fade-up"  data-aos-duration="1000">
+          <h2>YBM AI 디지털교과서로 수업을 어떻게?</h2>
+        </div>
+        <div class="ms_card_g" data-aos="fade-up"  data-aos-duration="1000">
+			<!-- (D)1130 거꾸로모델 추가 동영상 버튼 추가 -->
+          <ul>
+            <li class="m1" >
+              <button type="button" class="btn_v" onClick="card01();">상황(자료) 제시 중심 모델</button>
+            </li>
+            <li class="m2">
+              <button type="button" class="btn_v" onClick="card02();">평가 중심 모델</button>
+			  <button type="button" class="btn_p" onClick="card02_1();"><span class="blind">동영상-평가 중심 모델</span></button>
+            </li>
+            <li class="m3" >
+              <button type="button" class="btn_v" onClick="card03();">개별 탐구 중심 모델</button>
+            </li>
+            <li class="m4">
+              <button type="button" class="btn_v" onClick="card04();">협력 학습 중심 모델</button>
+            </li>
+            <li class="m5">
+              <button type="button" class="btn_v" onClick="card05();">느린 학습자 관리 모델</button>
+			  <button type="button" class="btn_p" onClick="card05_1();"><span class="blind">동영상-느린 학습자 관리 모델</span></button>
+            </li>
+            <li class="m6">
+              <button type="button" class="btn_v" onClick="card06();">예습 모델</button>
+            </li>
+            <li class="m7">
+              <button type="button" class="btn_v" onClick="card07();">모니터링 활용 수업 모델</button>
+            </li>
+			<li class="m11">
+              <button type="button" class="btn_v" onClick="card11();">거꾸로 수업 모델</button>
+			  <button type="button" class="btn_p" onClick="card11_1();"><span class="blind">동영상-거꾸로 수업 모델</span></button>
+            </li>
+
+            <li class="m8">
+              <button type="button" class="btn_v" onClick="card08();">프로젝트형 모델</button>
+            </li>
+            <li class="m9" >
+              <button type="button" class="btn_v" onClick="card09();">놀이 활동 중심 모델</button>
+			  <button type="button" class="btn_p" onClick="card09_1();"><span class="blind">동영상-놀이 활동 중심 모델</span></button>
+            </li>
+            <li class="m10">
+              <button type="button" class="btn_v" onClick="card10();">교구 활용 모델</button>
+			  <button type="button" class="btn_p" onClick="card10_1();"><span class="blind">동영상-교구 활용 모델</span></button>
+            </li>
+          </ul>
+          <div class="character"><img src="../asset/img/main/character.png" alt=""/></div>
+        </div>
+      </div>
+      <div class="ms5_vidwrap">
+        <div class="msbg_vidbox">
+          <video class="msbg_video" loop="loop" muted="muted" autoplay="autoplay" playsinline >
+            <source src="../asset/img/main/main_cntbg02.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="main_section ms6">
+      <div class="inner ms6_contbox">
+        <div class="ms_head" data-aos="fade-up"  data-aos-duration="1000">
+          <h2>YBM과 선생님이 더욱 가까워지는 AI 디지털교과서</h2>
+        </div>
+        <div class="gellery_w" data-aos="fade-up"  data-aos-duration="1000">
+          <div class="interview_g swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="card_head">
+                  <p class="dec">YBM AI 디지털교과서 미리보기!</p>
+                  <h3>초등학교 영어 3~4학년군</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/thum_interview01.jpg"  alt=""/>
+                    <button type="button" class="btn_play" onClick="interview_mv1();"><span class="blind">영상보기</span></button>
+                  </div>
+                  <div class="desc">영어와의 첫 만남! YBM 초등 영어 AI 디지털교과서에는 재미있게 즐기는 활동들이 가득합니다. 영어 학습의 즐거움을 AI 디지털교과서에서 경험해 보세요.</div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card_head">
+                  <p class="dec">YBM AI 디지털교과서 미리보기!</p>
+                  <h3>초등학교 수학 3~4학년군</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/thum_interview02.jpg"  alt=""/>
+                    <button type="button" class="btn_play" onClick="interview_mv2();"><span class="blind">영상보기</span></button>
+                  </div>
+                  <div class="desc">학생 맞춤형 교육을 위한 YBM 초등 수학 AI 디지털교과서 100% 활용법, 지금 바로 알아볼까요?</div>
+                </div>
+              </li>
+				<li class="swiper-slide">
+                <div class="card_head">
+                  <p class="dec">YBM AI 디지털교과서 미리보기!</p>
+                  <h3>고등학교 공통수학1/2</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/thum_interview03.jpg"  alt=""/>
+                    <button type="button" class="btn_play" onClick="interview_mv3();"><span class="blind">영상보기</span></button>
+                  </div>
+                  <div class="desc">고등학생을 위한 AI 디지털교과서는 어떤 모습일까요? 수준별 맞춤형 학습을 위한 YBM 고등 공통수학 AI 디지털교과서를 미리 만나보세요.</div>
+                </div>
+              </li>
+				<li class="swiper-slide">
+                <div class="card_head">
+                  <p class="dec">YBM AI 디지털교과서 미리보기!</p>
+                  <h3>중학교 영어1</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/thum_interview04.jpg"  alt=""/>
+                    <button type="button" class="btn_play" onClick="interview_mv4();"><span class="blind">영상보기</span></button>
+                  </div>
+                  <div class="desc">교실에서 즐기는 활동 콘텐츠가 가득한 중학교 영어 AI 디지털교과서를 미리 만나보세요.</div>
+                </div>
+              </li>
+				<li class="swiper-slide">
+                <div class="card_head">
+                  <p class="dec">YBM AI 디지털교과서 미리보기!</p>
+                  <h3>고등학교 공통영어1/2</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/thum_interview05.jpg"  alt=""/>
+                    <button type="button" class="btn_play" onClick="interview_mv5();"><span class="blind">영상보기</span></button>
+                  </div>
+                  <div class="desc">개별 학습 수준에 맞춘 풍부한 학습 콘텐츠로 영어 실력을 체계적으로 발전시킬 수 있는 고등 영어 AI 디지털교과서! 지금 확인해 보세요.</div>
+                </div>
+              </li>
+            </ul>
+            <div class="toolbx">
+              <div class="prv_btn"></div>
+              <div class="next_btn"></div>
+            </div>
+          </div>
+          <div class="card_g">
+            <ul>
+              <li>
+                <div class="card_head">
+                  <p class="dec">YBM과 함께하는 미래교실 미리보기!</p>
+                  <h3>AI 미래교실 세미나</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/news01_img_00.jpg"  alt=""/></div>
+                  <div class="desc">YBM이 전국에 계신 선생님들을 찾아갑니다! 선생님들의 열정에 YBM의 AI 코스웨어를 더해, 미래 교실의 문을 활짝 열었습니다. AI 미래교실 세미나 현장을 함께 만나볼까요?</div>
+                </div>
+                <button type="button" class="btn_view" onClick="gallery01();"><span class="blind">상세보기</span></button>
+              </li>
+              <li>
+                <div class="card_head">
+                  <p class="dec">충남교육청 영어교육 나눔 한마당!</p>
+                  <h3>&lang;영어로 미래로&rang; 에서 만난 YBM </h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/news02_img_00.jpg"  alt=""/></div>
+                  <div class="desc">AI 코스웨어를 활용한 미래 교실은 어떤 모습일까요? AI가 선생님의 수업에 어떤 도움을 줄 수 있을지 의견을 나누었던 뜻깊은 시간, 지금 만나보세요!</div>
+                </div>
+                <button type="button" class="btn_view" onClick="gallery02();"><span class="blind">상세보기</span></button>
+              </li>
+              <li>
+                <div class="card_head">
+                  <p class="dec">샛별 에듀테크 페어에 찾아온 YBM</p>
+                  <h3>AI 코스웨어를 활용한 미래교실은?</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/news03_img_00.jpg"  alt=""/></div>
+                  <div class="desc">Y클라우드의 에듀테크 콘텐츠와 YBM의 AI 코스웨어를 활용한 효과적인 수업 방법, 그리고 숨겨진 활용 노하우까지! 샛별 에듀테크 페어 현장을 확인해보세요.</div>
+                </div>
+                <button type="button" class="btn_view" onClick="gallery03();"><span class="blind">상세보기</span></button>
+              </li>
+
+				 <li>
+                <div class="card_head">
+                  <p class="dec">미래교육을 선도하는 YBM</p>
+                  <h3>2024 에듀테크 코리아 페어</h3>
+                </div>
+                <div class="card_content">
+                  <div class="img"><img src="../asset/img/main/news04_img_00.jpg"  alt=""/></div>
+                  <div class="desc">에듀테크 코리아 페어 현장에서 선보인 YBM의 교육 혁신! 새로운 교과서와 최신 에듀테크 트렌드를 담은 강연, 선생님과 학생의 상호작용을 돕는 AI 코스웨어까지!미래 교육을 이끌어가는 YBM 부스를 사진으로 함께 살펴볼까요?</div>
+                </div>
+                <button type="button" class="btn_view" onClick="gallery04();"><span class="blind">상세보기</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- common footer -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="inner">
+      <div class="f_cont">
+        <div class="ybmbox"><img src="../asset/img/Logo_ybm_s.svg" alt="" class="f_logo"/> <a href="https://www.ybm.co.kr/ybm_company/" class="link" target="_blank">회사소개</a><a href="https://member.ybmnet.co.kr/join/terms/ybmexam_agree.html" class="link" target="_blank">이용약관</a><a href="https://www.ybmbooks.com/policy/privacy_policy.html" class="link" target="_blank">개인정보처리방침</a> </div>
+        <div class="txtbox">
+          <p class="txt"> 사업자등록번호 101-81-14655  대표이사 허문호, 정용환 서울시 종로구 종로 104 ㈜와이비엠 </p>
+          <p class="txt">고객센터: 02-2000-0599 FAX 02-2000-0426 E-mail ycloud@ybm.co.kr</p>
+          <p class="txt"> Copyright ⓒ (주)와이비엠. All rights reserved. </p>
+        </div>
+      </div>
+      <div class="f_family">
+        <button type="button" class="btn_family">패밀리사이트</button>
+        <div class="family_list"><a href="https://school.ybmsmartschool.com/" class="link" target="_blank">YBM스마트스쿨</a> <a href="https://www.ybmbooksam.com/html/main/index" class="link" target="_blank">YBM북샘</a> <a href="https://www.ybmteachers.com/" class="link" target="_blank">YBM교원연수원</a><a href="https://www.ybmcloud.com/home.html" class="link" target="_blank">Y클라우드</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- JS -->
+<script src="../asset/js/common.js"></script>
+<script src="../asset/js/main.js"></script>
+
+
+
+
+
+
+</body>
+</html>

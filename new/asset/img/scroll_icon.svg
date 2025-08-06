@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="50" viewBox="0 0 34 50">
+  <g id="scroll_icon" transform="translate(3.999 -15.881)">
+      <rect width="34" height="50" rx="16" stroke="none"/>
+      <rect x="1" y="1" width="32" height="48" rx="15" fill="none"/>
+    <rect width="6" height="12" rx="3" transform="translate(9.999 20.879)" fill="#979aa4"/>
+    <path id="1" d="M4.814,6.8,4.8,6.817l-.012-.042L0,1.988.583,0,4.814,4.232,9.047,0l.582,1.988L4.842,6.775l-.012.042Z" transform="translate(8.186 45.243)" fill="#989aa4"/>
+    <path id="2"  d="M3.408,5.4l-.015.015-.012-.042L0,1.988.582,0,3.408,2.826,6.235,0l.582,1.988L3.435,5.369l-.012.042Z" transform="translate(9.549 40.309)" fill="#979aa4" opacity="0.5"/>
+  </g>
+</svg>
