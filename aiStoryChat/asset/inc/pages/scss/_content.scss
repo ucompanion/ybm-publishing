@@ -261,7 +261,7 @@
         }
         .frm-chk {
             @include chk-base-18;
-            vertical-align: top;
+            display: flex;
         }
     }
 
