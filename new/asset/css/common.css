@@ -1,7 +1,7 @@
 @charset "utf-8"; @import url('../js/jquery-confirm.min.css'); :root {--darkmode: all 0.4s ease;--color_black: #333333;--color_white: #fff;--color_bg: #eee;--marquee_gap: 7.5rem;}
 * {margin: 0;padding: 0;outline: none;box-sizing: border-box;-webkit-tap-highlight-color: transparent;}
 body {margin: 0;padding: 0;transition: var(--darkmode);background-color: var(--color_white);}
-html {scroll-behavior: smooth;}
+html {scroll-behavior: smooth; --pc-header:78px; --mo-header:50px;}
 html, body {font: 400 16px/1.3 'Pretendard', sans-serif;color: #000000;width: 100%;position: relative;scroll-snap-type: y mandatory;min-width: 100vw;}
 ul, li {list-style: none;}
 a {text-decoration: none;color: inherit;-webkit-tap-highlight-color: transparent;}
@@ -10,7 +10,7 @@ button {font-family: inherit;border: none;background-color: transparent;outline:
 input, textarea, button, select {font-family: inherit;}
 html.hidden {overflow: hidden;}
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {display: none;}
-.wrap {width: 100%;position: relative;}
+.wrap {width: 100%;position: relative; overflow: hidden;}
 .pc {display: block;}
 .tablet {display: none !important;}
 .mobile {display: none !important;}
@@ -59,7 +59,7 @@ html.hidden {overflow: hidden;}
 .header nav .depth1 {position: relative;display: flex;height: 100%;align-items: center;justify-content: center;z-index: 10;gap: 0px;}
 .header nav .depth1 > li {position: relative;height: 100%;width: auto;}
 .header nav .depth1 li:not(:first-child) {position: relative;height: 100%;width: auto;}
-.header nav .depth1 > li > a {position: relative;display: flex;height: 100%;padding: 0 30px;align-items: center;justify-content: center;color: #000;font-weight: 700;transition: padding 0.5s;text-align: center;}
+.header nav .depth1 > li > a {position: relative;display: flex;height: 100%;padding: 0 30px;align-items: center;justify-content: center;color: #000;font-weight: 700;transition: padding 0.5s;text-align: center; word-break: keep-all;}
 .header.white nav .depth1 > li > a {color: #fff; word-break: keep-all;}
 .header.on nav .depth1 > li > a, .header.active nav .depth1 > li > a {color: #000;}
 .header nav .depth1 > li > a span {position: relative;}
@@ -82,9 +82,9 @@ html.hidden {overflow: hidden;}
 .header nav .gnb_bg {position: fixed;left: 50vw;bottom: 1px;width: 100vw;height: 0;background-color: #fff;transform: translate(-50%,100%);transition: all 0.2s;}
 .header.on nav .gnb_bg, .header.active nav .gnb_bg {height: 150px;box-shadow: rgba(149,157,165,0.07) 0px 8px 15px;}
 .header nav .depth1 > li.ycloud {display: flex;align-items: center;justify-content: center;width: auto;margin-left: 20px;}
-.header nav .depth1 > li.ycloud a {background: #3B3B3B;padding: 0 28px;height: 40px;border-radius: 100px;transition: .3s;}
+.header nav .depth1 > li.ycloud a {background: #3B3B3B;padding: 0 1.75rem;height: 40px;border-radius: 100px;transition: .3s;}
 .header nav .depth1 > li.ycloud a:before {display: none;}
-.header nav .depth1 > li.ycloud img {filter: grayscale(1) brightness(105);}
+.header nav .depth1 > li.ycloud img {filter: grayscale(1) brightness(105); height: 1.125rem; max-width: none;}
 .header nav .depth1 > li.ycloud a:hover {background: #F0F0F0;}
 .header nav .depth1 > li.ycloud a:hover img {filter: grayscale(0);}
 .header nav .event {display: none;position: absolute;right: 0;bottom: -100px;}

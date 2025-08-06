@@ -61,6 +61,7 @@
 	}
 }
  @media screen and (max-width: 1023px) {
+	 html {font-size: 12px !important;}
 	 .bookbox_g .img_g {width: 160px;}
 	 .bookbox_g .tit {white-space: normal;word-break: keep-all;}
 	 .sbmain_sec2 .object_4 {width: 140px;height: 140px;}
@@ -165,15 +166,16 @@
 	 .sb_sec1 .sb_header {max-width: 50%;}
 	 .sb_sec1 .sb_header hgroup h2 {font-size: 1.8rem;}
 	 .sb_sec1 .sb_header hgroup h3 {font-size: 3rem;}
-	 .sbmain_ai{ padding-top: 100px }
+	 .sbmain_ai > .inner { padding-top: calc(12rem - var(--pc-header)); }
 	 .sbmain_ai .headline h1{font-size: 2.15rem;}
 	 .sbmain_ai .headline h2{font-size: 1.18rem; word-break: keep-all;}
 	 .sbmain_ai .headline h2 br{display: none}
 	 .sbmain_ai .headline .obj{max-width: 70%; margin: 0 auto;}
+	 .sbmain_ai .skill_sec .skill_guide .btn_box {padding: 2rem;}
 }
  @media screen and (max-width: 767px) {
-	 html {font-size: 13px !important;}
 	 html.hidden {height: 100vh;overflow: hidden;}
+	 .sb_container_0 {padding-top: var(--mo-header)}
 	 .topbtn button, .topbtn {width: 48px;height: 48px;background-size: 20px;}
 	 .inner {padding-left: 20px;padding-right: 20px;}
 	 .floating-book {bottom: 20px; right: 20px; padding: 20px 10px;}
@@ -340,14 +342,14 @@
 	 [class^="sbmain_sec"] .inner {gap: 40px;}
      .sb_sec5 .ebook_box .ebook_plus{ flex-direction: column}
 
-
+	 .sbmain_ai > .inner { padding-top: calc(7.5rem - var(--mo-header)); }
 	 .sbmain_ai .movie_wrap{border-radius: 0; box-shadow: none; margin-left: -3rem; margin-right: -3rem; border-top: 1px solid #eaeaea}
 	 .sbmain_ai .category{padding: 2rem 3rem; flex-direction: column; gap: 20px; }
 	 .sbmain_ai .category h3{font-size: 16px}
 	 .sbmain_ai .category ul{ margin-top: 8px}
 	 .sbmain_ai .category li{flex: 1}
 	 .sbmain_ai .category li a{padding: 10px 0; font-size: 14px}
-	 .sbmain_ai .content.active{flex-direction: column; padding: 3rem; gap: 20px}
+	 .sbmain_ai .content.active{flex-direction: column; gap: 20px}
 	 .sbmain_ai .content .video_container .hierarchy ol{font-size: 14px; font-weight: 600; margin-top: 0}
 	 .sbmain_ai .content .movie{margin-top: 10px}
 	 .sbmain_ai .content .video_container{padding-bottom: 0}
@@ -355,7 +357,7 @@
 	 .sbmain_ai .content .overview .title{font-size: 16px; margin-bottom: 5px}
 	 .sbmain_ai .content .video_container .script{font-size: 14px; display: block}
 	 .sbmain_ai .content .video_list{max-height: 100%}
-	 .sbmain_ai .csinfo{margin-top: 3rem; padding: 3rem 0}
+	 .sbmain_ai .csinfo{padding: 6rem 0}
 	 .sbmain_ai .csinfo .inner{flex-direction: column;}
 	 .sbmain_ai .csinfo .item{padding: 2.5rem}
 	 .sbmain_ai .csinfo .item.ai-info{background-image:none;}
@@ -364,6 +366,18 @@
 	 .sbmain_ai .csinfo .item.tt-info .obj_floating{top: -196px; right: -108px;}
 	 .sbmain_ai .csinfo .item.tt-info span{font-size: 15px}
 	 .sbmain_ai .csinfo .item.tt-info .btn{margin-top: 2rem}
+
+	 /* 자료실 */
+	 .sbmain_ai > .inner {padding-bottom: 6rem;}
+	 .sbmain_ai .modelinfo .inner {padding: 6rem 3rem;}
+	 .sbmain_ai .skill_sec {padding-bottom: 0;}
+	 .sbmain_ai .skill_sec .skill_header {font-size: 2rem; line-height: 3rem;}
+	 /* .sbmain_ai .skill_sec .skill_guide,
+	 .sbmain_ai .skill_sec .skill_list,
+	 .sbmain_ai .skill_sec .skill_list .skill_boxs {gap: 1rem;} */
+	 .sbmain_ai .skill_sec .skill_guide,
+	 .sbmain_ai .skill_sec .skill_list {flex-wrap: wrap;}
+	 .sbmain_ai .modelinfo_header .title {font-size: 2rem; line-height: 3rem;}
 
 	 .sb_sec1{height: auto}
 	 .container>[class*="sb_sec"] .inner {padding-bottom: 3rem}
