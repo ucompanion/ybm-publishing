@@ -75,10 +75,25 @@ $(document).ready(function () {
             let tabWrap = tabNavbox.closest("div");
             let tabContbox = tabWrap.find(".tab_contbox");
             let tabCont = tabContbox.find(".tab_cont");
-            tabNav.removeClass("on")
-            tabNav.eq(idx).addClass("on")
-            tabCont.removeClass("on")
-            tabCont.eq(idx).addClass("on")
+            tabNav.removeClass("on");
+            tabNav.eq(idx).addClass("on");
+            tabCont.removeClass("on");
+            tabCont.eq(idx).addClass("on");
+
+            const hideId = target.data('hide-id');
+            if (hideId) {
+                $('#' + hideId).removeClass('on');
+            }
+
+            const showId = target.data('show-id');
+            if (showId) {
+                $('#' + showId).addClass('on');
+                console.log(`ID '${showId}'에 'on' 클래스 추가됨.`);
+            }
+
+            if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
         }
 	})
 

@@ -233,7 +233,7 @@
  .sb_container_0 .inner{max-width:1280px; padding: 0; margin: 0 auto; box-sizing: border-box;}
  .sbmain_ai{position: relative;}
  .sbmain_ai > .inner {padding-top: calc(13.75rem - var(--pc-header)); padding-bottom: 8.75rem;}
-  .sbmain_ai .csinfo{background: rgba(168,188,231,0.3); padding: 5.625rem 0}
+ .sbmain_ai .csinfo{background: rgba(168,188,231,0.3); padding: 5.625rem 0}
  .sbmain_ai .csinfo .inner{display: flex; gap: 30px}
  .sbmain_ai .csinfo .item{flex: 1; display:flex; flex-direction: column; justify-content: space-between; background: #fff; border-radius: 40px; padding:40px 50px; position: relative;}
  .sbmain_ai .csinfo .item.ai-info{background: #fff url(../img/sbmain/bg_shape_2.png) no-repeat right 40px bottom 40px}
@@ -309,6 +309,8 @@
  .sbmain_ai .tab_list .tab_nav {width: 100%; flex: 1 1 auto;}
  .sbmain_ai .tab_list .tab_nav .tab_btn {display: flex; align-items: center; justify-content: center; height: 4rem; width: 100%; font-weight: 400; font-size: 1.5rem; line-height: 2.25rem; color: #606060; background-color: #F8F8F8;}
  .sbmain_ai .tab_list .tab_nav.on .tab_btn {background-color: #458FF6; color: #fff; font-weight: 600;}
+ .sbmain_ai .tab_cont {display: none;}
+ .sbmain_ai .tab_cont.on {display: block;}
 
  /* 자료실 */
  .sbmain_ai .filter{padding: 2.5rem; border-bottom: 0.5rem solid #BFDAFF}
@@ -350,7 +352,8 @@
  .sbmain_ai .skill_sec .skill_guide .btn_box .txt {display: block; margin-top: 16px; font-size: 1.125rem; line-height: 1.75rem; word-break: keep-all;}
  .sbmain_ai .skill_sec .skill_guide .btn_box:nth-child(1) {background-color: #FFF2F0;}
  .sbmain_ai .skill_sec .skill_guide .btn_box:nth-child(2) {background-color: #F0F5FE;}
- .sbmain_ai .modelinfo{background: linear-gradient(180deg, #74D8E4 100%, #53A4C5 0%);}
+ .sbmain_ai .modelinfo{display: none; background: linear-gradient(180deg, #74D8E4 100%, #53A4C5 0%);}
+ .sbmain_ai .modelinfo.on {display: block;}
  .sbmain_ai .modelinfo .inner {padding: 8.75rem 3rem;}
  .sbmain_ai .modelinfo_wrap {padding: 3.75rem; background-color: #fff; border-radius: 2.5rem; box-shadow: 0px 1.625rem 2.5rem rgba(0, 0, 0, 0.13);}
  .sbmain_ai .modelinfo_header {text-align: center;}
