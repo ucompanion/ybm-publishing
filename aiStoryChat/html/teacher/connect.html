@@ -52,7 +52,7 @@
                                         <div class="qrcode">
                                             <img src="../../asset/img/data/qrcode01.png" alt="" />
                                         </div>
-                                        <button type="button" class="btn-zoom">
+                                        <button type="button" class="btn-zoom" data-bs-toggle="modal" data-bs-target="#qrcodeModal">
                                             <span class="blind">돋보기</span>
                                         </button>
                                     </div>
@@ -317,8 +317,25 @@
         </div>
         <!-- //page-wrap -->
 
+        <!-- QR코드팝업 -->
+        <div class="modal modal-img fade" id="qrcodeModal" tabindex="-1" role="dialog" aria-labelledby="qrcodeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="icn icn-modal-close" aria-label="닫기"></i>
+                    </button>
+                    <div class="modal-qrcode">
+                        <div class="qrcode">
+                            <img src="../../asset/img/data/qrcode01.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: QR코드팝업 -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
-        <script src="../../asset/inc/common/js/publish-only.js"></script>
     </body>
 </html>
