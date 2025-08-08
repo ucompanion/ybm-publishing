@@ -1851,7 +1851,7 @@
                         }
                     }
                     .swiper-button-prev {
-                        transform: translateX(rem-calc(-460px));
+                        transform: translateX(calc(100vw * (-460 / 1280)));
                     }
                     .swiper-button-next {
                         transform: translateX(calc(100vw * (460 / 1280)));
