@@ -93,18 +93,26 @@
                 position: relative;
 
                 .main-visual-bg {
+                    position: relative;
                     display: flex;
-                    justify-content: flex-end;
+                    align-items: flex-end;
                     width: 100%;
                     height: rem-calc(780px);
                     border-radius: rem-calc(50px);
-                    background: url('#{$img-main-url}img_main_visual.png') no-repeat left bottom / cover;
+                    background: url('#{$img-main-url}img_main_visual.png') no-repeat center center / cover;
                 }
 
                 .main-title-area {
+                    display: flex;
+                    align-items: center;
                     position: absolute;
                     left: 0;
-                    bottom: rem-calc(16px);
+                    bottom: -1px;
+                    width: rem-calc(480px);
+                    height: rem-calc(206px);
+                    padding-top: rem-calc(40px);
+                    background: no-repeat left bottom / cover;
+                    background-image: url("data:image/svg+xml,%3Csvg width='479' height='206' viewBox='0 0 479 206' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0C-3.22539e-06 22.0914 17.9086 40 40 40H450.333C466.165 40 479 52.8348 479 68.667V95.333C479 112.27 465.27 126 448.333 126C439.865 126 433 132.865 433 141.333V166C433 188.091 450.909 206 473 206H0V0Z' fill='white'/%3E%3C/svg%3E%0A");
                     z-index: 10;
 
                     .main-title {
@@ -290,12 +298,25 @@
                         position: absolute;
                         right: 0;
                         bottom: 0;
+                        z-index: 2;
                         width: rem-calc(48px);
                         height: rem-calc(48px);
                         padding: 0;
                         border-radius: 50%;
                         background: #000 no-repeat center center / rem-calc(24px) auto;
                         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12H20M20 12L14 6M20 12L14 18' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    }
+                    &::after {
+                        content:'';
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        width: rem-calc(87px);
+                        height: rem-calc(87px);
+                        background: no-repeat right bottom / cover;
+                        background-image: url("data:image/svg+xml,%3Csvg width='87' height='87' viewBox='0 0 87 87' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M87 87H0V86.9805C15.0007 86.4539 26.9998 74.13 27 59.001V55.0938C27 39.6298 39.536 27.0938 55 27.0938H59C74.1606 27.0938 86.5058 15.0443 86.9844 0H87V87Z' fill='white'/%3E%3C/svg%3E%0A");
                     }
                     &:hover {
                         img {
@@ -391,7 +412,8 @@
                     width: rem-calc(275px);
                     height: rem-calc(200px);
                     border-radius: rem-calc(30px);
-                    background: url("#{$img-main-url}img_sec1_card.png") no-repeat right bottom / cover;
+                    background: #f7f7f7 no-repeat right bottom / rem-calc(60px) rem-calc(60px);
+                    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 60H0C10.873 60 19.7192 51.3235 19.9932 40.5166L20.0068 39.4834C20.2765 28.8481 28.8481 20.2765 39.4834 20.0068L40.5166 19.9932C51.3235 19.7192 60 10.873 60 0V60Z' fill='white'/%3E%3C/svg%3E%0A");
 
                     .post-link {
                         position: relative;
@@ -1616,8 +1638,6 @@
                     }
 
                     .main-title-area {
-                        bottom: calc(100vw * (16 / 1280));
-
                         .main-title {
                             font-size: calc(100vw * (48 / 1280));
                             line-height: calc(100vw * (72 / 1280));
@@ -1752,11 +1772,6 @@
 
                         .post-link {
                             padding: calc(100vw * (20 / 1280));
-
-                            &::after {
-                                width: calc(100vw * (32 / 1280));
-                                height: calc(100vw * (32 / 1280));
-                            }
                         }
 
                         .post-label {
@@ -2079,6 +2094,9 @@
                 }
                 .main-title-area {
                     bottom: 0;
+                    width: 222px;
+                    height: 110px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='222' height='110' viewBox='0 0 222 110' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0C4.53692e-06 13.2548 10.7452 24 24 24H205.125C214.445 24 222 31.5552 222 40.875V58.5C222 64.1179 217.588 68.7053 212.04 68.9863L210.96 69.0137C205.412 69.2948 201 73.8822 201 79.5V94.625C201 103.116 207.884 110 216.375 110H0V0Z' fill='white'/%3E%3C/svg%3E%0A");
                     .main-title {
                     font-size: 24px;
                        line-height: 40px;
@@ -2781,9 +2799,7 @@
                 .main-visual {
                     .main-visual-bg {
                         height: 604px;
-                    }
-                    .main-title-area {
-                        bottom: 130px;
+                        background-image: url('#{$img-main-url}img_main_visual_mo.png');
                     }
                     .main-bnr-area {
                         position: static;
