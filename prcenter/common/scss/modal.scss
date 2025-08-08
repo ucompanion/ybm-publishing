@@ -84,6 +84,7 @@
 				display: block;
                 width: 100%;
                 height: 100%;
+				background: no-repeat center center / contain;
                 background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='black'/%3E%3Cpath d='M29 19L19 29M19 19L29 29' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
             }
         }
@@ -185,15 +186,12 @@
 			}
 		}
     }
-	.modal-nav {
-		padding-bottom: rem-calc(40px);
-	}
 	.modal-body {
-		padding-top: 0;
+		padding-top: rem-calc(40px);
 		padding-bottom: rem-calc(24px);
 	}
     .modal-footer {
-		padding: rem-calc(24px) rem-calc(24px) rem-calc(60px);
+		padding: 0 rem-calc(60px) rem-calc(60px) rem-calc(60px);
 
         .pagination {
 			width: 100%;
@@ -263,13 +261,13 @@
 	.modal-header {
 		height: rem-calc(119px);
 		padding: rem-calc(30px) rem-calc(60px);
-		background: url('../../img/main/img_book_header.png');
+		background: url('../../img/main/img_book_header.png') no-repeat top right;
 		color: #fff;
 
 		.modal-title {
 			font-weight: 700;
 			font-size: rem-calc(24px);
-			line-height: 100%;
+			line-height: 120%;
 		}
 
 		.modal-explain {
@@ -308,16 +306,19 @@
 		}
 
 		.modal-header {
+			position: relative;
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 			min-height: 72px;
 			padding: 20px;
 			.btn-close {
-				position: static;
+				position: absolute;
 				width: 32px;
 				height: 32px;
-				margin-left: auto;
+				top: 50%;
+				right: 20px;
+				transform: translateY(-50%);
 
 				.icn-modal-close {
 					background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6654 9.3335L9.33203 22.6668M9.33203 9.3335L22.6654 22.6668' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -371,7 +372,6 @@
 			}
 		}
 		.modal-body {
-			padding-top: 0;
 			padding-bottom: 0;
 		}
 	}
@@ -380,14 +380,20 @@
 		background: none !important;
 		.modal-header {
 			height: rem-calc(119px);
-			padding: rem-calc(30px) rem-calc(60px);
+			padding: 20px;
 			background: url('../../img/main/img_book_header.png');
 			color: #fff;
 
 			.modal-title {
+				width: 100%;
 				font-weight: 700;
 				font-size: rem-calc(24px);
 				line-height: 100%;
+			}
+
+			.btn-close .icn-modal-close {
+
+				background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='black'/%3E%3Cpath d='M29 19L19 29M19 19L29 29' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
 			}
 
 			.modal-explain {

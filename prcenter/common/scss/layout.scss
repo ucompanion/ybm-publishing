@@ -585,14 +585,17 @@ html{
                 background-color: #000;
                 width: rem-calc(16px);
                 height: rem-calc(16px);
+                transform: rotate(180deg);
             }
             &.up{
                 span{
-                    transform: rotate(180deg);
+                    transform: rotate(0deg);
                 }
             }
-            &:hover span {
-                background-color: #0055A7;
+            &:hover {
+                span {
+                    background-color: #0055A7;
+                }
             }
         }
     }
