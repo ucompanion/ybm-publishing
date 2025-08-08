@@ -13,18 +13,21 @@ function toggleFloating() {
 //header
 var isMobile = window.matchMedia("(max-width: 960px)").matches;
 
-$('header .gnb > li').on('mouseenter',function(){
+$('header .gnb > li').on('click',function(){
     if(isMobile){
-        $(this).find('.depth').show();
-    }else{
-        $(this).find('.depth').stop().slideDown();
+        $(this).toggleClass('is-active');
+        $(this).find('.depth-wrap').toggle();
+        $(this).siblings('.is-active').removeClass('is-active').find('.depth-wrap').hide();
+    }
+});
+$('header .gnb > li').on('mouseenter',function(){
+    if(!isMobile){
+        $(this).find('.depth-wrap').stop().slideDown('fast');
     }
 });
 $('header .gnb > li').on('mouseleave',function(){
-    if(isMobile){
-        $(this).find('.depth').hide();
-    }else{
-        $(this).find('.depth').stop().slideUp();
+    if(!isMobile){
+        $(this).find('.depth-wrap').stop().slideUp('fast');
     }
 });
 // 기본 노출로 변경
@@ -41,7 +44,14 @@ $(window).on('resize', function() {
     isMobile = window.matchMedia("(max-width: 960px)").matches;
 });
 $('header .hamburger').on('click',function(){
+    const body = document.body;
+    const willBeActive = !$(this).closest('header').find('.gnb-wrap').hasClass('active');
     $(this).closest('header').find('.gnb-wrap').toggleClass('active');
+    if (willBeActive) {
+        body.style.overflow = 'hidden';
+    } else {
+        body.style.overflow = '';
+    }
 })
 
 //플로팅배너 bottom버튼 클릭시 scroll
