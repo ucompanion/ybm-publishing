@@ -330,15 +330,22 @@
  .sbmain_ai .filter .rdo_box input:checked + span {border:1px solid #458FF6; background-color: #E5F0FF; color: #458FF6; font-weight: 700;}
  .sbmain_ai .skill_sec {width: 100%; padding-bottom: 2.5rem;}
  .sbmain_ai .skill_sec + .skill_sec {padding-top: 2.5rem; border-top: 1px solid #ececec;}
- .sbmain_ai .skill_sec .skill_title {margin-bottom: 2rem; font-weight: 700; font-size: 1.5rem; line-height: 2rem;}
+ .sbmain_ai .skill_sec .skill_header {display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;}
+ .sbmain_ai .skill_sec .skill_title { font-weight: 700; font-size: 1.5rem; line-height: 2rem;}
+ .sbmain_ai .skill_sec .skill_toolbar {display: flex; align-items:center; gap: 1rem;}
+ .sbmain_ai .skill_sec .skill_toolbar .split {display: block; width: 4px; height: 4px; background-color: #d9d9d9; border-radius: 50%;}
+ .sbmain_ai .skill_sec .skill_toolbar .btn_toolbar {display: flex; font-weight: 400; font-size: 1.25rem; line-height: 110%; color: #000;}
+ .sbmain_ai .skill_sec .skill_toolbar .btn_toolbar.is_active {color: #458FF6; font-weight: 700; border-bottom: 1px solid #458FF6;}
  .sbmain_ai .skill_sec .skill_body {--border-radius: 1.25rem;}
- .sbmain_ai .skill_sec .skill_list {display: grid; gap: 1.25rem;}
+ .sbmain_ai .skill_sec .skill_list {display: grid; gap: 2.5rem 1.125rem;}
  .sbmain_ai .skill_sec .skill_list.type_doc {grid-template-columns: repeat(4, 1fr);}
  .sbmain_ai .skill_sec .skill_list.type_vod {grid-template-columns: repeat(3, 1fr);}
- .sbmain_ai .skill_sec .skill_video {position: relative;; flex: 1 1 auto; width: 100%; aspect-ratio: 388/218; border-radius: var(--border-radius); overflow: hidden;}
+ .sbmain_ai .skill_sec .skill_video {flex: 1 1 auto; width: 100%;}
+ .sbmain_ai .skill_sec .skill_video .vidbox {position: relative; aspect-ratio: 388/218; border-radius: var(--border-radius); overflow: hidden;}
  .sbmain_ai .skill_sec .skill_video video {width:100%; height: 100%; object-fit: cover;}
  .sbmain_ai .skill_sec .skill_video .btn_play {width: 5rem; height: 5rem; border-radius: 50%;}
  .sbmain_ai .skill_sec .skill_video .btn_play::before {width: 100%; height: 100%; background-size: 3rem auto;}
+ .sbmain_ai .skill_sec .skill_video .video_tit {margin-top: 1rem; font-size: 1.375rem; line-height: 140%; color: #111; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
  .sbmain_ai .skill_sec .skill_doc {display: flex; flex-direction: column; align-items: flex-start; background-color: #F6F6F6; border-radius: var(--border-radius); padding: 1.75rem;}
  .sbmain_ai .skill_sec .skill_doc .icn {flex:none; display: block; width: 2.5rem; height: 2.5rem; margin-bottom: 0.75rem; background-size: contain;}
  .sbmain_ai .skill_sec .skill_doc .icn_01 {background-image: url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.0121 3H43.4062V49.4H4.27051V13.7415L15.0121 3Z' fill='white' stroke='%23050505' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.0121 13.7415H4.27051L15.0121 3V13.7415Z' fill='white' stroke='%23050505' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4377 22.3098H10.3745V29.373H17.4377V22.3098Z' fill='url(%23paint0_linear_2590_4041)' stroke='%23020202' stroke-linejoin='round'/%3E%3Cpath d='M16.2046 24.5049L14.7105 25.999L13.2163 27.4932L11.7222 25.999' stroke='%23050505' stroke-linejoin='bevel'/%3E%3Cpath d='M21.7119 24.4559H38.028' stroke='%23050505' stroke-linejoin='bevel'/%3E%3Cpath d='M21.7119 27.2214H31.3777' stroke='%23050505' stroke-linejoin='bevel'/%3E%3Cpath d='M17.4377 34.2793H10.3745V41.3425H17.4377V34.2793Z' fill='white' stroke='%23050505'/%3E%3Cpath d='M16.2046 36.4797L14.7105 37.9739L13.2163 39.468L11.7222 37.9739' fill='white'/%3E%3Cpath d='M16.2046 36.4797L14.7105 37.9739L13.2163 39.468L11.7222 37.9739' stroke='%23050505' stroke-linejoin='bevel'/%3E%3Cpath d='M21.7119 36.4309H38.028' stroke='%23050505' stroke-linejoin='bevel'/%3E%3Cpath d='M21.7119 39.1964H31.3777' stroke='%23050505' stroke-linejoin='bevel'/%3E%3Cpath d='M40.113 8.82983H31.686' stroke='%23050505'/%3E%3Cpath d='M40.113 11.9919H31.686' stroke='%23050505'/%3E%3Cpath d='M50.6318 33.0296C51.5391 32.1222 51.5391 30.6498 50.6318 29.7424L48.6758 27.7865C47.7685 26.8791 46.2961 26.8791 45.3887 27.7865L33.479 39.6962L38.7221 44.9447L50.6318 33.0296Z' fill='url(%23paint1_linear_2590_4041)' stroke='%23050505'/%3E%3Cpath d='M33.479 39.6962L31.6208 46.7974L38.7221 44.9393L36.0979 42.315L33.479 39.6962Z' fill='white' stroke='%23050505'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2590_4041' x1='10.3723' y1='25.8413' x2='17.4339' y2='25.8413' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFC200'/%3E%3Cstop offset='1' stop-color='%23F5DC34'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_2590_4041' x1='33.479' y1='27.106' x2='33.479' y2='44.9447' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='1' stop-color='%2374D8E4'/%3E%3Cstop stop-color='%2353A4C5'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");}
