@@ -22,8 +22,8 @@
 	 .sbmain_sec2 .object_2 {top: 300px;}
 	 .ms3 .ms_list_g .list_item.open { width: calc(100% - 400px);}
 	 .ms3 .ms_list_g .list_item.open .item_inner {width: 100%;}
-	 .float_box1, .float_box2 {display: none;
-	}
+	 .float_box1, .float_box2 {display: none;}
+	 .sbmain_ai .skill_sec .skill_doc {padding: 20px;}
 }
  @media screen and (max-width: 1300px) {
 	 html {font-size: 14px !important;}
@@ -37,6 +37,7 @@
 	 .sb_sec2 .partner_box {gap: 16px;}
 
 	 .sb_container_0 .inner{padding-left: 3rem; padding-right: 3rem }
+	 .sbmain_ai .headline .obj{top: -20px;}
 }
  @media screen and (max-width: 1200px) {
 	 .sbmain_sec2 .object_1 {top: 0;}
@@ -147,6 +148,10 @@
 	 .original img {width: 100% !important;height: 100% !important;object-fit: cover !important;}
      .sb_sec5 .ebook_box .btns{ flex-wrap: wrap}
 
+	 .sbmain_ai .skill_sec .skill_doc .btn_group {
+		flex-direction: column;
+	 }
+
 }
  @media screen and (max-width: 900px) {
 	 .header nav .event {right: -40px;}
@@ -193,10 +198,10 @@
 	 .header.white .menu_icon .menu_linebox .menu_line, .header .menu_icon .menu_linebox .menu_line {background-color: #141519;}
 	 .header.white.active, .header.active {box-shadow: none;}
 	 .header.white.active nav, .header.active nav {height:  calc(100vh - 50px); display: block;background: #fff;width: 100vw;position: fixed;left: 0;top: 50px;padding: 50px 40px;}
-	 .header.white nav .depth1, .header nav .depth1 {flex-direction: column;width: 100%;align-items: flex-start;justify-content: flex-start;gap: 40px;height: auto;}
+	 .header.white nav .depth1, .header nav .depth1 {flex-direction: column;width: 100%;align-items: flex-start;justify-content: flex-start;gap: 20px;height: auto;}
 	 .header.white nav .depth1 li, .header nav .depth1 li {height: auto;display: flex;width: 100%;align-items: flex-start;}
 	 .header.white nav .depth2, .header nav .depth2 {position: relative;transform: none;left: auto;bottom: auto;}
-	 .header.white nav .depth1 > li > a, .header nav .depth1 > li > a {width: 140px;flex: none;text-align: left;font-size: 20px;font-weight: 700;justify-content: flex-start;height: auto;padding: 8px 0; line-height: 24px !important;}
+	 .header.white nav .depth1 > li > a, .header nav .depth1 > li > a {width: 100%;flex: none;text-align: left;font-size: 20px;font-weight: 700;justify-content: flex-start;height: auto;padding: 8px 0; line-height: 24px !important;}
 	 .header nav .depth1 > li:first-child.active > a, .header nav .depth1 > li:first-child > a:hover{width: 140px;}
 	 .header.white nav .depth1 li:first-child > .depth2 > li {width: auto; text-align: left;}
 	 .header.white nav .depth1 > li > a:before, .header nav .depth1 > li > a:before {display: none;}
@@ -342,7 +347,7 @@
 	 [class^="sbmain_sec"] .inner {gap: 40px;}
      .sb_sec5 .ebook_box .ebook_plus{ flex-direction: column}
 
-	 .sbmain_ai > .inner { padding-top: calc(7.5rem - var(--mo-header)); }
+	 .sbmain_ai > .inner { padding-top: calc(7.5rem - var(--mo-header)); padding-bottom: 4rem;}
 	 .sbmain_ai .movie_wrap{border-radius: 0; box-shadow: none; margin-left: -3rem; margin-right: -3rem; border-top: 1px solid #eaeaea}
 	 .sbmain_ai .category{padding: 2rem 3rem; flex-direction: column; gap: 20px; }
 	 .sbmain_ai .category h3{font-size: 16px}
@@ -368,16 +373,14 @@
 	 .sbmain_ai .csinfo .item.tt-info .btn{margin-top: 2rem}
 
 	 /* 자료실 */
-	 .sbmain_ai > .inner {padding-bottom: 6rem;}
 	 .sbmain_ai .modelinfo .inner {padding: 6rem 3rem;}
 	 .sbmain_ai .skill_sec {padding-bottom: 0;}
-	 .sbmain_ai .skill_sec .skill_header {font-size: 2rem; line-height: 3rem;}
-	 /* .sbmain_ai .skill_sec .skill_guide,
-	 .sbmain_ai .skill_sec .skill_list,
-	 .sbmain_ai .skill_sec .skill_list .skill_boxs {gap: 1rem;} */
-	 .sbmain_ai .skill_sec .skill_guide,
-	 .sbmain_ai .skill_sec .skill_list {flex-wrap: wrap;}
-	 .sbmain_ai .modelinfo_header .title {font-size: 2rem; line-height: 3rem;}
+	 .sbmain_ai .skill_sec + .skill_sec {margin-top: 2.5rem;}
+	 .sbmain_ai .skill_sec .skill_list.type_doc {grid-template-columns: repeat(2, 1fr);}
+	 .sbmain_ai .skill_sec .skill_list.type_vod {grid-template-columns: repeat(2, 1fr);}
+	 .sbmain_ai .skill_sec .skill_video .btn_play {width: 4rem; height: 4rem;}
+	 .sbmain_ai .skill_sec .skill_video .btn_play::before {background-size: 2rem auto;}
+	 /* .sbmain_ai .skill_sec .skill_doc .btn_group {flex-direction: row;} */
 
 	 .sb_sec1{height: auto}
 	 .container>[class*="sb_sec"] .inner {padding-bottom: 3rem}
