@@ -101,44 +101,38 @@
         <!-- //common header -->
 
         <div class="floating-wrap">
-            <div class="inner">
-                <ul>
-                    <li>
-                        <a href="https://www.ybmcloud.com/home.html" target="_blank">
-                            <img src="/prcenter/img/ico_float_Y.svg" alt="">
-                            <span>Y클라우드</span>
-                        </a>
-                    </li>
-                    <li class="sns">
-                        <a href="#;">
-                            <img src="/prcenter/img/ico_float_sns.svg" alt="">
-                            <span>SNS 채널</span>
-                        </a>
-                        <div class="float-sns">
-                            <div class="box">
-                                <a href="https://www.instagram.com/ybm_textbook/" target="_blank"><img src="/prcenter/img/ico_sns_instargram.svg" alt=""></a>
-                                <a href="https://blog.naver.com/ybm_text" target="_blank"><img src="/prcenter/img/ico_sns_blog.svg" alt=""></a>
-                                <a href="https://pf.kakao.com/_hPxbJC" target="_blank"><img src="/prcenter/img/ico_sns_kakao.svg" alt=""></a>
-                                <a href="https://www.youtube.com/@Ycloud_YBM" target="_blank"><img src="/prcenter/img/ico_sns_youtube.svg" alt=""></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#"onclick="clip(); return false;">
-                            <img src="/prcenter/img/ico_float_share.svg" alt="">
-                            <span>링크  공유</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="typeof">
-                    <li>
-                        <a href="#" target="_blank">
-                            <img src="/prcenter/img/ico_event.svg" alt="">
-                            <span>이벤트</span>
-                        </a>
-                    </li>
-                </ul>
-                <button type="button" class="btn-bottom"><span></span></button>
+            <div class="only-pc">
+                <div class="inner">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#classBookModal">
+                                <span>2022개정 교과서 보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/aidt/main.html" target="_blank">
+                                <span>AI 디지털교과서</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/cscenter/event" target="_blank">
+                                <span>이벤트</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="clip(); return false;">
+                                <span>공유하기</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-bottom"><span></span></button>
+                </div>
+            </div>
+            <div class="only-mobile">
+                <div class="inner">
+                    <button type="button" class="btn-plus" onclick="toggleFloating()"><span></span></button>
+                    <button type="button" class="btn-bottom"><span></span></button>
+                </div>
             </div>
         </div>
 

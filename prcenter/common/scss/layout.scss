@@ -49,11 +49,18 @@ iframe{
 
 header{
     background-color: #{$base-bgcolor};
+    // display: none;
     position: fixed;
     top: 0;
     z-index: 200;
     width: 100%;
+    &.fix-shadow {
+        display: block;
+        border-bottom: 1px solid #ccc;
+        // box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.16);
+    }
     &.is-shadow {
+        display: block;
         border-bottom: 1px solid #ccc;
         // box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.16);
     }

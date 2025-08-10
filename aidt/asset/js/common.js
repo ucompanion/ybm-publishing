@@ -431,13 +431,13 @@ if (window.innerWidth > 1023){
 */
 
 
-function play(element){
-	$(".vidbox").each(function() {
-		var $ui = $(this);
-		 $ui.find('video').trigger('play');
-		 $ui.find('.btn_play').fadeOut();
+function play(clickedButtonElement) {
+    // 클릭된 버튼의 가장 가까운 부모 .vidbox를 찾음
+    var $targetVidbox = $(clickedButtonElement).closest('.vidbox');
 
-	});
+    // 찾은 .vidbox 안에서 video와 .btn_play 요소를 찾아서 처리
+    $targetVidbox.find('video').trigger('play');
+    $targetVidbox.find('.btn_play').fadeOut();
 }
 
 /*function mvplay(){
