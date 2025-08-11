@@ -118,81 +118,108 @@
                     }
                 }
             }
-            .sub-book-list{
-                width: 100%;
-                &.swiper{
-                    padding: rem-calc(185px) 0 rem-calc(260px);
+
+            // 교과서
+            .main-book {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                .wrapper {
+                    width: 100%;
+                    padding-top: rem-calc(130px);
+                    padding-bottom: rem-calc(130px);
                 }
-                .item{
-                    position: relative;
-                    display: block;
-                    transition: 0.3s all;
-                    .desc-box{
-                        text-align: center;
-                        width: 100%;
-                        margin-top: rem-calc(20px);
-                        h2{
-                            font-size: rem-calc(22px);
-                            line-height: 1.3;
-                        }
-                        span{
-                            font-size: rem-calc(18px);
-                            font-weight: 700;
-                        }
-                    }
-                    &:hover{
-                        transform: scale(1.2);
-                        .img-box{
-                            border: 3px solid #FFAA75;
-                        }
-                        .hover-box{
-                            transform:  translate(-50%,-50%) scale(1.2);
-                            visibility: visible;
-                            opacity: 1;
-                        }
+                .title-box {
+                    margin-bottom: rem-calc(80px);
+                    text-align: center;
+                    .title {
+                        font-family: $font-stack3;
+                        font-size: rem-calc(48px);
+                        line-height: 120%;
+                        color: #000000;
                     }
                 }
-                .img-box{
-                    display: block;
-                    box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
-                    border: 1px solid rgba(0,0,0,0.08);
-                    border-radius: 8px;
-                    position: relative;
-                    img{
-                        border-radius: 4px;
-                    }
-                }
-                .hover-box{
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    transition: 0.3s all;
-                    span{
-                        display: inline-block;
-                        background-color: rgba(0,0,0,0.6);
-                        padding: 0 rem-calc(20px) 0 rem-calc(15px);
-                        border-radius: 50px;
-                        font-size: rem-calc(10px);
-                        line-height: rem-calc(26px);
-                        height: rem-calc(26px);
-                        color: #{$base-bgcolor};
-                        font-weight: 700;
-                        width: rem-calc(95px);
-                        box-sizing: border-box;
+                .sub-book-list{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    gap: rem-calc(37px);
+                    width: 100%;
+
+                    .item{
                         position: relative;
-                        &::after{
-                            content: '';
+                        display: block;
+                        transition: 0.3s all;
+                        .desc-box{
+                            text-align: center;
+                            width: 100%;
+                            margin-top: rem-calc(20px);
+                            h2{
+                                font-size: rem-calc(22px);
+                                line-height: 1.3;
+                                .small {
+                                    font-size: 0.9em;
+                                }
+                            }
+                            span{
+                                font-size: rem-calc(18px);
+                                font-weight: 700;
+                            }
+                        }
+                        &:hover{
+                            transform: scale(1.2);
+                            .img-box{
+                                border: 3px solid #FFAA75;
+                            }
+                            .hover-box{
+                                transform:  translate(-50%,-50%) scale(1.2);
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .img-box{
+                        display: block;
+                        box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+                        border: 1px solid rgba(0,0,0,0.08);
+                        border-radius: 8px;
+                        position: relative;
+                        img{
+                            border-radius: 4px;
+                        }
+                    }
+                    .hover-box{
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        transition: 0.3s all;
+                        span{
                             display: inline-block;
-                            background: url(#{$img-sub-url}ico_search_w.png) no-repeat center / contain;
-                            width: rem-calc(20px);
-                            height: rem-calc(20px);
-                            position: absolute;
-                            right: 8%;
-                            top: 50%;
-                            transform: translateY(-50%);
+                            background-color: rgba(0,0,0,0.6);
+                            padding: 0 rem-calc(20px) 0 rem-calc(15px);
+                            border-radius: 50px;
+                            font-size: rem-calc(10px);
+                            line-height: rem-calc(26px);
+                            height: rem-calc(26px);
+                            color: #{$base-bgcolor};
+                            font-weight: 700;
+                            width: rem-calc(95px);
+                            box-sizing: border-box;
+                            position: relative;
+                            &::after{
+                                content: '';
+                                display: inline-block;
+                                background: url(#{$img-sub-url}ico_search_w.png) no-repeat center / contain;
+                                width: rem-calc(20px);
+                                height: rem-calc(20px);
+                                position: absolute;
+                                right: 8%;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
                         }
                     }
                 }
@@ -203,9 +230,18 @@
                 .wrapper {
                     display: block;
                 }
+                .title-box {
+                    margin-bottom: rem-calc(80px);
+                    text-align: center;
+                    .title {
+                        font-family: $font-stack3;
+                        font-size: rem-calc(48px);
+                        line-height: 120%;
+                        color: #fff;
+                    }
+                }
                 .sketch-scroll {
                     width: 100%;
-                    height: rem-calc(265px);
                     padding: rem-calc(20px) 0;
                     // overflow: hidden;
                     .sketch-wrapper {
@@ -221,7 +257,7 @@
                 }
                 .sketch-swiper {
                     .swiper-slide {
-                        width: 300px;
+                        width: rem-calc(352px);
                     }
                     .swiper-pagination {
                         position: static;
@@ -248,196 +284,63 @@
                 .sketch {
                     width: 100%;
                     height: 100%;
-
+                    overflow: hidden;
                     &-link {
                         position: relative;
                         display: block;
                         width: 100%;
                         height: 100%;
-                        background: rgba(255, 255, 255, 0.4);
-                        backdrop-filter: blur(rem-calc(12px));
-                        border-radius: rem-calc(24px);
-                        overflow: hidden;
                         box-sizing: border-box;
-                        & {
-                            transition: all 0.2s ease;
-
-                            .sketch-overay {
-                                display: none;
-                                opacity: 0;
-                                transition: all 0.2s ease;
-                            }
-                        }
-                        &:hover {
-                            transform: scale(1.1);
-                            transition: all 0.2s ease;
-                            border-color: transparent;
-                            box-shadow: rem-calc(10px) rem-calc(10px) rem-calc(24px) rgba(0, 0, 0, 0.2);
-                            .sketch-overay {
-                                display: flex;
-                                opacity: 1;
-                            }
-                        }
-                    }
-
-                    &-normal {
-                        display: flex;
-                        flex-direction: column;
-                        height: 100%;
-                        padding: rem-calc(20px) rem-calc(32px);
-                        border-radius: rem-calc(24px);
-                        border:1px solid rgba(255, 255, 255, 0.6);
-
-                        .util-area {
+                        padding-top: rem-calc(20px);
+                        overflow: hidden;
+                        .tit-area {
                             display: flex;
-                            gap: rem-calc(8px);
-
-                            .icn {
-                                margin-right: auto;
-                                display: block;
-                                width: rem-calc(40px);
-                                height: rem-calc(40px);
-                                background: no-repeat center center / contain;
-                                &-edutech-01 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.8 8C12.8 5.79086 14.5909 4 16.8 4C19.0091 4 20.8 5.79086 20.8 8V10.4H22.4C24.6365 10.4 25.7548 10.4 26.6369 10.7654C27.813 11.2525 28.7475 12.187 29.2346 13.3631C29.6 14.2452 29.6 15.3635 29.6 17.6H32C34.2091 17.6 36 19.3909 36 21.6C36 23.8091 34.2091 25.6 32 25.6H29.6V28.32C29.6 31.0083 29.6 32.3524 29.0768 33.3792C28.6166 34.2823 27.8823 35.0166 26.9792 35.4768C25.9524 36 24.6083 36 21.92 36H20.8V33.2C20.8 31.2118 19.1882 29.6 17.2 29.6C15.2118 29.6 13.6 31.2118 13.6 33.2V36H11.68C8.99175 36 7.64762 36 6.62085 35.4768C5.71767 35.0166 4.98336 34.2823 4.52317 33.3792C4 32.3524 4 31.0083 4 28.32V25.6H6.4C8.60914 25.6 10.4 23.8091 10.4 21.6C10.4 19.3909 8.60914 17.6 6.4 17.6H4C4 15.3635 4 14.2452 4.36538 13.3631C4.85255 12.187 5.78698 11.2525 6.96312 10.7654C7.84522 10.4 8.96348 10.4 11.2 10.4H12.8V8Z' fill='%23FFC300'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-02 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35.9252 34.7988L29.9579 19.4922L19.3496 30.1639L34.5653 36.1669C35.419 36.5012 36.2576 35.6546 35.9252 34.7988Z' fill='white'/%3E%3Cpath d='M5.52531 29.5602C5.08622 29.5602 4.65018 29.37 4.34831 29.0019C3.81164 28.3485 3.90619 27.3823 4.55567 26.8424C9.21794 22.9743 16.1488 24.505 16.4416 24.5725C17.2618 24.7596 17.7771 25.5817 17.5881 26.4099C17.4021 27.235 16.5849 27.7534 15.7646 27.5663C15.7006 27.551 9.98329 26.3117 6.49192 29.2105C6.20835 29.4436 5.86682 29.5602 5.52531 29.5602Z' fill='%23FFC300'/%3E%3Cpath d='M23.2355 21.0258C22.9001 21.0258 22.5616 20.9123 22.278 20.6823C22.1378 20.5688 18.869 17.8449 18.2073 12.8756C18.0945 12.0351 18.6799 11.2652 19.5154 11.1517C20.3509 11.0382 21.1162 11.6271 21.2291 12.4676C21.7261 16.1885 24.1838 18.2866 24.2082 18.305C24.8516 18.8449 24.9461 19.8111 24.4125 20.4614C24.1137 20.8326 23.6746 21.0258 23.2355 21.0258Z' fill='%23FFC300'/%3E%3Cpath d='M11.4352 8.19688C12.6274 9.39626 14.5576 9.39626 15.7468 8.19688C16.9391 6.9975 16.9391 5.0558 15.7468 3.85949C14.5546 2.66012 12.6244 2.66012 11.4352 3.85949C10.243 5.0558 10.243 7.00057 11.4352 8.19688Z' fill='white'/%3E%3Cpath d='M26.4356 13.9611L31.5586 12.3027L29.9101 7.14909L24.7871 8.80742L26.4356 13.9611Z' fill='%23FFC300'/%3E%3Cpath d='M12.4337 20.576L15.8555 17.1338L12.4337 13.6916L9.01198 17.1338L12.4337 20.576Z' fill='%23FFC300'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-03 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.1045 16.0305L32.0767 15.9768C31.2678 14.394 30.1243 13.0259 28.674 11.8991C26.4149 10.1286 23.6537 9.16279 20.8367 9.02866V7.79462C22.1197 7.44587 23.068 6.29231 23.068 4.95096C23.068 3.31452 21.7013 2 20 2C18.2987 2 16.932 3.31452 16.932 4.95096C16.932 6.29231 17.8803 7.44587 19.1633 7.79462V9.05549C16.3463 9.18962 13.5851 10.1554 11.326 11.926C9.90358 13.0527 8.76006 14.4209 7.92334 16.0037L4.71592 23.4347C3.68396 25.8492 3.76764 28.5587 4.96693 30.9194C6.22201 33.3607 8.56483 35.1849 11.4097 35.9093C13.2505 36.3921 16.2348 36.6604 19.1912 36.6604C19.4701 36.6604 19.7211 36.6604 20 36.6604C23.2074 36.7141 26.5822 36.419 28.5903 35.9093C31.4352 35.1849 33.778 33.3607 35.0331 30.9194C36.2324 28.5855 36.316 25.8492 35.2841 23.4347L32.1045 16.0305ZM18.5776 4.95096C18.5776 4.19981 19.2191 3.58279 20 3.58279C20.7809 3.58279 21.4224 4.19981 21.4224 4.95096C21.4224 5.70212 20.7809 6.31914 20 6.31914C19.2191 6.31914 18.5776 5.70212 18.5776 4.95096Z' fill='%2300B29D'/%3E%3Cpath d='M26.8876 16.9951H13.1096C10.7389 16.9951 8.81445 18.8462 8.81445 21.1265V28.5575C8.81445 30.8378 10.7389 32.6889 13.1096 32.6889H26.8597C29.2304 32.6889 31.1549 30.8378 31.1549 28.5575V21.1265C31.1828 18.8462 29.2583 16.9951 26.8876 16.9951Z' fill='white'/%3E%3Cpath d='M23.5678 27.648C21.1971 28.5333 18.7985 28.5333 16.4278 27.648C15.4516 27.2993 15.0054 28.8284 15.9816 29.204C18.6033 30.1697 21.3645 30.1697 23.9862 29.204C24.9902 28.8284 24.5719 27.2993 23.5678 27.648Z' fill='%2300B29D'/%3E%3Cpath d='M16.57 22.5201C16.7931 23.459 18.3829 23.0566 18.1598 22.1177C17.5183 19.3813 13.1395 19.3813 12.498 22.1177C12.2748 23.0566 13.8646 23.459 14.0877 22.5201C14.3945 21.2056 16.2632 21.2056 16.57 22.5201Z' fill='%2300B29D'/%3E%3Cpath d='M21.8398 22.1177C21.6166 23.0566 23.2064 23.459 23.4295 22.5201C23.7363 21.2056 25.605 21.2056 25.9118 22.5201C26.1349 23.459 27.7247 23.0566 27.5016 22.1177C26.8601 19.3813 22.4812 19.3813 21.8398 22.1177Z' fill='%2300B29D'/%3E%3Cpath d='M23.3327 5.33333C23.3327 3.50327 21.8294 2 19.9993 2C18.1693 2 16.666 3.50327 16.666 5.33333C16.666 7.1634 18.1693 8.66667 19.9993 8.66667C21.8294 8.66667 23.3327 7.1634 23.3327 5.33333Z' fill='%2300B29D'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-04 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.22266 15.8104L19.5194 9.85547L29.8162 15.8104V22.4242V27.7109L19.5194 33.6533L9.22266 27.7109V22.4242V15.8104Z' fill='white'/%3E%3Cpath d='M19.5899 9.87679L9.22162 15.8099L3.17969 12.4222L13.5479 6.49219L19.5899 9.87679Z' fill='%23FFC300'/%3E%3Cpath d='M19.5898 9.87679L29.9581 15.8099L36 12.4222L25.6318 6.49219L19.5898 9.87679Z' fill='%23FFC300'/%3E%3Cpath d='M3.45312 18.8688L13.551 24.8548L19.5183 21.753L9.37695 15.8105L3.45312 18.8688Z' fill='%23FFC300'/%3E%3Cpath d='M35.5828 18.8688L25.4849 24.8548L19.5176 21.753L29.6589 15.8105L35.5828 18.8688Z' fill='%23FFC300'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-05 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.6 27.7983C28.0225 26.0556 29.6 23.212 29.6 20C29.6 14.6981 25.3019 10.4 20 10.4C14.6981 10.4 10.4 14.6981 10.4 20C10.4 23.212 11.9775 26.0556 14.4 27.7983V30.88C14.4 32.6722 14.4 33.5683 14.7488 34.2528C15.0556 34.8549 15.5451 35.3444 16.1472 35.6512C16.8317 36 17.7278 36 19.52 36H20.48C22.2722 36 23.1683 36 23.8528 35.6512C24.4549 35.3444 24.9444 34.8549 25.2512 34.2528C25.6 33.5683 25.6 32.6722 25.6 30.88V27.7983Z' fill='%23FFC300'/%3E%3Cpath d='M20 4V5.6M5.6 20H4M9.6 9.6L8.63984 8.63984M30.4 9.6L31.3604 8.63984M36 20H34.4' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-06 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 12.2C8 9.67976 8 8.41965 8.49047 7.45704C8.9219 6.61031 9.61031 5.9219 10.457 5.49047C11.4196 5 12.6798 5 15.2 5H20.0177C21.1183 5 21.6686 5 22.1865 5.12434C22.6457 5.23457 23.0847 5.41639 23.4873 5.66312C23.9414 5.94141 24.3305 6.33055 25.1088 7.10883L29.8912 11.8912C30.6695 12.6695 31.0586 13.0586 31.3369 13.5127C31.5836 13.9153 31.7654 14.3543 31.8757 14.8135C32 15.3314 32 15.8817 32 16.9823V27.8C32 30.3202 32 31.5804 31.5095 32.543C31.0781 33.3897 30.3897 34.0781 29.543 34.5095C28.5804 35 27.3202 35 24.8 35H15.2C12.6798 35 11.4196 35 10.457 34.5095C9.61031 34.0781 8.9219 33.3897 8.49047 32.543C8 31.5804 8 30.3202 8 27.8V12.2Z' fill='%2300B29D'/%3E%3Cpath d='M14 24.5V29M26 21.5V29M20 17.75V29' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-07 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.1678 35.8027H10.1017C7.43121 35.8027 5.26953 33.6377 5.26953 30.9705V11.9045C5.26953 9.23395 7.43453 7.07227 10.1017 7.07227H29.1678C31.8383 7.07227 34 9.23728 34 11.9045V30.9705C34 33.6377 31.835 35.8027 29.1678 35.8027Z' fill='%2300B29D'/%3E%3Cpath d='M12.8816 10.7266C11.9637 10.7266 11.2188 9.98169 11.2188 9.0638V5.07299C11.2188 4.15511 11.9637 3.41016 12.8816 3.41016C13.7995 3.41016 14.5444 4.15511 14.5444 5.07299V9.0638C14.5444 9.98169 13.7995 10.7266 12.8816 10.7266Z' fill='white'/%3E%3Cpath d='M19.6335 10.7266C18.7157 10.7266 17.9707 9.98169 17.9707 9.0638V5.07299C17.9707 4.15511 18.7157 3.41016 19.6335 3.41016C20.5514 3.41016 21.2964 4.15511 21.2964 5.07299V9.0638C21.2964 9.98169 20.5514 10.7266 19.6335 10.7266Z' fill='white'/%3E%3Cpath d='M26.3835 10.7266C25.4657 10.7266 24.7207 9.98169 24.7207 9.0638V5.07299C24.7207 4.15511 25.4657 3.41016 26.3835 3.41016C27.3014 3.41016 28.0464 4.15511 28.0464 5.07299V9.0638C28.0464 9.98169 27.3014 10.7266 26.3835 10.7266Z' fill='white'/%3E%3Cpath d='M24.8721 26.9392L21.3468 17.8501V17.8468C21.154 17.3679 20.9178 17.0453 20.6185 16.8591C20.0565 16.5033 19.2317 16.5033 18.6531 16.8558C18.3438 17.0487 18.1043 17.3746 17.9247 17.8535L14.3995 27.019C14.18 27.5811 14.2964 27.9801 14.4361 28.2163C14.619 28.5289 14.9017 28.7517 15.2775 28.8781C15.4804 28.9446 15.6832 28.9779 15.8828 28.9779C16.0224 28.9779 16.1655 28.9612 16.2985 28.928C16.5845 28.8581 16.9703 28.6486 17.1964 28.05L17.9946 25.8318H21.1972L21.9754 27.9802C22.1982 28.622 22.604 28.8448 22.9066 28.918C23.2591 29.0044 23.6183 28.9911 23.9708 28.8781C24.3632 28.7517 24.6659 28.5056 24.8455 28.1631C25.035 27.8006 25.0417 27.3915 24.8721 26.9392ZM19.5477 21.5416C19.5676 21.4884 19.5842 21.4386 19.6009 21.3887C19.6175 21.4386 19.6375 21.4884 19.6574 21.5416L20.2161 23.1014H18.9756L19.5477 21.5416Z' fill='white'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-08 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.2423 9H17.328C13.1698 9 11.0906 9 9.45869 9.78168C8.02183 10.4699 6.828 11.5726 6.03358 12.9452C5.1313 14.5042 4.98316 16.5614 4.6869 20.6757L4.29714 26.0885C4.10603 28.7425 6.22505 31 8.9074 31C10.2791 31 11.58 30.3956 12.4581 29.3503L13.0524 28.6429C13.5961 27.9958 13.8679 27.6722 14.1774 27.4108C14.8262 26.8627 15.6117 26.4978 16.4515 26.3542C16.8521 26.2857 17.2767 26.2857 18.1258 26.2857H21.4445C22.2936 26.2857 22.7182 26.2857 23.1188 26.3542C23.9587 26.4978 24.7441 26.8627 25.3929 27.4108C25.7024 27.6722 25.9743 27.9958 26.5179 28.6429L27.1122 29.3503C27.9903 30.3956 29.2912 31 30.6629 31C33.3453 31 35.4643 28.7425 35.2732 26.0885L34.8834 20.6757C34.5871 16.5614 34.439 14.5042 33.5367 12.9452C32.7423 11.5726 31.5485 10.4699 30.1116 9.78168C28.4797 9 26.4005 9 22.2423 9Z' fill='%2300B29D'/%3E%3Cpath d='M10.2793 18.429H16.616M13.4476 15.2861V21.5718M24.5368 20.0004H24.5527M29.2893 16.8576H29.3052' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-09 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.902 18.7429H5.35261C4.3557 18.7429 3.55078 17.9343 3.55078 16.9411V8.7664C3.55078 5.90858 5.86949 3.58984 8.72731 3.58984H16.902C17.8989 3.58984 18.7039 4.39843 18.7039 5.39165V16.9374C18.7039 17.938 17.8989 18.7429 16.902 18.7429Z' fill='white'/%3E%3Cpath d='M13.4429 12.7507H8.81285C7.99685 12.7507 7.33594 12.0898 7.33594 11.2738C7.33594 10.4578 7.99685 9.79688 8.81285 9.79688H13.4429C14.2589 9.79688 14.9198 10.4578 14.9198 11.2738C14.9198 12.0898 14.2589 12.7507 13.4429 12.7507Z' fill='%23FFC300'/%3E%3Cpath d='M11.1273 15.0663C10.3113 15.0663 9.65039 14.4054 9.65039 13.5894V8.95933C9.65039 8.14334 10.3113 7.48242 11.1273 7.48242C11.9433 7.48242 12.6042 8.14334 12.6042 8.95933V13.5894C12.6042 14.4054 11.9433 15.0663 11.1273 15.0663Z' fill='%23FFC300'/%3E%3Cpath d='M16.902 20.8467H5.35261C4.3557 20.8467 3.55078 21.6553 3.55078 22.6485V30.8232C3.55078 33.681 5.86949 35.9998 8.72731 35.9998H16.902C17.8989 35.9998 18.7039 35.1912 18.7039 34.1979V22.6522C18.7039 21.6553 17.8989 20.8467 16.902 20.8467Z' fill='white'/%3E%3Cpath d='M13.021 31.703C12.6444 31.703 12.2641 31.559 11.9761 31.271L8.18786 27.4828C7.61186 26.9068 7.61186 25.9726 8.18786 25.3929C8.76385 24.8169 9.7017 24.8169 10.2777 25.3929L14.066 29.1812C14.642 29.7572 14.642 30.6913 14.066 31.271C13.778 31.559 13.3976 31.703 13.021 31.703Z' fill='%23FFC300'/%3E%3Cpath d='M9.23275 31.703C8.85614 31.703 8.47585 31.559 8.18786 31.271C7.61186 30.695 7.61186 29.7609 8.18786 29.1812L11.9761 25.3929C12.5521 24.8169 13.49 24.8169 14.066 25.3929C14.642 25.9689 14.642 26.9031 14.066 27.4828L10.2777 31.271C9.9897 31.559 9.60937 31.703 9.23275 31.703Z' fill='%23FFC300'/%3E%3Cpath d='M22.6141 18.7429H34.1598C35.1567 18.7429 35.9617 17.9343 35.9617 16.9411V8.7664C35.9617 5.90858 33.643 3.58984 30.7851 3.58984H22.6104C21.6135 3.58984 20.8086 4.39843 20.8086 5.39165V16.9374C20.8086 17.938 21.6172 18.7429 22.6141 18.7429Z' fill='white'/%3E%3Cpath d='M30.2388 12.7487H26.0296C25.2137 12.7487 24.5527 12.0878 24.5527 11.2718C24.5527 10.4558 25.2137 9.79492 26.0296 9.79492H30.2388C31.0548 9.79492 31.7157 10.4558 31.7157 11.2718C31.7157 12.0878 31.0548 12.7487 30.2388 12.7487Z' fill='%23FFC300'/%3E%3Cpath d='M22.6903 20.7588H34.236C35.233 20.7588 36.0379 21.5674 36.0379 22.5606V30.7353C36.0379 33.5931 33.7191 35.9119 30.8613 35.9119H22.6866C21.6897 35.9119 20.8848 35.1033 20.8848 34.11V22.5643C20.8885 21.5637 21.6934 20.7588 22.6903 20.7588Z' fill='%23FFC300'/%3E%3Cpath d='M26.5628 31.7102C26.1862 31.7102 25.8059 31.5662 25.5179 31.2782C24.9419 30.7022 24.9419 29.7681 25.5179 29.1884L29.3173 25.389C29.8932 24.813 30.8311 24.813 31.4071 25.389C31.9831 25.965 31.9831 26.8992 31.4071 27.4788L27.6077 31.2782C27.3197 31.5662 26.9431 31.7102 26.5628 31.7102Z' fill='white'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-10 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2540_10048' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='5' y='5' width='30' height='30'%3E%3Cpath d='M19.9987 34.1654C27.8227 34.1654 34.1654 27.8227 34.1654 19.9987C34.1654 12.1747 27.8227 5.83203 19.9987 5.83203C12.1747 5.83203 5.83203 12.1747 5.83203 19.9987C5.83203 27.8227 12.1747 34.1654 19.9987 34.1654Z' fill='%23FFC300'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2540_10048)'%3E%3Cpath d='M19.9987 34.1654C27.8227 34.1654 34.1654 27.8227 34.1654 19.9987C34.1654 12.1747 27.8227 5.83203 19.9987 5.83203C12.1747 5.83203 5.83203 12.1747 5.83203 19.9987C5.83203 27.8227 12.1747 34.1654 19.9987 34.1654Z' fill='%23FFC300'/%3E%3Cpath d='M23.6432 28.4999C23.865 28.4999 23.9759 28.4999 24.0765 28.4693C24.1656 28.4423 24.2485 28.3979 24.3205 28.3388C24.4017 28.272 24.4632 28.1797 24.5862 27.9952L26.3273 25.3835C26.5868 24.9943 26.7166 24.7996 26.7284 24.6092C26.7387 24.4422 26.6896 24.2769 26.5897 24.1426C26.4758 23.9896 26.2608 23.8974 25.8308 23.7131L22.1248 22.1249L20.9323 21.7274C20.6016 21.6171 20.4363 21.562 20.283 21.5785C20.1479 21.593 20.0198 21.646 19.914 21.7313C19.794 21.8281 19.7161 21.984 19.5602 22.2957L18.7931 23.83C18.7156 23.9849 18.6768 24.0624 18.6579 24.1441C18.6411 24.2165 18.6358 24.2911 18.6422 24.3651C18.6494 24.4487 18.6768 24.5308 18.7316 24.6952L19.7415 27.7249C19.8344 28.0036 19.8808 28.1429 19.9669 28.2459C20.043 28.3369 20.1407 28.4073 20.2511 28.4507C20.376 28.4999 20.5229 28.4999 20.8166 28.4999H23.6432Z' fill='white'/%3E%3Cpath d='M12 17L5.92674 11.7944C5.35772 11.3066 5.10913 10.5417 5.28271 9.8126L7.18155 1.8375C7.37337 1.03184 8.04191 0.427745 8.86283 0.318289L20.6421 -1.25228C21.6871 -1.39161 22.6608 -0.695839 22.8676 0.337944L23.4413 3.20654C23.4802 3.4011 23.49 3.60036 23.4702 3.79778L22.6289 12.2112C22.5505 12.9954 22.0189 13.6604 21.2713 13.9096L17.0398 15.3201C16.6869 15.4377 16.3739 15.6514 16.1358 15.9371L15.2164 17.0403C14.5347 17.8583 13.3318 17.9988 12.4799 17.36L12 17Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-11 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33.0341 36.0002H15.1583C14.2968 36.0002 13.5977 35.301 13.5977 34.4396C13.5977 33.5781 14.2968 32.8789 15.1583 32.8789H33.0341C33.8956 32.8789 34.5947 33.5781 34.5947 34.4396C34.5947 35.301 33.8956 36.0002 33.0341 36.0002Z' fill='%23FFC300'/%3E%3Cpath d='M28.7922 35.9991C27.9307 35.9991 27.2316 35.2999 27.2316 34.4384V24.3378C27.2316 22.0218 26.214 19.8369 24.438 18.3418C23.7794 17.7862 23.6951 16.803 24.2476 16.1444C24.8032 15.4858 25.7864 15.3984 26.445 15.954C28.9264 18.0421 30.3498 21.0979 30.3498 24.3378V34.4384C30.3529 35.2999 29.6537 35.9991 28.7922 35.9991Z' fill='%23FFC300'/%3E%3Cpath d='M8.32054 18.5823L15.0251 25.2869C15.6556 25.9174 16.6763 25.9174 17.3037 25.2869L25.5596 17.031L16.5764 8.04785L8.32054 16.3037C7.69003 16.9342 7.69003 17.9549 8.32054 18.5823Z' fill='white'/%3E%3Cpath d='M20.2866 4.33801L16.5723 8.05236L25.5554 17.0355L29.2698 13.3211C30.022 12.5689 30.022 11.3516 29.2698 10.5994L23.0053 4.33488C22.2562 3.58577 21.0389 3.58577 20.2866 4.33801Z' fill='%23FFC300'/%3E%3Cpath d='M11.4221 27.3128L6.35623 22.2469C5.89428 21.7849 5.89428 21.0358 6.35623 20.5738L8.32266 18.6074L15.0616 25.3463L13.0952 27.3128C12.6332 27.7716 11.8841 27.7716 11.4221 27.3128Z' fill='%23FFC300'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-12 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9502 33.4347C10.8349 33.4347 9.92969 32.5296 9.92969 31.4143V9.32248C9.92969 8.39307 10.5641 7.58084 11.4652 7.36263L32.268 2.24277C32.8701 2.09325 33.5085 2.23064 33.9975 2.61453C34.4864 2.99842 34.7733 3.58436 34.7733 4.20666V26.2984C34.7733 27.4137 33.8682 28.3189 32.7529 28.3189C31.6376 28.3189 30.7324 27.4137 30.7324 26.2984V6.78073L13.9706 10.9065V31.4183C13.9706 32.5296 13.0655 33.4347 11.9502 33.4347Z' fill='%23FFC300'/%3E%3Cpath d='M8.80649 36.5306C11.7814 36.5306 14.1931 34.1407 14.1931 31.1926C14.1931 28.2444 11.7814 25.8545 8.80649 25.8545C5.83158 25.8545 3.41992 28.2444 3.41992 31.1926C3.41992 34.1407 5.83158 36.5306 8.80649 36.5306Z' fill='white'/%3E%3Cpath d='M29.5602 30.8962C32.5641 30.8962 34.9993 28.4845 34.9993 25.5096C34.9993 22.5347 32.5641 20.123 29.5602 20.123C26.5562 20.123 24.1211 22.5347 24.1211 25.5096C24.1211 28.4845 26.5562 30.8962 29.5602 30.8962Z' fill='white'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-13 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33 7V33M7 7L7 33' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.6662 21.4445L24.3329 21.4445M12.7773 27.2222L18.9476 13.6477C19.2818 12.9124 19.4489 12.5448 19.6804 12.4308C19.8817 12.3317 20.1175 12.3317 20.3187 12.4308C20.5502 12.5448 20.7173 12.9124 21.0515 13.6477L27.2218 27.2222' stroke='%2300B29D' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                                }
-                                &-edutech-14 {
-                                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.7191 4H14.2809C8.60279 4 4 8.20346 4 13.389V19.1386C4 24.3241 8.60279 28.5276 14.2809 28.5276H16.2307L19.3265 30.3659L28.8149 36L25.7191 28.5242C31.3972 28.5242 36 24.3207 36 19.1352V13.389C36 8.20346 31.3972 4 25.7191 4Z' fill='%2300B29D'/%3E%3Cpath d='M18.0769 21.2946H13.6378C12.6108 21.2946 11.7773 20.5334 11.7773 19.5955C11.7773 18.6577 12.6108 17.8965 13.6378 17.8965H18.0769C19.1039 17.8965 19.9373 18.6577 19.9373 19.5955C19.9373 20.5334 19.1039 21.2946 18.0769 21.2946Z' fill='white'/%3E%3Cpath d='M26.3669 15.3786H13.6339C12.6069 15.3786 11.7734 14.6174 11.7734 13.6795C11.7734 12.7416 12.6069 11.9805 13.6339 11.9805H26.3669C27.3939 11.9805 28.2274 12.7416 28.2274 13.6795C28.2274 14.6174 27.3939 15.3786 26.3669 15.3786Z' fill='white'/%3E%3C/svg%3E%0A");
-                                }
-                            }
-
-                            .label {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                width: rem-calc(40px);
-                                height: rem-calc(40px);
-                                border-radius: rem-calc(16px);
+                            align-items: center;
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            max-width: 100%;
+                            height: rem-calc(40px);
+                            overflow: hidden;
+                            background-color: #FF655B;
+                            border-radius: 48px;
+                            padding: 0 rem-calc(40px);
+                            transform: translate(-50%, 0);
+                            .title {
+                                @include ellipsis;
                                 font-weight: 700;
                                 font-size: rem-calc(16px);
                                 line-height: rem-calc(24px);
                                 color: #fff;
-
-                                &.type-ele {
-                                    background-color: $color-ele;
-                                }
-                                &.type-mid {
-                                    background-color: $color-mid;
-                                }
-                                &.type-hi {
-                                    background-color: $color-hi;
-                                }
                             }
                         }
                         .cont-area {
-                            margin-top: auto;
-                            color: #08403A;
-
-                            .title {
+                            display: block;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 100%;
+                            padding: rem-calc(40px) rem-calc(24px) rem-calc(24px);
+                            background-color: #fff;
+                            border-radius: rem-calc(16px);
+                            .tit {
+                                @include ellipsis;
+                                margin-bottom: rem-calc(12px);
                                 font-weight: 700;
-                                font-size: rem-calc(24px);
-                                line-height: rem-calc(34px);
+                                font-size: rem-calc(20px);
+                                line-height: rem-calc(28px);
+                                color: #FF655B;
                                 strong {
                                     font-weight: 700;
                                 }
                             }
-                            .explain {
-                                margin-top: rem-calc(4px);
+                            .con {
+                                display: block;
+                                @include ellipsis4;
                                 font-weight: 400;
                                 font-size: rem-calc(16px);
-                                line-height: rem-calc(22px);
-                                text-overflow: ellipsis;
-                                white-space: nowrap;
-                                overflow: hidden;
-                            }
-                        }
-                    }
-
-                    &-overay {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-
-                        .youtube-thumb,
-                        .sketch-thumb,
-                        img,
-                        iframe {
-                            object-fit: cover;
-                            width: 100%;
-                            height: 100% !important;
-                        }
-                        .sketch-thumb {
-                            position: relative;
-                            z-index: 2;
-                            .btn-play {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                width: 100%;
-                                height: 100%;
-                                background-color: rgba($color: #000000, $alpha: 0.4);
-                                &::before {
-                                    content:'';
-                                    display: block;
-                                    width: rem-calc(60px);
-                                    height: rem-calc(60px);
-                                    background: no-repeat center center / cover;
-                                    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject x='0' y='0' width='0' height='0'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='backdrop-filter:blur(20px);clip-path:url(%23bgblur_0_2256_6554_clip_path);height:100%25;width:100%25'%3E%3C/div%3E%3C/foreignObject%3E%3Cpath data-figma-bg-blur-radius='40' d='M44.0916 26.6563L20.5905 11.259C17.9303 9.51615 14.3984 11.4246 14.3984 14.6049V45.3994C14.3984 48.5797 17.9303 50.4881 20.5905 48.7453L44.0916 33.348C46.5021 31.7687 46.5022 28.2356 44.0916 26.6563Z' fill='white'/%3E%3Cdefs%3E%3CclipPath id='bgblur_0_2256_6554_clip_path' transform='translate(0 0)'%3E%3Cpath d='M44.0916 26.6563L20.5905 11.259C17.9303 9.51615 14.3984 11.4246 14.3984 14.6049V45.3994C14.3984 48.5797 17.9303 50.4881 20.5905 48.7453L44.0916 33.348C46.5021 31.7687 46.5022 28.2356 44.0916 26.6563Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-                                }
-                            }
-                        }
-                        .youtube-thumb {
-                            display: flex;
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 1;
-
-                            &.is-playing {
-                                z-index: 3;
+                                line-height: rem-calc(24px);
+                                color: #666666;
+                                white-space: normal;
                             }
                         }
                     }
@@ -777,21 +680,12 @@
                 }
                 //교과서
                 .main-book{
-                    padding: 0;
-                    background: url(#{$img-sub-url}img_sub_book_main_main_book_ele.png) no-repeat center / cover;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    .container{
-                        width: 100%;
-                        // padding: 0 7%;
-                        padding: 0 2%;
-                        .swiper{
-                            .swiper-slide{
-                                padding: 30px;
-                            }
-                        }
-                    }
+                    background:
+                        url(#{$img-sub-url}img_sub_book_main_main_book_ele.png) no-repeat center bottom / auto,
+                        url(#{$img-sub-url}img_sub_book_main_main_book_ele_obj_01.png) no-repeat left 5rem / 18rem auto,
+                        url(#{$img-sub-url}img_sub_book_main_main_book_ele_obj_02.png) no-repeat calc(100% - 3.75rem) top / 17.15rem auto,
+                        url(#{$img-sub-url}img_sub_book_main_main_book_ele_obj_03.png) no-repeat right 23.25rem / 9.625rem auto;
+                    background-color: #FFE2D0;
                 }
                 //현장 스케치
                 .main-sketch{
@@ -1152,26 +1046,10 @@
                         }
                     }
                     .sub-book-list{
-                        &.swiper{
-                            .list{
-                                display: flex;
-                                gap: 50px;
-                                flex-wrap: wrap;
-                                justify-content: center;
-                                .item{
-                                    width: calc(20% - 40px);
-                                    box-sizing: border-box;
-                                    &:hover{
-                                        .img-box{
-                                            border-color: #319FE8;
-                                        }
-                                    }
-                                }
-                            }
-                            &.swiper{
-                                padding: 3.5% 0;
-                                .swiper-slide{
-                                    padding: 0 5%;
+                        .item{
+                            &:hover{
+                                .img-box{
+                                    border-color: #319FE8;
                                 }
                             }
                         }
@@ -1183,53 +1061,12 @@
                     padding: rem-calc(125px) 0;
                     height: auto;
                     .sketch-list{
-                        &::after{
-                            display: none;
-                        }
-                        .swiper{
-                            width: 100%;
-                            .swiper-wrapper{
-                                height: auto;
+                        .sketch-link {
+                            .tit-area {
+                                background-color: #319FE8;
                             }
-                            .swiper-slide{
-                                padding: 40px 20px;
-                            }
-                        }
-                        .list{
-                            display: flex;
-                            flex-wrap: wrap;
-                            justify-content: center;
-                            gap: 80px 40px;
-                        }
-                        .item{
-                            border-radius: 8px;
-                            padding: 9px;
-                            background-color: #{$base-bgcolor};
-                            box-sizing: border-box;
-                            .img-box{
-                                padding-top: 52%;
-                                border: 0;
-                                border-radius: 8px 8px 0 0;
-                                box-shadow: none;
-                            }
-                            .desc-box{
-                                padding: 15px 11px;
-                                .desc{
-                                    color: nth($bg-grays,4);
-                                    font-weight: 600;
-                                }
-                            }
-                            &:nth-child(1){
-                                transform: rotate(7deg);
-                            }
-                            &:nth-child(3){
-                                transform: rotate(-7deg);
-                            }
-                            &:nth-child(4){
-                                transform: rotate(-7deg);
-                            }
-                            &:nth-child(5){
-                                transform: rotate(7deg);
+                            .cont-area .tit {
+                                color: #319FE8;
                             }
                         }
                     }
@@ -1404,18 +1241,13 @@
                     position: relative;
                     padding: 0 10px;
                     padding: rem-calc(80px) 0;
+                    .title-box {
+                        margin-bottom: 3.75rem;
+                    }
                 }
                 .sub-book-list{
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    gap: 50px 38px;
                     .item{
-                        // width: calc(14.28% - 34px);
-                        width: 210px;
-                        padding: 0;
                         &:hover{
-                            transform: scale(1.2);
                             .img-box{
                                 border-color: #26A85A;
                             }
@@ -1448,7 +1280,7 @@
                         }
                     }
                     .tab-conts{
-                        margin-top: rem-calc(120px);
+                        margin-top: rem-calc(50px);
                         .conts{
                             display: none;
                             &.current{
@@ -1485,104 +1317,13 @@
                         left: -11px;
                         z-index: 2;
                     }
-                    .box{
-                       display: flex;
-                       align-items: center;
-                       justify-content: center;
-                    }
-                    .description{
-                        display: inline-block;
-                        margin-top: rem-calc(20px);
-                        margin-bottom: rem-calc(30px);
-                        font-size: rem-calc(18px);
-                        color: #FCD24C;
-                        border-bottom: 1px dashed #{$base-bgcolor};
-                        padding: 0 20px 3.5px;
-                        text-align: center;
-                        &::before{
-                            content: '';
-                            display: inline-block;
-                            vertical-align: middle;
-                            background: url(#{$img-sub-url}img_sub_book_main_sketch_fly_hi.png) no-repeat center / contain;
-                            width: rem-calc(50px);
-                            height: rem-calc(50px);
-                            margin-right: 5px;
-                            margin-top: -3px;
-                        }
-                    }
-                    .tab-box{
-                        margin-top: rem-calc(20px);
-                        width: 100%;
-                        .tab{
-                            li{
-                                &.current{
-                                    button{
-                                        background-color: #{$base-bgcolor};
-                                        color: #3E47BA;
-                                    }
-                                }
-                            }
-                            button{
-                                background-color: transparent;
-                                color: #{$base-bgcolor};
-                                border: 1px solid #{$base-bgcolor};
-                            }
-                        }
-                        .tab-conts{
-                            margin-top: rem-calc(30px);
-                        }
-                    }
                     .sketch-list{
-                        padding: 0;
-                        margin-top: 0;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                        &::after{
-                            display: none;
-                        }
-                        .item{
-                            width: calc(25% - 30px);
-                            border-radius: 12px;
-                            padding: 9px;
-                            background-color: #FCD24C;
-                            box-sizing: border-box;
-                            .inner{
-                                border: 4px solid #{$base-footer};
-                                border-radius: 8px;
-                                background-color: #{$base-bgcolor};
-                                position: relative;
-                                &::after{
-                                    content: '';
-                                    display: block;
-                                    width: rem-calc(77px);
-                                    height: rem-calc(90px);
-                                    position: absolute;
-                                    top: -18%;
-                                    right: -5%;
-                                    background: url(#{$img-sub-url}img_sub_book_main_sketch_pin_hi.png) no-repeat center /contain;
-                                }
+                        .sketch-link {
+                            .tit-area {
+                                background-color: #3CB56D;
                             }
-                            .img-box{
-                                padding-top: 61%;
-                                border: 0;
-                                border-radius: 6px 6px 0 0;
-                                box-shadow: none;
-                            }
-                            .desc-box{
-                                padding: rem-calc(30px) rem-calc(20px);
-                                .desc{
-                                    color: nth($bg-grays,4);
-                                    font-weight: 600;
-                                }
-                            }
-                        }
-                    }
-                    #sketchTab2{
-                        .sketch-list{
-                            width: calc(100% - 25%);
-                            margin: auto;
-                            .item{
-                                width: calc(33.33% - 30px);
+                            .cont-area .tit {
+                                color: #3CB56D;
                             }
                         }
                     }
