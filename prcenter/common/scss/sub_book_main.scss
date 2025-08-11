@@ -1005,10 +1005,6 @@
                     align-items: center;
                     justify-content: center;
                     position: relative;
-                    //overflow: hidden;
-                    .wrapper{
-                        max-width: 85%;
-                    }
                     @keyframes armToggle {
                         0% {
                             transform: rotate(10deg);
@@ -1226,13 +1222,11 @@
                 }
                 //교과서
                 .main-book{
-                    background: url(#{$img-sub-url}img_sub_book_main_main_book_hi.png) no-repeat center / cover;
+                    background: #B9E1F8 url(#{$img-sub-url}img_sub_book_main_main_book_hi.png) no-repeat center top / 100% auto;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     position: relative;
-                    padding: 0 10px;
-                    padding: rem-calc(80px) 0;
                     .title-box {
                         margin-bottom: 3.75rem;
                     }
@@ -1283,32 +1277,13 @@
                 }
                 //현장 스케치
                 .main-sketch{
-                    background: url(#{$img-sub-url}img_sub_book_main_sketch_hi.png) no-repeat center / cover;
+                    background:
+                        url(#{$img-sub-url}img_sub_book_main_sketch_hi_obj01.png) no-repeat calc(50% + 33.625rem) 5.625rem / 12.625rem auto,
+                        url(#{$img-sub-url}img_sub_book_main_sketch_hi_obj02.png) no-repeat calc(50% - 16.25rem) bottom / 12.625rem auto;
+                    background-color: #4149BB;
                     padding: rem-calc(125px) 0;
                     height: auto;
                     position: relative;
-                    // &::before{
-                    //     content: '';
-                    //     display: block;
-                    //     background: url(#{$img-sub-url}img_sub_book_main_sketch_glassess_hi.png) no-repeat center / contain;
-                    //     width: rem-calc(250px);
-                    //     height: rem-calc(270px);
-                    //     position: absolute;
-                    //     top: -4%;
-                    //     left: 5%;
-                    //     z-index: 2;
-                    // }
-                    &::after{
-                        content: '';
-                        display: block;
-                        background: url(#{$img-sub-url}img_sub_book_main_sketch_person_hi.png) no-repeat center / contain;
-                        width: rem-calc(260px);
-                        height: rem-calc(400px);
-                        position: absolute;
-                        bottom: -17%;
-                        left: -11px;
-                        z-index: 2;
-                    }
                     .sketch-list{
                         .sketch-link {
                             .tit-area {
@@ -1426,6 +1401,13 @@
     .submain{
         &.ybm{
             &.sub-book-main{
+                .main-book {
+                    .sub-book-list{
+                        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                        gap: 24px;
+                    }
+                }
+
                 //현장 스케치
                 .main-sketch{
                     padding-bottom: rem-calc(80px);
@@ -1438,27 +1420,6 @@
                         }
                     }
                 }
-                .sub-book-list{
-                    &.swiper{
-                        .swiper-slide{
-                            //padding: 10px;
-                        }
-                        .item{
-                            &:hover{
-                                //transform: scale(1);
-                                .hover-box{
-                                    //transform:  translate(-50%,-50%) scale(1);
-                                }
-                            }
-
-                        }
-                    }
-                    .item{
-                        .hover-box{
-                           // display: none;
-                        }
-                    }
-                }
                 &.ele{
                     .main-visual{
                         height: 64vh;
@@ -1466,27 +1427,6 @@
                             &.obj3{
                                 top: 28%;
                                 left: 18%;
-                            }
-                        }
-                    }
-                    .sub-book-list{
-                        &.swiper{
-                            .swiper-slide{
-                                padding: 10px;
-                            }
-                            .item{
-                                &:hover{
-                                    // transform: scale(1);
-                                    .hover-box{
-                                        // transform:  translate(-50%,-50%) scale(1);
-                                    }
-                                }
-
-                            }
-                        }
-                        .item{
-                            .hover-box{
-                               // display: none;
                             }
                         }
                     }
@@ -1511,30 +1451,12 @@
                             margin-top: rem-calc(120px);
                         }
                     }
-                    .main-book{
-                        .sub-book-list{
-                            &.swiper{
-                                .list{
-                                    gap: 10px;
-                                    .item{
-                                        width: calc(20% - 8px);
-                                    }
-                                }
-                            }
-                        }
-                    }
                     .main-sketch{
-                        padding: rem-calc(200px) 0;
                         .sketch-list{
                             .item{
                                 width: calc(33.33% - 27px);
                             }
                         }
-                    }
-                }
-                &.hi{
-                    .main-sketch{
-                        padding: rem-calc(250px) 0 rem-calc(100px);
                     }
                 }
             }
@@ -1591,11 +1513,20 @@
                         }
                     }
                 }
+                .main-sketch {
+                    .wrapper {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
                 &.ele{
                     .main-visual{
                         height: 70vh;
                     }
                     .main-book{
+                        .wrapper{
+                            max-width: 100%;
+                        }
                         .container{
                             .swiper{
                                 .swiper-slide{
@@ -1613,20 +1544,8 @@
                         .obj-box{
                             display: none;
                         }
-                        .sub-book-list{
-                            &.swiper{
-                                width: 100%;
-                                .list{
-                                    gap: 10px;
-                                    .item{
-                                        width: calc(25% - 8px);
-                                    }
-                                }
-                            }
-                        }
                     }
                     .main-sketch{
-                        padding: rem-calc(300px) 0 rem-calc(150px);
                         .sketch-list{
                             .item{
                                 width: calc(50% - 27px);
@@ -1636,11 +1555,8 @@
                 }
                 &.hi{
                     .main-book{
-                        padding: 5rem 20px;
-                    }
-                    .sub-book-list{
-                        .item{
-                            width: calc(25% - 10px);
+                        .wrapper{
+                            max-width: 100%;
                         }
                     }
                     .tab-box{
@@ -1840,17 +1756,6 @@
                             }
                         }
                     }
-                    .main-book{
-                        .sub-book-list{
-                            &.swiper{
-                                .list{
-                                    .item{
-                                        width: calc(50% - 5px);
-                                    }
-                                }
-                            }
-                        }
-                    }
                     .main-sketch{
                         .sketch-list{
                             .item{
@@ -1866,11 +1771,6 @@
                                 width: rem-calc(130px);
                                 height: rem-calc(150px);
                             }
-                        }
-                    }
-                    .sub-book-list{
-                        .item{
-                            width: calc(50% - 20px);
                         }
                     }
                     .main-visual{
