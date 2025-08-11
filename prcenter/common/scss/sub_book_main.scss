@@ -242,8 +242,10 @@
                 }
                 .sketch-scroll {
                     width: 100%;
-                    padding: rem-calc(20px) 0;
-                    // overflow: hidden;
+                    padding: 0 0;
+                    + .sketch-scroll {
+                        margin-top: rem-calc(40px);
+                    }
                     .sketch-wrapper {
                         display: flex;
                         white-space: nowrap;
@@ -681,16 +683,20 @@
                 //교과서
                 .main-book{
                     background:
-                        url(#{$img-sub-url}img_sub_book_main_main_book_ele.png) no-repeat center bottom / auto,
-                        url(#{$img-sub-url}img_sub_book_main_main_book_ele_obj_01.png) no-repeat left 5rem / 18rem auto,
-                        url(#{$img-sub-url}img_sub_book_main_main_book_ele_obj_02.png) no-repeat calc(100% - 3.75rem) top / 17.15rem auto,
-                        url(#{$img-sub-url}img_sub_book_main_main_book_ele_obj_03.png) no-repeat right 23.25rem / 9.625rem auto;
+                        url(#{$img-sub-url}img_sub_book_main_book_ele.png) no-repeat center bottom / auto,
+                        url(#{$img-sub-url}img_sub_book_main_book_ele_obj_01.png) no-repeat left 5rem / 18rem auto,
+                        url(#{$img-sub-url}img_sub_book_main_book_ele_obj_02.png) no-repeat calc(100% - 3.75rem) top / 17.15rem auto,
+                        url(#{$img-sub-url}img_sub_book_main_book_ele_obj_03.png) no-repeat right 23.25rem / 9.625rem auto;
                     background-color: #FFE2D0;
                 }
                 //현장 스케치
                 .main-sketch{
-                    background: url(#{$img-sub-url}img_sub_book_main_sketch_ele.png) no-repeat center / cover;
-                    padding: rem-calc(90px) 0 rem-calc(184px);
+                    background:
+                        url(#{$img-sub-url}img_sub_book_main_sketch_ele_obj_01.png) no-repeat calc(50% + 31rem) 7.5rem / 11.75rem auto,
+                        url(#{$img-sub-url}img_sub_book_main_sketch_ele_obj_02.png) no-repeat calc(50% - 36.25rem) bottom / 12.5rem auto,
+                        url(#{$img-sub-url}img_sub_book_main_sketch_ele_obj_03.png) no-repeat calc(50% + 40.75rem) bottom / 14rem auto;
+                    background-color: #FF914D;
+                    padding: rem-calc(130px) 0 rem-calc(154px);
                 }
                 //기념 이벤트
                 .main-event{
@@ -989,33 +995,19 @@
                 }
                 //교과서
                  .main-book{
-                    background: url(#{$img-sub-url}img_sub_book_main_main_book_mid.png) no-repeat center / cover;
+                    background:
+                    url(#{$img-sub-url}img_sub_book_main_book_mid_obj_01.png) no-repeat 4.6785rem 2.5rem / 21.1875rem auto,
+                    url(#{$img-sub-url}img_sub_book_main_book_mid_obj_02.png) no-repeat right 6.125rem / 21.625rem auto,
+                    url(#{$img-sub-url}img_sub_book_main_book_mid_obj_03.png) no-repeat left 32.8125rem / 10.4375rem auto,
+                    url(#{$img-sub-url}img_sub_book_main_book_mid.png) no-repeat center top / 100% auto;
+                    background-color: #D3E1FF;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     position: relative;
                     //overflow: hidden;
-                    padding: rem-calc(215px) 0 rem-calc(144px);
                     .wrapper{
                         max-width: 85%;
-                    }
-                    .obj-box{
-                        position: absolute;
-                        right: -4%;
-                        .obj1{
-                            background: url(#{$img-sub-url}img_sub_book_main_main_book_map1_mid.svg) no-repeat center / cover;
-                            width: rem-calc(20px);
-                            height: rem-calc(24px);
-                            position: absolute;
-                            right: 39.1%;
-                            z-index: 2;
-                        }
-                        .obj2{
-                            background: url(#{$img-sub-url}img_sub_book_main_main_book_map2_mid.svg) no-repeat center / contain;
-                            width: rem-calc(277px);
-                            height: rem-calc(257px);
-                            animation: armToggle 1.4s linear infinite alternate;
-                        }
                     }
                     @keyframes armToggle {
                         0% {
@@ -1057,7 +1049,7 @@
                 }
                 //현장 스케치
                 .main-sketch{
-                    background: url(#{$img-sub-url}img_sub_book_main_sketch_mid.png) no-repeat center / cover;
+                    background: #527DDD;
                     padding: rem-calc(125px) 0;
                     height: auto;
                     .sketch-list{
@@ -1520,7 +1512,6 @@
                         }
                     }
                     .main-book{
-                        padding-top: 18rem;
                         .sub-book-list{
                             &.swiper{
                                 .list{
