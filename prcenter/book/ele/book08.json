@@ -1,98 +1,97 @@
 {
     "subject": "pra",
-    "title": "실과 3~4학년 (이기청)",
-    "subscript": "신나는 체육수업, 따미와 함께 역량 UP!",
+    "title": "실과 5~6학년 (이상원)",
+    "subscript": "뻔한 교과서 말고 FUNFUN한 실과 교과서",
     "cover_img_count": 2,
     "writing_staff": [
         {
-            "name":"이기청",
-            "affiliation":"춘천교육대학교 체육교육과 교수",
-            "history":["서울대학교 대학원 운동 역학 박사","서울대학교 야구부 감독"],
-            "word":"학생들 스스로 움직임의 원리를 발견하는 창의적인 교과서",
-            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-06.%20%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%B2%B4%EC%9C%A1%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EC%9D%B4%EA%B8%B0%EC%B2%AD%20%EA%B5%90%EC%88%98%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+            "name":"이상원",
+            "affiliation":"서울교육대학교 교수",
+            "history":["성균관대학교 생명과학 박사","서울대학교 야구부 감독", "서울대학교 약학대학 창의연구단 책임연구원"],
+            "word":"맑고 건강한 미래를 여는 첫 발걸음의 '마중물'"
         },
         {
-            "name":"박종태",
-            "affiliation":"부산교육대학교 체육교육과 교수",
-            "history":["부산대학교대학원 스포츠심리 박사"],
-            "word":"아이들의 땀과 웃음"
+            "name":"문성환",
+            "affiliation":"서울교육대학교 교수",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"이강순",
-            "affiliation":"경인교육대학교 체육교육과 교수",
-            "history":["뉴욕대학교대학원 무용교육 박사"],
-            "word":"자유롭고 즐거운 삶"
+            "name":"김종우",
+            "affiliation":"제주대학교 교수",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"김재운",
-            "affiliation":"경인교육대학교 체육교육과 교수",
-            "history":["서울대학교대학원 체육교육 박사"],
-            "word":"즐거움의 시작"
+            "name":"장현진",
+            "affiliation":"서울교육대학교 교수",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"이창근",
-            "affiliation":"춘천 송화초등학교 교사",
-            "history":["춘천교육대학교 교육대학원 초등체육 석사"],
-            "word":"종합예술"
+            "name":"김상미",
+            "affiliation":"서울 강서초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"박규빈",
-            "affiliation":"평창 속사초등학교 교사",
-            "history":["서울대학교대학원 체육교육 석사"],
-            "word":"앎"
+            "name":"김상지",
+            "affiliation":"서울 숭인초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"김도엽",
-            "affiliation":"강릉 모산초등학교 교사",
-            "history":["춘천교육대학교 교육대학원 초등체육 석사"],
-            "word":"활동 가득 학생 중심 교과서"
+            "name":"배영훈",
+            "affiliation":"인천 후정초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"전수진",
-            "affiliation":"김포 청수초등학교 교사",
-            "history":["춘천교육대학교 초등체육 학사"],
-            "word":"산소"
+            "name":"원정원",
+            "affiliation":"서울 신가초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"한상모",
-            "affiliation":"평택 현촌초등학교 수석교사",
-            "history":["경인교육대학교 교육대학원 초등체육 박사"],
-            "word":"수업코치"
+            "name":"이경아",
+            "affiliation":"서울 선곡초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"신진규",
-            "affiliation":"인천 동암초등학교 교사",
-            "history":["경인교육대학교 교육대학원 초등체육 박사"],
-            "word":"언제든 꺼내보는 비밀창고"
+            "name":"이미연",
+            "affiliation":"과천 청계초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"박계호",
-            "affiliation":"부산 동삼초등학교 교사",
-            "history":["부산교육대학교 교육대학원 초등체육 석사"],
-            "word":"보물창고"
+            "name":"이유림",
+            "affiliation":"서울 언남초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"권택돈",
-            "affiliation":"부산 연서초등학교 교사",
-            "history":["부산대학교 대학원 스포츠교육학 박사과정 재학"],
-            "word":"스포츠 세상으로 가는 비행기"
+            "name":"이정서",
+            "affiliation":"대구 경동초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"김정희",
-            "affiliation":"성남 보평초등학교 교사",
-            "history":["경인교육대학교 교육대학원 초등체육 박사"],
-            "word":"즐거움과 행복을 주는 오아시스"
+            "name":"전송이",
+            "affiliation":"서울 성내초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"정우정",
-            "affiliation":"군포 당동초등학교 교사",
-            "history":["경인교육대학교 교육대학원 초등체육 박사 수료"],
-            "word":"선생님의 수업을 위한 밀키트"
+            "name":"조영철",
+            "affiliation":"(전)인천 간석초등학교 교사",
+            "history":[""],
+            "word":""
         }
     ],
     "character":[
-        {"name":"체육 3학년"},
-        {"name":"체육 4학년"}
+        {"name":"실과 5학년"},
+        {"name":"실과 6학년"}
     ],
     "booktab":[
         [
@@ -112,7 +111,7 @@
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07170143362024WLKyS", "SEMESTER":"3학년"},
-        {"TEXTBOOK_ID":"T07170144092024JtVQf", "SEMESTER":"4학년"}
+        {"TEXTBOOK_ID":"", "SEMESTER":"5학년"},
+        {"TEXTBOOK_ID":"", "SEMESTER":"6학년"}
     ]
 }

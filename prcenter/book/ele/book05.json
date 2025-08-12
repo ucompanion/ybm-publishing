@@ -1,8 +1,8 @@
 {
     "subject": "music",
-    "title": "음악 3~4학년 (양소영)",
+    "title": "음악 3~6학년 (양소영)",
     "subscript": "알쏭 달쏭 음악 개념을 쉽고 재미있게",
-    "cover_img_count": 2,
+    "cover_img_count": 4,
     "writing_staff": [
         {
             "name":"양소영",
@@ -51,7 +51,9 @@
     ],
     "character":[
         {"name":"음악 3학년"},
-        {"name":"음악 4학년"}
+        {"name":"음악 4학년"},
+        {"name":"음악 5학년"},
+        {"name":"음악 6학년"}
     ],
     "booktab":[
         [
@@ -72,6 +74,8 @@
     ],
     "TEXTBOOK_INFO":[
         {"TEXTBOOK_ID":"T07170142222024txvVx", "SEMESTER":"3학년"},
-        {"TEXTBOOK_ID":"T07170142562024GXUlP", "SEMESTER":"4학년"}
+        {"TEXTBOOK_ID":"T07170142562024GXUlP", "SEMESTER":"4학년"},
+        {"TEXTBOOK_ID":"", "SEMESTER":"5학년"},
+        {"TEXTBOOK_ID":"", "SEMESTER":"5학년"}
     ]
 }

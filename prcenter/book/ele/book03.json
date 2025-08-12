@@ -1,8 +1,8 @@
 {
     "subject": "math",
-    "title": "수학 3~4학년 (류희찬)",
+    "title": "수학 3~6학년 (류희찬)",
     "subscript": "창의적인 사고력을 기르는 교과서",
-    "cover_img_count": 4,
+    "cover_img_count": 8,
     "AIDT_LINK": "/aidt/elemath3.html",
     "writing_staff": [
         {
@@ -78,7 +78,11 @@
         {"name":"수학 3-1"},
         {"name":"수학 3-2"},
         {"name":"수학 4-1"},
-        {"name":"수학 4-2"}
+        {"name":"수학 4-2"},
+        {"name":"수학 5-1"},
+        {"name":"수학 5-2"},
+        {"name":"수학 6-1"},
+        {"name":"수학 6-2"}
     ],
     "booktab":[
         [
@@ -87,20 +91,23 @@
             "디지털 교육 환경에 최적화"
         ],
         [
-            "교과서의 팀구 활동 및 문제에 대한 자세한 해설",
+            "교과서의 탐구 활동 및 문제에 대한 자세한 해설",
             "각 차시별 오프라인, 온라인 교수 학습 방법 제시",
             "각 차시별 풍부한 평가자료를 부록으로 제공"
         ],
         [
             "교과서와 익힘책을 전자책(e-book)으로 제공함과 동시에 문제별로 학습창 제시",
-            "교수∙학습 및 평가에 활용할 수 있는 다양한 자료가 수록된 자료실",
-            "재미있게 수학 학습이 가능한 디지털 교구 탑재"
+            "교수∙학습 및 평가에 활용할 수 있는 다양한 자료가 수록된 자료실"
         ]
     ],
     "TEXTBOOK_INFO":[
         {"TEXTBOOK_ID":"T07171208392024WISxJ", "SEMESTER":"3학년 1학기"},
         {"TEXTBOOK_ID":"T07171209142024M35Wr", "SEMESTER":"3학년 2학기"},
         {"TEXTBOOK_ID":"T07171209472024ir74Q", "SEMESTER":"4학년 1학기"},
-        {"TEXTBOOK_ID":"T07171210222024VOdeN", "SEMESTER":"4학년 2학기"}
+        {"TEXTBOOK_ID":"T07171210222024VOdeN", "SEMESTER":"4학년 2학기"},
+        {"TEXTBOOK_ID":"", "SEMESTER":"5학년 1학기"},
+        {"TEXTBOOK_ID":"", "SEMESTER":"5학년 2학기"},
+        {"TEXTBOOK_ID":"", "SEMESTER":"6학년 1학기"},
+        {"TEXTBOOK_ID":"", "SEMESTER":"6학년 2학기"}
     ]
 }

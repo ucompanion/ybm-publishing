@@ -28,7 +28,7 @@ $(function(){
         success: function(res) {
             $('body').addClass(res.subject);
             $('.main-visual .title-box .title').text(res.title);
-            $('.main-visual .title-box .desc').text(res.subscript);
+            $('.main-visual .title-box .desc').html(res.subscript);
 
             //console.log("Prcenter_TextBook: "+JSON.stringify(res));
             const aiBookLink = document.querySelector(".floating-ai-book a");
