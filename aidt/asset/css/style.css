@@ -384,14 +384,26 @@
  .sbmain_ai .modelinfo_summary .expain {margin-top: 0.75rem; font-weight: 400; font-size: 1.125rem; line-height: 1.625rem; color: #666;}
 
  .sbmain_sec2 .sb_sec.mid .sb_header h2 span {background: linear-gradient(0deg,#74D8E4 0.5rem,transparent calc(0.5rem + 1px));}
+ .sbmain_sec2 .sb_sec.mid .bookbox_g {padding: 4.5rem 1.25rem 1.25rem 1.25rem;}
+ .sbmain_sec2 .sb_sec.mid .bookbox_g .tit {margin-bottom: 1.25rem; font-size: 1.25rem; line-height: 2rem;}
+ /* .sbmain_sec2 .sb_sec.mid .bookbox_g .img_g {width: 13.75rem;} */
+ .sbmain_sec2 .sb_sec.mid .book_bx {grid-template-columns: 2fr 1fr 1fr;}
+ .sbmain_sec2 .sb_sec.mid .bookbox_g .detail_g {margin-top: 1.25rem; padding: 0;}
+ .sbmain_sec2 .sb_sec.mid .bookbox_g .detail_g .desc {font-size: 1rem; line-height: 1.625rem;}
  .sbmain_sec2 .sb_sec.mid .bookbox_g h3 {background: transparent linear-gradient(180deg,#4293B7 0%,#60CDDC 100%);}
- .sbmain_sec2 .sb_sec.mid .bookbox_g .book_box {background: #E1F7F8;}
- .sbmain_sec2 .sb_sec.mid .book_box .btn_moreview {background: transparent linear-gradient(106deg,#53A4C5 0%,#74D8E4 100%) 0% 0% no-repeat padding-box;border: none;}
+ .sbmain_sec2 .sb_sec.mid .bookbox_g .book_box {padding: 2.5rem 1.25rem 6rem 1.25rem; background: #E1F7F8;}
+ .sbmain_sec2 .sb_sec.mid .book_box .btn_moreview {max-width: calc(100% - 2.5rem); bottom: 1.25rem; background: transparent linear-gradient(106deg,#53A4C5 0%,#74D8E4 100%) 0% 0% no-repeat padding-box;border: none;}
  .sbmain_sec2 .sb_sec.mid .book_box:hover {border: 2px solid #71D3E1;}
  .sbmain_sec2 .sb_sec.hi .sb_header h2 span {background: linear-gradient(0deg,#3DAC6D 0.5rem,transparent calc(0.5rem + 1px));}
+ .sbmain_sec2 .sb_sec.hi .bookbox_g {padding: 4.5rem 1.25rem 1.25rem 1.25rem;}
+ .sbmain_sec2 .sb_sec.hi .bookbox_g .tit {margin-bottom: 1.25rem; font-size: 1.25rem; line-height: 2rem;}
+ /* .sbmain_sec2 .sb_sec.hi .bookbox_g .img_g {width: 13.75rem;} */
+ .sbmain_sec2 .sb_sec.hi .book_bx {grid-template-columns: 2fr 1fr 1fr;}
+ .sbmain_sec2 .sb_sec.hi .bookbox_g .detail_g {margin-top: 1.25rem; padding: 0;}
+ .sbmain_sec2 .sb_sec.hi .bookbox_g .detail_g .desc {font-size: 1rem; line-height: 1.625rem;}
  .sbmain_sec2 .sb_sec.hi .bookbox_g h3 {background: transparent linear-gradient(180deg,#3DAC6D 0%,#42CA9A 100%);}
- .sbmain_sec2 .sb_sec.hi .bookbox_g .book_box {background: #E5F7EE;}
- .sbmain_sec2 .sb_sec.hi .book_box .btn_moreview {background: transparent linear-gradient(90deg,#4DB97D 0%,#55D6AC 100%) 0% 0% no-repeat padding-box;border: none;}
+ .sbmain_sec2 .sb_sec.hi .bookbox_g .book_box {padding: 2.5rem 1.25rem 6rem 1.25rem; background: #E5F7EE;}
+ .sbmain_sec2 .sb_sec.hi .book_box .btn_moreview {max-width: calc(100% - 2.5rem); bottom: 1.25rem; background: transparent linear-gradient(90deg,#4DB97D 0%,#55D6AC 100%) 0% 0% no-repeat padding-box;border: none;}
  .sbmain_sec2 .sb_sec.hi .book_box:hover {border: 2px solid #4DB97D;}
  .sb_sec1 {height: 100vh;background: transparent linear-gradient(118deg,#FE6D5F 0%,#FE9467 100%);}
  .sb_sec1 .inner {max-width:calc(1280px + 5rem);margin: 0 auto;display: flex;align-items: center;justify-content: space-between;height: 100%;}
