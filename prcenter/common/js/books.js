@@ -146,6 +146,7 @@ $(function(){
             });
 
             // booktab
+            console.log(res.booktab);
             for(let i=0; i<res.booktab.length; i++){
                 let $class = (i == 0)? ' current' : '';
 
@@ -398,7 +399,7 @@ $(function(){
      * 페이지 예외처리
      */
         // 특정 교과서 전자 저작물 제외
-    const arBooksList = new Array('hi14','hi15','hi16','hi18');
+    const arBooksList = new Array('hi15','hi16','hi17','hi19');
     if(arBooksList.indexOf(bookCode) >= 0){
         $('.book-tab-menu .item:last-child').remove();
     }

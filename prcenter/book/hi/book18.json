@@ -1,59 +1,92 @@
 {
-    "subject": "music2",
-    "title": "음악 감상과 비평 (강민선)",
-    "subscript": "음악을 읽다, 세상을 잇다",
+    "subject": "pe2",
+    "title": "스포츠 과학 (김경래)",
+    "subscript": "과학으로 풀어낸 운동의 원리! <br/>움직임 속에 숨겨진 과학적 사고력 향상",
     "cover_img_count": 1,
     "writing_staff": [
         {
-            "name":"강민선",
-            "affiliation":"국제예술대학교 교수",
-            "history":["서울대학교 음악교육 박사"],
-            "word":"공감과 감동이 있는 교과서",
-            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-18.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%9D%8C%EC%95%85%20%EA%B0%90%EC%83%81%EA%B3%BC%20%EB%B9%84%ED%8F%89%20%EC%A0%80%EC%9E%90%20%EA%B0%95%EB%AF%BC%EC%84%A0%C2%B7%EC%9D%B4%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%86%A1%ED%98%84%EC%9A%B0%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+            "name":"김경래",
+            "affiliation":"한국교원대학교",
+            "history":["서울대학교 대학원 체육학 박사"],
+            "word":"미래 체육인을 위한 나침반"
         },
         {
-            "name":"김일영",
-            "affiliation":"청담고등학교 교사",
-            "history":["한국교원대학교 음악교육 박사"],
-            "word":"행복한 음악의 시작"
+            "name":"문제헌",
+            "affiliation":"한국교원대학교",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"이동희",
-            "affiliation":"경인교육대학교 교수",
-            "history":["한국학중앙연구원 한국학대학원 음악학 박사"],
-            "word":"즐거운 교과서",
-            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-18.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%9D%8C%EC%95%85%20%EA%B0%90%EC%83%81%EA%B3%BC%20%EB%B9%84%ED%8F%89%20%EC%A0%80%EC%9E%90%20%EA%B0%95%EB%AF%BC%EC%84%A0%C2%B7%EC%9D%B4%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%86%A1%ED%98%84%EC%9A%B0%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+            "name":"서건석",
+            "affiliation":"일동중학교",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"송현우",
-            "affiliation":"혜화여자고등학교 교사",
-            "history":["경희대학교 작곡 학사"],
-            "word":"풍부한 교과서",
-            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/03-18.%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EC%9D%8C%EC%95%85%20%EA%B0%90%EC%83%81%EA%B3%BC%20%EB%B9%84%ED%8F%89%20%EC%A0%80%EC%9E%90%20%EA%B0%95%EB%AF%BC%EC%84%A0%C2%B7%EC%9D%B4%EB%8F%99%ED%9D%AC%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EC%86%A1%ED%98%84%EC%9A%B0%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
+            "name":"이병호",
+            "affiliation":"권선중학교",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"김형석",
-            "affiliation":"국제예술대학교 교수",
-            "history":["애리조나주립대 음악교육 박사"],
-            "word":"생동감 있는 교과서"
+            "name":"김철호",
+            "affiliation":"경기체육고등학교",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"최진형",
-            "affiliation":"세현고등학교 교사",
-            "history":["연세대학교 음악교육 석사"],
-            "word":"꼭 필요한 교과서"
+            "name":"정연규",
+            "affiliation":"사직중학교",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"한태동",
-            "affiliation":"명일여자고등학교 교사",
-            "history":["서울대학교 음악교육 박사"],
-            "word":"쉽고 재밌는 교과서"
+            "name":"김도형",
+            "affiliation":"광주교육대학교",
+            "history":[""],
+            "word":""
         },
         {
-            "name":"유하양",
-            "affiliation":"수원여자고등학교 교사",
-            "history":["서울대학교 음악교육 박사"],
-            "word":"흥미로운 교과서"
+            "name":"고기범",
+            "affiliation":"홍천여자고등학교",
+            "history":[""],
+            "word":""
+        },
+        {
+            "name":"김동민",
+            "affiliation":"광주제일고등학교",
+            "history":[""],
+            "word":""
+        },
+        {
+            "name":"김성민",
+            "affiliation":"한국교원대 학교체육연구소",
+            "history":[""],
+            "word":""
+        },
+        {
+            "name":"박현옥",
+            "affiliation":"울산대현중학교",
+            "history":[""],
+            "word":""
+        },
+        {
+            "name":"서승범",
+            "affiliation":"경북소프트웨어마이스터고등학교",
+            "history":["B"],
+            "word":""
+        },
+        {
+            "name":"오연옥",
+            "affiliation":"면목중학교",
+            "history":[""],
+            "word":""
+        },
+        {
+            "name":"이혜윤",
+            "affiliation":"세종미래고등학교",
+            "history":[""],
+            "word":""
         }
     ],
     "character":[
@@ -61,22 +94,22 @@
     ],
     "booktab":[
         [
-            "명곡과 최신 음악 QR 코드 수록",
-            "직관적인 3단계 활동으로 쉬운 재구성",
-            "현직 교사 설문 조사를 반영한 체재"
+            "과학적 안목과 창의적 사고를 함양하는 교과서",
+            "사고력과 탐구력을 함양하는 교과서",
+            "나의 진로를 탐색하고 설계하는 교과서"
         ],
         [
-            "교사용 교과서와 지도서를 한 번에",
-            "다양한 활동 예시 내용 제공",
-            "간편한 수업 지도를 위한 보충 설명"
+            "수업 준비 및 학습 안내를 제시한 지도서",
+            "다양한 보충 자료를 제시한 지도서",
+            "다양한 활동 자료를 제시한 지도서"
         ],
         [
-            "가독성을 높인 깔끔한 구성",
-            "음원, 영상 자료를 손쉽게 감상",
-            "악보, 활동지 다운로드 가능"
+            "시선의 흐름이 편리한 전자저작물",
+            "학습자의 흥미를 유도하는 전자저작물",
+            "영상 및 애니 자료 등 다양한 자료를 제공"
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07171156412024mfyEF", "SEMESTER":"음악 감상과 비평"}
+        {"TEXTBOOK_ID":"ㅁㄴㅇㄻㄴㅇㄹ", "SEMESTER":"스포츠 과학"}
     ]
 }

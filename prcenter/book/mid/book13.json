@@ -1,0 +1,79 @@
+{
+    "subject": "ai",
+    "title": "인공지능과 문제 해결 (유재원)",
+    "subscript": "수업부터 평가까지 한 번에, 학교자율시간 OK!",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"유재원",
+            "affiliation":"충청남도당진교육지원청 장학관",
+            "history":[],
+            "word":""
+        },
+        {
+            "name":"박진석",
+            "affiliation":"서산고등학교 교감",
+            "history":[],
+            "word":""
+        },
+        {
+            "name":"강성훈",
+            "affiliation":"아산갈산중학교 교사",
+            "history":[],
+            "word":""
+        },
+        {
+            "name":"오순희",
+            "affiliation":"온양용화중학교 교사",
+            "history":[],
+            "word":""
+        },
+        {
+            "name":"정승열",
+            "affiliation":"온양고등학교 교사",
+            "history":[],
+            "word":""
+        },
+        {
+            "name":"황정선",
+            "affiliation":"예산여자고등학교 교사",
+            "history":[],
+            "word":""
+        },
+        {
+            "name":"정현진",
+            "affiliation":"배방고등학교 교사",
+            "history":[],
+            "word":""
+        },
+        {
+            "name":"가민경",
+            "affiliation":"배방고등학교 교사",
+            "history":[],
+            "word":""
+        }
+    ],
+    "character":[
+        {"name":"구성과 특징"}
+    ],
+    "booktab":[
+        [
+            "활동책이 함께 하는 교과서",
+            "수업 환경을 최우선으로 고려한 교과서",
+            "인공지능에 최적화된 학습 구조"
+        ],
+        [
+            "내용은 없는데 자료는 있음",
+            "내용은 없는데 자료는 있음",
+            "내용은 없는데 자료는 있음"
+        ],
+        [
+            "해당없음 인데 자료는 있음",
+            "해당없음 인데 자료는 있음",
+            "해당없음 인데 자료는 있음"
+        ]
+    ],
+    "TEXTBOOK_INFO":[
+        {"TEXTBOOK_ID":"", "SEMESTER":"인공지능과 문제 해결"}
+    ]
+}
