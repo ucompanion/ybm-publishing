@@ -12,6 +12,510 @@
 
 // 모바일 시작
 @include mobile-xl {
+    .container {
+        .content {
+            padding: 60rem var(--sidepacer);
+            .content-body {
+                padding: 20rem;
+            }
+        }
+    }
+
+    .sub-wrap {
+        .container {
+            .content {
+                padding: 32rem var(--sidepacer);
+                .content-body {
+                    padding: 0;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .board-sec {
+            .sec-header {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 40rem;
+                .sec-title {
+                    font-size: 32rem;
+                    line-height: 44rem;
+                }
+            }
+            .sec-util {
+                margin: 16rem auto 0;
+            }
+        }
+    }
+
+    // 페이지: AI 스토리챗 메인
+    .main-page {
+        // 섹션: 소개
+        .main-intro-sec {
+            position: relative;
+            z-index: 30;
+
+            .h1-area {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .h1 {
+                    width: 162rem;
+                    height: 42rem;
+                }
+                .explain {
+                    margin-top: 12rem;
+                    font-size: 16rem;
+                    line-height: 24rem;
+                    text-align: center;
+                }
+                .dropdown {
+                    margin-top: 24rem;
+                    @include dropdown-default;
+                    .dropdown-toggle {
+                        width: 160rem;
+                        height: 48rem;
+                        padding: 0 12rem 0 16rem;
+                        border-radius: 8rem;
+                        font-size: 14rem;
+                        line-height: 20rem;
+                        &::after {
+                            width: 20rem;
+                            height: 20rem;
+                        }
+                    }
+                    .dropdown-menu {
+                        width: 160rem;
+                        padding: 12rem;
+                        background: #fff;
+                        border-radius: 8rem;
+                        font-size: 14rem;
+                        line-height: 20rem;
+                        box-shadow: 2rem 2rem 6rem 0 rgba(0, 0, 0, 0.1);
+                        .dropdown-item {
+                            padding: 4rem 6rem;
+                        }
+                    }
+                }
+            }
+
+            .visual-area {
+                display: none;
+            }
+        }
+
+        // 섹션: 탭
+        .main-tab-sec {
+            margin-top: 74rem;
+
+            .tab-list {
+                &::after {
+                    content:'';
+                    position: absolute;
+                    display: block;
+                    left: -50%;
+                    top: 50%;
+                    width: 200%;
+                    bottom: 0;
+                    background-color: #fff;
+                }
+
+                .tab-link {
+                    height: 52rem;
+                    padding: 0 18rem;
+                    font-weight: 700;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    border-radius: 20rem 20rem 12rem 12rem;
+
+                    &::before {
+                        width: 20rem;
+                        height: 20rem;
+                        margin-right: 8rem;
+                    }
+                }
+                .tab-link:disabled {
+                    opacity: 0.75;
+                }
+            }
+
+            .tab-content {
+                border-radius: 0 16rem 20rem 16rem;
+            }
+
+            .tab-pane {
+                padding: 20rem;
+            }
+        }
+
+        // 스토리북 목록
+        .book-list {
+            grid-template-columns: repeat(auto-fill, minmax(130rem, 1fr));
+            gap: 16rem;
+            .book-card {
+                .book-thumb {
+                    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+                    border-radius: 4rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .book-cont {
+                    margin-top: 8rem;
+                    .title {
+                        font-size: 12rem;
+                        line-height: 18rem;
+                    }
+                    .name {
+                        font-size: 10rem;
+                        line-height: 14rem;
+                    }
+                }
+            }
+        }
+
+        // 게시물 섹션
+        .board-sec {
+            .sec-header {
+                .sec-title {
+                    display: none;
+                }
+                .sec-util {
+                    width: 100%;
+                    .btn-delete {
+                        width: 100%;
+                    }
+                }
+            }
+            .sec-body {
+                margin-top: 20rem;
+            }
+        }
+
+        // 게시물 목록
+        .board-table {
+            &,
+            tbody,
+            td {
+                display: block;
+            }
+            thead {
+                display: none;
+            }
+
+            tr {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                gap: 10rem 20rem;
+                padding: 10rem 0;
+                border-bottom: 1px solid #eaeaea;
+                &.is-active {
+                    td {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            th, td {
+                display: flex;
+                align-items: center;
+                height: auto;
+                padding: 0;
+                text-align: left;
+                border: 0;
+            }
+            td {
+                height: 20rem;
+                font-size: 14rem;
+                line-height: 22rem;
+            }
+            .cel-checkbox {
+                order: 1;
+                width: 100%;
+            }
+            .cel-num {
+                order: 2;
+                display: none;
+            }
+            .cel-book {
+                order: 3;
+                width: 100%;
+                color: #000000;
+            }
+            .cel-lesson {
+                order: 4;
+                width: 100%;
+                a {
+                    color: #000000;
+                }
+            }
+            .cel-date {
+                order: 5;
+                color: #767676;
+            }
+            .cel-users {
+                order: 6;
+                color: #767676;
+                &::before {
+                    content: '참여인원 :';
+                    margin-right: 4px;
+                }
+                &::after {
+                    content: '명';
+                }
+            }
+        }
+
+        // 꾸미기 오브젝트
+        .object-group {
+            .object-01 {
+                opacity: 0;
+            }
+            .object-02 {
+                position: absolute;
+                left: -40px;
+                top: -40px;
+                width: 130px;
+                height: 130px;
+                opacity: 0.2;
+            }
+            .object-03 {
+                display: none;
+            }
+            .object-04 {
+                display: none;
+            }
+            .object-05 {
+                top: 273px;
+                left: auto;
+                right: 28px;
+                width: 32px;
+                height: 32px;
+            }
+            .object-06 {
+                left: auto;
+                right: -40px;
+                top: 309px;
+                width: 96px;
+                height: 96px;
+            }
+            .object-07 {
+                opacity: 0;
+            }
+
+            @keyframes floatY {
+            from { transform: translateY(0)  }
+            to   { transform: translateY(calc(var(--float-distance) * -1)) }
+            }
+
+            & > div {
+                will-change: transform;
+                transition: none !important; /* 혹시 남아있는 transition 충돌 제거 */
+                animation: floatY var(--float-duration, 4s) ease-in-out var(--float-delay, 0s) infinite alternate;
+                transform: var(--tx) translate3d(0, 0, 0); /* 초기값(반드시 --tx 선언 필요) */
+            }
+
+            /* 7개 프리셋 (진폭, 지속시간, 지연) */
+            .object-01 { --float-distance: 52.6rem;  --float-duration: 3.2s; --float-delay: 0.0s; }
+            .object-02 { --float-distance: 53.0rem;  --float-duration: 3.8s; --float-delay: 0.4s; }
+            .object-05 { --float-distance: 38.2rem;  --float-duration: 6.0s; --float-delay: 0.7s; }
+            .object-06 { --float-distance: 59.2rem;  --float-duration: 6.8s; --float-delay: 1.1s; }
+            .object-07 { --float-distance: 39.5rem;  --float-duration: 7.4s; --float-delay: 0.5s; }
+        }
+
+        // 모바일 비주얼
+        &::after {
+            content:'';
+            display: block;
+            width: 100%;
+            max-width: 480px;
+            margin: auto;
+            aspect-ratio: 320/228;
+            background: url('#{$pages-url}img-main-visual-pc.png') no-repeat center center / contain;
+        }
+
+    }
+
+    // 페이지: 결과 리포트
+    .report-page {
+        // 게시물 섹션
+        .board-sec {
+            @include board-sec;
+            .sec-footer {
+                display: flex;
+                justify-content: center;
+                margin-top: 20rem;
+                .btn-list {
+                    @include btn-base-48;
+                    @include btn-line-normal;
+                    @include btn-base-shadow;
+                }
+            }
+        }
+
+        // 상세표
+        .board-info-box {
+            border-radius: 20rem;
+            padding: 16rem 16rem;
+            background-color: rgba(255, 255, 255, 0.6);
+            .board-table {
+                display: block;
+                width: 100%;
+                border-top: 0;
+                tbody {
+                    display: block;
+                }
+                tr {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                }
+                th {
+                    flex: none;
+                    width: 64rem;
+                    height: auto;
+                    padding: 6rem 0;
+                    border: 0;
+                    background-color: transparent;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    text-align: left;
+                }
+                td {
+                    width: calc(50% - 64rem);
+                    height: auto;
+                    padding: 6rem 0;
+                    border: 0;
+                    background-color: transparent;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    @include ellipsis;
+                    &.cel-lesson,
+                    &.cel-date {
+                        width: calc(100% - 64rem);
+                    }
+                    &.cel-count {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+
+        .board-list-box {
+            border-radius: 20rem;
+            width: 100%;
+            padding: 20rem 16rem;
+            background-color: rgba(255, 255, 255, 1);
+            .board-table {
+                display: block;
+                border-top: 0;
+                thead {
+                    display: none;
+                }
+                tbody {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12rem;
+                }
+                tr {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    width: 100%;
+                    border: 1px solid #eaeaea;
+                    border-radius: 8rem;
+                }
+                td {
+                    display: block;
+                    height: auto;
+                    border: 0;
+                    padding: 11rem;
+                    &.cel-num,
+                    &.cel-word,
+                    &.cel-time,
+                    &.cel-count,
+                    &.cel-count {
+                        display: none;
+                    }
+                    &.cel-more {
+                        .btn-more {
+                            @include btn-base-40;
+                            @include btn-base-shadow;
+                        }
+                    }
+                    &.cel-name {
+                        p {
+                            display: flex;
+                            align-items: center;
+                            gap: 8rem;
+                            font-size: 14rem;
+                            line-height: 20rem;
+                            color: #000;
+                            .avata {
+                                display: inline;
+                                width: 32rem;
+                                height: 32rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .board-action {
+                flex-direction: column;
+                align-items: center;
+                .desc {
+                    display: block;
+                    margin-bottom: 16rem;
+                    text-align: center;
+                    font-size: 14rem;
+                    line-height: 20rem;
+                    color: #666666;
+                }
+                .btn-list {
+                    width: 100%;
+                }
+            }
+        }
+
+        // 꾸미기 오브젝트
+        .object-group {
+            .object-01 {
+                position: absolute;
+                left: auto;
+                right: -40px;
+                top: -60px;
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                background: var(--main-object-01);
+                opacity: 0.2;
+            }
+            .object-02 {
+                display: none;
+            }
+
+            @keyframes floatY {
+                from { transform: translateY(0)  }
+                to   { transform: translateY(calc(var(--float-distance) * -1)) }
+            }
+
+            & > div {
+                will-change: transform;
+                transition: none !important; /* 혹시 남아있는 transition 충돌 제거 */
+                animation: floatY var(--float-duration, 4s) ease-in-out var(--float-delay, 0s) infinite alternate;
+                transform: var(--tx) translate3d(0, 0, 0); /* 초기값(반드시 --tx 선언 필요) */
+            }
+
+            /* 7개 프리셋 (진폭, 지속시간, 지연) */
+            .object-01 { --float-distance: 32.6rem;  --float-duration: 3.2s; --float-delay: 0.0s; }
+        }
+    }
 }
 
 // 모바일 전용

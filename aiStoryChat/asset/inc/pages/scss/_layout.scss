@@ -194,27 +194,17 @@ footer {
         width: 100%;
         max-width: var(--max-width);
         margin: auto;
-        padding: 50rem var(--sidepacer) 0;
+        padding: 20rem var(--sidepacer) 0;
 
         .logo {
-            width: 250rem;
-            height: 42rem;
+            width: 126rem;
+            height: 32rem;
             background: no-repeat center center / contain;
             background-image: var(--bg-logo);
         }
     }
     .content {
-        padding-top: 60rem;
-        .content-header {
-            margin-bottom: 60rem;
-            text-align: center;
-            .content-title {
-                font-weight: 700;
-                font-size: 48rem;
-                line-height: 64rem;
-                color: #000;
-            }
-        }
+        padding-top: 48rem;
         .content-body {
             padding: 60rem;
             background-color: #fff;

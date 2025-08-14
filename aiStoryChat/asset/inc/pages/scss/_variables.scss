@@ -60,3 +60,41 @@ $color-primary-light: var(--color-primary-light);
         display: flex;
     }
 }
+
+@mixin board-sec {
+    .sec-header {
+        display: flex;
+        justify-content: space-between;
+        .sec-title {
+            font-weight: 700;
+            font-size: 28rem;
+            line-height: 40rem;
+            color: #000;
+        }
+        .sec-util {
+            display: flex;
+            gap: 12rem;
+            margin-left: auto;
+
+            .btn-delete {
+                @include btn-base-40;
+                @include btn-line-normal;
+                @include btn-base-shadow;
+            }
+            .btn-primary {
+                @include btn-base-40;
+                @include btn-fill-primary;
+                @include btn-base-shadow;
+            }
+            .btn-delete {
+                @include btn-base-40;
+                @include btn-line-normal;
+                @include btn-base-shadow;
+            }
+        }
+    }
+    .sec-body {
+        margin-top: 20rem;
+    }
+
+}

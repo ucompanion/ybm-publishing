@@ -91,6 +91,13 @@
     .connect-page .book-setting .btn-setting {
         top: 10rem;
     }
+
+    // 학생 - 접속확인/접속완료
+    .sigin-page {
+        .sigin-wrap {
+            transform: scale(1);
+        }
+    }
 }
 
 // 모바일 시작
@@ -100,8 +107,8 @@
         .page-header {
             height: 56rem;
             .logo a {
-                width: 120rem;
-                height: 20rem;
+                width: 102rem;
+                height: 26rem;
             }
             .util-area {
                 gap: 12rem;
@@ -677,6 +684,7 @@
 
     // 학생 - 대화하기
     .chat-page {
+        padding-bottom: 88rem !important;
         .chat-desc {
             font-size: 12rem;
             line-height: 16rem;
@@ -687,51 +695,24 @@
             }
         }
         .chat-utils {
-            display: flex;
-            justify-content: center;
-            gap: 20rem;
-            margin: 0 auto;
             button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 &::before {
-                    display: block;
-                    width: 16rem;
-                    height: 16rem;
-                    background: no-repeat center center / contain;
+                    width: 24rem;
+                    height: 24rem;
                 }
             }
             .btn-recording {
-                background-color: #31324D;
-                width: 40rem;
-                height: 40rem;
-                border-radius: 50%;
-                color: #fff;
-                &::before {
-                    content:'';
-                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6663 6.66536V7.9987C12.6663 10.576 10.577 12.6654 7.99967 12.6654M3.33301 6.66536V7.9987C3.33301 10.576 5.42235 12.6654 7.99967 12.6654M7.99967 12.6654V14.6654M5.33301 14.6654H10.6663M7.99967 9.9987C6.89511 9.9987 5.99967 9.10327 5.99967 7.9987V3.33203C5.99967 2.22746 6.89511 1.33203 7.99967 1.33203C9.10424 1.33203 9.99967 2.22746 9.99967 3.33203V7.9987C9.99967 9.10327 9.10424 9.9987 7.99967 9.9987Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                }
+                width: 48rem;
+                height: 48rem;
             }
             .btn-keyboard {
-                background-color: #31324D;
-                width: 40rem;
-                height: 40rem;
-                border-radius: 50%;
-                color: #fff;
-                &::before {
-                    content:'';
-                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.66683 9.66667H11.3335M4.00016 6.66667H4.00683M6.66683 6.66667H6.6735M9.3335 6.66667H9.34016M12.0002 6.66667H12.0068M3.46683 12H12.5335C13.2802 12 13.6536 12 13.9388 11.8547C14.1897 11.7268 14.3937 11.5229 14.5215 11.272C14.6668 10.9868 14.6668 10.6134 14.6668 9.86667V6.13333C14.6668 5.3866 14.6668 5.01323 14.5215 4.72801C14.3937 4.47713 14.1897 4.27316 13.9388 4.14532C13.6536 4 13.2802 4 12.5335 4H3.46683C2.72009 4 2.34672 4 2.06151 4.14532C1.81063 4.27316 1.60665 4.47713 1.47882 4.72801C1.3335 5.01323 1.3335 5.3866 1.3335 6.13333V9.86667C1.3335 10.6134 1.3335 10.9868 1.47882 11.272C1.60665 11.5229 1.81063 11.7268 2.06151 11.8547C2.34672 12 2.72009 12 3.46683 12Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                }
+                width: 48rem;
+                height: 48rem;
             }
             .btn-story {
-                background-color: var(--color-primary);
-                padding: 0 16rem 2rem;
-                height: 40rem;
-                border-radius: 40rem;
-                font-weight: 700;
-                font-size: 12rem;
-                color: #fff;
+                padding: 0 14rem 2rem;
+                height: 48rem;
+                font-size: 14rem;
             }
         }
     }
