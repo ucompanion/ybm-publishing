@@ -560,8 +560,6 @@
     .chat-community {
         // 채팅 레이아웃
         .chat-list {
-            gap: 24rem;
-
             .chat-item {
                 .chat-sender {
                     gap: 8rem;
@@ -570,6 +568,14 @@
                 .chat-avata {
                     width: 40rem;
                     height: 40rem;
+                }
+                & + .chat-item {
+                    margin-top: 24rem;
+                }
+
+                &.bot + .chat-item.bot,
+                &.user + .chat-item.user {
+                    margin-top: 12rem;
                 }
             }
         }
@@ -684,7 +690,6 @@
 
     // 학생 - 대화하기
     .chat-page {
-        padding-bottom: 88rem !important;
         .chat-desc {
             font-size: 12rem;
             line-height: 16rem;
@@ -1238,7 +1243,6 @@
         }
     }
 
-
     // 학생 - 결과확인
     .story-result-page {
         .story-result-wrap {
@@ -1267,12 +1271,20 @@
         .modal-body {
             padding: 20rem;
             padding-right: 4rem;
-            padding-bottom: 0;
             .modal-inner {
                 padding-right: 16rem;
             }
         }
-
+        .modal-footer {
+            .btn-primary {
+                flex: 1 1 auto;
+                width: 100%;
+            }
+            .btn-normal {
+                flex: 1 1 auto;
+                width: 100%;
+            }
+        }
     }
 }
 

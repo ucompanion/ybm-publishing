@@ -36,12 +36,12 @@
                         <div class="chat-wrap">
                             <div class="chat-desc">
                                 <p><span>AI는 전문적 근거를 바탕으로 하지 않습니다.</span> <span>민감한 개인정보는 전달하지 마세요.</span></p>
-                                <a href="#" target="_blank">자세히보기</a>
+                                <a href="javascript:void(0)" target="_blank" data-bs-toggle="modal" data-bs-target="#chatGuideModal">자세히보기</a>
                             </div>
                             <div class="chat-community">
                                 <ul class="chat-list">
-                                    <!-- My Story -->
-                                    <li class="chat-item user">
+                                    <!-- AI Chat: Story (번역 후) -->
+                                    <li class="chat-item bot">
                                         <div class="chat-sender">
                                             <div class="chat-avata">
                                                 <img src="../../asset/img/common/icn-30-avata-bot.png" alt="AI Robot" />
@@ -59,7 +59,8 @@
                                                         <button type="button" class="btn-speaker">
                                                             <span class="blind">스피커</span>
                                                         </button>
-                                                        <button type="button" class="btn-translate">
+                                                        <!-- Case 번역 후 : is-active -->
+                                                        <button type="button" class="btn-translate is-active">
                                                             <span class="blind">번역</span>
                                                         </button>
                                                     </div>
@@ -68,30 +69,8 @@
                                         </div>
                                     </li>
 
-                                    <!-- AI Hint -->
-                                    <!-- <li class="chat-item order">
-                                        <div class="chat-body">
-                                            <div class="story-hint-chat">
-                                                <i class="icn"></i>
-                                                <p>힌트메세지</p>
-                                                <label>힌트</label>
-                                            </div>
-                                        </div>
-                                    </li> -->
-
-                                    <!-- AI Hint Chat -->
-                                    <!-- <li class="chat-item order">
-                                        <div class="chat-body">
-                                            <div class="story-chat">
-                                                <p class="story-hint"></p>
-                                                <p class="story-original"></p>
-                                                <div class="story-utils"></div>
-                                            </div>
-                                        </div>
-                                    </li> -->
-
-                                    <!-- AI Record -->
-                                    <li class="chat-item order">
+                                    <!-- My Chat: 녹음 -->
+                                    <li class="chat-item user">
                                         <div class="chat-sender">
                                             <div class="chat-avata">
                                                 <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
@@ -107,16 +86,27 @@
                                         </div>
                                     </li>
 
-                                    <!-- AI Story -->
-                                    <li class="chat-item order">
+                                    <!-- My Chat: Basic -->
+                                    <li class="chat-item user">
                                         <div class="chat-sender">
                                             <div class="chat-avata">
                                                 <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
                                             </div>
                                             <div class="chat-body">
-                                                <div class="story-target-chat">
+                                                <div class="story-user-chat">
                                                     <p>I’m in the sixth grade.</p>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- My Chat: 교정 피드백 -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
+                                            </div>
+                                            <div class="chat-body">
                                                 <div class="story-feedback-chat">
                                                     <p class="title"><strong>교정이 필요합니다</strong></p>
                                                     <p class="explan">이름은 대문자로 시작해야 합니다</p>
@@ -128,7 +118,9 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="chat-item user">
+
+                                    <!-- AI Chat: Story (번역 전) -->
+                                    <li class="chat-item bot">
                                         <div class="chat-sender">
                                             <div class="chat-avata">
                                                 <img src="../../asset/img/common/icn-30-avata-bot.png" alt="AI Robot" />
@@ -139,17 +131,85 @@
                                                         I’m in the sixth grade. My family will move to a new town.
                                                         We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.
                                                     </p>
-                                                    <p class="story-translated">
+                                                    <!-- <p class="story-translated">
                                                         안녕하세요! 삐삐가 새로운 마을에서 긴장을 했는지 기억하시나요?
-                                                    </p>
+                                                    </p> -->
                                                     <div class="story-utils">
                                                         <button type="button" class="btn-speaker">
                                                             <span class="blind">스피커</span>
                                                         </button>
+                                                        <!-- Case 번역 전 (기본값) -->
                                                         <button type="button" class="btn-translate">
                                                             <span class="blind">번역</span>
                                                         </button>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- My Chat:  녹음 힌트 -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-08.png" alt="본인" />
+                                            </div>
+
+                                            <div class="chat-body">
+                                                <div class="story-record-chat">
+                                                    <button type="button" class="btn-recored">
+                                                        <span class="blind">녹음하기</span>
+                                                    </button>
+                                                    <p class="explan">녹음 버튼을 누른 후 말하세요</p>
+                                                    <button type="button" class="btn-hint">
+                                                        <span>힌트</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- My Chat: 힌트 결과 -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-08.png" alt="본인" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-hint-chat">
+                                                    <p class="story-hint">힌트</p>
+                                                    <p class="story-original">I’m in the sixth grade. My family will move to a new town.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- My Chat:  녹음 -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-record-chat">
+                                                    <button type="button" class="btn-recored">
+                                                        <span class="blind">녹음하기</span>
+                                                    </button>
+                                                    <p class="explan">녹음 버튼을 누른 후 말하세요</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- My Chat: Basic -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-user-chat">
+                                                    <p>I’m in the sixth grade.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -159,14 +219,22 @@
                         </div>
                     </div>
                     <div class="content-footer">
+                        <div class="chat-form" id="chatKeyboard">
+                            <div class="chat-input">
+                                <input type="text" value="I'm in the si" class="input" />
+                                <button type="button" class="btn-send" onclick="toggleActive('#chatKeyboard', 'is-active')">
+                                    <span class="blind">보내기</span>
+                                </button>
+                            </div>
+                        </div>
                         <div class="chat-utils">
-                            <button type="button" class="btn-recording">
+                            <button type="button" class="btn-recording" onclick="toggleActive(this, 'is-active')">
                                 <span class="blind">녹음하기</span>
                             </button>
-                            <button type="button" class="btn-keyboard">
+                            <button type="button" class="btn-keyboard" onclick="toggleActive(this, 'is-active'); toggleActive('#chatKeyboard', 'is-active')">
                                 <span class="blind">키보드</span>
                             </button>
-                            <button type="button" class="btn-story">
+                            <button type="button" class="btn-story" data-bs-toggle="modal" data-bs-target="#storyModal">
                                 <span>스토리보기</span>
                             </button>
                         </div>
@@ -178,7 +246,84 @@
         </div>
         <!-- //page-wrap -->
 
+        <!-- 모달: 스토리 확인하기 -->
+        <div class="modal modal-full fade" id="storyModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="storyModalLabel">스토리 확인하기</h3>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icn icn-modal-close" aria-label="닫기"></i>
+                        </button>
+                    </div>
+
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <div class="story-confirm">
+                                <p class="story-original">
+                                    I’m in the sixth <b class="keyword">grade</b>. My family will move to a new <b class="keyword">town</b>. I have friends here. We play <b class="keyword">together</b> every day. In the new town, I’ll make new friends. Let’s explore the <b class="keyword">town together</b>.
+                                </p>
+                                <p class="story-translated">
+                                    저는 6학년 입니다. 우리 가족은 새로운 동네로 이사할 예정입니다. 여기에 친구들이 있어요. 우리는 매일 함께 놀아요. 새 동내에서 제가 새 친구들을 사귈거예요. 같이 동네를 탐험해 봐요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-primary">
+                            <span>이 스토리로 새 채팅 만들기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: 스토리 확인하기 -->
+
+        <!-- 모달: AI대화 유의사항 -->
+        <div class="modal modal-full fade" id="chatGuideModal" tabindex="-1" role="dialog" aria-labelledby="chatGuideModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content ai-chat-page">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="chatGuideModalLabel">AI 대화 유의사항</h3>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icn icn-modal-close" aria-label="닫기"></i>
+                        </button>
+                    </div>
+
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <div class="ai-chat-guide">
+                                <div class="summary-para">
+                                    <p>AI 스토리챗은 영어 회화 능력 향상을 돕고자 개발된 생성형 AI 기반의 영어 회화 학습 솔루션입니다.</p>
+                                    <p>사용자의 입력내용으로 생성되는 오류, 오해, 개인정보에 대한 책임은 사용자에게 있음을 안내드립니다. 아래의 내용을 유의하시기 바랍니다.</p>
+                                </div>
+                                <ul class="summary-list">
+                                    <li>1. AI와 대화 시 개인정보나 민감한 정보를 절대 공유하지 마세요. 생성형 AI는 인터넷 상에서 불특정 다수와 정보를 공유할 수 있는 기술이므로 주의를 요합니다.</li>
+                                    <li>2. 영어 학습 이외의 전문적인 조언이나 의견에 근거로 AI의 생성 답변을 활용하지 마세요. 생성 AI는 영어회화 학습을 목적으로 특화되어 있으며, 전문적인 분야나 사실 근거한 내용으로 답변하지는 않습니다.</li>
+                                    <li>3. 부적절한 내용으로 대화하지 마세요. 혐오, 성적인 대화, 또는 폭력적인 대화에 참여할 경우 생성형 AI는 부적절한 답변을 할 수 있습니다. 이런 경우, 서비스 이용에 제약이 있을 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-primary" data-bs-dismiss="modal">
+                            <span>확인</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: AI대화 유의사항 -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
+        <script>
+            function toggleActive(ele, cls) {
+                $(ele).toggleClass(cls);
+            }
+        </script>
     </body>
 </html>
