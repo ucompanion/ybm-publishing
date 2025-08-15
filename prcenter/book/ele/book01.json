@@ -81,10 +81,10 @@
         }
     ],
     "character":[
-        {"name":"영어 3학년"},
-        {"name":"영어 4학년"},
         {"name":"영어 5학년"},
-        {"name":"영어 6학년"}
+        {"name":"영어 6학년"},
+        {"name":"영어 3학년"},
+        {"name":"영어 4학년"}
     ],
     "booktab":[
         [
@@ -104,9 +104,9 @@
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07171206262024T2e65", "SEMESTER":"3학년"},
-        {"TEXTBOOK_ID":"T07171207222024fAR59", "SEMESTER":"4학년"},
         {"TEXTBOOK_ID":"", "SEMESTER":"5학년"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"6학년"}
+        {"TEXTBOOK_ID":"", "SEMESTER":"6학년"},
+        {"TEXTBOOK_ID":"T07171206262024T2e65", "SEMESTER":"3학년"},
+        {"TEXTBOOK_ID":"T07171207222024fAR59", "SEMESTER":"4학년"}
     ]
 }

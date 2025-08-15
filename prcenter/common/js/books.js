@@ -137,6 +137,9 @@ $(function(){
                 if(res.character.length > 1){
                     $(".character-tab-menu").append("<li class='item" + $class + "'>" + res.character[i].name + "</li>");
                 }
+                if(res.character.length > 5){
+                    $(".character-tab-menu").addClass('is-small');
+                }
                 $(".character-tab-contents .swiper-wrapper").append("<li class='swiper-slide'><div class='zoom_minimap'></div><div class='zoom'><div class='original'><img src='" + $bookPath + $book + "/character"+(i+1)+"_1.png' alt='' /></div><div class='viewer'><img src='" + $bookPath + $book + "/character"+(i+1)+"_1.png' alt='' /></div><div class='magnifier'></div></div></li>");
             }
 

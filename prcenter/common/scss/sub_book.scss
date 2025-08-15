@@ -899,7 +899,7 @@ body.eng2
                                 opacity: 1;
                                 filter: unset;
                                 .word-box{
-                                    display: flex;
+                                    // display: flex;
                                     align-items: center;
                                     transition: 1s all;
                                     min-width: rem-calc(550px);
@@ -1028,6 +1028,12 @@ body.eng2
                         font-size: rem-calc(24px);
                         &.current{
                             color: white;
+                        }
+                    }
+                    &.is-small {
+                        .item {
+                            padding-top: rem-calc(20px);
+                            font-size: rem-calc(18px);
                         }
                     }
                 }
