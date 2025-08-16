@@ -233,7 +233,8 @@
 .section.main-visual .data-wrap .data-box {
     display: flex;
     flex-direction: column;
-    gap: .75rem
+    gap: .75rem;
+    margin: 1em 0;
 }
 
 .section.main-visual .data-wrap .data-box .item {
@@ -253,7 +254,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    word-break: break-all
+    word-break: break-all;
+    box-sizing: content-box;
 }
 
 .section.main-visual .data-wrap .data-box dt:before {
@@ -312,24 +314,24 @@
 }
 
 .section.main-visual .data-wrap .data-box dd a.caseA:before {
-    background: url(../../img/sub/ico_button_book.svg) no-repeat center center/contain
+    background: url('/prcenter/img/sub/ico_button_book.svg') no-repeat center center/contain
 }
 
 .section.main-visual .data-wrap .data-box dd a.caseB:before {
-    background: url(../../img/sub/ico_button_math.svg) no-repeat center center/contain
+    background: url('/prcenter/img/sub/ico_button_math.svg') no-repeat center center/contain
 }
 
 .section.main-visual .data-wrap .data-box dd a.caseC:before {
-    background: url(../../img/sub/ico_button_gdcap.svg) no-repeat center center/contain;
+    background: url('/prcenter/img/sub/ico_button_gdcap.svg') no-repeat center center/contain;
     margin-right: .125rem
 }
 
 .section.main-visual .data-wrap .data-box dd a.caseD:before {
-    background: url(../../img/sub/ico_button_paper.svg) no-repeat center center/contain
+    background: url('/prcenter/img/sub/ico_button_paper.svg') no-repeat center center/contain
 }
 
 .section.main-visual .data-wrap .data-box dd a.caseE:before {
-    background: url(../../img/sub/ico_button_monitor.svg) no-repeat center center/contain
+    background: url('/prcenter/img/sub/ico_button_monitor.svg') no-repeat center center/contain
 }
 
 .section.main-visual .download-box {
