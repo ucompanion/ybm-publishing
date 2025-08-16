@@ -383,6 +383,7 @@
  .sbmain_ai .modelinfo_summary .title {font-weight: 700; font-size: 1.5rem; line-height: 2.125rem; color: #458FF6;}
  .sbmain_ai .modelinfo_summary .expain {margin-top: 0.75rem; font-weight: 400; font-size: 1.125rem; line-height: 1.625rem; color: #666;}
 
+ .sbmain_sec2 {background-color: #f8f8f8;}
  .sbmain_sec2 .sb_sec.mid .sb_header h2 span {background: linear-gradient(0deg,#74D8E4 0.5rem,transparent calc(0.5rem + 1px));}
  .sbmain_sec2 .sb_sec.mid .bookbox_g {padding: 4.5rem 1.25rem 1.25rem 1.25rem;}
  .sbmain_sec2 .sb_sec.mid .bookbox_g .tit {margin-bottom: 1.25rem; font-size: 1.25rem; line-height: 2rem;}

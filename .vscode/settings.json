@@ -24,7 +24,7 @@
         "/event/**",
         "/expcenter/**",
         "/gate/**",
-        // "/prcenter/**",
+        "/prcenter/**",
         "/pub_etc/**",
         "/viewer/**",
     ],
