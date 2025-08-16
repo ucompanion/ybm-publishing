@@ -66,7 +66,7 @@ $(function(){
             // 교과서 표지
             let coverImgHtml = '';
             for(let i=1; i<=res.cover_img_count;i++){
-                if(i>1 && i%3==0) coverImgHtml += "</div><div class='cover-img-group'>";
+                if(i>1 && i%2==0) coverImgHtml += "</div><div class='cover-img-group'>";
                 coverImgHtml += "<div class='cover-img'><img src='" + $bookPath + $book + "/cover_image0" + i + ".png' alt='' class='main-book'/><div class='cover-hover-box'><img src='" + $bookPath + $book + "/cover_image0" + i + "_main_ov.png' alt='' class='main-ov' /><img src='" + $bookPath + $book + "/cover_image0" + i + "_ov.png' alt='' class='ov'/></div></div>";
             }
             $('.dataCoverImages').append("<div class='cover-img-group'>" + coverImgHtml + "</div>");

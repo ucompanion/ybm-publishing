@@ -2,7 +2,7 @@
     "subject": "science",
     "title": "과학 1~2학년 (권우진)",
     "subscript": "메타인지 질문으로 과학을 즐기다",
-    "cover_img_count": 1,
+    "cover_img_count": 2,
     "writing_staff": [
         {
             "name":"권우진",
@@ -89,7 +89,8 @@
         }
     ],
     "character":[
-        {"name":"구성과 특징"}
+        {"name":"과학 2"},
+        {"name":"과학 1"}
     ],
     "booktab":[
         [

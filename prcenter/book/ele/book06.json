@@ -2,7 +2,7 @@
     "subject": "pe",
     "title": "체육 3~6학년 (이기청)",
     "subscript": "수업 준비는 가볍게, 움직임 지도는 확실하게! <br/> 따미, 라미와 함께 신체활동 역량 UP!",
-    "cover_img_count": 2,
+    "cover_img_count": 4,
     "writing_staff": [
         {
             "name":"이기청",
@@ -109,6 +109,8 @@
         }
     ],
     "character":[
+        {"name":"체육 5학년"},
+        {"name":"체육 6학년"},
         {"name":"체육 3학년"},
         {"name":"체육 4학년"}
     ],

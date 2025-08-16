@@ -194,12 +194,13 @@ footer .footer-bottom .inn .copyright .copyright-right .form-select.ver2 {font-s
 .sbmain_sec3 .copy_bx strong {color: #fff;}
 .sbmain_sec3 .copy_bx strong:before {background: #DD1FF6;}
 .sbmain_sec3 .card_bx li {background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20.914' viewBox='0 0 20 20.914'%3E%3Cg id='icon_arrow' transform='translate(-181 -111)'%3E%3Crect width='20' height='20' transform='translate(181 111)' fill='%23fff' opacity='0'/%3E%3Cpath d='M7.5,16.5h18m-9-9,9,9-9,9' transform='translate(174.5 105)' fill='none' stroke='%23111' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat right 22px bottom 20px;}
-[class^="object_"] {background: url("../img/sbmain/object1.png") no-repeat 50% 50%;animation-name: object1;animation-duration: 5s;animation-direction: normal;animation-iteration-count: infinite;position: absolute;left: 10vw;top: -180px;z-index: 3;width: 380px;height: 380px;border-radius: 100%;background-size: cover;}
-.object_1 {width: 180px;height: 180px;left: 10vw;top: 650px;animation-duration: 6s;transform: rotate(45deg);background-image: url("../img/sbmain/object2.png");}
-.object_2 {width: 70px;height: 70px;left: 5vw;top: 815px;animation-delay: 2s;transform: rotate(0deg);background-image: url("../img/sbmain/object2.png");filter: blur(4px);animation-duration: 8s;}
-.object_3 {width: 40px;height: 40px;left: auto;right: 6vw;top: 900px;animation-delay: 2s;background-image: url("../img/sbmain/object1.png");filter: blur(4px);animation-duration: 8s;animation-name: object2;}
-.object_4 {width: 240px;height: 240px;left: auto;right: 6vw;top: 940px;animation-duration: 5s;background-image: url("../img/sbmain/object1.png");animation-name: object2;z-index: 1;}
-.object_5 {width: 60px;height: 60px;left: auto;right: 3vw;top: 420px;animation-delay: 2s;background-image: url("../img/sbmain/object2.png");filter: blur(1px);animation-duration: 8s;animation-name: object2;}
+[class^="object_"] {background: url("../img/sbmain/object1.png") no-repeat 50% 50%;animation-name: object1;animation-duration: 5s;animation-direction: normal;animation-iteration-count: infinite;position: absolute;z-index: 3;border-radius: 100%;background-size: cover;}
+.object_1 {width: 180px;height: 180px;right: calc(50% + 615px);top: 650px;animation-duration: 6s;transform: rotate(45deg);background-image: url("../img/sbmain/object2.png");}
+.object_2 {width: 70px;height: 70px;right: calc(50% + 786px);top: 815px;animation-delay: 2s;transform: rotate(0deg);background-image: url("../img/sbmain/object2.png");filter: blur(4px);animation-duration: 8s;}
+.object_3 {width: 40px;height: 40px;right: 6vw;top: 900px;animation-delay: 2s;background-image: url("../img/sbmain/object1.png");filter: blur(4px);animation-duration: 8s;animation-name: object2;}
+.object_4 {width: 240px;height: 240px;left: calc(50% + 543px);top: 940px;animation-duration: 5s;background-image: url("../img/sbmain/object1.png");animation-name: object2;z-index: 1;}
+.object_5 {width: 120px;height: 120px;left: calc(50% + 777px); top: 420px;animation-delay: 2s;background-image: url("../img/sbmain/object2.png");filter: blur(1px);animation-duration: 8s;animation-name: object2;}
+.object_6 {width: 380px;height: 380px;right: calc(50% + 314px);top: -180px;}
 @keyframes object1 {
 	0% {transform: translate(0,0);		 animation-timing-function: cubic-bezier(.25,.46,.45,.94);	}
 	25% {transform: translate(0,-30px);		 animation-timing-function: cubic-bezier(.55,.085,.68,.53);	}
