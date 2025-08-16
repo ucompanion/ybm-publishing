@@ -377,7 +377,9 @@
                         }
 
                         .post-title {
+                            flex: none;
                             margin-bottom: rem-calc(52px);
+                            height: rem-calc(132px);
                             font-weight: 700;
                             font-size: rem-calc(32px);
                             line-height: rem-calc(44px);
@@ -679,6 +681,7 @@
                         object-fit: cover;
                         width: 100%;
                         height: 100%;
+                        transform: scale(1.02);
                         transition: all 1s ease;
                     }
                 }
@@ -1108,15 +1111,15 @@
                     width: 100%;
                     height: 100%;
 
-                    .youtube-thumb,
                     .main-edutech-thumb,
+                    .main-edutech-btn,
                     img,
                     iframe {
                         object-fit: cover;
                         width: 100%;
                         height: 100% !important;
                     }
-                    .main-edutech-thumb {
+                    .main-edutech-btn {
                         position: relative;
                         z-index: 2;
                         .btn-play {
@@ -1139,7 +1142,7 @@
                             }
                         }
                     }
-                    .youtube-thumb {
+                    .main-edutech-thumb {
                         display: flex;
                         position: absolute;
                         left: 0;
@@ -1396,6 +1399,7 @@
     justify-content: space-between;
     width: 100%;
     gap: rem-calc(20px);
+    margin-top: rem-calc(60px);
 
     .board-pager-nav {
         display: flex;
@@ -2005,7 +2009,7 @@
                     &-overay {
                         width: calc(100% + 3px);
                         height: calc(100% + 3px);
-                        .main-edutech-thumb {
+                        .main-edutech-btn {
                             .btn-play {
                                 &::before {
                                     width: calc(100vw * (60 / 1280));
@@ -2175,6 +2179,7 @@
                             }
                         }
                         .post-title {
+                            height: 64px;
                             margin-bottom: 20px;
                             font-size: 20px;
                             line-height: 32px;
