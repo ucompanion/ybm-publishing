@@ -431,34 +431,27 @@ if (window.innerWidth > 1023){
 */
 
 
-function play(clickedButtonElement) {
-    // 클릭된 버튼의 가장 가까운 부모 .vidbox를 찾음
-    var $targetVidbox = $(clickedButtonElement).closest('.vidbox');
+function play(element){
+	$(".vidbox").each(function() {
+		var $ui = $(this);
+		 $ui.find('video').trigger('play');
+		 $ui.find('.btn_play').fadeOut();
 
-    // 찾은 .vidbox 안에서 video와 .btn_play 요소를 찾아서 처리
-    $targetVidbox.find('video').trigger('play');
-    $targetVidbox.find('.btn_play').fadeOut();
+	});
 }
 
-/*function mvplay(){
-	var target = $(this);
-	if(target.hasClass(".btn_p")==false){
-		$('.jconfirm-type-card .vidbox').hide();
-		$('.jconfirm-type-card .chart_g').show();
-		$('.jconfirm').addClass('aaa');
-	}else {
-		$('.jconfirm-type-card .vidbox').show();
-		$('.jconfirm-type-card .chart_g').hide();
-		$('.jconfirm').addClass('bbb');
-}*/
-
-
-
-
-
-
-
-
+// function play(){
+// 	var target = $(this);
+// 	if(target.hasClass(".btn_p")==false){
+// 		$('.jconfirm-type-card .vidbox').hide();
+// 		$('.jconfirm-type-card .chart_g').show();
+// 		$('.jconfirm').addClass('aaa');
+// 	}else {
+// 		$('.jconfirm-type-card .vidbox').show();
+// 		$('.jconfirm-type-card .chart_g').hide();
+// 		$('.jconfirm').addClass('bbb');
+//     }
+// }
 
 jconfirm.defaults = {
     onOpenBefore: function () {

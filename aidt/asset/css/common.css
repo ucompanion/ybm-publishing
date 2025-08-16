@@ -135,7 +135,7 @@ footer .footer-bottom .inn .copyright .copyright-right .form-select.ver2 {font-s
   footer.for-pc { display: none;}
 }
 
-.sb_container_1 .inner {display: flex;flex-direction: column;align-items: center; max-width:1280px; margin: 0 auto; padding: 0;box-sizing: border-box;}
+[class^="sbmain_sec"] .inner {display: flex;flex-direction: column;align-items: center; max-width:1280px; margin: 0 auto; padding: 0;box-sizing: border-box;}
 .copy_bx {width: 100%;max-width: 1280px;font-weight: 500;color: #867E8C;font-size: 2.5rem;}
 .copy_bx em {color: #000;font-style: normal;}
 .copy_bx strong {color: #111;position: relative;z-index: 2;font-weight: 800;}
