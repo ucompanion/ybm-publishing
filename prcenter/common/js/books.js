@@ -65,9 +65,9 @@ $(function(){
 
             // 교과서 표지
             let coverImgHtml = '';
-            for(let i=1; i<=res.cover_img_count;i++){
-                if(i>1 && i%2==0) coverImgHtml += "</div><div class='cover-img-group'>";
-                coverImgHtml += "<div class='cover-img'><img src='" + $bookPath + $book + "/cover_image0" + i + ".png' alt='' class='main-book'/><div class='cover-hover-box'><img src='" + $bookPath + $book + "/cover_image0" + i + "_main_ov.png' alt='' class='main-ov' /><img src='" + $bookPath + $book + "/cover_image0" + i + "_ov.png' alt='' class='ov'/></div></div>";
+            for(let i=0; i<=(res.cover_img_count-1);i++){
+                if(i>0 && i%2==0) coverImgHtml += "</div><div class='cover-img-group'>";
+                coverImgHtml += "<div class='cover-img'><img src='" + $bookPath + $book + "/cover_image0" + (i+1) + ".png' alt='' class='main-book'/><div class='cover-hover-box'><img src='" + $bookPath + $book + "/cover_image0" + (i+1) + "_main_ov.png' alt='' class='main-ov' /><img src='" + $bookPath + $book + "/cover_image0" + (i+1) + "_ov.png' alt='' class='ov'/></div></div>";
             }
             $('.dataCoverImages').append("<div class='cover-img-group'>" + coverImgHtml + "</div>");
 
@@ -86,6 +86,13 @@ $(function(){
                     clickable: true,
                 }
             });
+
+            // 탭전환
+            if (res.AIDT_LINK) {
+                $('.tab-box .tab-link.type-ai').attr({'href': res.AIDT_LINK});
+            } else {
+                $('.tab-box').remove();
+            }
 
             // 집필진 매핑
             for(let i=0; i<res.writing_staff.length; i++){

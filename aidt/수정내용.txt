@@ -4,7 +4,7 @@
 
 ------------메인-------------
 
-.pop_wrap 소스 수정 
+.pop_wrap 소스 수정
 
 .ms5내부 버튼들에 onclick추가
 
@@ -23,7 +23,7 @@
 ------------ 서브 -------------
 
 .event_banner - 이벤트 배너부분 수정
-.qna_bx 텍스트 수정 
+.qna_bx 텍스트 수정
 FAQ부분(.faq_bx) 두번째 질문답변 텍스트 수정
 
 
@@ -33,8 +33,8 @@ FAQ부분(.faq_bx) 두번째 질문답변 텍스트 수정
 
 중등영어 박준언(s2_sb_eng_park.html) 저자들 중 고근희 클래스네임(.w_wide) 추가
 
-고등 공통수학 류희찬(s3_sb_math_ryu.html) 상단 비주얼 부분 책 이미지 교체 
-<div class="img"><img src="../asset/img/s3_m1.png" alt=""/></div>
-<div class="img"><img src="../asset/img/s3_m2.png" alt=""/></div>
+고등 공통수학 류희찬(s3_sb_math_ryu.html) 상단 비주얼 부분 책 이미지 교체
+<div class="img"><img src="/aidt/img/s3_m1.png" alt=""/></div>
+<div class="img"><img src="/aidt/img/s3_m2.png" alt=""/></div>
 
 

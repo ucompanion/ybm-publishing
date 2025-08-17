@@ -64,6 +64,12 @@ $listPrimaryColor:(
             display: block;
         }
 
+        .tab-box {
+            .tab-link.current {
+                background-color: list.nth($listTmp,1);
+            }
+        }
+
         .data-wrap{
             background-color: list.nth($listTmp,2);
             border-color: list.nth($listTmp,10);
@@ -284,6 +290,7 @@ body.eng2
                 //padding-left: rem-calc(30px);
                 //padding-right: rem-calc(30px);
                 &.main-visual{
+                    overflow: hidden;
                     padding: rem-calc(90px) 0;
                 }
                 &.introduce{
@@ -553,6 +560,31 @@ body.eng2
                         //         animation: change-img-anim 1.5s forwards;
                         //     }
                         // }
+                    }
+                }
+                .tab-box {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 12rem;
+                    margin-bottom: -4rem;
+                    border-radius: rem-calc(12px);
+                    overflow: hidden;
+                    max-width: rem-calc(520px);
+                    margin-left: auto;
+                    margin-right: auto;
+                    .tab-link {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: rem-calc(260px);
+                        height: rem-calc(64px);
+                        background-color: #fff;
+                        font-family: $font-stack3;
+                        font-size: rem-calc(23px);
+                        color: #333;
+                        &.current {
+                            color: #fff;
+                        }
                     }
                 }
                 .data-wrap{
@@ -1753,6 +1785,7 @@ body.eng2
                 }
             }
             .floating-ai-book{
+                display: none;
                 position: fixed;
                 bottom: 60px;
                 right: 60px;
@@ -1861,6 +1894,10 @@ body.eng2
                     transform: rotate(2deg) scale(1.45) translateY(-8%);
                 }
             }
+        }
+        .tab-box {
+            margin-top: rem-calc(60px);
+            margin-bottom: rem-calc(36px);
         }
         .data-wrap{
             margin-top: rem-calc(30px);
@@ -2147,6 +2184,16 @@ body.eng2
                     // }
                 }
             }
+
+            .tab-box {
+                margin-top: rem-calc(40px);
+                margin-bottom: rem-calc(50px);
+                .tab-link {
+                    height: 48px;
+                    font-size: 16px;
+                }
+            }
+
             .data-wrap{
                 margin-top: rem-calc(0px);
                 width: 100%;

@@ -471,7 +471,7 @@ jconfirm.defaults = {
 function interview_mv1(){
      $.confirm({
          type: 'interview_mv',
-         content:'<h4><span>YBM AI 디지털교과서 미리보기!</span><strong>초등학교 영어 3~4학년군</strong></h4><div class="vidbox"><video class="video"  controls="controls" preload="none" poster="/aidt/img/main/thum_interview01.jpg" controlslist="nodownload" oncontextmenu="return false;"><source src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/%EC%98%81%EC%96%B43%2C4_%EC%B4%88%EB%93%B1_YBM.mp4" type="video/mp4"></video><button type="button" class="btn_play" onClick="play();"><span class="blind">재생</span></button></div>',
+         content:'<h4><span>YBM AI 디지털교과서 미리보기!</span><strong>초등학교 영어 3~6학년군</strong></h4><div class="vidbox"><video class="video"  controls="controls" preload="none" poster="/aidt/img/main/thum_interview01.jpg" controlslist="nodownload" oncontextmenu="return false;"><source src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/%EC%98%81%EC%96%B43%2C4_%EC%B4%88%EB%93%B1_YBM.mp4" type="video/mp4"></video><button type="button" class="btn_play" onClick="play();"><span class="blind">재생</span></button></div>',
          backgroundDismiss: true, //dimm클릭하면 창 꺼짐
          closeIcon: true,
          closeIconClass: 'bt_close',
@@ -486,7 +486,7 @@ function interview_mv1(){
 function interview_mv2(){
      $.confirm({
          type: 'interview_mv',
-         content:'<h4><span>YBM AI 디지털교과서 미리보기!</span><strong>초등학교 수학 3~4학년군</strong></h4><div class="vidbox"><video class="video"  controls="controls" preload="none" poster="/aidt/img/main/thum_interview02.jpg" controlslist="nodownload" oncontextmenu="return false;"><source src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/%EC%88%98%ED%95%993%2C4_%EC%B4%88%EB%93%B1_YBM.mp4" type="video/mp4"></video><button type="button" class="btn_play" onClick="play();"><span class="blind">재생</span></button></div>',
+         content:'<h4><span>YBM AI 디지털교과서 미리보기!</span><strong>초등학교 수학 3~6학년군</strong></h4><div class="vidbox"><video class="video"  controls="controls" preload="none" poster="/aidt/img/main/thum_interview02.jpg" controlslist="nodownload" oncontextmenu="return false;"><source src="https://kr.object.ncloudstorage.com/ybm-prd-std/aidt/%EC%88%98%ED%95%993%2C4_%EC%B4%88%EB%93%B1_YBM.mp4" type="video/mp4"></video><button type="button" class="btn_play" onClick="play();"><span class="blind">재생</span></button></div>',
          backgroundDismiss: true, //dimm클릭하면 창 꺼짐
          closeIcon: true,
          closeIconClass: 'bt_close',
