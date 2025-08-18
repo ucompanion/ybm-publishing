@@ -165,7 +165,7 @@ $color-primary-light: var(--color-primary-light);
     }
     &:disabled {
         border-color: #EAEAEA;
-        background-color: #EAEAEA;
+        background: #EAEAEA;
         color: #fff;
         box-shadow: none;
         &::before {
