@@ -165,9 +165,10 @@
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
         <script>
+            var loadingModal = null;
             document.addEventListener("DOMContentLoaded", function() {
                 // 모달 바로 볼 수 있도록 호출
-                var loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
+                loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
                 loadingModal.show();
             });
         </script>
