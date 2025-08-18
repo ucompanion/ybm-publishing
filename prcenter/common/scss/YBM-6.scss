@@ -2191,7 +2191,7 @@
                     .support-wrap{
                         flex-direction: row;
                         gap: rem-calc(30px);
-                        .lf-box,
+                        .lt-box,
                         .rt-box{
                             width: calc(50% - 15px);
                             background: nth($bg-colors,5);
@@ -2232,7 +2232,7 @@
                                 border-color: #746AE7;
                             }
                         }
-                        .lf-box{
+                        .lt-box{
                             .top-box{
                                 background:
                                 linear-gradient(180deg, #B773F4 0%, #564CFE 100%),
@@ -3840,7 +3840,7 @@
                         }
                         .support-wrap{
                             flex-direction: column;
-                            .lf-box,
+                            .lt-box,
                             .rt-box{
                                 width: 100%;
                             }
@@ -4516,7 +4516,7 @@
                                     line-height: 18px;
                                 }
                             }
-                            .lf-box{
+                            .lt-box{
                                 .mid-box{
                                     margin: 20px;
                                     p{

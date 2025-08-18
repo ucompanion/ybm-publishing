@@ -540,7 +540,7 @@ $(function(){
             ];
 
             const lfBox = document.createElement('div');
-            lfBox.className = 'lf-box';
+            lfBox.className = 'lt-box';
 
             const rtBox = document.createElement('div');
             rtBox.className = 'rt-box';

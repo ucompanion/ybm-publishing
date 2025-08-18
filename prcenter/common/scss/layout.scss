@@ -17,7 +17,7 @@ iframe{
 :root {
     --header-height: 72px;
     --sidepacer: 3.75rem;
-    --max-width: $breakpoint-tablet;
+    --max-width: #{$breakpoint-tablet};
     --max-width-main: 1800px;
 
 
@@ -73,7 +73,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: $breakpoint-tablet;
+        // max-width: $breakpoint-tablet;
         margin: 0 auto;
         padding: 0 var(--sidepacer);
         position: relative;

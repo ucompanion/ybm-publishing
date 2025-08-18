@@ -582,13 +582,13 @@ header.on .gnb {
     height: 2.25rem
 }
 
-.section.main-visual .download-box .lf-box {
+.section.main-visual .download-box .lt-box {
     display: flex;
     align-items: center;
     gap: 1.875rem
 }
 
-.section.main-visual .download-box .lf-box .contour {
+.section.main-visual .download-box .lt-box .contour {
     display: none
 }
 
@@ -853,12 +853,16 @@ header.on .gnb {
 
     /* Cover Box */
     .section.main-visual .cover-box {
-        gap: 7.5rem;
+        gap: 6.5rem;
         transform: scale(0.7)
     }
 
     .section.main-visual .cover-box .cover-img-group {
-        gap: 7.5rem
+        gap: 6.5rem
+    }
+
+    .submain.ybm.sub-book .section .cover-box .cover-img {
+        width: 13.75rem
     }
 
     .section.main-visual .cover-box .cover-img:nth-child(1) {
@@ -886,6 +890,21 @@ header.on .gnb {
         width: 100%
     }
 
+}
+@media(max-width: 1280px) {
+    .section.main-visual .cover-box {
+        transform: scale(1);
+        gap: 6rem
+    }
+
+    .section.main-visual .cover-box .cover-img-group {
+        display: flex;
+        gap: 6rem
+    }
+
+    .section.main-visual .cover-box .cover-img {
+        width: 12rem
+    }
 }
 @media(max-width: 1023px) {
     /* Layout */
@@ -1133,6 +1152,20 @@ header.on .gnb {
         padding-top: calc(1.875rem + var(--header-height));
     }
 
+    /* Cover Box */
+    .section.main-visual .cover-box {
+        transform: scale(1);
+        gap: 4rem
+    }
+
+    .section.main-visual .cover-box .cover-img-group {
+        gap: 4rem
+    }
+
+    .section.main-visual .cover-box .cover-img {
+        width: 10rem
+    }
+
     /* Title Box */
     .section.main-visual .title-box {
         margin-top: 4.375rem
@@ -1217,6 +1250,10 @@ header.on .gnb {
         gap: 0
     }
 
+    .section.main-visual .cover-box .cover-img-group .cover-img {
+        width: 100%
+    }
+
     .section.main-visual .cover-box .cover-img-group .cover-img:nth-child(1) {
         transform: rotate(-2deg) scale(1) translateY(-8%)
     }
@@ -1283,7 +1320,7 @@ header.on .gnb {
         flex-direction: column
     }
 
-    .section.main-visual .data-wrap .download-box .lf-box .contour {
+    .section.main-visual .data-wrap .download-box .lt-box .contour {
         display: block
     }
 

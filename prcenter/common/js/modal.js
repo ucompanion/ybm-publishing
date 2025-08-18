@@ -1,130 +1,232 @@
-//main modal 오늘 하루 보지 않기
-// 쿠키 설정 함수
-function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
+/** modal Class */
+class setModal{
 
-// 쿠키 가져오기 함수
-function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    constructor(id, body='', header=''){
+        this.id = id;
+        if(body) this.setBody(body);
+        if(header) this.setHeader(header);
     }
-    return null;
-}
+    setBody(body){
+        this.body = body;
+    }
+    setHeader(header){
+        this.header = header;
+    }
+    setFooter(footer){
+        this.footer = footer;
+    }
 
-// 자정 기준으로 쿠키 초기화
-const now = new Date();
-const midnight = new Date();
-midnight.setHours(24, 0, 0, 0);
-const expiresIn = midnight.getTime() - now.getTime();
-setTimeout(() => {
-    setCookie('hidePopup', '', -1); // 쿠키 삭제
-    location.reload(); // 페이지 새로고침
-}, expiresIn);
+    open(){
+        setTimeout(() => {
 
-// 팝업 표시 제어
-if (getCookie('hidePopup') !== 'true') {
-    $('#modalPopup').show();
-}
-
-// 닫기 버튼 클릭 이벤트
-$('#closePopup').click(function() {
-    $('#modalPopup').hide();
-});
-
-// 닫기 버튼 클릭 이벤트
-$('#closePopup2').click(function() {
-    $('#modalPopup2').hide();
-});
-
-// 오늘 하루 보지 않기 버튼 클릭 이벤트
-$('#hideForToday').click(function() {
-    setCookie('hidePopup', 'true', 1); // 쿠키를 1일 동안 설정
-    $('#modalPopup').hide();
-});
-
-
-//layer popup
-$('[data-popup]').on('click', function () {
-    var popupName = $(this).data('popup');
-  
-    $.ajax({
-        type: "GET", //추후 POST로 변경
-        url: "../html/modal.html",
-        dataType: "html",
-        error: function () {
-            alert("통신실패!!!!");
-        },
-        success: function (res) {
-            //console.log('성공');
-            $(".popup-wrap").html(res);
-            $('html').addClass('active-popup');
-            $('#' + popupName + 'Popup').addClass('show');
-    
-            // 팝업 닫기
-            $('.dimd, .close-btn').on('click', function () {
-                $('html').removeClass('active-popup');
-                $('.layerpop').removeClass('show');
-                $('[data-popup]').removeClass('active');
-                return false;
-            });
-
-            
-    
-            // 팝업 스크립트
-            $('[data-popup]').on('click', function () {
-                var popupName = $(this).data('popup');
-                $('html').addClass('active-popup');
-                $('#' + popupName + 'Popup').addClass('show');
-                return false;
-            });
-
-            $(window).resize(function(){
-                resizeYoutube();
-            });
-            $(function(){
-                resizeYoutube();
-            });
-            function resizeYoutube(){ 
-                $("iframe").each(function(){
-                    if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ 
-                        $(this).css("width","100%"); 
-                        $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 480 / 854 ) + "px");
-                    } 
-                }); 
+            if(this.header){
+                $('#'+this.id).find('.popup-header h2').html(this.header);
+                $('#'+this.id).find('.popup-header').show();
+            }
+            else if($('#'+this.id).find('.popup-header h2').html() == ''){
+                $('#'+this.id).find('.popup-header').hide();
+            }
+            if(this.body){
+                if($('#'+this.id).hasClass('toast-alert-box') && $('#'+this.id).hasClass('show')){
+                    $('#'+this.id).find('.toast-item:eq(0)').clone().prependTo($('#'+this.id)).find('.popup-body').html(this.body);
+                }
+                else{
+                    $('#'+this.id).find('.popup-body').html(this.body);
+                    $('#'+this.id).find('.popup-body').show();
+                }
+            }
+            else if($('#'+this.id).find('.popup-body').html() == ''){
+                $('#'+this.id).find('.popup-body').hide();
+            }
+            if(this.footer){
+                $('#'+this.id).find('.popup-footer .btn-set').html(this.footer);
+                $('#'+this.id).find('.popup-footer').show();
+            }
+            else if($('#'+this.id).find('.popup-footer .btn-set').html() == ''){
+                $('#'+this.id).find('.popup-footer').hide();
             }
 
-            
-            //현장스케치(이미지) 팝업 swipe
-            var imageSwiper = new Swiper(".imageSwiper-wrap .imageSwiperRail", {
-                spaceBetween: 10,
-                slidesPerView: 5,
-                freeMode: true,
-                watchSlidesProgress: true,
-                observer: true,
-                observeParents: true,
-            });
-            var imageSwiper2 = new Swiper(".imageSwiper-wrap .imageSwiperThumb", {
-                // autoplay: {
-                //     delay: 000,
-                // },
-                navigation: {
-                    nextEl: ".imageSwiper-wrap .swiper-button-next",
-                    prevEl: ".imageSwiper-wrap .swiper-button-prev",
-                },
-                thumbs: {
-                    swiper: imageSwiper,
-                },
-                observer: true,
-                observeParents: true,
+            $('body').removeClass('active-modal').addClass('active-modal');
+
+            if($('#'+this.id).hasClass('toast-alert-box')){
+                if($('.overlay').css('display') != 'block'){
+                    $('.overlay').css('background-color','rgba(0,0,0,0)');
+                }
+            }
+            else{
+                $('.overlay').css('background-color','rgba(0,0,0,0.65)');
+            }
+            $('.overlay').fadeIn();
+            $('#'+this.id).removeClass('show').addClass('show');
+            $('#'+this.id).show();
+        }, 100);
+    }
+    /** 쿠키 데이터 */
+    close(){
+        if($('#'+this.id).find('.toast-item').length > 1){
+            $('#'+this.id).find('.toast-item:last-child').fadeOut(function(){
+                $(this).remove();
             });
         }
-    });
+        else if($('#'+this.id).hasClass('toast-alert-box') && $('.layerpop.show').length > 0){
+            $('#'+this.id).fadeOut().removeClass('show');
+        }
+        else{
+            $('body').removeClass('active-modal');
+            $('.layerpop, .overlay, .toast-alert-box').fadeOut();
+            $('.toast-alert-box.show').removeClass('show');
+            $('.layerpop.show').removeClass('show');
+        }
+    }
+}
+
+// 먼저 개발 jsp 찾고 없으면 퍼블 html 찾는다.
+$.ajax({
+    url: '/asset/templates/popup-wrap.jsp',
+    type: 'GET',
+    dataType: false,
+    data: false,
+    success: function(data) {
+        if ( $('body .popup-wrap').length == 0 ) {
+            $('body').append(data);
+            $('body .popup-wrap').addClass('added-by-ajax');
+        }
+    },
+    error: function() {
+        $.get('./templates/popup-wrap.html', function(data){
+            $('body').append(data);
+            console.log('실패');
+        });
+    }
 });
+
+function malert(body){
+    let modal = new setModal('alertPopup',body);
+    modal.open();
+}
+
+function mconfirm(body,callback){
+    let modal = new setModal('confirmPopup',body);
+    modal.open();
+    $(document).on('click', '#confirmPopup .close, .call-ok', function(e){
+        e.preventDefault();
+        $('#confirmPopup button').unbind("click");
+        callback($(this).hasClass('call-ok'));
+        modal.close();
+    });
+}
+
+function toast(body,$timeout = 2000){
+    let modal = new setModal('alertToast',body);
+    modal.open();
+    setTimeout(() => modal.close(), $timeout);
+}
+
+// 팝업 닫기
+$(document).on('click', '.overlay, .close, .close-btn', function (e) {
+    e.preventDefault();
+    // forever 클래스가 있는 경우 overlay를 클릭해도 팝업을 닫지 않음
+    if ( $(e.target).hasClass('overlay') && $(e.target).hasClass('forever') ) {
+        return false;
+    } else {
+        $('.overlay').removeClass('forever');
+    }
+    if($('.toast-alert-box.show').length > 0 && $('.layerpop.show').length > 0){
+        $('.toast-alert-box.show').fadeOut().removeClass('show');
+    }
+    else{
+        $('body').removeClass('active-modal');
+        $('.layerpop, .overlay, .toast-alert-box').fadeOut();
+        $('.toast-alert-box.show').removeClass('show');
+        $('.layerpop.show').removeClass('show');
+
+    }
+    return false;
+});
+
+$(document).on('click', '[data-popup]',function(e){
+    e.preventDefault();
+    let this_id = $(this).data('popup');
+    let modal = new setModal(this_id);
+    modal.open();
+});
+
+$(document).on('click', '[data-toast-msg]',function(e){
+    e.preventDefault();
+    toast($(this).data('toast-msg'));
+});
+
+// 라디오박스 탭메뉴
+$(document).on('click', '.tab-menu-radio', function(){
+    let checked = $('.tab-menu-radio:checked');
+    let name = checked.attr('name');
+    let id = checked.attr('id');
+    $('[data-radio-name='+name+']').removeClass('checked');
+    $('[data-radio-for='+id+']').removeClass('checked').addClass('checked');
+    console.log(id);
+});
+
+
+ // 페이지 탭 메뉴
+$(document).on('click', '.pop-menu', function(e){
+    e.preventDefault();
+    var tab_pop_id = $(this).attr('data-pop-tab');
+
+    $('.pop-menu , .pop-tab-content').removeClass('current');
+    $(this).addClass('current');
+    $("#"+tab_pop_id).addClass('current');
+    return false;
+});
+$(document).on('click', '.pop-menu', function(e){
+    e.preventDefault();
+    if($(this).attr('data-pop-tab') === 'popTab2'){
+        $(this).closest('#subscription2POpup').find('.part2').show();
+        $(this).closest('#subscription2POpup').find('.part1').hide();
+    }else{
+        $(this).closest('#subscription2POpup').find('.part2').hide();
+        $(this).closest('#subscription2POpup').find('.part1').show();
+
+    }
+});
+
+//직접입력 클릭시 textarea노출
+$(document).on('click', '.pop-tab-content .direct-box li', function(e){
+    e.preventDefault();
+    if($(this).hasClass("direct") === true) {
+        $('.textareabox .form-wrap').show();
+        $(this).closest('#subscription2POpup').find('.popup-footer .part2 .btn').removeClass('positive').addClass('negative');
+    } else{
+        $('.textareabox .form-wrap').hide();
+        $(this).closest('#subscription2POpup').find('.popup-footer .part2 .btn').removeClass('negative').addClass('positive');
+    }
+});
+$(document).on('keyup','.textareabox textarea',function(e){
+    if($(this).val() != ''){
+        $(this).closest('#subscription2POpup').find('.popup-footer .part2 .btn').removeClass('negative').addClass('positive');
+    } else {
+        $(this).closest('#subscription2POpup').find('.popup-footer .part2 .btn').removeClass('positive').addClass('negative');
+    }
+});
+
+/*
+mconfirm("정말로 삭제 하시겠습니까?", function(res){
+    if(res){
+        malert("`네`를 선택하셨습니다.");
+    }
+    else{
+        malert('`아니요`를 선택하셨습니다.');
+    }
+});
+*/
+
+// 과목설정
+function subjectDisabled(name, idList) {
+    // 해당 name을 가진 모든 라디오 반복
+    document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
+        const target = document.getElementById(radio.id);
+        if (!target) return;
+
+        // 해당 id가 포함되어 있으면 disabled
+        target.disabled = idList.includes(radio.id);
+    });
+}
