@@ -41,6 +41,37 @@ document.querySelectorAll('[data-aos]').forEach(aosElem => {
     }
 }).resize();
 
+var isMobile = window.matchMedia("(max-width: 960px)").matches;
+
+$('header .gnb > li').on('click',function(){
+    if(isMobile){
+        $(this).toggleClass('is-active');
+        $(this).find('.depth-wrap').toggle();
+        $(this).siblings('.is-active').removeClass('is-active').find('.depth-wrap').hide();
+    }
+});
+$('header .gnb > li').on('mouseenter',function(){
+    if(!isMobile){
+        $(this).find('.depth-wrap').stop().slideDown('fast');
+    }
+});
+$('header .gnb > li').on('mouseleave',function(){
+    if(!isMobile){
+        $(this).find('.depth-wrap').stop().slideUp('fast');
+    }
+});
+
+// 기본 노출로 변경
+$(window).on('scroll', function() {
+    if ($(this).scrollTop() > 50) {
+        $('header').addClass('is-shadow');
+        // $('.sitemenu').hide();
+    } else {
+        $('header').removeClass('is-shadow');
+        // $('.sitemenu').show();
+    }
+});
+
 // header navbox button
 function menu_toggle() {
 	$("html").toggleClass("hidden");

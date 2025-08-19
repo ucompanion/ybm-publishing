@@ -1245,8 +1245,8 @@ header.on .gnb {
     }
 
     .section.main-visual .cover-box .cover-img-group {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 0
     }
 
