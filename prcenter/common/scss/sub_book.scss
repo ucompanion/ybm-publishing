@@ -908,17 +908,42 @@ body.eng2 {
                     }
                 }
 
+                .writing-staff-tab-box {
+                    margin-top: rem-calc(60px);
+                    .writing-staff-tab-menu {
+                        display: inline-flex;
+                        margin-bottom: rem-calc(50px);
+                        border-radius: rem-calc(12px);
+                        overflow: hidden;
+                        border: 1px solid #ddd;
+                        box-shadow: 3px 3px 12px 0 rgba(0, 0, 0, 0.2);
+                        .item {
+                            height: rem-calc(56px);
+                            padding: 0 rem-calc(16px);
+                            font-size: rem-calc(20px);
+                            font-weight: 700;
+                            font-family: $font-stack3;
+                            min-width: 140px;
+                            background-color: #f8f8f8;
+                            &.current {
+                                background-color: #3ac3a9;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
                 .writing-staff-box {
-                    display: flex;
+                    display: none;
                     gap: rem-calc(30px);
                     align-items: self-start;
                     justify-content: center;
                     flex-wrap: wrap;
-                    margin-top: rem-calc(60px);
                     font-size: rem-calc(18px);
                     color: list.nth($bg-grays, 4);
                     line-height: 120%;
-
+                    &.current {
+                        display: flex;
+                    }
                     .tit {
                         font-weight: 700;
                         color: $base-text-color;
@@ -1003,7 +1028,7 @@ body.eng2 {
                                 font-weight: 700;
                                 font-size: rem-calc(18px);
                                 color: $base-text-color;
-                                text-align: left;
+                                text-align: center;
                                 box-sizing: border-box;
 
                                 .desc {
@@ -1275,6 +1300,8 @@ body.eng2 {
                     &.is-small {
                         .item {
                             padding-top: rem-calc(20px);
+                            padding-left: 1rem;
+                            padding-right: 1rem;
                             font-size: rem-calc(18px);
                         }
                     }
