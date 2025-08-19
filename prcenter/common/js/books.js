@@ -142,49 +142,51 @@ $(function(){
             }
 
             // 사회과부도
-            var $writingStaffBox2 = $('#writingStaffBox2');
-            var $leadAuthorBox2 = $writingStaffBox2.find($(".lead-author-box"));
-            var $staffList2 = $writingStaffBox2.find($(".staff-list"));
-            for(let i=0; i<res.writing_staff_02.length; i++){
-                let number = (i >= 10)? i : '0'+i;
-                // 대표저자
-                if(i == 0){
-                    const $ltBox = $("<div>").prop({className: 'lt-box'});
-                    const $imgBox = $("<div>").prop({className: 'img-box'});
-                    // 사진 처리
-                    $leadAuthorBox2.append(
-                        $imgBox.append("<img src='" + $bookPath + $book + "/writing_staff_02_"+number+".png' alt='' />")
-                    );
-                    // 인터뷰 영상 처리
-                    if(res.writing_staff_02[i].video != null){
+            if (typeof res.writing_staff_02 != "undefined") {
+                var $writingStaffBox2 = $('#writingStaffBox2');
+                var $leadAuthorBox2 = $writingStaffBox2.find($(".lead-author-box"));
+                var $staffList2 = $writingStaffBox2.find($(".staff-list"));
+                for(let i=0; i<res.writing_staff_02.length; i++){
+                    let number = (i >= 10)? i : '0'+i;
+                    // 대표저자
+                    if(i == 0){
+                        const $ltBox = $("<div>").prop({className: 'lt-box'});
+                        const $imgBox = $("<div>").prop({className: 'img-box'});
+                        // 사진 처리
                         $leadAuthorBox2.append(
-                            $imgBox.append("<a href='"+res.writing_staff_02[i].video+"' class='evShowVideo'></a>")
+                            $imgBox.append("<img src='" + $bookPath + $book + "/writing_staff_02_"+number+".png' alt='' />")
+                        );
+                        // 인터뷰 영상 처리
+                        if(res.writing_staff_02[i].video != null){
+                            $leadAuthorBox2.append(
+                                $imgBox.append("<a href='"+res.writing_staff_02[i].video+"' class='evShowVideo'></a>")
+                            );
+                        }
+                        // 이력 처리
+                        $leadAuthorBox2.append(
+                            $ltBox.append("<div class='tit mg top-20'>대표 저자 " + res.writing_staff_02[i].name + "</div>")
+                                .append("<span>" + res.writing_staff_02[i].affiliation + "</span>")
+                                .append("<div class='tit mg top-12'>주요 이력</div>"),
+
+                            res.writing_staff_02[i].history.forEach(function(val){
+                                $ltBox.append("<li>"+val+"</li>")
+                            })
+                        );
+                        $leadAuthorBox2.append("<div class='tit mg top-12'>YBM교과서는</div><div class='word-contain'><div class='word-box'><div class='inn'>" + res.writing_staff_02[i].word + "</div></div><span>이다.</span></div>");
+                    }
+                    else{
+                        let $word = (res.writing_staff_02[i].type2)? "<div class='inn'>" + res.writing_staff_02[i].word + "</div>" : "YBM교과서는<div class='inn'>" + res.writing_staff_02[i].word + "</div>이다.";
+                        let $video = (res.writing_staff_02[i].video != null)? "<a href='"+res.writing_staff_02[i].video+"' class='evShowVideo'></a>" : '';
+                        const $liBox = $("<li>").prop({className: 'lt-box'});
+                        $staffList2.append(
+                            $liBox.prop({className:'item'})
+                              //.append("<div class='img-box'><img src='" + $bookPath + $book + "/writing_staff"+number+".png' alt='' /></div>")
+                                .append("<div class='img-box'><img src='" + $bookPath + $book + "/writing_staff_02_"+number+".png' alt='' />"+$video+"</div>")
+                                .append("<div class='tit'>" + res.writing_staff_02[i].name + "</div>")
+                                .append("<span>" + res.writing_staff_02[i].affiliation + "</span>")
+                                .append("<div class='word-box'>" + $word + "</div>")
                         );
                     }
-                    // 이력 처리
-                    $leadAuthorBox2.append(
-                        $ltBox.append("<div class='tit mg top-20'>대표 저자 " + res.writing_staff_02[i].name + "</div>")
-                            .append("<span>" + res.writing_staff_02[i].affiliation + "</span>")
-                            .append("<div class='tit mg top-12'>주요 이력</div>"),
-
-                        res.writing_staff_02[i].history.forEach(function(val){
-                            $ltBox.append("<li>"+val+"</li>")
-                        })
-                    );
-                    $leadAuthorBox2.append("<div class='tit mg top-12'>YBM교과서는</div><div class='word-contain'><div class='word-box'><div class='inn'>" + res.writing_staff_02[i].word + "</div></div><span>이다.</span></div>");
-                }
-                else{
-                    let $word = (res.writing_staff_02[i].type2)? "<div class='inn'>" + res.writing_staff_02[i].word + "</div>" : "YBM교과서는<div class='inn'>" + res.writing_staff_02[i].word + "</div>이다.";
-                    let $video = (res.writing_staff_02[i].video != null)? "<a href='"+res.writing_staff_02[i].video+"' class='evShowVideo'></a>" : '';
-                    const $liBox = $("<li>").prop({className: 'lt-box'});
-                    $staffList2.append(
-                        $liBox.prop({className:'item'})
-                          //.append("<div class='img-box'><img src='" + $bookPath + $book + "/writing_staff"+number+".png' alt='' /></div>")
-                            .append("<div class='img-box'><img src='" + $bookPath + $book + "/writing_staff_02_"+number+".png' alt='' />"+$video+"</div>")
-                            .append("<div class='tit'>" + res.writing_staff_02[i].name + "</div>")
-                            .append("<span>" + res.writing_staff_02[i].affiliation + "</span>")
-                            .append("<div class='word-box'>" + $word + "</div>")
-                    );
                 }
             }
 
@@ -470,7 +472,7 @@ $(function(){
      * 페이지 예외처리
      */
     // 특정 교과서 전자 저작물 제외
-    const arBooksList = new Array('hi15','hi16','hi17','hi19');
+    const arBooksList = new Array('ele9','hi15','hi16','hi17','hi19');
     if(arBooksList.indexOf(bookCode) >= 0){
         $('.book-tab-menu .item:last-child').remove();
     }
