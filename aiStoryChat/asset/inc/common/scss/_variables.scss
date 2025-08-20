@@ -340,7 +340,7 @@ $color-primary-light: var(--color-primary-light);
         }
     }
     .btn-hint {
-        background-color: --chat-bubble-hint;
+        background-color: var(--chat-bubble-hint);
         &::before {
             background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_910_13985)'%3E%3Cpath d='M6.66536 11.7721V13.333C6.66536 14.0694 7.26232 14.6663 7.9987 14.6663C8.73508 14.6663 9.33203 14.0694 9.33203 13.333V11.7721M7.9987 1.33301V1.99967M1.9987 7.99967H1.33203M3.66536 3.66634L3.2653 3.26628M12.332 3.66634L12.7322 3.26628M14.6654 7.99967H13.9987M11.9987 7.99967C11.9987 10.2088 10.2078 11.9997 7.9987 11.9997C5.78956 11.9997 3.9987 10.2088 3.9987 7.99967C3.9987 5.79054 5.78956 3.99967 7.9987 3.99967C10.2078 3.99967 11.9987 5.79054 11.9987 7.99967Z' stroke='%23F96800' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_910_13985'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
         }
