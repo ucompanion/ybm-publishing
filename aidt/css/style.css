@@ -742,14 +742,15 @@
 .aidt_container .aidt_sec4::after {content:''; display: block; position: absolute; left: calc(50% + 15.8125rem); bottom: 0; width: 34.59375rem; height: 20.375rem; background: url('/aidt/img/aidt/img_sec03_object02.png') no-repeat center center / contain; opacity: 1;}
 .aidt_container .aidt_sec4 .aidt_header h2,
 .aidt_container .aidt_sec4 .aidt_header p {color: #fff;}
-.aidt_container .aidt_sec4 .diff_table {overflow: hidden; border-radius: 0.75rem; box-shadow: var(--box-shadow);}
-.aidt_container .aidt_sec4 .diff_table table {table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%;}
-.aidt_container .aidt_sec4 .diff_table table thead {background-color: #144CAC; color: #fff;}
-.aidt_container .aidt_sec4 .diff_table table thead th {padding: 1rem 0;}
-.aidt_container .aidt_sec4 .diff_table table th {height: 3.75rem; text-align: center;}
-.aidt_container .aidt_sec4 .diff_table table td {height: 3.75rem; text-align: center; border-bottom:1px solid #EAEAEA; background-color: #fff;}
-.aidt_container .aidt_sec4 .diff_table table th + th {border-left:1px solid #144CAC;}
-.aidt_container .aidt_sec4 .diff_table table td + td {border-left:1px solid #EAEAEA;}
+.aidt_container .aidt_sec4 .diff_table_pc {overflow: hidden; border-radius: 0.75rem; box-shadow: var(--box-shadow);}
+.aidt_container .aidt_sec4 .diff_table_pc table {table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%;}
+.aidt_container .aidt_sec4 .diff_table_pc table thead {background-color: #144CAC; color: #fff;}
+.aidt_container .aidt_sec4 .diff_table_pc table thead th {padding: 1rem 0;}
+.aidt_container .aidt_sec4 .diff_table_pc table th {height: 3.75rem; text-align: center;}
+.aidt_container .aidt_sec4 .diff_table_pc table td {height: 3.75rem; text-align: center; border-bottom:1px solid #EAEAEA; background-color: #fff;}
+.aidt_container .aidt_sec4 .diff_table_pc table th + th {border-left:1px solid #144CAC;}
+.aidt_container .aidt_sec4 .diff_table_pc table td + td {border-left:1px solid #EAEAEA;}
+.aidt_container .aidt_sec4 .diff_table_mo {display: none;}
 .aidt_container .aidt_sec5 .process_box {display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;}
 .aidt_container .aidt_sec5 .process_box .process_item {display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2.5rem 2.5rem 1.75rem 2.5rem; box-shadow: var(--box-shadow); border-radius: 1.25rem; background-color: #fff;}
 .aidt_container .aidt_sec5 .process_box .process_img {width: 14.0625rem; height: 14.0625rem; background: no-repeat center center / contain;}

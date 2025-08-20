@@ -446,9 +446,16 @@
 	.aidt_container .aidt_sec3 .process_box .process_item {flex-direction: row; gap: 16px; justify-content: flex-start; padding: 16px;}
 	.aidt_container .aidt_sec3 .process_box .process_img {width: 68px; height: 68px;}
 	.aidt_container .aidt_sec3 .process_box .process_tit {margin-top: 0; font-size: 16px; line-height: 26px;}
+	.aidt_container .aidt_sec4 .diff_table_pc {display: none;}
+	.aidt_container .aidt_sec4 .diff_table_mo {display: block;}
+	.aidt_container .aidt_sec4 .diff_list {display: flex; flex-direction: column; gap: 12px;}
+	.aidt_container .aidt_sec4 .diff_list li {padding: 16px; background-color: #fff; border-radius: 8px;}
+	.aidt_container .aidt_sec4 .diff_list .diff_title {margin-bottom: 10px; font-weight: 400; font-size: 18px; line-height: 20px; color: #000;}
+	.aidt_container .aidt_sec4 .diff_list .diff_cont {display: flex; flex-direction: column; background-color: #E8EDFF; border-radius: 8px; padding: 12px; gap: 10px;}
+	.aidt_container .aidt_sec4 .diff_list .diff_cont dl {display: flex; justify-content: space-between; font-size: 12px; line-height: 14px; color: #000;}
+	.aidt_container .aidt_sec4 .diff_list .diff_cont dd.point {color: #2741CD;}
 	.aidt_container .aidt_sec5 .process_box {display: flex; flex-direction: column;}
 	.aidt_container .aidt_sec5 .process_box .process_item {flex-direction: row; gap: 16px; justify-content: flex-start; padding: 16px;}
-
 	.aidt_container .aidt_sec5 .process_box .process_img {width: 68px; height: 68px;}
 	.aidt_container .aidt_sec5 .process_box .process_tit {margin-top: 0; font-size: 16px; line-height: 26px;}
 
