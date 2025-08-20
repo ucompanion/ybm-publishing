@@ -2068,6 +2068,18 @@ body.eng2 {
                             }
                         }
                     }
+
+                    .edutech-more {
+                        margin-top: rem-calc(60px);
+                        display: flex;
+                        justify-content: center;
+                        .btn-edutech-link {
+                            display: block;
+                            width: rem-calc(240px);
+                            height: rem-calc(60px);
+                            background: url("#{$img-sub-url}btn-edutech-link.png") no-repeat center center  / contain;
+                        }
+                    }
                 }
             }
 
