@@ -471,9 +471,14 @@ $(function(){
     /**
      * 페이지 예외처리
      */
-    // 특정 교과서 전자 저작물 제외
-    const arBooksList = new Array('ele9','hi15','hi16','hi17','hi19');
+    // 특정 교과서 지도서 제외
+    const arBooksList = new Array('mid14');
     if(arBooksList.indexOf(bookCode) >= 0){
+        $('.book-tab-menu .item:nth(2)').remove();
+    }
+    // 특정 교과서 전자 저작물 제외
+    const arBooksList02 = new Array('ele9','mid12','mid13','mid14','hi15','hi16','hi17','hi19');
+    if(arBooksList02.indexOf(bookCode) >= 0){
         $('.book-tab-menu .item:last-child').remove();
     }
     if(bookCode == 'ele4') {

@@ -2288,7 +2288,7 @@ body.eng2 {
             }
 
             .floating-ai-book {
-                display: none;
+                display: none !important;
                 position: fixed;
                 bottom: 60px;
                 right: 60px;
