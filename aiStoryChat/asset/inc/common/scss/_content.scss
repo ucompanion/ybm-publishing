@@ -2021,6 +2021,7 @@
     .story-learning {
         position: relative;
         padding: 24rem;
+        padding-right: 80rem;
         border-radius: 8rem;
         background-color: #f6f6f6;
         border:1px solid #f6f6f6;
@@ -2180,6 +2181,7 @@
         @include fill-height;
         overflow: auto;
         padding: 20rem 0;
+        scroll-behavior: smooth;
     }
     .chat-desc {
         display: flex;

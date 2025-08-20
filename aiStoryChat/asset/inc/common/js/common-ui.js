@@ -11,15 +11,20 @@ $(function(){
         $(dropBox).slideUp();
     });
 
-    $(window).resize(function(){ 
-        if (window.innerWidth < 960) { 
+    $(window).resize(function(){
+        if (window.innerWidth < 960) {
             $('.responsive-layout').addClass('wrapper-m');
-            
+
             } else {
-                $('.responsive-layout').removeClass('wrapper-m');   
+                $('.responsive-layout').removeClass('wrapper-m');
                 $('.only-mobile').hide();
-            
+
             }
-        
-    }).resize(); 
-})
+
+    }).resize();
+});
+
+function chatScrollEnd(){
+    const chatWrap = $('.chat-wrap');
+    chatWrap.prop('scrollTop', chatWrap.prop('scrollHeight'));
+}
