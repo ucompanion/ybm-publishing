@@ -2,7 +2,6 @@
  @media screen and (max-width: 1600px) {
 	/* 공통 */
 	.header .menu_icon {right: 3rem;}
-	.header nav {margin-right: 50px;}
 	.inner {padding-left: 3rem;padding-right: 3rem;}
 
 	/* 교과서 소개 */
@@ -59,8 +58,14 @@
 	.data_container .sbmain_ai .headline{text-align: center;}
 	.data_container .sbmain_ai .headline .obj{position:relative; top: auto; right: auto;}
 	.data_container .sbmain_ai .movie_wrap{ margin-top: -10px }
+
+	/* 교과서 소개 */
+	.aidt_container .aidt_sec2 .object_1 {top: 0;}
+	.aidt_container .aidt_sec2 .object_4 {right: -10vw;}
 }
  @media screen and (max-width: 1150px) {
+	.header nav .depth1 > li > a {padding: 0 20px;}
+
 	/* 메인 */
 	.main_page .ms3 .ms_list_g .list_item {height: 500px;}
 
@@ -74,6 +79,9 @@
 	.sb_sec2 .writer_bx>div.writer_box {padding: 25px;}
 	.sb_sec2 .partner_box >li {padding: 40px 25px;}
 	.sb_sec2 .partner_box .logo {position: relative;right: auto;top: auto;height: auto;justify-content: flex-end;width: 100%;}
+
+	/* 교과서란 */
+	.aidt_container .aidt_sec3 .process_box .process_item {padding: 1.75rem 1.75rem 1.25rem 1.75rem;}
 }
  @media screen and (max-width: 1023px) {
 	/* 공통 */
@@ -86,7 +94,6 @@
 	.header nav .depth1 li:first-child > .depth2 > li {width: 120px;}
 	.header nav .depth1 li:first-child > .depth2 > li > a { word-break: keep-all; white-space: normal; overflow-wrap: break-word;}
 	.header .menu_icon {right: 2rem;}
-	.header nav {margin-right: 40px;}
 	.header.hide {opacity: 1;transform: translateX(0);}
 
 	 /* 교과서 소개 */
@@ -141,8 +148,19 @@
 	.main_page .ms5 .ms_card_g ul li.m9 {margin-right: 1% !important;}
 	.main_page .ms6 .ms6_contbox {gap: 30px;}
 
+	/* 자료실 */
+	.data_container .sbmain_ai .skill_sec .skill_doc .btn_group {flex-direction: column;}
+	.data_container .diagram {margin: 2rem 0 2rem 0;}
+
 	/* 교과서 소개 */
+	.sbmain_container .sbmain_sec2 .book_bx {grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); gap: 5rem 1.375rem;}
+	.sbmain_container .sbmain_sec2 .sb_sec.mid .book_bx {grid-template-columns: 1fr 1fr; gap: 5rem 1.375rem;}
+	.sbmain_container .sbmain_sec2 .sb_sec.mid .book_bx .bookbox_g:first-child {grid-column: 1 / span 2}
+	.sbmain_container .sbmain_sec2 .sb_sec.hi .book_bx {grid-template-columns: 1fr 1fr; gap: 5rem 1.375rem;}
+	.sbmain_container .sbmain_sec2 .sb_sec.hi .book_bx .bookbox_g:first-child {grid-column: 1 / span 2}
 	.sbmain_container .sbmain_sec3 .copy_bx strong {background: #DD1FF6;}
+	.sbmain_container .object_5 {width: 56px; height: 56px; top: 210px; right: -28px; left: auto; z-index: 3;}
+	.sbmain_container .object_6 {width: 180px; height: 180px; top: -60px; right: auto; left: -60px;}
 
 	/* 교과서 상세 */
 	.copy_bx strong:before {display: none;}
@@ -166,16 +184,12 @@
 	.original img {width: 100% !important;height: 100% !important;object-fit: cover !important;}
 	.sb_sec5 .ebook_box .btns{ flex-wrap: wrap}
 
-	/* 자료실 */
-	.data_container .sbmain_ai .skill_sec .skill_doc .btn_group {flex-direction: column;}
-	.data_container .diagram {margin: 2rem 0 2rem 0;}
-
-	/* 교과서 소개 */
-	.sbmain_container .sbmain_sec2 .book_bx {grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); gap: 5rem 1.375rem;}
-	.sbmain_container .sbmain_sec2 .sb_sec.mid .book_bx {grid-template-columns: 1fr 1fr; gap: 5rem 1.375rem;}
-	.sbmain_container .sbmain_sec2 .sb_sec.mid .book_bx .bookbox_g:first-child {grid-column: 1 / span 2}
-	.sbmain_container .sbmain_sec2 .sb_sec.hi .book_bx {grid-template-columns: 1fr 1fr; gap: 5rem 1.375rem;}
-	.sbmain_container .sbmain_sec2 .sb_sec.hi .book_bx .bookbox_g:first-child {grid-column: 1 / span 2}
+	/* 교과서란 */
+	.aidt_container .object_5 {width: 56px; height: 56px; top: 210px; right: -28px; left: auto; z-index: 12;}
+	.aidt_container .object_6 {width: 180px; height: 180px; top: -60px; right: auto; left: -60px;}
+	.aidt_container .aidt_sec2 .why_box {padding: 2.5rem;}
+	.aidt_container .aidt_sec3 .process_box {display: grid; grid-template-columns: 1fr 1fr;}
+	.aidt_container .aidt_sec3 .process_item {width: 100%;}
 
 	/* 팝업 */
 	.layerpop.ty2 {width: calc(100% - 40px)}
@@ -187,6 +201,7 @@
 	.header nav .event {right: -40px;}
 
 	/* 교과서 소개 */
+	.sbmain_container .sbmain_sec1 .sb_header h1 {font-size: 2.75rem;}
 	.sbmain_container .sbmain_sec2 {padding-top: 5rem; padding-bottom: 5rem;}
 	.sbmain_container .sbmain_sec2 h2 {font-size: 2.15rem;text-align: center;word-break: keep-all;}
 	.sbmain_container .sbmain_sec1 .bookbox_g+.bookbox_g {width: 100%;}
@@ -207,6 +222,11 @@
 	.sbmain_ai .headline h2 br{display: none}
 	.sbmain_ai .headline .obj{max-width: 70%; margin: 0 auto;}
 	.sbmain_ai .skill_sec .skill_guide .btn_box {padding: 2rem;}
+
+	/* 교과서란 */
+	.aidt_container section {padding: 5rem 0;}
+	.aidt_container .aidt_header h1 {font-size: 2.75rem;}
+	.aidt_container .aidt_header h2 {font-size: 2.15rem;}
 }
  @media screen and (max-width: 767px) {
 	/* 레이아웃 공통 */
@@ -225,7 +245,9 @@
 	.header.white, .header {background: #fff;height: 50px;box-shadow: 0px 2px 3px #0000001A;}
 	.header.white *, .header * {filter: none !important;line-height: 1 !important;}
 	.header.white .h_logo img, .header .h_logo img {height: 20px;}
-	.header.white .menu_icon .menu_linebox .menu_line, .header .menu_icon .menu_linebox .menu_line {background-color: #141519;}
+	.header .menu_icon {display: block;}
+	.header.white .menu_icon .menu_linebox .menu_line,
+	.header .menu_icon .menu_linebox .menu_line {background-color: #141519;}
 	.header.white.active, .header.active {box-shadow: none;}
 	.header.white.active nav, .header.active nav {height:  calc(100vh - 50px); display: block;background: #fff;width: 100vw;position: fixed;left: 0;top: 50px;padding: 50px 40px;}
 	.header.white nav .depth1, .header nav .depth1 {flex-direction: column;width: 100%;align-items: flex-start;justify-content: flex-start;gap: 20px;height: auto;}
@@ -262,6 +284,7 @@
 	.main_page .ms1 .banner_02 {width: 292px; right: 20px; bottom: calc(10px + 147px + 10px);}
 
 	/* 교과서 소개 */
+	.sbmain_container .sbmain_sec1::after {width: 100%;}
 	.sbmain_container .sbmain_sec2 {padding: 70px 0;}
 	.sbmain_container .sbmain_sec2 .sb_sec {margin-top: 5rem;}
 	.sbmain_container .sbmain_sec2 .bookbox_g .book_g {flex-direction: column;}
@@ -397,15 +420,6 @@
 	.data_container .sbmain_ai .content .overview .title{font-size: 16px; margin-bottom: 5px}
 	.data_container .sbmain_ai .content .video_container .script{font-size: 14px; display: block}
 	.data_container .sbmain_ai .content .video_list{max-height: 100%}
-	.data_container .sbmain_ai .csinfo{padding: 6rem 0}
-	.data_container .sbmain_ai .csinfo .inner{flex-direction: column;}
-	.data_container .sbmain_ai .csinfo .item{padding: 2.5rem}
-	.data_container .sbmain_ai .csinfo .item.ai-info{background-image:none;}
-	.data_container .sbmain_ai .csinfo .item.ai-info strong, .sbmain_ai .csinfo .item.ai-info span{font-size: 16px}
-	.data_container .sbmain_ai .csinfo .item.ai-info ul{margin-top: 2rem}
-	.data_container .sbmain_ai .csinfo .item.tt-info .obj_floating{top: -196px; right: -108px;}
-	.data_container .sbmain_ai .csinfo .item.tt-info span{font-size: 15px}
-	.data_container .sbmain_ai .csinfo .item.tt-info .btn{margin-top: 2rem}
 	.data_container .sbmain_ai .modelinfo .inner {padding: 6rem 3rem;}
 	.data_container .sbmain_ai .skill_sec {padding-bottom: 0;}
 	.data_container .sbmain_ai .skill_sec + .skill_sec {margin-top: 2.5rem;}
@@ -413,6 +427,30 @@
 	.data_container .sbmain_ai .skill_sec .skill_list.type_vod {grid-template-columns: repeat(2, 1fr);}
 	.data_container .sbmain_ai .skill_sec .skill_video .btn_play {width: 4rem; height: 4rem;}
 	.data_container .sbmain_ai .skill_sec .skill_video .btn_play::before {background-size: 2rem auto;}
+
+	/* 공통 */
+	.csinfo{padding: 5rem 0}
+	.csinfo .inner{flex-direction: column;}
+	.csinfo .item{padding: 2.5rem}
+	.csinfo .item.ai-info{background-image:none;}
+	.csinfo .item.ai-info strong, .csinfo .item.ai-info span{font-size: 16px}
+	.csinfo .item.ai-info ul{margin-top: 2rem}
+	.csinfo .item.tt-info .obj_floating{top: -196px; right: -108px;}
+	.csinfo .item.tt-info span{font-size: 15px}
+	.csinfo .item.tt-info .btn{margin-top: 2rem}
+
+	/* 교과서란 */
+	.aidt_container .aidt_sec1::after {width: 100%;}
+	.aidt_container .aidt_sec2 .why_list {display: flex; flex-direction: column;}
+	.aidt_container .aidt_sec3 .process_box {display: flex; flex-direction: column;}
+	.aidt_container .aidt_sec3 .process_box .process_item {flex-direction: row; gap: 16px; justify-content: flex-start; padding: 16px;}
+	.aidt_container .aidt_sec3 .process_box .process_img {width: 68px; height: 68px;}
+	.aidt_container .aidt_sec3 .process_box .process_tit {margin-top: 0; font-size: 16px; line-height: 26px;}
+	.aidt_container .aidt_sec5 .process_box {display: flex; flex-direction: column;}
+	.aidt_container .aidt_sec5 .process_box .process_item {flex-direction: row; gap: 16px; justify-content: flex-start; padding: 16px;}
+
+	.aidt_container .aidt_sec5 .process_box .process_img {width: 68px; height: 68px;}
+	.aidt_container .aidt_sec5 .process_box .process_tit {margin-top: 0; font-size: 16px; line-height: 26px;}
 
 	/* 팝업 */
 	.layerpop.ty2 {top: 0;left: 0;transform: translate(0);height: 100%;width: 100%;padding: 0}
