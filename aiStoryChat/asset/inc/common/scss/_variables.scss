@@ -295,3 +295,54 @@ $color-primary-light: var(--color-primary-light);
     }
 
 }
+
+@mixin story-user-utils {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8rem;
+    position: absolute;
+    right: calc(100% + 8rem);
+    top: 0;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32rem;
+        height: 32rem;
+        border-radius: 50%;
+        &::before {
+            content:'';
+            display: block;
+            width: 16rem;
+            height: 16rem;
+            @include icon-default-bg;
+        }
+    }
+    .btn-correct {
+        background-color: #FFEAEA;
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 6.00015V8.66682M8 11.3335H8.00667M7.07688 2.59464L1.59362 12.0657C1.28948 12.591 1.13742 12.8537 1.15989 13.0693C1.1795 13.2573 1.27801 13.4282 1.43091 13.5394C1.60622 13.6668 1.90973 13.6668 2.51674 13.6668H13.4833C14.0903 13.6668 14.3938 13.6668 14.5691 13.5394C14.722 13.4282 14.8205 13.2573 14.8401 13.0693C14.8626 12.8537 14.7105 12.591 14.4064 12.0657L8.92312 2.59463C8.62007 2.07119 8.46855 1.80947 8.27087 1.72157C8.09843 1.64489 7.90157 1.64489 7.72913 1.72157C7.53145 1.80947 7.37992 2.07119 7.07688 2.59464Z' stroke='%23FF6652' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
+        }
+
+    }
+    .btn-better {
+        background-color: #CDF8EC;
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8H5.00667M8 8H8.00667M11 8H11.0067M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 8.7981 2.15582 9.5598 2.43871 10.2563C2.49285 10.3897 2.51992 10.4563 2.532 10.5102C2.54381 10.5629 2.54813 10.6019 2.54814 10.6559C2.54814 10.7111 2.53812 10.7713 2.51807 10.8916L2.12275 13.2635C2.08135 13.5119 2.06065 13.6361 2.09917 13.7259C2.13289 13.8045 2.19552 13.8671 2.27412 13.9008C2.36393 13.9393 2.48812 13.9186 2.73651 13.8772L5.10843 13.4819C5.22872 13.4619 5.28887 13.4519 5.34409 13.4519C5.3981 13.4519 5.43711 13.4562 5.48981 13.468C5.54369 13.4801 5.61035 13.5072 5.74366 13.5613C6.4402 13.8442 7.2019 14 8 14ZM5.33333 8C5.33333 8.1841 5.1841 8.33333 5 8.33333C4.81591 8.33333 4.66667 8.1841 4.66667 8C4.66667 7.81591 4.81591 7.66667 5 7.66667C5.1841 7.66667 5.33333 7.81591 5.33333 8ZM8.33333 8C8.33333 8.1841 8.1841 8.33333 8 8.33333C7.81591 8.33333 7.66667 8.1841 7.66667 8C7.66667 7.81591 7.81591 7.66667 8 7.66667C8.1841 7.66667 8.33333 7.81591 8.33333 8ZM11.3333 8C11.3333 8.1841 11.1841 8.33333 11 8.33333C10.8159 8.33333 10.6667 8.1841 10.6667 8C10.6667 7.81591 10.8159 7.66667 11 7.66667C11.1841 7.66667 11.3333 7.81591 11.3333 8Z' stroke='%231C9F78' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
+    }
+    .btn-respeak {
+        background-color: #F4F4F4;
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9987 6.66667C13.9987 6.66667 12.662 4.84548 11.5761 3.75883C10.4902 2.67218 8.98963 2 7.33203 2C4.01832 2 1.33203 4.68629 1.33203 8C1.33203 11.3137 4.01832 14 7.33203 14C10.0674 14 12.3753 12.1695 13.0975 9.66667M13.9987 6.66667V2.66667M13.9987 6.66667H9.9987' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
+    }
+    .btn-hint {
+        background-color: --chat-bubble-hint;
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_910_13985)'%3E%3Cpath d='M6.66536 11.7721V13.333C6.66536 14.0694 7.26232 14.6663 7.9987 14.6663C8.73508 14.6663 9.33203 14.0694 9.33203 13.333V11.7721M7.9987 1.33301V1.99967M1.9987 7.99967H1.33203M3.66536 3.66634L3.2653 3.26628M12.332 3.66634L12.7322 3.26628M14.6654 7.99967H13.9987M11.9987 7.99967C11.9987 10.2088 10.2078 11.9997 7.9987 11.9997C5.78956 11.9997 3.9987 10.2088 3.9987 7.99967C3.9987 5.79054 5.78956 3.99967 7.9987 3.99967C10.2078 3.99967 11.9987 5.79054 11.9987 7.99967Z' stroke='%23F96800' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_910_13985'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        }
+    }
+}
