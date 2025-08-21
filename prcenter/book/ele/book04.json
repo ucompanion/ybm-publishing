@@ -227,14 +227,14 @@
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"", "SEMESTER":"5학년 1학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"5학년 2학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"6학년 1학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"6학년 2학기"},
+        {"TEXTBOOK_ID":"T07230459022025Gb2lr", "SEMESTER":"5학년 1학기"},
+        {"TEXTBOOK_ID":"T07230502172025MbmIt", "SEMESTER":"5학년 2학기"},
+        {"TEXTBOOK_ID":"T07230512472025yCaqM", "SEMESTER":"6학년 1학기"},
+        {"TEXTBOOK_ID":"T07230513232025rdafu", "SEMESTER":"6학년 2학기"},
         {"TEXTBOOK_ID":"T07170139342024uJNy7", "SEMESTER":"3학년 1학기"},
         {"TEXTBOOK_ID":"T07170140212024yBFHx", "SEMESTER":"3학년 2학기"},
         {"TEXTBOOK_ID":"T07170140562024tzdsW", "SEMESTER":"4학년 1학기"},
         {"TEXTBOOK_ID":"T07170141472024OMzpc", "SEMESTER":"4학년 2학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"사회과 부도"}
+        {"TEXTBOOK_ID":"T07230513552025t3SZd", "SEMESTER":"사회과 부도"}
     ]
 }

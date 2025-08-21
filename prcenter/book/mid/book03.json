@@ -71,7 +71,8 @@
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07171125112024K2xdd", "SEMESTER":"수학 1"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"수학 2"}
+        {"TEXTBOOK_ID":"T07230546402025N4zdN", "SEMESTER":"수학 2"},
+        {"TEXTBOOK_ID":"T07171125112024K2xdd", "SEMESTER":"수학 1"}
+
     ]
 }

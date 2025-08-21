@@ -102,13 +102,13 @@
         ]
     ],
     "TEXTBOOK_INFO":[
+        {"TEXTBOOK_ID":"T072304563120255pF78", "SEMESTER":"5학년 1학기"},
+        {"TEXTBOOK_ID":"T07230457102025nOaqx", "SEMESTER":"5학년 2학기"},
+        {"TEXTBOOK_ID":"T07230457492025XBwSq", "SEMESTER":"6학년 1학기"},
+        {"TEXTBOOK_ID":"T07230458282025KLkCp", "SEMESTER":"6학년 2학기"},
         {"TEXTBOOK_ID":"T07171208392024WISxJ", "SEMESTER":"3학년 1학기"},
         {"TEXTBOOK_ID":"T07171209142024M35Wr", "SEMESTER":"3학년 2학기"},
         {"TEXTBOOK_ID":"T07171209472024ir74Q", "SEMESTER":"4학년 1학기"},
-        {"TEXTBOOK_ID":"T07171210222024VOdeN", "SEMESTER":"4학년 2학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"5학년 1학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"5학년 2학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"6학년 1학기"},
-        {"TEXTBOOK_ID":"", "SEMESTER":"6학년 2학기"}
+        {"TEXTBOOK_ID":"T07171210222024VOdeN", "SEMESTER":"4학년 2학기"}
     ]
 }

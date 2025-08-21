@@ -131,6 +131,8 @@
         ]
     ],
     "TEXTBOOK_INFO":[
+        {"TEXTBOOK_ID":"T07230531062025epOBb", "SEMESTER":"5학년"},
+        {"TEXTBOOK_ID":"T072305313720256pNCy", "SEMESTER":"6학년"},
         {"TEXTBOOK_ID":"T07170143362024WLKyS", "SEMESTER":"3학년"},
         {"TEXTBOOK_ID":"T07170144092024JtVQf", "SEMESTER":"4학년"}
     ]
