@@ -330,6 +330,7 @@
                     <div class="modal-body">
                         <div class="modal-inner">
                             <div class="chat-community">
+                                <!-- 대화리스트 -->
                                 <ul class="chat-list">
                                     <!-- AI Chat: Story (번역 후) -->
                                     <li class="chat-item bot">
@@ -360,23 +361,6 @@
                                         </div>
                                     </li>
 
-                                    <!-- My Chat: 녹음 -->
-                                    <li class="chat-item user">
-                                        <div class="chat-sender">
-                                            <div class="chat-avata">
-                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="story-record-chat">
-                                                    <button type="button" class="btn-recored">
-                                                        <span class="blind">녹음하기</span>
-                                                    </button>
-                                                    <p class="explan">녹음 버튼을 누른 후 말하세요</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
                                     <!-- My Chat: Basic -->
                                     <li class="chat-item user">
                                         <div class="chat-sender">
@@ -385,32 +369,18 @@
                                             </div>
                                             <div class="chat-body">
                                                 <div class="story-user-chat">
-                                                    <p>I’m in the sixth grade.</p>
+                                                    <p>My family will move to a new town.</p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-respeak">
+                                                            <span class="blind">다시 말하기</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
 
-                                    <!-- My Chat: 교정 피드백 -->
-                                    <li class="chat-item user">
-                                        <div class="chat-sender">
-                                            <div class="chat-avata">
-                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="story-feedback-chat">
-                                                    <p class="title"><strong>교정이 필요합니다</strong></p>
-                                                    <p class="explan">이름은 대문자로 시작해야 합니다</p>
-                                                    <dl class="corect">
-                                                        <dt class="corect-label">교정된 문장</dt>
-                                                        <dd class="corect-translated">My 얼씨구</dd>
-                                                    </dl>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- AI Chat: Story (번역 전) -->
+                                    <!-- AI Chat: Story (번역 후) -->
                                     <li class="chat-item bot">
                                         <div class="chat-sender">
                                             <div class="chat-avata">
@@ -422,71 +392,18 @@
                                                         I’m in the sixth grade. My family will move to a new town.
                                                         We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.
                                                     </p>
-                                                    <!-- <p class="story-translated">
+                                                    <p class="story-translated">
                                                         안녕하세요! 삐삐가 새로운 마을에서 긴장을 했는지 기억하시나요?
-                                                    </p> -->
+                                                    </p>
                                                     <div class="story-utils">
                                                         <button type="button" class="btn-speaker">
                                                             <span class="blind">스피커</span>
                                                         </button>
-                                                        <!-- Case 번역 전 (기본값) -->
-                                                        <button type="button" class="btn-translate">
+                                                        <!-- Case 번역 후 : is-active -->
+                                                        <button type="button" class="btn-translate is-active">
                                                             <span class="blind">번역</span>
                                                         </button>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- My Chat:  녹음 힌트 -->
-                                    <li class="chat-item user">
-                                        <div class="chat-sender">
-                                            <div class="chat-avata">
-                                                <img src="../../asset/img/common/icn-30-avata-08.png" alt="본인" />
-                                            </div>
-
-                                            <div class="chat-body">
-                                                <div class="story-record-chat">
-                                                    <button type="button" class="btn-recored">
-                                                        <span class="blind">녹음하기</span>
-                                                    </button>
-                                                    <p class="explan">녹음 버튼을 누른 후 말하세요</p>
-                                                    <button type="button" class="btn-hint">
-                                                        <span>힌트</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- My Chat: 힌트 결과 -->
-                                    <li class="chat-item user">
-                                        <div class="chat-sender">
-                                            <div class="chat-avata">
-                                                <img src="../../asset/img/common/icn-30-avata-08.png" alt="본인" />
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="story-hint-chat">
-                                                    <p class="story-hint">힌트</p>
-                                                    <p class="story-original">I’m in the sixth grade. My family will move to a new town.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <!-- My Chat:  녹음 -->
-                                    <li class="chat-item user">
-                                        <div class="chat-sender">
-                                            <div class="chat-avata">
-                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="story-record-chat">
-                                                    <button type="button" class="btn-recored">
-                                                        <span class="blind">녹음하기</span>
-                                                    </button>
-                                                    <p class="explan">녹음 버튼을 누른 후 말하세요</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -500,12 +417,18 @@
                                             </div>
                                             <div class="chat-body">
                                                 <div class="story-user-chat">
-                                                    <p>I’m in the sixth grade.</p>
+                                                    <p>My family will move to a new town.</p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-respeak">
+                                                            <span class="blind">다시 말하기</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
+                                <!-- //대화리스트 -->
                             </div>
                         </div>
                     </div>

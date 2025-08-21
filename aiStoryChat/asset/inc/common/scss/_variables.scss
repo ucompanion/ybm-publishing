@@ -189,12 +189,14 @@ $color-primary-light: var(--color-primary-light);
 @mixin btn-line-normal {
     border: 1px solid #CCCCCC;
     background-color: #fff;
+    &::after,
     &::before {
         background-color: #767676;
     }
     &:hover {
         border-color: var(--color-primary);
         color: var(--color-primary);
+        &::after,
         &::before {
             background-color: var(--color-primary);
         }

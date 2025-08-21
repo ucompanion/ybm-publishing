@@ -62,7 +62,7 @@
                                         </div>
                                     </li>
                                     <li class="stats-item">
-                                        <a href="javascript:;" class="stats-box type-caution">
+                                        <a href="javascript:;" class="stats-box type-caution" data-bs-toggle="modal" data-bs-target="#chatModal">
                                             <div class="stats-body">
                                                 <p class="tit"><strong>교정 문장</strong></p>
                                                 <p class="stat">3개</p>
@@ -71,7 +71,7 @@
                                         </a>
                                     </li>
                                     <li class="stats-item">
-                                        <a href="javascript:;" class="stats-box type-good">
+                                        <a href="javascript:;" class="stats-box type-good" data-bs-toggle="modal" data-bs-target="#chatModal">
                                              <div class="stats-body">
                                                  <p class="tit"><strong>더 좋은 표현 문장</strong></p>
                                                  <p class="stat">4개</p>
@@ -104,6 +104,130 @@
         </div>
         <!-- //page-wrap -->
 
+
+        <!-- 모달: 대화 다시 보기 -->
+        <div class="modal modal-full fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="chatModalLabel">대화 다시 보기<span class="middot">&middot;</span>1번 김학일</h3>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icn icn-modal-close" aria-label="닫기"></i>
+                        </button>
+                    </div>
+
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <div class="modal-inner">
+                            <div class="chat-community">
+                                <!-- 대화리스트 -->
+                                <ul class="chat-list">
+                                    <!-- AI Chat: Story (번역 후) -->
+                                    <li class="chat-item bot">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-bot.png" alt="AI Robot" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-chat">
+                                                    <p class="story-original">
+                                                        I’m in the sixth grade. My family will move to a new town.
+                                                        We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.
+                                                    </p>
+                                                    <p class="story-translated">
+                                                        안녕하세요! 삐삐가 새로운 마을에서 긴장을 했는지 기억하시나요?
+                                                    </p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-speaker">
+                                                            <span class="blind">스피커</span>
+                                                        </button>
+                                                        <!-- Case 번역 후 : is-active -->
+                                                        <button type="button" class="btn-translate is-active">
+                                                            <span class="blind">번역</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- My Chat: Basic -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-user-chat">
+                                                    <p>My family will move to a new town.</p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-respeak">
+                                                            <span class="blind">다시 말하기</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- AI Chat: Story (번역 후) -->
+                                    <li class="chat-item bot">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-bot.png" alt="AI Robot" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-chat">
+                                                    <p class="story-original">
+                                                        I’m in the sixth grade. My family will move to a new town.
+                                                        We play together every day. In the new town, I’ll make new friends. Let’s explore the town together.
+                                                    </p>
+                                                    <p class="story-translated">
+                                                        안녕하세요! 삐삐가 새로운 마을에서 긴장을 했는지 기억하시나요?
+                                                    </p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-speaker">
+                                                            <span class="blind">스피커</span>
+                                                        </button>
+                                                        <!-- Case 번역 후 : is-active -->
+                                                        <button type="button" class="btn-translate is-active">
+                                                            <span class="blind">번역</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- My Chat: Basic -->
+                                    <li class="chat-item user">
+                                        <div class="chat-sender">
+                                            <div class="chat-avata">
+                                                <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
+                                            </div>
+                                            <div class="chat-body">
+                                                <div class="story-user-chat">
+                                                    <p>My family will move to a new town.</p>
+                                                    <div class="story-utils">
+                                                        <button type="button" class="btn-respeak">
+                                                            <span class="blind">다시 말하기</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- //대화리스트 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달: 대화 다시 보기 -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
         <script src="../../asset/inc/common/js/jquery-1.12.4.min.js"></script>
         <script src="../../asset/inc/common/js/common-ui.js"></script>
     </body>
