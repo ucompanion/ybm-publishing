@@ -174,8 +174,8 @@ html, body, .page-wrap {
                 border: 0;
                 border-radius: 50%;
                 &.is-blind {
-                    visibility: hidden;
                     pointer-events: none;
+                    background: transparent;
                 }
             }
 

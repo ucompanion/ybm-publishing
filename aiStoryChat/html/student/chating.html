@@ -24,7 +24,10 @@
                     <h1 class="logo"><a href="/"><span class="blind">AI 스토리챗</span></a></h1>
                 </div>
                 <div class="util-area">
-                    <a href="./setting_step1.html" class="btn btn-home is-blind"><span class="blind">설정 홈</span></a>
+                    <!-- 프로필 이미지 추가 -->
+                    <a href="javascript:void(0)" class="btn btn-home is-blind">
+                        <img src="../../asset/img/common/icn-30-avata-02.png" alt="본인" />
+                    </a>
                 </div>
             </header>
 
@@ -275,6 +278,21 @@
                     </div>
                     <!-- 대화 중일때 is-chatting 추가 -->
                     <div class="content-footer is-chatting">
+                        <!-- 녹음중 -->
+                        <div class="chat-recording is-active" id="chatRecording">
+                            <div class="record-ani">
+                                <div class="record-circle"></div>  <!-- 기본 원 -->
+                                <div class="record-ripples">
+                                    <div class="ripple"></div>
+                                    <div class="ripple"></div>
+                                    <!-- <div class="ripple"></div> -->
+                                    <!-- <div class="ripple"></div> -->
+                                </div>
+                            </div>
+                            <p class="record-desc">듣고 있어요</p>
+                        </div>
+                        <!-- //녹음중 -->
+                        <!-- 키보드입력 -->
                         <div class="chat-form" id="chatKeyboard">
                             <div class="chat-input">
                                 <input type="text" value="I'm in the si" class="input" />
@@ -283,8 +301,9 @@
                                 </button>
                             </div>
                         </div>
+                        <!-- //키보드입력 -->
                         <div class="chat-utils">
-                            <button type="button" class="btn-recording" onclick="toggleActive(this, 'is-active')">
+                            <button type="button" class="btn-recording is-active" onclick="toggleActive(this, 'is-active'); toggleActive('#chatRecording', 'is-active')">
                                 <span class="blind">녹음하기</span>
                             </button>
                             <button type="button" class="btn-keyboard" onclick="toggleActive(this, 'is-active'); toggleActive('#chatKeyboard', 'is-active')">

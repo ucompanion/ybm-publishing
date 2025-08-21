@@ -4,6 +4,91 @@
 
 // 페이지: AI 스토리챗 메인
 .main-page {
+    .visual-area {
+        position: absolute;
+        top: 136rem;
+        left: calc(50% + 1007rem - 960rem);
+        z-index: 10;
+        width: 488rem;
+        aspect-ratio: 488/334;
+        background: url('#{$pages-url}img-main-visual.png') no-repeat center center / contain;
+        &::before,
+        .visual,
+        .visual::before,
+        .visual::after {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: no-repeat center center / contain;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        &::before {
+            content:'';
+            opacity: 0;
+            background-image: url('#{$pages-url}img-main-visual-smile.png');
+            animation-name: visual-smile;
+        }
+        .visual::before {
+            content:'';
+            opacity: 0;
+            background-image: url('#{$pages-url}img-main-visual-bb-01.png');
+            animation-name: visual-bubble1;
+        }
+        .visual::after {
+            content:'';
+            opacity: 0;
+            background-image: url('#{$pages-url}img-main-visual-bb-02.png');
+            animation-name: visual-bubble2;
+        }
+        @keyframes visual-smile {
+            5%, 55% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes visual-bubble1 {
+            0%, 15%, 75% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            25% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            65% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes visual-bubble2 {
+            0%, 30%, 90% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            40% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
     // 섹션: 소개
     .main-intro-sec {
         position: relative;
@@ -67,15 +152,6 @@
                     }
                 }
             }
-        }
-
-        .visual-area {
-            position: absolute;
-            bottom: -56rem;
-            right: 55rem;
-            width: 524rem;
-            height: 426rem;
-            background: url('#{$pages-url}img-main-visual-pc.png');
         }
     }
 

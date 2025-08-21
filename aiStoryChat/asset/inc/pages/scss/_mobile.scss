@@ -50,6 +50,16 @@
 
     // 페이지: AI 스토리챗 메인
     .main-page {
+        position: relative;
+        .visual-area {
+            top: auto;
+            bottom: 60rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 480px;
+        }
+
         // 섹션: 소개
         .main-intro-sec {
             position: relative;
@@ -97,10 +107,6 @@
                         }
                     }
                 }
-            }
-
-            .visual-area {
-                display: none;
             }
         }
 
@@ -333,10 +339,9 @@
             content:'';
             display: block;
             width: 100%;
+            margin: 40rem auto 0;
             max-width: 480px;
-            margin: auto;
-            aspect-ratio: 320/228;
-            background: url('#{$pages-url}img-main-visual-pc.png') no-repeat center center / contain;
+            aspect-ratio: 488/334;
         }
 
     }
