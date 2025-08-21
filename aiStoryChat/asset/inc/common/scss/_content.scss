@@ -1344,9 +1344,14 @@
                     order: 1;
                     align-items: flex-end;
                 }
-                + .user {
+                &.hide-avata {
                     .chat-avata img {
                         visibility: hidden;
+                    }
+                    .chat-body {
+                        > div::before {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -1491,6 +1496,7 @@
 
     // 스토리 채팅 - 힌트
     .story-hint-chat {
+        position: relative;
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
@@ -1506,7 +1512,7 @@
             left: 100%;
             display: block;
             border: 5rem solid transparent;
-            border-left: 6rem solid var(--chat-primary-light);
+            border-left: 6rem solid var(--chat-bubble-hint);
             border-right: 0;
             border-radius: 3rem;
         }
