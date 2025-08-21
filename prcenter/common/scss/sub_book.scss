@@ -871,6 +871,7 @@ body.eng2 {
                         &.download {
                             font-weight: 500;
                             font-size: rem-calc(18px);
+                            word-break: keep-all;
                         }
 
                         .btns {
@@ -2597,7 +2598,7 @@ body.eng2 {
                 }
             }
             .data-wrap {
-                padding: rem-calc(20px) rem-calc(50px);
+                padding: rem-calc(20px) rem-calc(30px);
 
                 .data-box {
                     gap: rem-calc(16px);
@@ -2648,7 +2649,7 @@ body.eng2 {
             }
 
             top: - 75%;
-            left: 72%;
+            left: 10%;
 
             .writing_staff_all {
                 top: 130%;
@@ -2757,8 +2758,8 @@ body.eng2 {
                 scale: .6;
             }
 
-            top: - 200%;
-            left: -10%;
+            // top: - 200%;
+            left: 30%;
 
             .writing_staff_all {
                 top: 80%;
@@ -3098,8 +3099,8 @@ body.eng2 {
         }
 
         .camera-box {
-            top: - 200%;
-            left: - 38%;
+            // top: - 200%;
+            left: -8%;
 
             .writing_staff_all {
                 scale: .8;
