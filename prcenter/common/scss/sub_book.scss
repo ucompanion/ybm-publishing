@@ -854,19 +854,22 @@ body.eng2 {
                     display: flex;
                     justify-content: space-between;
                     gap: rem-calc(30px);
-                    align-items: center;
+                    align-items: flex-start;
 
                     .contour {
+                        position: relative;
+                        top: rem-calc(6px);
                         width: 1px;
                         height: rem-calc(25px);
                     }
 
                     .btn {
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
                         justify-content: center;
                         position: relative;
-                        gap: rem-calc(5px);
+                        gap: rem-calc(12px);
+                        line-height: rem-calc(36px);
 
                         &.download {
                             font-weight: 500;
@@ -898,9 +901,20 @@ body.eng2 {
 
                     .rt-box {
                         display: flex;
-                        align-items: center;
-                        flex-wrap: wrap;
+                        align-items: flex-start;
                         gap: 1.875rem;
+                        .btn {
+                            &.download {
+                                .box {
+                                    flex-wrap: wrap;
+                                    justify-content: flex-end;
+                                    max-width: rem-calc(180px);
+                                    .dl_group_label {
+                                        margin-right: rem-calc(6px);
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     .box {
@@ -2850,22 +2864,57 @@ body.eng2 {
                 }
 
                 .download-box {
+                    flex-direction: column;
                     justify-content: center;
-                    gap: 1.25rem;
+                    gap: 16px;
+
+                    .contour {
+                        display: none;
+                    }
 
                     .btn {
-                        font-size: 13px;
-                        flex-direction: column;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        gap: 6px;
+                        width: 100%;
+                        line-height: 38px;
+                        font-weight: 700;
+                        font-size: 16px;
+
+                        .dl_group_label {
+                            margin-right: 4px;
+                            font-weight: 400;
+                        }
+
+                        .box {
+                            gap: 8px;
+                        }
+
+                        .btns {
+                            width: 38px;
+                            height: 38px;
+                        }
                     }
 
                     .lt-box {
+                        flex-direction: row;
+                        align-items: flex-start;
+                        width: 100%;
+                        gap: 16px;
                         .contour {
-                            display: block;
+                            display: none;
                         }
                     }
 
                     .rt-box {
-                        gap: 1.25rem;
+                        flex-direction: column;
+                        gap: 16px;
+                        width: 100%;
+                        .box {
+                            max-width: 180px;
+                            gap: 8px;
+                        }
                     }
                 }
             }
