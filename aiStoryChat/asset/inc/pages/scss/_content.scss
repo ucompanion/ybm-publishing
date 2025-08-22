@@ -2,6 +2,10 @@
 
 @import 'variables', 'functions', 'breakpoint';
 
+@mixin visualArea {
+
+}
+
 // 페이지: AI 스토리챗 메인
 .main-page {
     .visual-area {
@@ -400,6 +404,208 @@
             position: absolute;
             top: 1139rem;
             right: 171rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--main-object-02);
+            opacity: 1;
+        }
+
+        @keyframes floatY {
+        from { transform: translateY(0)  }
+        to   { transform: translateY(calc(var(--float-distance) * -1)) }
+        }
+
+        & > div {
+            will-change: transform;
+            transition: none !important; /* 혹시 남아있는 transition 충돌 제거 */
+            animation: floatY var(--float-duration, 4s) ease-in-out var(--float-delay, 0s) infinite alternate;
+            transform: var(--tx) translate3d(0, 0, 0); /* 초기값(반드시 --tx 선언 필요) */
+        }
+
+        /* 7개 프리셋 (진폭, 지속시간, 지연) */
+        .object-01 { --float-distance: 52.6rem;  --float-duration: 3.2s; --float-delay: 0.0s; }
+        .object-02 { --float-distance: 53.0rem;  --float-duration: 3.8s; --float-delay: 0.4s; }
+        .object-05 { --float-distance: 38.2rem;  --float-duration: 6.0s; --float-delay: 0.7s; }
+        .object-06 { --float-distance: 59.2rem;  --float-duration: 6.8s; --float-delay: 1.1s; }
+        .object-07 { --float-distance: 39.5rem;  --float-duration: 7.4s; --float-delay: 0.5s; }
+    }
+}
+
+.ending-page {
+    padding: 0 !important;
+    overflow: hidden;
+
+    // 학습종료 페이지
+    .ending-sec {
+        padding-top: 189rem;
+        padding-bottom: 100rem;
+
+        .header-area {
+            margin-bottom: 60rem;
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 40rem;
+                line-height: 56rem;
+                text-align: center;
+                color: #000;
+                strong {
+                    font-weight: 700;
+                }
+            }
+        }
+        .visual-area {
+            position: relative;
+            width: 488rem;
+            aspect-ratio: 488/334;
+            margin: auto;
+            background: url('#{$pages-url}img-main-visual.png') no-repeat center center / contain;
+            &::before,
+            .visual,
+            .visual::before,
+            .visual::after {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: no-repeat center center / contain;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            &::before {
+                content:'';
+                opacity: 0;
+                background-image: url('#{$pages-url}img-main-visual-smile.png');
+                animation-name: visual-smile;
+            }
+            .visual::before {
+                content:'';
+                opacity: 0;
+                background-image: url('#{$pages-url}img-main-visual-bb-01.png');
+                animation-name: visual-bubble1;
+            }
+            .visual::after {
+                content:'';
+                opacity: 0;
+                background-image: url('#{$pages-url}img-main-visual-bb-02.png');
+                animation-name: visual-bubble2;
+            }
+            @keyframes visual-smile {
+                5%, 55% {
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes visual-bubble1 {
+                0%, 15%, 75% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                25% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                65% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes visual-bubble2 {
+                0%, 30%, 90% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                40% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                80% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    // 꾸미기 오브젝트
+    .object-group {
+        .object-01 {
+            position: absolute;
+            left: calc(50% + 250rem);
+            top: -119px;
+            width: 534px;
+            height: 534px;
+            border-radius: 50%;
+            background: var(--main-object-01);
+            opacity: 0.2;
+        }
+        .object-02 {
+            position: absolute;
+            top: 45%;
+            right: calc(50% + 1367rem - 960rem);
+            width: 162px;
+            height: 162px;
+            border-radius: 50%;
+            background: var(--main-object-01);
+            opacity: 0.2;
+        }
+        .object-03 {
+            position: absolute;
+            left: calc(50% + 1244rem - 960rem);
+            top: 311rem;
+            z-index: 30;
+            width: 167rem;
+            height: 131rem;
+            background: url('#{$pages-url}img-object-03.png');
+        }
+        .object-04 {
+            display: none;
+            position: absolute;
+            top: 558rem;
+            left: 83rem;
+            width: 122rem;
+            height: 107rem;
+            background: url('#{$pages-url}img-object-04.png');
+        }
+        .object-05 {
+            display: none;
+            position: absolute;
+            top: 921rem;
+            left: 135rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--main-object-02);
+            opacity: 1;
+        }
+        .object-06 {
+            position: absolute;
+            bottom: -140rem;
+            left: calc(50% + 1202rem - 960rem);
+            width: 260rem;
+            height: 260rem;
+            border-radius: 50%;
+            background: var(--main-object-01);
+            opacity: 0.2;
+        }
+        .object-07 {
+            position: absolute;
+            bottom: 80rem;
+            left: calc(50% + 1451rem - 960rem);
             width: 48px;
             height: 48px;
             border-radius: 50%;

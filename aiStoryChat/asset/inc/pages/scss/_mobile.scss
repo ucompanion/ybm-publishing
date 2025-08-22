@@ -8,6 +8,11 @@
 
 // 테블릿 가로모드
 @include tablet {
+    .ending-page {
+        .ending-sec {
+            padding-top: 120rem;
+        }
+    }
 }
 
 // 모바일 시작
@@ -344,6 +349,20 @@
             aspect-ratio: 488/334;
         }
 
+    }
+
+    .ending-page {
+        .ending-sec {
+            padding-top: 100rem;
+            .header-area .title {
+                font-size: 24rem;
+                line-height: 36rem;
+            }
+            .visual-area {
+                width: calc(100% - 40px);
+                max-width: 420px;
+            }
+        }
     }
 
     // 페이지: 결과 리포트
