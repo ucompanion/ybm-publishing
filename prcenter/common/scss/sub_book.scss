@@ -2864,23 +2864,17 @@ body.eng2 {
                 }
 
                 .download-box {
-                    flex-direction: column;
+                    flex-direction: row;
                     justify-content: center;
                     gap: 16px;
 
-                    .contour {
-                        display: none;
-                    }
-
                     .btn {
-                        flex-direction: row;
-                        align-items: flex-start;
-                        justify-content: space-between;
+                        flex-direction: column;
+                        align-items: center;
                         gap: 6px;
-                        width: 100%;
-                        line-height: 38px;
+                        line-height: 28px;
                         font-weight: 700;
-                        font-size: 16px;
+                        font-size: 13px;
 
                         .dl_group_label {
                             margin-right: 4px;
@@ -2892,28 +2886,25 @@ body.eng2 {
                         }
 
                         .btns {
-                            width: 38px;
-                            height: 38px;
+                            width: 28px;
+                            height: 28px;
                         }
                     }
 
                     .lt-box {
                         flex-direction: row;
                         align-items: flex-start;
-                        width: 100%;
                         gap: 16px;
                         .contour {
-                            display: none;
+                            display: block;
                         }
                     }
 
                     .rt-box {
-                        flex-direction: column;
                         gap: 16px;
-                        width: 100%;
                         .box {
-                            max-width: 180px;
-                            gap: 8px;
+                            max-width: 136px;
+                            gap: 6px;
                         }
                     }
                 }
@@ -3199,6 +3190,65 @@ body.eng2 {
 
             .ycloud-tab-contents {
                 border-radius: 10px;
+            }
+        }
+
+        &.main-visual {
+            .data-wrap {
+                .download-box {
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 16px;
+
+                    .contour {
+                        display: none;
+                    }
+
+                    .btn {
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        gap: 6px;
+                        width: 100%;
+                        line-height: 38px;
+                        font-weight: 700;
+                        font-size: 16px;
+
+                        .dl_group_label {
+                            margin-right: 4px;
+                            font-weight: 400;
+                        }
+
+                        .box {
+                            gap: 8px;
+                        }
+
+                        .btns {
+                            width: 38px;
+                            height: 38px;
+                        }
+                    }
+
+                    .lt-box {
+                        flex-direction: row;
+                        align-items: flex-start;
+                        width: 100%;
+                        gap: 16px;
+                        .contour {
+                            display: none;
+                        }
+                    }
+
+                    .rt-box {
+                        flex-direction: column;
+                        gap: 16px;
+                        width: 100%;
+                        .box {
+                            max-width: 180px;
+                            gap: 8px;
+                        }
+                    }
+                }
             }
         }
     }
