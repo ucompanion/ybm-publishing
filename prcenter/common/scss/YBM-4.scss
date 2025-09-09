@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'common';
 
+.wrapper {
+    max-width: 1280px;
+    margin: auto;
+}
 .section {
     // 섹션 공통
     & {
@@ -15,12 +19,12 @@
             position: relative;
             z-index: 3;
             width: 100%;
-            padding-left: var(--sidepacer);
-            padding-right: var(--sidepacer);
         }
     }
 }
-
+.body-submain {
+    padding-top: rem-calc(80px);
+}
 .body-main {
     padding-top: rem-calc(80px);
 
@@ -219,6 +223,9 @@
                             box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.12);
                         }
                         .btn {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                             width: 100%;
                             height: 100%;
                             border-radius: rem-calc(30px);
@@ -253,9 +260,9 @@
                     gap: rem-calc(12px);
                     width: auto;
                     position: absolute;
-                    top: 72px;
-                    right: 20px;
-                    left: auto;
+                    top: calc(100% + 20px);
+                    left: 50%;
+                    transform: translateX(-50%);
                     bottom: auto;
                     z-index: 20;
 
@@ -338,15 +345,18 @@
                         display: flex;
                         flex-direction: column;
                         height: 100%;
-                        padding: rem-calc(60px) rem-calc(20px);
                         border-top: 2px solid #000000;
                         border-bottom: 2px solid #000000;
+                        padding: rem-calc(40px) rem-calc(20px);
 
                         .post-link {
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             height: 100%;
+                            &:focus-visible {
+                                // outline: none;
+                            }
                         }
 
                         .post-label {
@@ -378,12 +388,13 @@
 
                         .post-title {
                             flex: none;
-                            margin-bottom: rem-calc(52px);
+                            margin-bottom: rem-calc(40px);
                             height: rem-calc(132px);
                             font-weight: 700;
                             font-size: rem-calc(32px);
                             line-height: rem-calc(44px);
                             color: #000;
+                            word-break: keep-all;
                         }
 
                         .post-meta {
@@ -480,6 +491,7 @@
                         font-size: rem-calc(20px);
                         line-height: rem-calc(32px);
                         color: #000;
+                        word-break: keep-all;
                     }
 
                     .post-meta {
@@ -1379,12 +1391,14 @@
         }
         .board-content {
             font-weight: 400;
-            font-size: rem-calc(16px);
-            line-height: rem-calc(24px);
+            font-size: rem-calc(18px);
+            line-height: rem-calc(28px);
             color: #666;
 
             img {
+                margin: auto;
                 max-width: 100%;
+                text-align: center;
             }
             p:has(img) + p {
                 margin-top: rem-calc(40px);
@@ -1458,6 +1472,9 @@
             font-size: rem-calc(16px);
             line-height: rem-calc(24px);
             color: #000;
+            br {
+                display: none;
+            }
             a {
                 color: inherit;
             }
@@ -1506,7 +1523,7 @@
                     height: rem-calc(40px);
                     mask: no-repeat center center / contain;
                     mask-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 15L20 25L30 15' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                    background-color: $color-ele;
+                    background-color: #000;
                     transform: scaleY(-1);
                 }
                 &.collapsed {
@@ -1519,6 +1536,45 @@
             }
             &-collapse {
                 background-color: #FFF6F5;
+            }
+
+            &-item {
+                &.type-ele {
+                    .accordion-button {
+                        color: $color-ele;
+                    }
+                    .accordion-collapse {
+                        background-color: #FFF6F5;
+                    }
+                    .classBook-list .classBook-btn:hover {
+                        border-color: $color-ele;
+                        background-color: $color-ele;
+                    }
+                }
+                &.type-mid {
+                    .accordion-button {
+                        color: $color-mid;
+                    }
+                    .accordion-collapse {
+                        background-color: #E2FAFF;
+                    }
+                    .classBook-list .classBook-btn:hover {
+                        border-color: $color-mid;
+                        background-color: $color-mid;
+                    }
+                }
+                &.type-hi {
+                    .accordion-button {
+                        color: $color-hi;
+                    }
+                    .accordion-collapse {
+                        background-color: #EDFFEA;
+                    }
+                    .classBook-list .classBook-btn:hover {
+                        border-color: $color-hi;
+                        background-color: $color-hi;
+                    }
+                }
             }
         }
         .classBook-list {
@@ -1538,6 +1594,7 @@
                 border: 1px solid #dedede;
                 background-color: #fff;
                 border-radius: rem-calc(4px);
+                box-sizing: border-box;
 
                 .name {
                     order: 1;
@@ -1608,10 +1665,14 @@
             padding-bottom: calc(100vw * (120 / 1280));
             .wrapper{
                 gap: calc(100vw * (20 / 1280));
+                padding: 0 20px;
             }
         }
     }
 
+    .body-submain {
+        padding-top: calc(100vw * (80 / 1280));
+    }
     .body-main {
         padding-top: calc(100vw * (80 / 1280));
 
@@ -1706,8 +1767,6 @@
                 .news-swiper {
                     .swiper-pagination {
                         gap: calc(100vw * (12 / 1280));
-                        top: calc(100vw * (72 / 1280));
-                        right: calc(100vw * (20 / 1280));
 
                         &-bullet {
                             width: calc(100vw * (12 / 1280));
@@ -2071,6 +2130,10 @@
 }
 
 @include mobile {
+    .body-submain {
+        padding-top: 72px;
+    }
+
     .body-main {
         padding-top: 72px;
         .section {
@@ -2226,7 +2289,7 @@
                             margin: 0;
                             .label {
                                 justify-content: center;
-                                width: 78px;
+                                width: 98px;
                                 height: 24px;
                                 padding: 0px;
                                 font-size: 10px;
@@ -2532,7 +2595,7 @@
                     .classBook-list {
                         display: flex;
                         flex-direction: column;
-                        padding: 12px 24px;
+                        padding: 12px 12px;
 
                         .classBook-item:last-child {
                             .classBook-btn {
@@ -2546,9 +2609,10 @@
                             align-items: center;
                             gap: 4px;
                             width: 100%;
-                            padding: 12px 0;
+                            padding: 12px 12px;
                             border-bottom: 1px solid #EAEAEA;
                             border-radius: rem-calc(4px);
+                            box-sizing: border-box;
 
                             .name {
                                 order: 1;
@@ -2767,12 +2831,6 @@
                     transform: scaleX(1);
                 }
             }
-
-
-
-            .title {
-                display: none;
-            }
         }
     }
 
@@ -2857,6 +2915,42 @@
                             display: none;
                         }
                     }
+                }
+            }
+        }
+    }
+
+
+    // 게시판 다음/이전
+    .board-pager {
+        flex-direction: column;
+        .board-pager-nav {
+            flex-direction: row;
+            padding: 16px 20px !important;
+            text-align: left;
+            box-sizing: border-box;
+            gap: 16px;
+            .prev, .next {
+                flex: none;
+                font-size: 1rem;
+                line-height: 1.5;
+                &::before {
+                    display: none;
+                }
+            }
+            .title {
+                position: relative;
+                padding-left: 16px;
+                text-align: left;
+                &::before {
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 4px;
+                    bottom: 4px;
+                    width: 1px;
+                    background-color: #ccc;
                 }
             }
         }

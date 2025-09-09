@@ -13,7 +13,7 @@
                 "2018~현재 (사)글로벌여성ICT네트워크 부회장",
                 "2023~현재 한국중등영어교육학회 국제이사"
             ],
-            "word":""
+            "word":"학생과 세계를 잇는 다리"
         },
         {
             "name":"손일수",
@@ -29,13 +29,13 @@
         },
         {
             "name":"김가람",
-            "affiliation":"(와우고등학교 교사",
+            "affiliation":"와우고등학교 교사",
             "history":["서울대학교 영어교육과 영어교육 석사"],
             "word":""
         },
         {
             "name":"김은영",
-            "affiliation":"(인천진산과학고등학교 교사",
+            "affiliation":"인천진산과학고등학교 교사",
             "history":["이화여자대학교 외국어교육특수대학원 TESOL 석사"],
             "word":""
         },
@@ -75,5 +75,20 @@
     ],
     "TEXTBOOK_INFO":[
         {"TEXTBOOK_ID":"T07230551502025nxFdO", "SEMESTER":"심화 영어 독해와 작문"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "지도서"},
+        {"number": 3, "name": "전자저작물"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "Learning Log(Introduction, Reflection)"},
+        {"number": 2, "name": "Reading Log"},
+        {"number": 3, "name": "어휘 Worksheet"},
+        {"number": 4, "name": "Crossword Puzzle Worksheet"},
+        {"number": 5, "name": "본문 Dictation Worksheet"},
+        {"number": 6, "name": "본문 해석 Worksheet"},
+        {"number": 7, "name": "어법 선택 Worksheet"},
+        {"number": 8, "name": "문법 Worksheet"}
     ]
 }

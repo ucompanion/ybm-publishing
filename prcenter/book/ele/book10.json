@@ -1,0 +1,117 @@
+{
+    "subject": "ai",
+    "title": "생활 속 인공지능 (이영호)",
+    "subscript": "내일이 기다려지는 인공지능 수업",
+    "cover_img_count": 1,
+    "writing_staff": [
+        {
+            "name":"이영호",
+            "affiliation":"대구교육대학교 교수",
+            "history":["서울교육대학교 졸업", "서울교육대학교 컴퓨터교육 박사"],
+            "word":"학생들의 미래를 밝혀주는 등불"
+        },
+        {
+            "name": "김성원",
+            "affiliation": "부산교육대학교 교수",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "옥지현",
+            "affiliation": "한국교육학술정보원 책임연구원",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "강신옥",
+            "affiliation": "동화초등학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "권순찬",
+            "affiliation": "충암중학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "김슬기",
+            "affiliation": "초당초등학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "김형기",
+            "affiliation": "인하대학교사범대학부속중학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "배국환",
+            "affiliation": "대구매곡초등학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "서성원",
+            "affiliation": "마포고등학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "이수환",
+            "affiliation": "수원선일초등학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "이승현",
+            "affiliation": "매천초등학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "이정서",
+            "affiliation": "경동초등학교 교사",
+            "history": [""],
+            "word": ""
+        },
+        {
+            "name": "정승열",
+            "affiliation": "온양고등학교 교사",
+            "history": [""],
+            "word": ""
+        }
+    ],
+    "character":[
+        {"name":"차례는 있는데 아무표시 없음"}
+    ],
+    "booktab":[
+        [
+            "이론+실습+프로젝트의 체계적인 학습 구조​",
+            "학습 내용을 실천적으로 정리하는 협력적 프로젝트​",
+            "다채로운 활동 자료로 놀이처럼 즐기는 인공지능 수업​"
+        ],
+        [
+            "학교자율시간에 대해 친절히 안내하는 지도서​",
+            "학교 현장에 맞춘 평가 방법을 안내하는 지도서​",
+            "교과서의 내용을 완벽하게 보완하는 지도서"
+        ],
+        [
+            "해당없음(삭제예정)"
+        ]
+    ],
+    "TEXTBOOK_INFO":[
+        {"TEXTBOOK_ID":"T07240213202025ccrNY", "SEMESTER":"생활 속 인공지능"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "수업 활용 워크북"},
+        {"number": 2, "name": "학습용 데이터셋"},
+        {"number": 3, "name": "프로그램 소스 파일"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "생활 속 인공지능 교육과정"},
+        {"number": 2, "name": "영역별 성취 기준 및 평가 기준"},
+        {"number": 3, "name": "교수·학습 평가 운영 계획 예시"}
+    ]
+}

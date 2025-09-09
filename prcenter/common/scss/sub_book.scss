@@ -730,7 +730,7 @@ body.eng2 {
                 .data-wrap {
                     border-radius: rem-calc(40px);
                     margin-top: rem-calc(147px);
-                    padding: rem-calc(40px) rem-calc(60px);
+                    padding: rem-calc(40px) rem-calc(40px);
                     width: rem-calc(1180px);
                     border-width: 1px;
                     border-style: solid;
@@ -747,20 +747,21 @@ body.eng2 {
                         }
 
                         dt {
+                            display: flex;
+                            align-items: center;
                             font-family: #{$font-stack3};
                             width: rem-calc(200px);
                             font-weight: 700;
-                            font-size: rem-calc(20px);
+                            font-size: rem-calc(18px);
                             position: relative;
                             padding-right: rem-calc(50px);
-                            @include ellipsis;
 
                             &:before {
                                 content: "";
                                 display: inline-block;
                                 vertical-align: middle;
-                                width: rem-calc(30px);
-                                height: rem-calc(30px);
+                                width: rem-calc(24px);
+                                height: rem-calc(24px);
                                 margin-right: rem-calc(5px);
                                 //background: url(#{$img-sub-url}ico_pencle.svg) no-repeat center center / contain;
                             }
@@ -927,23 +928,36 @@ body.eng2 {
                 .writing-staff-tab-box {
                     margin-top: rem-calc(60px);
                     .writing-staff-tab-menu {
-                        display: inline-flex;
+                        display: flex;
                         margin-bottom: rem-calc(50px);
                         border-radius: rem-calc(12px);
-                        overflow: hidden;
-                        border: 1px solid #ddd;
-                        box-shadow: 3px 3px 12px 0 rgba(0, 0, 0, 0.2);
+
                         .item {
-                            height: rem-calc(56px);
-                            padding: 0 rem-calc(16px);
-                            font-size: rem-calc(20px);
-                            font-weight: 700;
+                            flex: 1;
                             font-family: $font-stack3;
-                            min-width: 140px;
-                            background-color: #f8f8f8;
+                            text-align: center;
+                            font-weight: 700;
+                            font-size: rem-calc(26px);
+                            background-color: white;
+                            padding: rem-calc(22px) 0;
+                            border: 1px solid list.nth($bg-grays, 16);
+                            cursor: pointer;
+
                             &.current {
-                                background-color: #3ac3a9;
-                                color: #fff;
+                                background-color: list.nth($list: $listBaseColor, $n: 7);
+                                color: white;
+                            }
+
+                            &:first-of-type {
+                                border-right: 0 none;
+                                border-top-left-radius: rem-calc(20px);
+                                border-bottom-left-radius: rem-calc(20px);
+                            }
+
+                            &:last-of-type {
+                                border-left: 0 none;
+                                border-top-right-radius: rem-calc(20px);
+                                border-bottom-right-radius: rem-calc(20px);
                             }
                         }
                     }
@@ -1096,6 +1110,7 @@ body.eng2 {
 
                         .img-box {
                             @include aspect(420, 252);
+                            // @include aspect(420, 360);
                             width: 100%;
                             overflow: hidden;
                             border-radius: rem-calc(20px);
@@ -1148,6 +1163,7 @@ body.eng2 {
                             position: relative;
                             border: 1px solid transparent;
                             word-break: keep-all;
+                            word-wrap: break-word;
                             box-sizing: border-box;
                             transition: all .5s ease;
 
@@ -1797,6 +1813,7 @@ body.eng2 {
                             line-height: rem-calc(36px);
                             color: #666;
                             text-align: center;
+                            word-break: keep-all;
                         }
                     }
                     .edutech-wrap {
@@ -2175,6 +2192,7 @@ body.eng2 {
                 right: 0;
                 transform: translateY(-50%);
                 z-index: 10;
+                width: 50px;
 
                 ul {
                     display: none;
@@ -2195,6 +2213,7 @@ body.eng2 {
                         background-color: #{$base-bgcolor};
                         padding: rem-calc(13.5px) rem-calc(21px);
                         position: relative;
+                        white-space: nowrap;
 
                         &:not(:first-child) {
                             border: 1px solid #eee;
@@ -2288,6 +2307,9 @@ body.eng2 {
                                     height: rem-calc(43px);
                                     border-radius: 8px;
                                     padding: 0 16px;
+                                    .badge-new {
+                                        margin-left: 4px;
+                                    }
                                 }
                             }
                         }
@@ -2366,6 +2388,45 @@ body.eng2 {
     }
 }
 
+// 배지: 기본
+.badge-new {
+    position: relative;
+    padding: 2px 4px;
+    background-color: #EF4348;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+}
+// 배지: 서브메인 - 표지
+.submain.ybm.sub-book-main .main-book .sub-book-list .item .desc-box span .badge-new {
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
+}
+// 배지: 서브메인 - 탭메뉴
+.submain.ybm.sub-book-main.hi .tab-box .tab li {
+    position: relative;
+    .badge-new {
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%, 50%);
+    }
+}
+// 배지: 상세 - 퀵메뉴
+.submain.ybm.sub-book .sub-float-right ul li h3 .badge-new {
+    vertical-align: middle;
+    font-family: $font-stack;
+    top: -1px;
+    margin-left: 4px;
+}
+// 배지: 상세 - 서브메뉴
+.submain.ybm.sub-book .sub-float-right ul.hi .tooltip .inner .link .badge-new {
+
+}
+
 .videoPopup {
     position: fixed;
     top: 0;
@@ -2393,11 +2454,119 @@ body.eng2 {
         width: 100%;
         height: 100%;
     }
-
-    video {
+    .video-wrap {
+        position: relative;
         @include aspect(1280, 720);
         width: 80%;
+    }
+    video {
+        width: 100%;
+        height: 100%;
         z-index: 220;
+    }
+
+    .video-close {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 10px);
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: -10px;
+        &::after {
+            content:'';
+            display: block;
+            flex: none;
+            width: 200%;
+            height: 200%;
+            background: no-repeat center center / contain;
+            background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='transparent'/%3E%3Cpath d='M29 19L19 29M19 19L29 29' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    /* 세로 모드 (Portrait Mode) */
+    @media screen and (orientation: portrait) {
+        .video-close {
+            bottom: calc(100% + 10px);
+            right: 0;
+            left: auto;
+            top: auto;
+        }
+    }
+}
+
+// 비디오와 모달의 공통기능 충돌로 인한 분리
+.youtubePopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    .dimmer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: .5;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+    }
+
+    .inn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .youtube-wrap {
+        position: relative;
+        @include aspect(1280, 720);
+        width: 80%;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        z-index: 220;
+    }
+
+    .youtube-close {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 10px);
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        margin: -10px;
+        &::after {
+            content:'';
+            display: block;
+            flex: none;
+            width: 200%;
+            height: 200%;
+            background: no-repeat center center / contain;
+            background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='24' fill='transparent'/%3E%3Cpath d='M29 19L19 29M19 19L29 29' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    /* 세로 모드 (Portrait Mode) */
+    @media screen and (orientation: portrait) {
+        .video-close {
+            bottom: calc(100% + 10px);
+            right: 0;
+            left: auto;
+            top: auto;
+        }
     }
 }
 
@@ -2437,6 +2606,13 @@ body.eng2 {
         .data-wrap {
             margin-top: rem-calc(30px);
             width: 100%;
+            max-width: 1020px;
+            .data-box dd {
+                gap: 0.5rem;
+                a {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 }
@@ -2795,12 +2971,10 @@ body.eng2 {
                 margin-top: 20px;
 
                 .cover-img-group {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    justify-content: center;
                     gap: 0;
-
                     .cover-img {
-                        width: 100%;
+                        width: 50%;
                         &:nth-child(1) {
                             transform: rotate(-2deg) scale(1) translateY(-8%);
                         }
@@ -2916,6 +3090,7 @@ body.eng2 {
             width: 100%;
         }
 
+        .writing-staff-tab-box .writing-staff-tab-menu .item,
         .book-tab-menu .item {
             font-size: rem-calc(24px);
         }
@@ -2925,6 +3100,11 @@ body.eng2 {
         }
 
         .ycloud-box {
+            .title-sub-box {
+                .title {
+                    font-size: 1.35rem;
+                }
+            }
             .edutech-wrap .edutech-box {
                 flex-direction: column;
                 .lt-box, .rt-box  {
@@ -3123,7 +3303,7 @@ body.eng2 {
             // margin-top: rem-calc(70px);
 
             .title {
-                font-size: rem-calc(40px);
+                font-size: rem-calc(32px);
 
                 span {
                     font-size: rem-calc(30px);
@@ -3154,6 +3334,7 @@ body.eng2 {
             }
         }
 
+        .writing-staff-tab-box .writing-staff-tab-menu .item,
         .book-tab-menu .item {
             font-size: rem-calc(19px);
         }

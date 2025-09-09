@@ -3,7 +3,7 @@
     "title": "수학 1~2학년 (류희찬)",
     "subscript": "자기 주도 학습이 가능한 비주얼 교과서",
     "cover_img_count": 2,
-    "AIDT_LINK": "/aidt/midmath.html",
+    "AIDT_LINK": "/aidt/midmath1.html",
     "writing_staff": [
         {
             "name":"류희찬",
@@ -75,5 +75,18 @@
         {"TEXTBOOK_ID":"T07230546402025N4zdN", "SEMESTER":"수학 2"},
         {"TEXTBOOK_ID":"T07171125112024K2xdd", "SEMESTER":"수학 1"}
 
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "지도서"},
+        {"number": 3, "name": "교사용 교과서"},
+        {"number": 4, "name": "수업 지도안"},
+        {"number": 5, "name": "평가 문제"},
+        {"number": 6, "name": "개념 PPT"},
+        {"number": 7, "name": "활동지"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "2022 교육과정"},
+        {"number": 2, "name": "연간 지도 계획"}
     ]
 }

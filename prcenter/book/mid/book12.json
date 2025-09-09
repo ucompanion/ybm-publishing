@@ -75,7 +75,7 @@
     ],
     "booktab":[
         [
-            "깊이 있는 학습’이 가능한 교과서",
+            "'깊이 있는 학습'이 가능한 교과서",
             "IB의 프레임워크와 학습 방법에 따라 설계된 교과서",
             "IB의 학습 접근 방식(ATL) 중심 수업을 구현한 교과서"
         ],
@@ -83,12 +83,22 @@
             "IB 개념 중심 수업 설계 과정을 체험할 수 있는 지도서",
             "IB 개념 중심 수업 진행의 안내서",
             "IB 과정 중심 평가를 지원하는 지도서"
-        ],
-        [
-            "해당없음 삭제예정"
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07171131222024l6wMP", "SEMESTER":"개념 기반 탐구"}
+        {"TEXTBOOK_ID":"T0228055827202543WvG", "SEMESTER":"개념 기반 탐구"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "보충 자료 PPT"},
+        {"number": 3, "name": "활동지"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "지도서"},
+        {"number": 2, "name": "연간 교수·학습 계획"},
+        {"number": 3, "name": "교과의 교육과정"},
+        {"number": 4, "name": "교과서와 지도서의 구성 체제"},
+        {"number": 5, "name": "(예시)_교수·학습 운영 계획"},
+        {"number": 6, "name": "(예시)_평가 계획"}
     ]
 }

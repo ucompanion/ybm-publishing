@@ -1,107 +1,136 @@
 {
-    "subject": "ai",
-    "title": "생활 속 인공지능 (이영호)",
-    "subscript": "내일이 기다려지는 인공지능 수업",
-    "cover_img_count": 1,
+    "subject": "pra",
+    "title": "실과 5~6학년군 (이상원)",
+    "subscript": "뻔한 교과서 말고 FUNFUN한 실과 교과서",
+    "cover_img_count": 2,
     "writing_staff": [
         {
-            "name":"이영호",
-            "affiliation":"대구교육대학교 교수",
+            "name":"이상원",
+            "affiliation":"서울교육대학교 교수",
+            "history":["성균관대학교 생명과학 박사","서울교육대학교 산학협력단장", "서울대학교 약학대학 창의연구단 책임연구원"],
+            "word":"맑고 건강한 미래를 여는 첫 발걸음의 '마중물'"
+        },
+        {
+            "name":"문성환",
+            "affiliation":"서울교육대학교 교수",
             "history":[""],
             "word":""
         },
         {
-            "name": "김성원",
-            "affiliation": "부산교육대학교 교수",
-            "history": [""],
-            "word": ""
+            "name":"김종우",
+            "affiliation":"제주대학교 교수",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "옥지현",
-            "affiliation": "한국교육학술정보원 책임연구원",
-            "history": [""],
-            "word": ""
+            "name":"장현진",
+            "affiliation":"서울교육대학교 교수",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "강신옥",
-            "affiliation": "동화초등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"김상미",
+            "affiliation":"서울 강서초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "권순찬",
-            "affiliation": "충암중학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"김상지",
+            "affiliation":"서울 숭인초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "김슬기",
-            "affiliation": "초당초등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"배영훈",
+            "affiliation":"인천 후정초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "김형기",
-            "affiliation": "인하대학교사범대학부속중학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"원정원",
+            "affiliation":"서울 신가초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "배국환",
-            "affiliation": "대구매곡초등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"이경아",
+            "affiliation":"서울 선곡초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "서성원",
-            "affiliation": "마포고등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"이미연",
+            "affiliation":"과천 청계초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "이수환",
-            "affiliation": "수원선일초등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"이유림",
+            "affiliation":"서울 언남초등학교 교사",
+            "history":[""],
+            "word":"",
+            "video": "https://kr.object.ncloudstorage.com/ybm-prd-std/interview/%5BYBM%EA%B5%90%EA%B3%BC%EC%84%9C%5D%20%EC%B4%88%EB%93%B1%20%EC%8B%A4%EA%B3%BC%205%7E6%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EC%9D%B4%EC%9C%A0%EB%A6%BC%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
         },
         {
-            "name": "이승현",
-            "affiliation": "매천초등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"이정서",
+            "affiliation":"대구 경동초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "이정서",
-            "affiliation": "경동초등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"전송이",
+            "affiliation":"서울 성내초등학교 교사",
+            "history":[""],
+            "word":""
         },
         {
-            "name": "정승열",
-            "affiliation": "온양고등학교 교사",
-            "history": [""],
-            "word": ""
+            "name":"조영철",
+            "affiliation":"(전)인천 간석초등학교 교사",
+            "history":[""],
+            "word":""
         }
     ],
     "character":[
-        {"name":"차례는 있는데 아무표시 없음"}
+        {"name":"실과 5학년"},
+        {"name":"실과 6학년"}
     ],
     "booktab":[
         [
-            "깊이 있는 학습을 위해 따로 또 같이",
-            "단원 간의 연결이 살아 있는 교과서",
-            "지도서는 있는데 수급된 내용 없음"
+            "220*280 압도적 크기로 삽화 등의 콘텐츠를 구성하여 모두의 시선을 사로 잡아요.",
+            "세련된 디자인과 산뜻한 컬러감을 사용하여 학습의 흥미와 집중도를 높여요.",
+            "친근한 동물 캐릭터를 통해 딱딱한 지식을 말랑말랑하고 쉽게 이해해요."
         ],
         [
-            "지도서는 있는데 수급된 내용 없음",
-            "지도서는 있는데 수급된 내용 없음",
-            "지도서는 있는데 수급된 내용 없음"
+            "학교 안과 밖의 크고 작은 사고를 대비할 수 있는 다양한 안전 자료를 제공해요.",
+            "수업에 바로 적용 가능한 지도 자료 및 평가 자료를 제공해요.",
+            "체계적인 구성과 함께 활동 및 평가 자료에 해당하는 예시 답안을 제공해요."
         ],
         [
-            "해당없음(삭제예정)"
+            "단원과 연계된 외부 영상들은 한 번의 클릭으로 바로 시청 가능해요.",
+            "교과서 내의 노작 활동과 관련된 동영상 자료들은 큰 화면으로 시청 가능해요.",
+            "다양한 성우들의 목소리를 통해 각 단원의 주요 내용을 직접 들어볼 수 있어요."
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07240213202025ccrNY", "SEMESTER":"생활 속 인공지능"}
+        {"TEXTBOOK_ID":"T07240211172025E1Irv", "SEMESTER":"5학년"},
+        {"TEXTBOOK_ID":"T07240212002025X3T64", "SEMESTER":"6학년"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "교사용 교과서"},
+        {"number": 3, "name": "지도서"},
+        {"number": 4, "name": "QR 동영상(MP4)"},
+        {"number": 5, "name": "애니메이션(MP4)"},
+        {"number": 6, "name": "이미지(ZIP)"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "연간 지도 계획"},
+        {"number": 2, "name": "교수·학습 과정안"},
+        {"number": 3, "name": "강의용 자료"},
+        {"number": 4, "name": "용어 정리"},
+        {"number": 5, "name": "안전 자료"},
+        {"number": 6, "name": "활동지"},
+        {"number": 7, "name": "추가 활동지"},
+        {"number": 8, "name": "학습 내용 정리"}
     ]
 }

@@ -1,117 +1,122 @@
 {
-    "subject": "pra",
-    "title": "실과 5~6학년 (이상원)",
-    "subscript": "뻔한 교과서 말고 FUNFUN한 실과 교과서",
+    "subject": "health",
+    "title": "생활 속의 보건 5~6학년군 (우옥영)",
+    "subscript": "생활 속 주제로 건강 역량을 높이는 교과서",
     "cover_img_count": 2,
     "writing_staff": [
         {
-            "name":"이상원",
-            "affiliation":"서울교육대학교 교수",
-            "history":["성균관대학교 생명과학 박사","서울대학교 야구부 감독", "서울대학교 약학대학 창의연구단 책임연구원"],
-            "word":"맑고 건강한 미래를 여는 첫 발걸음의 '마중물'"
+            "name":"우옥영",
+            "affiliation":"경기대학교 겸임교수",
+            "history":["(사)보건교육포럼 이사장", "한국보건교육학회장"],
+            "word":"행복을 가져오는 마법"
         },
         {
-            "name":"문성환",
-            "affiliation":"서울교육대학교 교수",
+            "name":"김대유",
+            "affiliation":"서영대학교 외래교수",
+            "history":["(사)보건교육포럼 이사장", "한국보건교육학회장"],
+            "word":""
+        },
+        {
+            "name":"신미수",
+            "affiliation":"서울가원초등학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"김종우",
-            "affiliation":"제주대학교 교수",
+            "name":"우윤미",
+            "affiliation":"효성초등학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"장현진",
-            "affiliation":"서울교육대학교 교수",
+            "name":"김미경",
+            "affiliation":"안산호원초등학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"김상미",
-            "affiliation":"서울 강서초등학교 교사",
+            "name":"김영숙",
+            "affiliation":"수택초등학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"김상지",
-            "affiliation":"서울 숭인초등학교 교사",
+            "name":"주애영",
+            "affiliation":"함현초등학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"배영훈",
-            "affiliation":"인천 후정초등학교 교사",
+            "name":"김미화",
+            "affiliation":"청천중학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"원정원",
-            "affiliation":"서울 신가초등학교 교사",
+            "name":"정지원",
+            "affiliation":"늘푸른초등학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"이경아",
-            "affiliation":"서울 선곡초등학교 교사",
+            "name":"손승현",
+            "affiliation":"왕미초등학교 교사",
             "history":[""],
             "word":""
         },
         {
-            "name":"이미연",
-            "affiliation":"과천 청계초등학교 교사",
-            "history":[""],
-            "word":""
-        },
-        {
-            "name":"이유림",
-            "affiliation":"서울 언남초등학교 교사",
-            "history":[""],
-            "word":""
-        },
-        {
-            "name":"이정서",
-            "affiliation":"대구 경동초등학교 교사",
-            "history":[""],
-            "word":""
-        },
-        {
-            "name":"전송이",
-            "affiliation":"서울 성내초등학교 교사",
-            "history":[""],
-            "word":""
-        },
-        {
-            "name":"조영철",
-            "affiliation":"(전)인천 간석초등학교 교사",
+            "name":"신윤희",
+            "affiliation":"서울안암초등학교 교사",
             "history":[""],
             "word":""
         }
     ],
     "character":[
-        {"name":"실과 5학년"},
-        {"name":"실과 6학년"}
+        {"name":"생활 속의 보건 5학년"},
+        {"name":"생활 속의 보건 6학년"}
     ],
     "booktab":[
         [
-            "질문에 답하면서 생각하는 힘을 키워요",
-            "흥미롭게 움직임 학습을 할 수 있어요",
-            "실생활과 연계된 프로젝트 학습을 해요"
+            "재미있는 이야기로 생각을 여는 교과서",
+            "실생활 주제로 생활 속 건강 역량을 높이는 교과서",
+            "아이들 눈높이에 꼭 맞춘, 친근한 캐릭터 교과서"
         ],
         [
-            "수업 지도 과정을 구체적으로 제시",
-            "수업에 도움을 주는 자료 수록",
-            "바로 활용할 수 있는 추가 활동"
+            "교실에서 바로 펼쳐 쓰는 주석 지도서",
+            "다양한 교수 방법과 활동 예시 답안 수록",
+            "수업이 살아나는 교과서 연계 활동지 제공"
         ],
         [
-            "학습자의 참여를 유도하는 활동 콘텐츠",
-            "효과적으로 활용할 수 있는 멀티미디어",
-            "조작 활동을 통한 학습 내용 점검"
+            "다채로운 애니메이션을 활용한 영상 친화형 수업!",
+            "보건 수업에 편리하고 최적화된 구조",
+            "학습 수준을 점검할 수 있는 풍부한 활동"
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07240211172025E1Irv", "SEMESTER":"5학년"},
-        {"TEXTBOOK_ID":"T07240212002025X3T64", "SEMESTER":"6학년"}
+        {"TEXTBOOK_ID":"T07230533562025tcujp", "SEMESTER":"5학년"},
+        {"TEXTBOOK_ID":"T08071155082025kmNH6", "SEMESTER":"6학년"}
+    ],
+
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "교사용 교과서"},
+        {"number": 3, "name": "교과서 연계 활동지​"},
+        {"number": 4, "name": "수업용 PPT​"},
+        {"number": 5, "name": "이미지​"},
+        {"number": 6, "name": "애니메이션"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "연간 지도 계획​"},
+        {"number": 2, "name": "소단원별 교수 학습 지도안​"},
+        {"number": 3, "name": "지도서​"},
+        {"number": 4, "name": "교육과정​"},
+        {"number": 5, "name": "성취 기준별 성취 수준​"},
+        {"number": 6, "name": "교수 학습 및 평가 운영 계획"}
     ]
 }
+
+
+
+
+
+

@@ -3,6 +3,7 @@
     "title": "정보 (신승기)",
     "subscript": "세상을 뒤집을 정보의 세계로!",
     "cover_img_count": 1,
+    "AIDT_LINK": "/aidt/middata.html",
     "writing_staff": [
         {
             "name":"신승기",
@@ -14,8 +15,14 @@
             "word":"컴퓨팅 사고력의 토대"
         },
         {
+            "name":"정재화",
+            "affiliation":"한국방송통신대학교 컴퓨터과학과 교수",
+            "history":[""],
+            "word":""
+        },
+        {
             "name":"강성현",
-            "affiliation":"와우고등학교 교사",
+            "affiliation":"와우고등학교 수석교사",
             "history":[""],
             "word":""
         },
@@ -33,13 +40,13 @@
         },
         {
             "name":"채미혜",
-            "affiliation":" 교사",
+            "affiliation":" 번동중학교 교사",
             "history":[""],
             "word":""
         },
         {
             "name":"장기호",
-            "affiliation":"",
+            "affiliation":"용산고등학교 교사",
             "history":[""],
             "word":""
         },
@@ -55,20 +62,33 @@
     ],
     "booktab":[
         [
-            "내용은 없고 자료는 잇음",
-            "내용은 없고 자료는 잇음",
-            "내용은 없고 자료는 잇음"
+            "학습한 내용을 프로젝트로 즉시 적용하는 교과서​",
+            "핵심 질문으로 학습 과정이 연결되는 교과서​",
+            "조력자가 함께 하는 교과서​"
         ],
         [
-            "내용은 없고 자료는 잇음",
-            "내용은 없고 자료는 잇음",
-            "내용은 없고 자료는 잇음"
-        ],
-        [
-            "해당없음 삭제예정"
+            "수업시간에 바로 사용할 수 있는 지도서​",
+            "수업의 흐름을 한눈에 살펴볼 수 있는 지도서​",
+            "다양한 영상 자료가 가득한 지도서​"
         ]
     ],
     "TEXTBOOK_INFO":[
         {"TEXTBOOK_ID":"T07171131572024vgDRo", "SEMESTER":"보건"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서 활동지"},
+        {"number": 2, "name": "프레젠테이션 자료"},
+        {"number": 3, "name": "프로그램 소스 파일"},
+        {"number": 4, "name": "중단원 도입 활동 안내 영상"},
+        {"number": 5, "name": "소단원 동기 유발 애니메이션"},
+        {"number": 6, "name": "학습 내용 요약정리 동영상"},
+        {"number": 7, "name": "쉬어 가기-세상을 바꾸는 정보"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "교수·학습 과정안"},
+        {"number": 2, "name": "초등 실과 연계 사전 진단 문제"},
+        {"number": 3, "name": "단원별 OX퀴즈"},
+        {"number": 4, "name": "단원별 형성평가 문제"},
+        {"number": 5, "name": "영역별 선택 실습 자료"}
     ]
 }

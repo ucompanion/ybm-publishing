@@ -111,9 +111,13 @@ function initGsapInfiniteScroll(container) {
         });
 
         // 애니메이션 추가
+        const currentX = gsap.getProperty(scrollWrapper, "x");
+        const speedPxPerSecond = 60; // 1초에 200px 움직이는 속도 (조정 가능)
+        const distance = Math.abs(endX - currentX);
+        const calculatedDuration = distance / speedPxPerSecond;
         scrollTimeline.to(scrollWrapper, {
-            x: endX, // 목표 지점
-            duration: speedSeconds,
+            x: endX,
+            duration: calculatedDuration,
             ease: "none"
         });
 

@@ -3,6 +3,7 @@
 
 .submain{
     &.ybm{
+        position: relative;
         .key-visual{
             @include flex-clm;
             position: relative;
@@ -18,6 +19,8 @@
                 position: relative;
                 z-index: 3;
                 h2{
+                    position: relative;
+                    z-index: 1;
                     margin-top: rem-calc(130px);
                     @include font3;
                     text-align: center;
@@ -1830,7 +1833,7 @@
                     }
                 }
                 .top-contain{
-                    padding: rem-calc(150px) 0 0;
+                    padding: rem-calc(70px) 0 0;
                     text-align: center;
                     position: relative;
                     background: #e4f0f6 url(#{$img-sub-url}img_sub_ai_obj_bg.svg) no-repeat fixed center top;
@@ -3063,7 +3066,7 @@
                 }
                 //ybm 교과서 > parallax
                 &.ybmbook{
-
+                    padding-top: 0;
                     .parallax__contain{
                         .parallax__item{
                             .table-view-box{
@@ -3194,6 +3197,7 @@
                 }
                 //ai디지털교과서
                 &.ai{
+                    padding-top: 0;
                     .banner{
                         height: rem-calc(320px);
                         .text{
@@ -3210,6 +3214,7 @@
                         }
                     }
                     .top-contain{
+                        min-height: 670px;
                         .box-wrap{
                             padding: 0 20px;
                         }
@@ -3245,7 +3250,7 @@
                         }
                     }
                     .middle-contain{
-                        padding-top: 21vw;
+                        padding-top: 18vw;
                         .box1{
                             padding-bottom: rem-calc(140px);
                             .title{
@@ -3670,7 +3675,7 @@
                 //ai디지털교과서
                 &.ai{
                     .sub-nav{
-                        top: rem-calc(80px);
+                        top: rem-calc(40px);
                     }
                     .banner{
                         height: rem-calc(200px);
@@ -3775,7 +3780,7 @@
                         }
                     }
                     .middle-contain{
-                        padding-top: 30vw;
+                        // padding-top: 30vw;
                         .box1{
                             padding: rem-calc(30px) rem-calc(30px) rem-calc(150px);
                             top: -56vh;

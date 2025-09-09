@@ -111,5 +111,24 @@
     ],
     "TEXTBOOK_INFO":[
         {"TEXTBOOK_ID":"T07230556032025AdAPO", "SEMESTER":"스포츠 과학"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "지도서"},
+        {"number": 3, "name": "교사용 교과서"},
+        {"number": 4, "name": "연간 지도안"},
+        {"number": 5, "name": "수업 지도안"},
+        {"number": 6, "name": "수업 지도 자료"},
+        {"number": 7, "name": "2022개정 교육과정 총론"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "스포츠 경기 규정 자료집"},
+        {"number": 2, "name": "[YBM 활기찬 150] 활동지"},
+        {"number": 3, "name": "학교생활기록부 세부 능력 및 특기 사항"},
+        {"number": 4, "name": "paps브로마이드"},
+        {"number": 5, "name": "골격근의 구조"},
+        {"number": 6, "name": "마가리아 칼라멘 파워 공식"},
+        {"number": 7, "name": "스포츠의 교육적 순기능과 역기능"},
+        {"number": 8, "name": "주요 근육의 명칭"}
     ]
 }

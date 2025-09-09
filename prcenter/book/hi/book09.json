@@ -6,30 +6,31 @@
     "writing_staff": [
         {
             "name":"김수연",
-            "affiliation":"한국외국어대학교 영미문학문화학과 교수",
+            "affiliation":"한국외국어대학교 영미문학&middot;문화학과 교수",
             "history":[
-                "• 서울대학교 영어영문학과 졸업",
-                "• Texas A&M 대학교 영문학 박사",
-                "• 한국외대 외국어교육센터장"
+                "서울대학교 영어영문학과 졸업",
+                "Texas A&M 대학교 영문학 박사",
+                "한국외대 외국어교육센터장"
             ],
-            "word":"영어 교과서의 혁신"
+            "word":"영어 교과서의 혁신",
+            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/%5BYBM%EA%B5%90%EA%B3%BC%EC%84%9C%5D%20%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90%20%EB%AF%B8%EB%94%94%EC%96%B4%20%EC%98%81%EC%96%B4%20%EC%A7%91%ED%95%84%EC%A7%84%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
         },
         {
             "name":"김예리",
-            "affiliation":"Claremont 대학원대학교 문화연구 박사",
-            "history":[""],
+            "affiliation":"서울대학교 기초교육원 대학영어 교수",
+            "history":["Claremont 대학원대학교 문화연구 박사"],
             "word":""
         },
         {
             "name":"최승용",
-            "affiliation":"국제언어대학원대학교 영어교재개발 석사",
-            "history":[""],
+            "affiliation":"서울 세화고등학교 교사",
+            "history":["국제언어대학원대학교 영어교재개발 석사"],
             "word":""
         },
         {
             "name":"이자인",
-            "affiliation":"서울대학교 영어교육학과 졸업",
-            "history":[""],
+            "affiliation":"서울대학교 사범대학부설고등학교",
+            "history":["서울대학교 영어교육학과 졸업"],
             "word":""
         }
     ],
@@ -49,10 +50,30 @@
 
         ],
         [
-            "해당없음 삭졔예정"
+            "교과서 영상 및 추가 영상 자료 수록",
+            "활동에 필요한 다양한 저작 도구 링크 제공",
+            "수업 진행과 학생들의 이해를 돕기 위한 풍부한 자료 제공"
         ]
     ],
     "TEXTBOOK_INFO":[
         {"TEXTBOOK_ID":"T07230552362025zxZp4", "SEMESTER":"미디어 영어"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서 음원"},
+        {"number": 2, "name": "교과서 동영상"},
+        {"number": 3, "name": "Main Text"},
+        {"number": 4, "name": "Word List"},
+        {"number": 5, "name": "Background Knowledge (배경 지식)"},
+        {"number": 6, "name": "Overview 어휘"},
+        {"number": 7, "name": "Overview 듣기 & 말하기"},
+        {"number": 8, "name": "Media Use (미디어 활동)"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "Main Text PPT"},
+        {"number": 2, "name": "Words PPT"},
+        {"number": 3, "name": "Grammar PPT"},
+        {"number": 4, "name": "단원 평가"},
+        {"number": 5, "name": "서술형 평가"},
+        {"number": 6, "name": "차시별 수행 평가"}
     ]
 }

@@ -124,11 +124,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 0;
+                padding: rem-calc(130px) 0;
                 .wrapper {
                     width: 100%;
-                    padding-top: rem-calc(130px);
-                    padding-bottom: rem-calc(130px);
                 }
                 .title-box {
                     margin-bottom: rem-calc(80px);
@@ -138,6 +136,36 @@
                         font-size: rem-calc(48px);
                         line-height: 120%;
                         color: #000000;
+                    }
+                    .explan {
+                        display: flex;
+                        align-items: center;
+                        max-width: 850px;
+                        margin: auto;
+                        gap: 12px;
+                        padding: rem-calc(16px) rem-calc(32px);
+                        background-color: rgba(255,255,255,1);
+                        border-radius: rem-calc(20px);
+                        &::before {
+                            content: '';
+                            flex: none;
+                            display: block;
+                            width: rem-calc(56px);
+                            height: rem-calc(56px);
+                            background: no-repeat center center / contain;
+                            background-image: url(#{$img-sub-url}img_noti.png);
+                        }
+                        > span {
+                            display: block;
+                            font-size: 18px;
+                            line-height: 140%;
+                            color: #000000;
+                            word-break: keep-all;
+                            > em {
+                                background: no-repeat 0 50% / 100% 16px;
+                                background-image: linear-gradient(to bottom, #ffe2d0 0%, #ffe2d0 100%);
+                            }
+                        }
                     }
                 }
                 .sub-book-list{
@@ -158,7 +186,7 @@
                                 font-size: rem-calc(22px);
                                 line-height: 1.3;
                                 .small {
-                                    font-size: 0.9em;
+                                    font-size: 0.8em;
                                 }
                             }
                             span{
@@ -184,7 +212,12 @@
                         border: 1px solid rgba(0,0,0,0.08);
                         border-radius: 8px;
                         position: relative;
+                        aspect-ratio: 200/260;
+                        overflow: hidden;
                         img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
                             border-radius: 4px;
                         }
                     }
@@ -227,8 +260,10 @@
 
             //현장 스케치
             .main-sketch {
+                padding: rem-calc(130px) 0 rem-calc(154px);
                 .wrapper {
                     display: block;
+                    max-width: 100%;
                 }
                 .title-box {
                     margin-bottom: rem-calc(80px);
@@ -696,7 +731,6 @@
                         url(#{$img-sub-url}img_sub_book_main_sketch_ele_obj_02.png) no-repeat calc(50% - 36.25rem) bottom / 12.5rem auto,
                         url(#{$img-sub-url}img_sub_book_main_sketch_ele_obj_03.png) no-repeat calc(50% + 40.75rem) bottom / 14rem auto;
                     background-color: #FF914D;
-                    padding: rem-calc(130px) 0 rem-calc(154px);
                 }
                 //기념 이벤트
                 .main-event{
@@ -1046,7 +1080,6 @@
                 //현장 스케치
                 .main-sketch{
                     background: #527DDD;
-                    padding: rem-calc(125px) 0;
                     height: auto;
                     .sketch-list{
                         .sketch-link {
@@ -1281,7 +1314,6 @@
                         url(#{$img-sub-url}img_sub_book_main_sketch_hi_obj01.png) no-repeat calc(50% + 33.625rem) 5.625rem / 12.625rem auto,
                         url(#{$img-sub-url}img_sub_book_main_sketch_hi_obj02.png) no-repeat calc(50% - 16.25rem) bottom / 12.625rem auto;
                     background-color: #4149BB;
-                    padding: rem-calc(125px) 0;
                     height: auto;
                     position: relative;
                     .sketch-list{
@@ -1479,7 +1511,6 @@
                 }
                 //현장 스케치
                 .main-sketch{
-                    padding-bottom: rem-calc(80px);
                     .sketch-list{
                         padding: 0;
                         gap: 30px 10px;
@@ -1525,10 +1556,15 @@
                     }
                 }
                 &.ele{
-                    .main-visual{
-                        height: 70vh;
+                    .main-visual {
+                        .obj.obj1 {
+                            width: 20rem;
+                            aspect-ratio: 643/616;
+                            bottom: 8%;
+                        }
                     }
                     .main-book{
+                        background-size: auto, 12rem auto, 12rem auto;
                         .wrapper{
                             max-width: 100%;
                         }
@@ -1543,6 +1579,8 @@
                 }
                 &.mid{
                     .main-book{
+                        background-size: 16rem auto, 16rem auto, 8rem auto, 100% auto;
+                        background-position: 1rem 3rem, right 6rem, left 32rem, center top;
                         .wrapper{
                             max-width: 100%;
                         }
@@ -1614,8 +1652,9 @@
                         top: -36px;
                     }
                 }
+
                 .main-visual{
-                    padding-top: rem-calc(100px) !important;
+                    padding-top: rem-calc(80px) !important;
                     .title-box{
                         img{
                             max-width: 50%;
@@ -1625,6 +1664,15 @@
                         }
                     }
                 }
+                .main-book {
+                    .title-box {
+                        margin-bottom: 3rem;
+                        .title {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+
                 .swiper-pagination{
                     .swiper-pagination-bullet{
                         width: 10px;
@@ -1635,11 +1683,15 @@
                         height: 10px;
                     }
                 }
+                .main-book {
+                    padding: rem-calc(100px) 0;
+                }
                 //현장스케치
                 .main-sketch{
+                    padding: rem-calc(80px) 0;
                     .title-box{
                         .title{
-                            font-size: rem-calc(40px);
+                            font-size: 1.8rem;
                             &::before{
                                 width: 40px;
                                 height: 40px;
@@ -1681,6 +1733,8 @@
                 }
                 &.ele{
                     .main-visual{
+                        height: 54rem;
+
                         .obj{
                             &.obj1{
                                 width: rem-calc(150px);
@@ -1751,6 +1805,9 @@
                                 }
                             }
                         }
+                    }
+                    .main-book {
+                        background-size: auto, 8rem auto, 8rem auto;
                     }
                 }
                 &.mid{

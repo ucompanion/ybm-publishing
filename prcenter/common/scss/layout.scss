@@ -73,7 +73,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // max-width: $breakpoint-tablet;
+        max-width: 100%;
         margin: 0 auto;
         padding: 0 var(--sidepacer);
         position: relative;
@@ -152,7 +152,7 @@ header{
                 li{
                     width: 100%;
                     height: auto;
-                    padding: 0 rem-calc(25px);
+                    padding: 0 rem-calc(10px);
                     box-sizing: border-box;
                     display: block;
                     a{
@@ -749,7 +749,7 @@ footer {
 
 .sub-nav{
     position: absolute;
-    top: rem-calc(110px);
+    top: rem-calc(30px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -1408,6 +1408,7 @@ footer {
             z-index: 101;
             transform: none;
             display: block !important;
+            width: auto;
             transition: none;
             pointer-events: none;
             ul {
@@ -1423,8 +1424,11 @@ footer {
                 li {
                     opacity: 1;
                     transform: translateY(20px);
-                    pointer-events: none;
+                    // pointer-events: none;
                     transition: all 0.2s ease;
+                    &:first-child {
+                        display: none;
+                    }
                     a {
                         display: flex;
                         flex-direction: row;
@@ -1458,6 +1462,14 @@ footer {
                             line-height: 20px;
                             white-space: nowrap;
                             color: #fff;
+                        }
+                        &:hover {
+                            &::before {
+                                background-color: #fff;
+                            }
+                            span {
+                                color: #fff;
+                            }
                         }
                     }
 
@@ -1644,9 +1656,11 @@ footer {
             bottom: 0;
             width: 100%;
             height: calc(100% - var(--header-height));
-            overflow: hidden;
+            max-width: 100%;
             align-items: flex-start;
             pointer-events: none;
+            overflow: auto;
+            display: block;
             &::before {
                 content:'';
                 display: block;
@@ -1665,10 +1679,10 @@ footer {
                 justify-content: flex-start;
                 gap: 0;
                 width: 100%;
-                height: 100%;
+                min-height: 100%;
                 padding: 0 20px;
                 background: #fff;
-                transform: translateY(-100%);
+                transform: translateY(calc(-100% - 100px));
                 transition: 0.2s all;
                 li{
                     display: block;

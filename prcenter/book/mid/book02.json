@@ -80,5 +80,25 @@
     "TEXTBOOK_INFO":[
         {"TEXTBOOK_ID":"T07230543122025MnPVA", "SEMESTER":"영어 2"},
         {"TEXTBOOK_ID":"T07171106112024M5FWt", "SEMESTER":"영어 1"}
+    ],
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "Scripts"},
+        {"number": 3, "name": "Listen&Speak_A"},
+        {"number": 4, "name": "Listen&Speak_B"},
+        {"number": 5, "name": "의사소통기능 PPT"},
+        {"number": 6, "name": "어휘 PPT"},
+        {"number": 7, "name": "Word_Chant"},
+        {"number": 8, "name": "Vocabulary List"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "지도서"},
+        {"number": 2, "name": "연간 수업 지도 계획"},
+        {"number": 3, "name": "단원별 지도계획표"},
+        {"number": 4, "name": "영문 수업 지도안"},
+        {"number": 5, "name": "성취기준"},
+        {"number": 6, "name": "Listening&Speaking_(보충/기본/심화)"},
+        {"number": 7, "name": "Listening&Speaking_수준별_음원"},
+        {"number": 8, "name": "Words&Communication_(기본/심화)"}
     ]
 }

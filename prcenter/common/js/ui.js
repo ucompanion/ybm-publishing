@@ -69,10 +69,11 @@ $w.on('scroll', function() {
     }
 });
 $(".floating-wrap .btn-bottom").click(function(){
+    console.log($(window).scrollTop() > 0 && $(this).hasClass('up') == true);
     if ($(window).scrollTop() > 0 && $(this).hasClass('up') == true) {
         $('html,body').animate({scrollTop:($('html,body').offset().top)},200);
     } else {
-        $('html,body').animate({scrollTop:($('footer').offset().top)},200);
+        $('html,body').animate({scrollTop:($('footer:visible').offset().top)},200);
     }
 });
 
@@ -142,7 +143,7 @@ $(document).on('click','.evShowVideo', function(e){
     $videoBox.play();
 
     // 팝업 닫기
-    $('.videoPopup .overlay').on('click', function () {
+    $('.videoPopup .overlay, .videoPopup .video-close').on('click', function () {
         $('.videoPopup').hide();
         $('html').removeClass('active-popup');
         $videoBox.pause();

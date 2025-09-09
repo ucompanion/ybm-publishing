@@ -1,8 +1,8 @@
 {
     "subject": "math",
-    "title": "수학 3~6학년 (류희찬)",
+    "title": "수학 3~4학년군 (류희찬)",
     "subscript": "창의적인 사고력을 기르는 교과서",
-    "cover_img_count": 8,
+    "cover_img_count": 4,
     "AIDT_LINK": "/aidt/elemath3.html",
     "writing_staff": [
         {
@@ -75,10 +75,6 @@
         }
     ],
     "character":[
-        {"name":"수학 5-1"},
-        {"name":"수학 5-2"},
-        {"name":"수학 6-1"},
-        {"name":"수학 6-2"},
         {"name":"수학 3-1"},
         {"name":"수학 3-2"},
         {"name":"수학 4-1"},
@@ -102,13 +98,26 @@
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T072304563120255pF78", "SEMESTER":"5학년 1학기"},
-        {"TEXTBOOK_ID":"T07230457102025nOaqx", "SEMESTER":"5학년 2학기"},
-        {"TEXTBOOK_ID":"T07230457492025XBwSq", "SEMESTER":"6학년 1학기"},
-        {"TEXTBOOK_ID":"T07230458282025KLkCp", "SEMESTER":"6학년 2학기"},
         {"TEXTBOOK_ID":"T07171208392024WISxJ", "SEMESTER":"3학년 1학기"},
         {"TEXTBOOK_ID":"T07171209142024M35Wr", "SEMESTER":"3학년 2학기"},
         {"TEXTBOOK_ID":"T07171209472024ir74Q", "SEMESTER":"4학년 1학기"},
         {"TEXTBOOK_ID":"T07171210222024VOdeN", "SEMESTER":"4학년 2학기"}
+    ],
+
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "교과서"},
+        {"number": 2, "name": "지도서"},
+        {"number": 3, "name": "교사용교과서"},
+        {"number": 4, "name": "수학익힘"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "단원기본평가"},
+        {"number": 2, "name": "단원보충평가"},
+        {"number": 3, "name": "단원심화평가"},
+        {"number": 4, "name": "서술형평가"},
+        {"number": 5, "name": "수학익힘유사"},
+        {"number": 6, "name": "수행평가"},
+        {"number": 7, "name": "익힘평가"},
+        {"number": 8, "name": "진단평가"}
     ]
 }

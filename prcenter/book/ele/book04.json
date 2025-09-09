@@ -1,8 +1,8 @@
 {
     "subject": "society",
-    "title": "사회 3~6학년 (남상준)",
+    "title": "사회 3~4학년군 (남상준)",
     "subscript": "현장의 목소리를 담아 수업하기 편한 교과서",
-    "cover_img_count": 9,
+    "cover_img_count": 4,
     "writing_staff": [
         {
             "name":"남상준",
@@ -108,133 +108,55 @@
             "type2": true
         }
     ],
-    "writing_staff_02": [
-        {
-            "name":"남상준",
-            "affiliation":"한국교원대학교 명예 교수",
-            "history":["서울대학교 사회교육 박사"],
-            "word":"생각을 넓히는 사회 교과서의 친구",
-            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-04.%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%82%AC%ED%9A%8C%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EB%82%A8%EC%83%81%EC%A4%80%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B9%80%EC%A3%BC%ED%83%9D%C2%B7%EC%9E%A5%EC%A7%84%EC%95%84%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
-        },
-        {
-            "name":"김이재",
-            "affiliation":"경인교육대학교 사회과교육과 교수",
-            "history":["서울대학교 지리교육 박사"],
-            "word":"마법 지도책"
-        },
-        {
-            "name":"최현우",
-            "affiliation":"군산대학교 역사학과 교수",
-            "history":["미시간주립대학교 교육과정 및 교수 전공 박사"],
-            "word":"세상 여행 안내서"
-        },
-        {
-            "name":"김주택",
-            "affiliation":"서울 교동초등학교 교감",
-            "history":["한국교원대학교 초등사회과교육 박사"],
-            "word":"YBM 사회교과서로 공부하면, 사회 지식이 쏙! 들어와요.",
-            "type2": true,
-            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-04.%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%82%AC%ED%9A%8C%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EB%82%A8%EC%83%81%EC%A4%80%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B9%80%EC%A3%BC%ED%83%9D%C2%B7%EC%9E%A5%EC%A7%84%EC%95%84%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
-        },
-        {
-            "name":"김병연",
-            "affiliation":"대구 다사고등학교 교사",
-            "history": "",
-            "word":"",
-            "type2": true
-        },
-        {
-            "name":"김상우",
-            "affiliation":"서울 화곡초등학교 교사",
-            "history": "",
-            "word":"",
-            "type2": true
-        },
-        {
-            "name":"김영현",
-            "affiliation":"충북 옥동초등학교 교사",
-            "history": "",
-            "word":"",
-            "type2": true
-        },
-        {
-            "name":"나정향",
-            "affiliation":"서울 목동초등학교 교사",
-            "history": "",
-            "word":"",
-            "type2": true
-        },
-        {
-            "name":"양재영",
-            "affiliation":"경기 송원초등학교 교사",
-            "history": "",
-            "word":"",
-            "type2": true
-        },
-        {
-            "name":"장진아",
-            "affiliation":"서울남명초등학교 교사",
-            "history":["한국교원대학교 초등사회과교육 박사"],
-            "word":"연결고리",
-            "video":"https://kr.object.ncloudstorage.com/ybm-prd-std/interview/01-04.%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%20%EC%82%AC%ED%9A%8C%203%7E4%ED%95%99%EB%85%84%EA%B5%B0%20%EC%A0%80%EC%9E%90%20%EB%82%A8%EC%83%81%EC%A4%80%20%EA%B5%90%EC%88%98%EB%8B%98%2C%20%EA%B9%80%EC%A3%BC%ED%83%9D%C2%B7%EC%9E%A5%EC%A7%84%EC%95%84%20%EC%84%A0%EC%83%9D%EB%8B%98%20%EC%9D%B8%ED%84%B0%EB%B7%B0.mp4"
-        },
-        {
-            "name":"장혜정",
-            "affiliation":"서울탑산초등학교 교사",
-            "history":["한국교원대학교 초등사회과교육 박사"],
-            "word":"공부하면 세상을 보는 눈을 키울 수 있어요.",
-            "type2": true
-        },
-        {
-            "name":"서대석",
-            "affiliation":"지도 제작 및 편집인",
-            "history":[""],
-            "word":"",
-            "type2": true
-        }
-    ],
     "character":[
-        {"name":"사회 5-1"},
-        {"name":"사회 5-2"},
-        {"name":"사회 6-1"},
-        {"name":"사회 6-2"},
         {"name":"사회 3-1"},
         {"name":"사회 3-2"},
         {"name":"사회 4-1"},
-        {"name":"사회 4-2"},
-        {"name":"사회과부도"}
+        {"name":"사회 4-2"}
     ],
     "booktab":[
         [
-            "학습 흐름이 한눈에 들어오는 교과서",
+            "생활 소재를 활용한 흥미로운 교과서",
             "질문을 통해 스스로 생각하는 힘을 키우는 교과서",
-            "생활 소재를 활용한 흥미로운 교과서"
+            "놀이 활동으로 학습에 즐거움을 주는 교과서"
         ],
         [
-            "우리나라 및 세계 지리 기초 학습을 위한 지도책",
-            "사회 수업에 필요한 다양한 시각 자료",
-            "흥미를 유발하는 활동 자"
+            "수업에 활용할 자료를 체계적으로 수록",
+            "각종 평가 문제와 알찬 참고 자료 제공",
+            "전체적인 수업 계획과 효율적인 수업 방법 안내"
         ],
         [
-            "전체적인 수업 계획과 효율적인 수업 방법 안내",
-            "재미있는 수업을 만들어 주는 다양한 활동지 수록",
-            "학생들 학습 수준에 맞춘 각종 평가 제공"
-        ],
-        [
-            "디지털 수업에 최적화 된 편리한 구성",
+            "수업을 재구성할 수 있는 '나만의 맞춤 수업'",
             "차시 흐름에 맞춘 다양한 멀티미디어 자료",
             "학습 수준을 점검할 수 있는 풍부한 평가 자료"
         ]
     ],
     "TEXTBOOK_INFO":[
-        {"TEXTBOOK_ID":"T07230459022025Gb2lr", "SEMESTER":"5학년 1학기"},
-        {"TEXTBOOK_ID":"T07230502172025MbmIt", "SEMESTER":"5학년 2학기"},
-        {"TEXTBOOK_ID":"T07230512472025yCaqM", "SEMESTER":"6학년 1학기"},
-        {"TEXTBOOK_ID":"T07230513232025rdafu", "SEMESTER":"6학년 2학기"},
         {"TEXTBOOK_ID":"T07170139342024uJNy7", "SEMESTER":"3학년 1학기"},
         {"TEXTBOOK_ID":"T07170140212024yBFHx", "SEMESTER":"3학년 2학기"},
         {"TEXTBOOK_ID":"T07170140562024tzdsW", "SEMESTER":"4학년 1학기"},
-        {"TEXTBOOK_ID":"T07170141472024OMzpc", "SEMESTER":"4학년 2학기"},
-        {"TEXTBOOK_ID":"T07230513552025t3SZd", "SEMESTER":"사회과 부도"}
+        {"TEXTBOOK_ID":"T07170141472024OMzpc", "SEMESTER":"4학년 2학기"}
+    ],
+
+    "TEXTBOOK_HASHTAG_LEFT":[
+        {"number": 1, "name": "디지털 영상 콘텐츠"},
+        {"number": 2, "name": "단원 도입 영상"},
+        {"number": 3, "name": "주제 도입 영상"},
+        {"number": 4, "name": "차시별 영상"},
+        {"number": 5, "name": "수업 전개"},
+        {"number": 6, "name": "교과서 활동 가이드"},
+        {"number": 7, "name": "교과서 활동 가이드 활동지"},
+        {"number": 8, "name": "차시 확인 퀴즈"}
+    ],
+    "TEXTBOOK_HASHTAG_RIGHT":[
+        {"number": 1, "name": "교사용 교과서"},
+        {"number": 2, "name": "주제 평가_기본"},
+        {"number": 3, "name": "주제 평가_실력"},
+        {"number": 4, "name": "수행 평가"},
+        {"number": 5, "name": "단원 평가"},
+        {"number": 6, "name": "서술형 평가"},
+        {"number": 7, "name": "성취도 평가"},
+        {"number": 8, "name": "평가 카드"}
     ]
+
 }
